@@ -1,0 +1,13 @@
+/insights/insights/*  /insights/:splat  200
+/insights/category/*  /category/:splat  200
+/insights/admin/*     /admin/:splat     200
+/insights/api/*       /api/:splat       200
+/insights/rss.xml             /rss.xml             200
+/insights/sitemap-index.xml   /sitemap-index.xml   200
+/insights/sitemap-0.xml       /sitemap-0.xml       200
+/insights/favicon.svg         /favicon.svg         200
+/insights/robots.txt          /robots.txt          200
+/insights/_astro/*  /_astro/:splat  200
+/insights/images/*  /images/:splat  200
+/insights   /   200
+/insights/  /   200
