@@ -41,7 +41,13 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   if (!isInsightsPath) {
     const mainSite = env.MAIN_SITE_URL || MAIN_SITE_DEFAULT;
     const target = mainSite.replace(/\/+$/, '') + path + url.search;
-    return Response.redirect(target, 302);
+    // Use a manual Location header instead of Response.redirect() — this
+    // means Cloudflare doesn't wait for the origin to respond before
+    // sending the redirect, avoiding 522 timeouts.
+    return new Response(null, {
+      status: 302,
+      headers: { Location: target },
+    });
   }
 
   // ---------------------------------------------------------------------
