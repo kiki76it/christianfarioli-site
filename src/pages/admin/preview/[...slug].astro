@@ -1,0 +1,111 @@
+---
+// src/pages/admin/preview/[slug].astro
+// Preview an article in ANY status (draft / review / scheduled / published).
+// The page banner shows the current status; no /insights/[slug] page is generated
+// for non-public entries, so this is the only way the team can see them.
+
+import { getCollection, render } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import ArticleLayout from '~/layouts/ArticleLayout.astro';
+import { STATUS_INFO, defaultAdvance, nextStatuses } from '~/lib/status';
+import { CATEGORY_LABELS } from '~/content.config';
+import { paths } from '~/lib/links';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const all = await getCollection('insights');
+  return all.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry, all },
+  }));
+};
+
+interface Props {
+  entry: CollectionEntry<'insights'>;
+  all: CollectionEntry<'insights'>[];
+}
+const { entry, all } = Astro.props as Props;
+const { Content } = await render(entry);
+const data = entry.data;
+const info = STATUS_INFO[data.status];
+const advanceTo = defaultAdvance(data.status);
+const next = nextStatuses(data.status);
+---
+<ArticleLayout entry={entry} allEntries={all} preview={true}>
+  <Content />
+</ArticleLayout>
+
+<script define:vars={{ slug: entry.id, status: data.status, scheduledFor: data.scheduledFor, advanceTo, next, apiPath: paths.apiPublish() }}>
+  // Admin helpers shown only in preview. They POST to the local API endpoint that
+  // the automation scripts also use; in static-only deploys the API may be unavailable
+  // and these buttons become read-only summaries.
+  document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.createElement('div');
+    banner.className = 'admin-action-bar';
+    banner.innerHTML = `
+      <div class="container">
+        <span class="status">${status}</span>
+        <span class="filename">${slug}.mdx</span>
+        <div class="actions">
+          <button data-action="edit" class="btn btn-secondary">Edit File</button>
+          ${advanceTo ? `<button data-action="advance" class="btn btn-primary">Advance → ${advanceTo}</button>` : ''}
+        </div>
+      </div>
+    `;
+    document.body.prepend(banner);
+
+    banner.querySelector('[data-action="edit"]')?.addEventListener('click', () => {
+      window.open(`vscode://file${window.location.pathname.replace('/admin/preview/', '/src/content/insights/').replace(/\/$/, '')}.mdx`, '_blank');
+    });
+    banner.querySelector('[data-action="advance"]')?.addEventListener('click', async () => {
+      const r = await fetch(apiPath, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug, action: 'transition', to: advanceTo }),
+      });
+      if (r.ok) location.reload();
+      else alert('Transition failed: ' + (await r.text()));
+    });
+  });
+</script>
+
+<style is:global>
+  .admin-action-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .admin-action-bar > div {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .admin-action-bar .status {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .admin-action-bar .filename {
+    font-family: 'SFMono-Regular', Menlo, monospace;
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    flex: 1;
+  }
+  .admin-action-bar .actions {
+    display: flex;
+    gap: 8px;
+  }
+  .admin-action-bar .btn {
+    color: var(--color-text-light);
+    border-color: rgba(255,255,255,0.2);
+  }
+  .admin-action-bar .btn-primary {
+    background: var(--color-accent);
+    color: var(--color-white);
+  }
+</style>

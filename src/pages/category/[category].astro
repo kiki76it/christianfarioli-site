@@ -1,0 +1,26 @@
+---
+// src/pages/category/[category].astro
+// Category archive — one page per category in INSIGHT_CATEGORIES.
+
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import InsightsLayout from '~/layouts/InsightsLayout.astro';
+import { CATEGORY_LABELS, INSIGHT_CATEGORIES, type InsightCategory } from '~/content.config';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return INSIGHT_CATEGORIES.map((category) => ({
+    params: { category },
+    props: { category },
+  }));
+};
+
+interface Props { category: InsightCategory; }
+const { category } = Astro.props as Props;
+const all = await getCollection('insights');
+---
+<InsightsLayout
+  title={CATEGORY_LABELS[category]}
+  description={`The latest ${CATEGORY_LABELS[category]} insights from Prof. Christian Farioli.`}
+  category={category}
+  entries={all}
+/>

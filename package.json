@@ -1,0 +1,40 @@
+{
+  "name": "christian-farioli-insights",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Authority publishing platform for Prof. Christian Farioli — content collections, status workflow, and automation hooks for future AI agents.",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0",
+    "start": "astro dev --host 0.0.0.0",
+    "build": "astro build",
+    "preview": "astro preview --host 0.0.0.0",
+    "check": "astro check",
+    "validate": "node scripts/validate.mjs",
+    "publish": "node scripts/publish.mjs",
+    "deploy": "node scripts/deploy.mjs",
+    "content:new": "node scripts/new-article.mjs",
+    "content:list": "node scripts/list-articles.mjs",
+    "cf:dev": "wrangler pages dev ./dist",
+    "cf:tail": "wrangler pages deployment tail"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.0.3",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.1.1",
+    "gray-matter": "^4.0.3",
+    "reading-time": "^1.5.0",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260615.1",
+    "typescript": "^5.7.2",
+    "wrangler": "^4.100.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

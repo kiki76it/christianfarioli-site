@@ -1,0 +1,241 @@
+---
+// src/pages/admin/index.astro
+// Static admin dashboard. Lists every insight grouped by status so the team can
+// see drafts, items in review, scheduled pieces, and the published archive.
+
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { STATUS_INFO } from '~/lib/status';
+import { CATEGORY_LABELS, INSIGHT_CATEGORIES, INSIGHT_STATUSES, type InsightStatus } from '~/content.config';
+import { paths } from '~/lib/links';
+
+const all = await getCollection('insights');
+
+// Group by status. Even drafts are listed here.
+const byStatus: Record<InsightStatus, typeof all> = {
+  draft: [], review: [], scheduled: [], published: [],
+};
+for (const e of all) byStatus[e.data.status].push(e);
+
+// Newest first within each group
+for (const s of INSIGHT_STATUSES) {
+  byStatus[s].sort((a, b) => {
+    const aTime = a.data.publishedAt?.getTime() ?? a.data.scheduledFor?.getTime() ?? a.data.updatedAt?.getTime() ?? 0;
+    const bTime = b.data.publishedAt?.getTime() ?? b.data.scheduledFor?.getTime() ?? b.data.updatedAt?.getTime() ?? 0;
+    return bTime - aTime;
+  });
+}
+
+const totalCount = all.length;
+const summary = {
+  draft: byStatus.draft.length,
+  review: byStatus.review.length,
+  scheduled: byStatus.scheduled.length,
+  published: byStatus.published.length,
+};
+---
+<BaseLayout title="Insights Admin" noindex={true} description="Internal publishing dashboard.">
+  <div class="admin">
+    <header class="admin-header">
+      <div class="container">
+        <span class="eyebrow">Internal</span>
+        <h1>Insights Admin</h1>
+        <p>{totalCount} article{totalCount === 1 ? '' : 's'} in the pipeline.</p>
+
+        <div class="status-summary">
+          {INSIGHT_STATUSES.map((s) => {
+            const info = STATUS_INFO[s];
+            return (
+              <a href={`#${s}`} class="summary-card">
+                <span class={`status-pill ${info.pillClass}`}>{info.label}</span>
+                <span class="summary-count">{summary[s]}</span>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <div class="container">
+        {INSIGHT_STATUSES.map((s) => {
+          const info = STATUS_INFO[s];
+          const list = byStatus[s];
+          return (
+            <section id={s} class="status-section">
+              <div class="status-section-header">
+                <h2>
+                  <span class={`status-pill ${info.pillClass}`}>{info.label}</span>
+                  {info.description}
+                </h2>
+                <span class="status-count">{list.length}</span>
+              </div>
+
+              {list.length === 0 ? (
+                <p class="empty">No articles in this state.</p>
+              ) : (
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th>Title</th>
+                      <th>Category</th>
+                      <th>Author</th>
+                      <th>Updated</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {list.map((e) => {
+                      const date = e.data.publishedAt ?? e.data.scheduledFor ?? e.data.updatedAt;
+                      return (
+                        <tr>
+                          <td>
+                            <a href={paths.adminPreview(e.id)} class="title-link">
+                              {e.data.title}
+                            </a>
+                            {e.data.scheduledFor && s === 'scheduled' && (
+                              <div class="scheduled-date">
+                                → auto-publish {e.data.scheduledFor.toLocaleDateString('en-US', {
+                                  year: 'numeric', month: 'short', day: 'numeric',
+                                })}
+                              </div>
+                            )}
+                          </td>
+                          <td>{CATEGORY_LABELS[e.data.category]}</td>
+                          <td>{e.data.author.name}</td>
+                          <td>
+                            {date ? date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '—'}
+                          </td>
+                          <td>
+                            <a href={paths.adminPreview(e.id)} class="btn-link">Preview →</a>
+                            {e.data.status === 'published' && (
+                              <a href={paths.insights(e.id)} class="btn-link">View →</a>
+                            )}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              )}
+            </section>
+          );
+        })}
+      </div>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .admin-header {
+    background: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: 64px 0 40px;
+  }
+  .admin-header h1 {
+    font-family: var(--font-accent);
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--color-white);
+  }
+  .admin-header p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+  }
+  .admin-header .eyebrow {
+    color: var(--color-accent);
+  }
+  .status-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 32px;
+  }
+  .summary-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    color: var(--color-white);
+    transition: all 0.2s;
+  }
+  .summary-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+  }
+  .summary-count {
+    font-family: var(--font-accent);
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .admin-main { padding: 48px 0 96px; }
+  .status-section { margin-bottom: 64px; }
+  .status-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .status-section-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+  .status-count {
+    font-family: var(--font-accent);
+    font-size: 20px;
+    color: var(--color-text-secondary);
+  }
+  .empty {
+    padding: 24px;
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    color: var(--color-text-secondary);
+    text-align: center;
+  }
+  .admin-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .admin-table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .admin-table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+  .title-link {
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+  .title-link:hover { color: var(--color-accent); }
+  .scheduled-date {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #1D4ED8;
+  }
+  .admin-table td:last-child {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+</style>

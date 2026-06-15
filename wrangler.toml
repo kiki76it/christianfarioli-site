@@ -1,0 +1,37 @@
+# wrangler.toml
+# Cloudflare Pages configuration for the Insights platform.
+#
+# This file is read by `wrangler pages` commands (local dev with `wrangler dev`)
+# and serves as a reference for the Pages dashboard settings. The actual
+# production deploys happen via the Cloudflare Git integration — wrangler.toml
+# is mostly for the local `functions/` environment.
+#
+# Docs: https://developers.cloudflare.com/pages/functions/wrangler-configuration/
+
+name = "christianfarioli-insights"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "./dist"
+
+# ----------------------------------------------------------------------------
+# Environment variables (synced to the Pages dashboard automatically when you
+# run `wrangler pages secret put NAME`).
+# ----------------------------------------------------------------------------
+# Secrets (set with `wrangler pages secret put ADMIN_PASSWORD`):
+#   ADMIN_PASSWORD   required for /admin/* basic auth
+#
+# Plain vars (set in dashboard):
+#   ADMIN_USERNAME                default: "admin"
+#   PUBLIC_SITE_URL               e.g. "https://christianfarioli.com/insights"
+#   PUBLIC_BASE_PATH              e.g. "/insights"  (matches astro.config.mjs base)
+#
+# ----------------------------------------------------------------------------
+# Local dev secrets — use .dev.vars (gitignored), NOT this file.
+# See .dev.vars.example for the template.
+# ----------------------------------------------------------------------------
+
+# Optional: scheduled triggers. Uncomment to enable.
+# [triggers]
+# crons = ["0 8 * * 1"]  # every Monday 8am UTC
+
+# Optional: compatibility flags for newer runtime features.
+# compatibility_flags = ["nodejs_compat"]

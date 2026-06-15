@@ -1,0 +1,13 @@
+---
+// src/pages/index.astro
+// Site root — landing page that doubles as the latest published insights.
+import InsightsLayout from '~/layouts/InsightsLayout.astro';
+import { getCollection } from 'astro:content';
+
+const all = await getCollection('insights');
+---
+<InsightsLayout
+  title="Insights"
+  description="Authority insights on AI strategy, leadership, and the future of work — by Prof. Christian Farioli."
+  entries={all}
+/>

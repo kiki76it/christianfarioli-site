@@ -1,0 +1,33 @@
+---
+// src/pages/insights/[slug].astro
+// Article detail page. Only PUBLISHED (or past-scheduled) entries render publicly.
+// Other statuses 404 here — the admin preview at /admin/preview/[slug] can render any state.
+
+import { getCollection, render } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import ArticleLayout from '~/layouts/ArticleLayout.astro';
+import { isPubliclyVisible } from '~/lib/insights';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const all = await getCollection('insights');
+  // Only public entries get a static page. Drafts/review/scheduled are handled by the admin preview.
+  return all
+    .filter((entry) => isPubliclyVisible(entry))
+    .map((entry) => ({
+      params: { slug: entry.id },
+      props: { entry, all },
+    }));
+};
+
+interface Props {
+  entry: CollectionEntry<'insights'>;
+  all: CollectionEntry<'insights'>[];
+}
+
+const { entry, all } = Astro.props as Props;
+const { Content } = await render(entry);
+---
+<ArticleLayout entry={entry} allEntries={all}>
+  <Content />
+</ArticleLayout>

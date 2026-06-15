@@ -1,0 +1,424 @@
+---
+// src/layouts/ArticleLayout.astro
+// Layout for a single insight article. Includes the executive summary, FAQ, and related.
+
+import BaseLayout from './BaseLayout.astro';
+import { CATEGORY_LABELS } from '~/content.config';
+import { insightHref, resolveRelated, imageSrc, avatarSrc } from '~/lib/insights';
+import { paths, absolute } from '~/lib/links';
+import { statusInfo } from '~/lib/status';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'insights'>;
+  allEntries: CollectionEntry<'insights'>[]; // for resolving related
+  /** When true (e.g. /admin/preview/), do NOT show the published-only header notice. */
+  preview?: boolean;
+}
+
+const { entry, allEntries, preview = false } = Astro.props;
+const data = entry.data;
+const info = statusInfo(data.status);
+const isPublic = data.status === 'published';
+const related = resolveRelated(allEntries, data.related);
+
+const publishedISO = data.publishedAt?.toISOString();
+const updatedISO = data.updatedAt?.toISOString();
+---
+<BaseLayout
+  title={data.title}
+  description={data.description}
+  ogImage={imageSrc(data.featuredImage) || undefined}
+  ogType="article"
+  publishedTime={publishedISO}
+  modifiedTime={updatedISO}
+>
+  {preview && !isPublic && (
+    <div class="preview-banner">
+      <div class="container">
+        <span class={`status-pill ${info.pillClass}`}>{info.label}</span>
+        <span>Preview mode — this article is not yet public.</span>
+      </div>
+    </div>
+  )}
+
+  <article class="article">
+    <header class="article-header">
+      <div class="container">
+        <div class="article-meta-top">
+          <a href={paths.category(data.category)} class="article-category">
+            {CATEGORY_LABELS[data.category]}
+          </a>
+          {!preview && !isPublic && (
+            <span class={`status-pill ${info.pillClass}`}>{info.label}</span>
+          )}
+        </div>
+        <h1>{data.title}</h1>
+        <p class="article-description">{data.description}</p>
+
+        <div class="article-byline">
+          {data.author.avatar && (
+            <img
+              src={avatarSrc(data.author.avatar)}
+              alt={data.author.name}
+              class="author-avatar"
+            />
+          )}
+          <div class="author-meta">
+            <div class="author-name">{data.author.name}</div>
+            {data.author.role && <div class="author-role">{data.author.role}</div>}
+          </div>
+          <div class="article-dates">
+            {data.publishedAt && (
+              <time datetime={data.publishedAt.toISOString()}>
+                Published {data.publishedAt.toLocaleDateString('en-US', {
+                  year: 'numeric', month: 'long', day: 'numeric',
+                })}
+              </time>
+            )}
+            {data.readingTime && <span>· {data.readingTime} min read</span>}
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {data.featuredImage && (
+      <div class="article-hero-image">
+        <div class="container">
+          <img
+            src={imageSrc(data.featuredImage)}
+            alt={data.featuredImageAlt}
+            width={1200}
+            height={675}
+          />
+        </div>
+      </div>
+    )}
+
+    {data.executiveSummary && (
+      <section class="executive-summary">
+        <div class="reading-container">
+          <span class="eyebrow">Executive Summary</span>
+          <p>{data.executiveSummary}</p>
+        </div>
+      </section>
+    )}
+
+    <div class="article-body-wrap">
+      <div class="reading-container">
+        <div class="article-body">
+          <slot />
+        </div>
+
+        {data.keyTakeaways.length > 0 && (
+          <aside class="key-takeaways">
+            <h3>Key Takeaways</h3>
+            <ul>
+              {data.keyTakeaways.map((t) => <li>{t}</li>)}
+            </ul>
+          </aside>
+        )}
+
+        {data.faq.length > 0 && (
+          <section class="faq" aria-labelledby="faq-heading">
+            <h3 id="faq-heading">Frequently Asked Questions</h3>
+            <dl>
+              {data.faq.map((item) => (
+                <details>
+                  <summary>{item.question}</summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </dl>
+          </section>
+        )}
+
+        {data.tags.length > 0 && (
+          <div class="article-tags">
+            <span class="eyebrow">Tags</span>
+            <ul>
+              {data.tags.map((t) => <li>#{t}</li>)}
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
+
+    {related.length > 0 && (
+      <section class="related-insights">
+        <div class="container">
+          <h2>Related Insights</h2>
+          <ul>
+            {related.map((r) => (
+              <li>
+                <a href={insightHref(r)}>
+                  {r.data.featuredImage && (
+                    <img
+                      src={imageSrc(r.data.featuredImage)}
+                      alt={r.data.featuredImageAlt}
+                    />
+                  )}
+                  <div>
+                    <span class="related-category">{CATEGORY_LABELS[r.data.category]}</span>
+                    <h3>{r.data.title}</h3>
+                    <p>{r.data.description}</p>
+                  </div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )}
+  </article>
+</BaseLayout>
+
+<style>
+  .preview-banner {
+    background: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: 12px 0;
+    text-align: center;
+    font-size: 13px;
+  }
+  .preview-banner > div {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .article-header {
+    padding: 64px 0 32px;
+    text-align: center;
+  }
+  .article-meta-top {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .article-category {
+    color: var(--color-accent);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+  }
+  .article-header h1 {
+    font-family: var(--font-accent);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    max-width: 880px;
+    margin: 0 auto 16px;
+  }
+  .article-description {
+    font-size: 20px;
+    line-height: 1.55;
+    color: var(--color-text-secondary);
+    max-width: 720px;
+    margin: 0 auto 32px;
+  }
+  .article-byline {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 100px;
+    text-align: left;
+  }
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .author-name { font-weight: 600; font-size: 14px; }
+  .author-role { font-size: 12px; color: var(--color-text-secondary); }
+  .article-dates {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+  }
+
+  .article-hero-image {
+    margin: 32px 0 48px;
+  }
+  .article-hero-image img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+  }
+
+  .executive-summary {
+    background: var(--color-bg-secondary);
+    padding: 32px 24px;
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-accent);
+    margin: 0 auto 48px;
+    max-width: 720px;
+  }
+  .executive-summary p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .article-body-wrap {
+    padding: 32px 0 64px;
+  }
+
+  .key-takeaways {
+    margin: 48px 0;
+    padding: 32px;
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+  }
+  .key-takeaways h3 {
+    font-family: var(--font-accent);
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+  .key-takeaways ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .key-takeaways li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+  }
+  .key-takeaways li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .faq {
+    margin: 64px 0;
+  }
+  .faq h3 {
+    font-family: var(--font-accent);
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .faq dl {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .faq details {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 4px 20px;
+    transition: border-color 0.2s;
+  }
+  .faq details[open] { border-color: var(--color-accent); }
+  .faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: '+';
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--color-accent);
+  }
+  .faq details[open] summary::after { content: '−'; }
+  .faq details p {
+    margin: 0 0 16px;
+    color: var(--color-text-secondary);
+  }
+
+  .article-tags {
+    margin: 48px 0 0;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-border);
+  }
+  .article-tags ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 12px 0 0;
+  }
+  .article-tags li {
+    padding: 4px 12px;
+    background: var(--color-bg-secondary);
+    border-radius: 100px;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+  }
+
+  .related-insights {
+    background: var(--color-bg-secondary);
+    padding: 64px 0;
+  }
+  .related-insights h2 {
+    font-family: var(--font-accent);
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .related-insights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .related-insights a {
+    display: block;
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  .related-insights a:hover { transform: translateY(-2px); }
+  .related-insights img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  .related-insights div {
+    padding: 20px;
+  }
+  .related-category {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-accent);
+    margin-bottom: 8px;
+  }
+  .related-insights h3 {
+    font-family: var(--font-accent);
+    font-size: 18px;
+    margin: 0 0 8px;
+  }
+  .related-insights p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+</style>
