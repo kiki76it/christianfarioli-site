@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "include": ["/admin/*"],
+  "exclude": [
+    "/_astro/*",
+    "/images/*",
+    "/*.css",
+    "/*.js",
+    "/*.svg",
+    "/*.png",
+    "/*.jpg",
+    "/*.jpeg",
+    "/*.webp",
+    "/*.woff",
+    "/*.woff2",
+    "/favicon.ico",
+    "/robots.txt",
+    "/rss.xml",
+    "/sitemap-index.xml",
+    "/sitemap-0.xml"
+  ]
+}
