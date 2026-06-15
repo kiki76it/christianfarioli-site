@@ -1,0 +1,35 @@
+# public/_redirects
+# Cloudflare Pages rewrite rules for sub-path deploy at /insights/.
+#
+# Background: Astro's `base: '/insights'` makes page-route URLs double-prefixed
+# in the HTML (e.g. <a href="/insights/insights/ai-strategy/foo/">) but
+# generates the actual files at the dist root (dist/insights/ai-strategy/foo/).
+# So we use rewrites to map /insights/insights/* → /insights/* at serving time.
+#
+# Syntax: [source]  [destination]  [status]
+# 200 = internal rewrite (URL stays the same, file content is served)
+
+# Page routes — the platform's "insights" segment collides with the BASE path
+# /insights/insights/<slug>  →  /insights/<slug>
+/insights/insights/*  /insights/:splat  200
+
+# Other page routes
+/insights/category/*  /category/:splat  200
+/insights/admin/*     /admin/:splat     200
+/insights/api/*       /api/:splat       200
+
+# Top-level files at /insights/
+/insights/rss.xml             /rss.xml             200
+/insights/sitemap-index.xml   /sitemap-index.xml   200
+/insights/sitemap-0.xml       /sitemap-0.xml       200
+/insights/favicon.svg         /favicon.svg         200
+/insights/robots.txt          /robots.txt          200
+
+# Static assets
+/insights/_astro/*  /_astro/:splat  200
+/insights/images/*  /images/:splat  200
+
+# Root level /insights/ (the homepage) — Astro places it at dist/index.html
+# A request for /insights/ serves /index.html
+/insights   /   200
+/insights/  /   200

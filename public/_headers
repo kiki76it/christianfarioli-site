@@ -1,0 +1,43 @@
+# public/_headers
+# Cloudflare Pages headers config. Long cache for static assets, no cache for
+# admin, and standard security headers everywhere.
+
+# Static assets — long cache (immutable, content-hashed)
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/*.css
+  Content-Type: text/css; charset=utf-8
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Content-Type: application/javascript; charset=utf-8
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Content-Type: image/svg+xml; charset=utf-8
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Content-Type: image/png
+/*.jpg
+  Content-Type: image/jpeg
+/*.webp
+  Content-Type: image/webp
+
+# Admin area — no caching, no indexing
+/admin/*
+  Cache-Control: no-store, max-age=0
+  X-Robots-Tag: noindex
+
+# Standard security headers everywhere
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

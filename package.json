@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "astro dev --host 0.0.0.0",
     "start": "astro dev --host 0.0.0.0",
-    "build": "astro build",
+    "build": "astro build && node scripts/post-build.mjs",
     "preview": "astro preview --host 0.0.0.0",
     "check": "astro check",
     "validate": "node scripts/validate.mjs",
@@ -16,7 +16,8 @@
     "content:new": "node scripts/new-article.mjs",
     "content:list": "node scripts/list-articles.mjs",
     "cf:dev": "wrangler pages dev ./dist",
-    "cf:tail": "wrangler pages deployment tail"
+    "cf:tail": "wrangler pages deployment tail",
+    "postbuild": "node scripts/post-build.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
