@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "include": ["/admin/*"],
+  "include": ["/", "/insights", "/insights/*", "/admin", "/admin/*", "/category", "/category/*", "/api", "/api/*"],
   "exclude": [
     "/_astro/*",
     "/images/*",
