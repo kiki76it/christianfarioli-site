@@ -33,7 +33,7 @@
 /insights/_astro/*  /_astro/:splat  200
 /insights/images/*  /images/:splat  200
 
-# Root level /insights/ (the homepage) — Astro places it at dist/index.html
-# A request for /insights/ serves /index.html
-/insights   /   200
-/insights/  /   200
+# NOTE: the old "/insights → /" homepage rewrite was removed when the main site
+# moved to the dist root. /insights/ is now served by the Pages Function
+# (functions/_middleware.ts → next()) from the mirrored dist/insights/index.html,
+# so it must NOT be rewritten to "/" (which is now the main site).

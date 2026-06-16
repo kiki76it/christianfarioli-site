@@ -16,8 +16,7 @@
     "content:new": "node scripts/new-article.mjs",
     "content:list": "node scripts/list-articles.mjs",
     "cf:dev": "wrangler pages dev ./dist",
-    "cf:tail": "wrangler pages deployment tail",
-    "postbuild": "node scripts/post-build.mjs"
+    "cf:tail": "wrangler pages deployment tail"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

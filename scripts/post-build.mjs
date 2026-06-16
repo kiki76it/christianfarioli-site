@@ -37,3 +37,17 @@ console.log(`[post-build] Mirroring ${DIST}/ → ${DEST}/`);
 await rm(DEST, { recursive: true, force: true });
 await copyDir(DIST, DEST);
 console.log(`[post-build] Done. /insights/ sub-path is now servable.`);
+
+// ---------------------------------------------------------------------------
+// Overlay the main site onto the dist ROOT, AFTER the /insights mirror exists.
+// Source: main-site/ (index.html, testimonials.html, imgs/, videos/).
+// Result:
+//   dist/index.html          → main site            (christianfarioli.com/)
+//   dist/insights/index.html → Insights homepage    (already mirrored, untouched)
+// The main site is copied last, so its root index.html overwrites the Astro
+// homepage at the root while the Insights copy under dist/insights/ stays intact.
+// ---------------------------------------------------------------------------
+const MAIN_SITE = 'main-site';
+console.log(`[post-build] Overlaying ${MAIN_SITE}/ → ${DIST}/ (main site at root)`);
+await copyDir(MAIN_SITE, DIST);
+console.log('[post-build] Main site overlaid at root. christianfarioli.com/ now serves the main site.');

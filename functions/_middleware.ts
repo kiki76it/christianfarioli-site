@@ -2,25 +2,18 @@
 // Cloudflare Pages Function — runs on EVERY request to the Pages project.
 //
 // Responsibilities:
-//   1. Route /insights/* to the Insights platform (pass through)
-//   2. Gate /insights/admin/* behind HTTP Basic Auth
-//   3. Redirect everything else (i.e. the apex christianfarioli.com/) to the
-//      main site on tqv4jhprd4ud.space.minimax.io
+//   1. Serve the static main site at the root (everything not under /insights/)
+//   2. Route /insights/* to the Insights platform (pass through)
+//   3. Gate /insights/admin/* behind HTTP Basic Auth
 //
 // Credentials (for /admin auth) are stored as Cloudflare Pages env vars:
 //   ADMIN_USERNAME  (default: "admin")
 //   ADMIN_PASSWORD  (required in production)
-//
-// The main-site redirect target can be overridden via the MAIN_SITE_URL env var
-// for future migration flexibility.
 
 interface Env {
   ADMIN_USERNAME?: string;
   ADMIN_PASSWORD?: string;
-  MAIN_SITE_URL?: string;
 }
-
-const MAIN_SITE_DEFAULT = 'https://tqv4jhprd4ud.space.minimax.io';
 
 export const onRequest: PagesFunction<Env> = async (context) => {
   const { request, env, next } = context;
@@ -28,10 +21,11 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   const path = url.pathname;
 
   // ---------------------------------------------------------------------
-  // 1) Main-site redirect — anything that ISN'T the /insights/* namespace
-  //    gets a 302 to the real main site. This makes christianfarioli.com/
-  //    serve the main site while christianfarioli.com/insights/* serves
-  //    this Pages project.
+  // 1) Main site — anything that ISN'T the /insights/* namespace is served
+  //    as a static asset from this Pages project. The main site files live
+  //    at the root of the build output (public/index.html, testimonials.html,
+  //    imgs/, videos/), while the Astro CMS is namespaced under /insights/
+  //    via `base: '/insights'`, so the two never collide.
   // ---------------------------------------------------------------------
   const isInsightsPath =
     path === '/insights' ||
@@ -39,15 +33,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     path.startsWith('/insights/');
 
   if (!isInsightsPath) {
-    const mainSite = env.MAIN_SITE_URL || MAIN_SITE_DEFAULT;
-    const target = mainSite.replace(/\/+$/, '') + path + url.search;
-    // Use a manual Location header instead of Response.redirect() — this
-    // means Cloudflare doesn't wait for the origin to respond before
-    // sending the redirect, avoiding 522 timeouts.
-    return new Response(null, {
-      status: 302,
-      headers: { Location: target },
-    });
+    return next();
   }
 
   // ---------------------------------------------------------------------
