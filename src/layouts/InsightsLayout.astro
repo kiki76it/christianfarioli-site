@@ -1,14 +1,15 @@
 ---
 // src/layouts/InsightsLayout.astro
-// Layout for the /insights index and category pages — site chrome + listing grid.
-// Structure mirrors the original christianfarioli.com/insights.html:
-//   1. Page header (eyebrow + h1 + lede)
-//   2. Category strip
-//   3. "Looking for practical AI resources?" → Future callout panel
-//   4. Featured section (one large card with "Must Read" badge) — only when a featured article exists
-//   5. Latest insights list (compact horizontal rows)
-//   6. Newsletter call-to-action
-//   7. Footer with author bio + nav columns
+// Layout for the /insights index and category pages — editorial magazine design
+// matching the main christianfarioli.com look & feel:
+//   1. Fixed nav (logo + main-site links + Insights active + Work Together CTA)
+//   2. Insights hero (masthead: title + subtitle + live search)
+//   3. Sticky category pill nav (links to category pages)
+//   4. Featured article (2-col) — only when a featured/first article exists
+//   5. Articles grid (3-col cards) — the rest
+//   6. Future callout (light gradient panel)
+//   7. Newsletter (dark)
+//   8. Footer
 
 import BaseLayout from './BaseLayout.astro';
 import { getCollection } from 'astro:content';
@@ -47,664 +48,545 @@ const latest = entries.filter((e) => e.id !== featured?.id);
 
 const categories = INSIGHT_CATEGORIES;
 const currentPath = Astro.url.pathname;
-const articleCount = entries.length;
+
+// Main site lives at the domain root (one level up from /insights).
+const main = paths.mainSite();
+const heroSubtitle =
+  description ??
+  'Expert perspectives on AI strategy, human-centered leadership, and executive education.';
+
+/** Initials for the author avatar fallback (e.g. "Christian Farioli" → "CF"). */
+function initials(name: string): string {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0]?.toUpperCase() ?? '')
+    .join('');
+}
+
+/** Human date label, e.g. "June 2026". */
+function dateLabel(d?: Date): string | null {
+  return d ? d.toLocaleDateString('en-US', { year: 'numeric', month: 'long' }) : null;
+}
 ---
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={heroSubtitle}>
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href={main} class="nav-logo" aria-label="Prof. Christian Farioli — home">
+        <img src="/imgs/logo-dark.png" alt="Prof. Christian Farioli" />
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href={`${main}#positioning`} class="nav-link">About</a>
+        <a href={`${main}#speaking`} class="nav-link">Speaking</a>
+        <a href={paths.home()} class="nav-link active">Insights</a>
+        <a href={`${main}#books`} class="nav-link">Books</a>
+        <a href="/testimonials.html" class="nav-link">Testimonials</a>
+        <a href="https://future.christianfarioli.com" target="_blank" rel="noopener" class="nav-link">Future</a>
+        <a href={`${main}#contact`} class="nav-link">Contact</a>
+        <a href={`${main}#cta`} class="nav-cta">Work Together</a>
+      </div>
+      <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
   <main id="main">
-    <!-- Header -->
-    <section class="page-header">
-      <div class="container">
-        <span class="eyebrow">Insights</span>
-        <h1>Insights</h1>
-        {description && <p class="lede">{description}</p>}
+    <!-- Hero masthead -->
+    <section class="insights-hero">
+      <div class="insights-hero-inner">
+        <div class="insights-masthead">
+          <div>
+            <h1 class="insights-title">{category ? CATEGORY_LABELS[category] : 'Insights'}</h1>
+            <p class="insights-subtitle">{heroSubtitle}</p>
+          </div>
+          <div class="search-container">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="M21 21l-4.35-4.35"></path>
+            </svg>
+            <label for="searchInput" class="sr-only">Search insights</label>
+            <input type="text" class="search-input" placeholder="Search insights..." id="searchInput" autocomplete="off" />
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Category strip -->
-    <nav class="category-strip" aria-label="Categories">
-      <div class="container">
-        <ul>
-          <li><a href={paths.home()} class:list={[{ active: currentPath === paths.home() }]}>All Insights</a></li>
+    <!-- Category pills -->
+    <nav class="category-nav" aria-label="Categories">
+      <div class="category-inner">
+        <div class="category-scroll">
+          <a href={paths.home()} class:list={["category-btn", { active: currentPath === paths.home() }]}>All</a>
           {categories.map((c) => (
-            <li>
-              <a
-                href={paths.category(c)}
-                class:list={[{ active: currentPath === paths.category(c) }]}
-              >
-                {CATEGORY_LABELS[c]}
-              </a>
-            </li>
+            <a
+              href={paths.category(c)}
+              class:list={["category-btn", { active: currentPath === paths.category(c) }]}
+            >
+              {CATEGORY_LABELS[c]}
+            </a>
           ))}
-          <li>
-            <a href="https://christianfarioli.com#speaking" class="external-pill">Speaking &amp; Conferences</a>
-          </li>
-        </ul>
+        </div>
       </div>
     </nav>
 
-    <!-- Future callout -->
-    <section class="future-callout">
-      <div class="container callout-inner">
-        <div class="callout-text">
-          <h2>Looking for practical AI resources?</h2>
-          <p>
-            <strong>Explore <em>Future</em></strong> for podcasts, frameworks, and weekly AI insights.
-          </p>
-          <p class="muted">
-            Future is Prof. Christian Farioli's companion platform for leaders who want practical AI content between keynotes.
-          </p>
-          <ul class="callout-list">
-            <li>Podcasts</li>
-            <li>Frameworks</li>
-            <li>Community Resources</li>
-            <li>Weekly AI Insights</li>
-          </ul>
-          <a href="https://future.christianfarioli.com" class="btn-primary">Visit Future →</a>
-        </div>
-        <aside class="callout-aside">
-          <div class="callout-tag">Future</div>
-          <div class="callout-domain">future.christianfarioli.com</div>
-          <p class="callout-tagline">Companion platform — practical AI, not keynote takeaways.</p>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Article count -->
-    <section class="results-bar">
-      <div class="container">
-        <h2 class="results-heading">Search Results</h2>
-        <p class="results-count">{articleCount} article{articleCount === 1 ? '' : 's'} found</p>
-      </div>
-    </section>
-
-    <!-- Featured -->
+    <!-- Featured article -->
     {featured && (
-      <section class="featured-section">
-        <div class="container">
-          <h2 class="section-label">Featured</h2>
-          <article class="featured-card">
-            <a href={paths.insights(featured.id)} class="featured-card-link">
-              <div class="featured-card-image">
-                {featured.data.featuredImage && (
-                  <img
-                    src={imageSrc(featured.data.featuredImage)}
-                    alt={featured.data.featuredImageAlt}
-                    loading="lazy"
-                  />
-                )}
-                <span class="must-read-badge">Must Read</span>
-              </div>
-              <div class="featured-card-body">
-                <span class="card-eyebrow">{CATEGORY_LABELS[featured.data.category]}</span>
-                <h3>{featured.data.title}</h3>
-                <p>{featured.data.description}</p>
-                <div class="card-meta">
-                  {featured.data.publishedAt && (
-                    <time datetime={featured.data.publishedAt.toISOString()}>
-                      {featured.data.publishedAt.toLocaleDateString('en-US', {
-                        year: 'numeric', month: 'long',
-                      })}
-                    </time>
-                  )}
-                  {featured.data.readingTime && (
-                    <span class="meta-sep">·</span>
-                  )}
-                  {featured.data.readingTime && (
-                    <span>{featured.data.readingTime} min read</span>
-                  )}
-                </div>
-              </div>
+      <section class="featured-section" id="featuredSection">
+        <div class="featured-inner">
+          <span class="section-label">Featured</span>
+          <article class="featured-article">
+            <a href={paths.insights(featured.id)} class="featured-image" aria-label={featured.data.title}>
+              {featured.data.featuredImage && (
+                <img src={imageSrc(featured.data.featuredImage)} alt={featured.data.featuredImageAlt} loading="lazy" />
+              )}
+              <span class="featured-badge">Must Read</span>
             </a>
+            <div class="featured-content">
+              <span class="featured-category">{CATEGORY_LABELS[featured.data.category]}</span>
+              <h2 class="featured-title"><a href={paths.insights(featured.id)}>{featured.data.title}</a></h2>
+              <p class="featured-excerpt">{featured.data.description}</p>
+              <div class="featured-meta">
+                {dateLabel(featured.data.publishedAt) && <span>{dateLabel(featured.data.publishedAt)}</span>}
+                {featured.data.readingTime && (
+                  <span>
+                    <svg class="read-time-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline>
+                    </svg>
+                    {featured.data.readingTime} min read
+                  </span>
+                )}
+              </div>
+            </div>
           </article>
         </div>
       </section>
     )}
 
-    <!-- Latest insights list -->
-    {latest.length > 0 && (
-      <section class="latest-section">
-        <div class="container">
-          <h2 class="section-label">Latest Insights</h2>
-          <ul class="latest-list">
+    <!-- Articles grid -->
+    <section class="articles-section">
+      <div class="articles-inner">
+        <div class="search-results-header" id="searchHeader" hidden>
+          <p class="search-results-count" id="searchCount"></p>
+        </div>
+        {latest.length > 0 ? (
+          <div class="articles-grid" id="articlesGrid">
             {latest.map((entry) => (
-              <li class="latest-item">
-                <a href={paths.insights(entry.id)} class="latest-link">
-                  <div class="latest-thumb">
-                    {entry.data.featuredImage && (
-                      <img
-                        src={imageSrc(entry.data.featuredImage)}
-                        alt={entry.data.featuredImageAlt}
-                        loading="lazy"
-                      />
+              <article
+                class="article-card"
+                data-search={`${entry.data.title} ${CATEGORY_LABELS[entry.data.category]} ${entry.data.description ?? ''}`}
+              >
+                <a href={paths.insights(entry.id)} class="article-card-image" aria-label={entry.data.title}>
+                  {entry.data.featuredImage && (
+                    <img src={imageSrc(entry.data.featuredImage)} alt={entry.data.featuredImageAlt} loading="lazy" />
+                  )}
+                  <span class="article-card-category">{CATEGORY_LABELS[entry.data.category]}</span>
+                </a>
+                <div class="article-card-content">
+                  <h3 class="article-card-title"><a href={paths.insights(entry.id)}>{entry.data.title}</a></h3>
+                  <p class="article-card-excerpt">{entry.data.description}</p>
+                  <div class="article-card-footer">
+                    <div class="article-card-author">
+                      <span class="author-avatar-small">
+                        {entry.data.author.avatar
+                          ? <img src={avatarSrc(entry.data.author.avatar)} alt={entry.data.author.name} loading="lazy" />
+                          : initials(entry.data.author.name)}
+                      </span>
+                      <span class="author-name">{entry.data.author.name}</span>
+                    </div>
+                    {entry.data.readingTime && (
+                      <span class="read-time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                          <circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        {entry.data.readingTime} min
+                      </span>
                     )}
                   </div>
-                  <div class="latest-body">
-                    <span class="card-eyebrow">{CATEGORY_LABELS[entry.data.category]}</span>
-                    <h3>{entry.data.title}</h3>
-                    <div class="card-meta card-meta-row">
-                      {entry.data.author.avatar && (
-                        <span class="meta-avatar">
-                          <img
-                            src={avatarSrc(entry.data.author.avatar)}
-                            alt={entry.data.author.name}
-                            loading="lazy"
-                          />
-                        </span>
-                      )}
-                      <span class="meta-author">{entry.data.author.name}</span>
-                      {entry.data.readingTime && (
-                        <>
-                          <span class="meta-sep">·</span>
-                          <span>{entry.data.readingTime} min</span>
-                        </>
-                      )}
-                    </div>
-                  </div>
-                </a>
-              </li>
+                </div>
+              </article>
             ))}
-          </ul>
+          </div>
+        ) : (
+          <p class="empty-state">No insights in this category yet — check back soon.</p>
+        )}
+        <div class="no-results" id="noResults" hidden>
+          <h3>No matching insights</h3>
+          <p>Try a different search term or browse by category above.</p>
         </div>
-      </section>
-    )}
+      </div>
+    </section>
+
+    <!-- Future callout -->
+    <section class="future-callout">
+      <div class="future-callout-wrap">
+        <div class="future-callout-inner">
+          <div class="future-callout-text">
+            <span class="future-callout-eyebrow">Looking for practical AI resources?</span>
+            <h2 class="future-callout-title">Explore <em>Future</em> for podcasts, frameworks, and weekly AI insights.</h2>
+            <p class="future-callout-desc">Future is Prof. Christian Farioli's companion platform for leaders who want practical AI content between keynotes.</p>
+            <ul class="future-callout-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Podcasts</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Frameworks</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Community Resources</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Weekly AI Insights</li>
+            </ul>
+            <a href="https://future.christianfarioli.com" target="_blank" rel="noopener" class="btn-primary">
+              Visit Future
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </a>
+          </div>
+          <div class="future-callout-card">
+            <div class="future-callout-card-tag">Future</div>
+            <div class="future-callout-card-domain">future.christianfarioli.com</div>
+            <p class="future-callout-card-tagline">Companion platform — practical AI, not keynote takeaways.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Newsletter -->
-    <section class="newsletter">
-      <div class="container newsletter-inner">
-        <div class="newsletter-text">
-          <h2>Newsletter</h2>
-          <p class="newsletter-headline">Stay Ahead of the AI Curve</p>
-          <p class="newsletter-sub">
-            Join executives and leaders receiving weekly insights on AI strategy, leadership, and the future of work.
-          </p>
-        </div>
+    <section class="newsletter-section">
+      <div class="newsletter-inner">
+        <span class="newsletter-label">Newsletter</span>
+        <h2 class="newsletter-title">Stay Ahead of the AI Curve</h2>
+        <p class="newsletter-desc">Join executives and leaders receiving weekly insights on AI strategy, leadership, and the future of work.</p>
         <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓';">
           <label for="newsletter-email" class="sr-only">Email address</label>
-          <input id="newsletter-email" type="email" placeholder="you@company.com" required />
-          <button type="submit" class="btn-primary">Subscribe</button>
+          <input id="newsletter-email" type="email" class="newsletter-input" placeholder="Enter your email" required />
+          <button type="submit" class="newsletter-btn">Subscribe</button>
         </form>
       </div>
     </section>
   </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Prof. Christian Farioli</h3>
+          <p>AI strategist, educator, speaker, author, and advisor helping leaders navigate artificial intelligence with clarity and strategic thinking.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href={`${main}#positioning`}>About</a></li>
+            <li><a href={`${main}#speaking`}>Speaking</a></li>
+            <li><a href={paths.home()}>Insights</a></li>
+            <li><a href={`${main}#books`}>Books</a></li>
+            <li><a href="/testimonials.html">Testimonials</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href={paths.home()}>Insights</a></li>
+            <li><a href="https://future.christianfarioli.com" target="_blank" rel="noopener">Future</a></li>
+            <li><a href="https://future.christianfarioli.com/podcast" target="_blank" rel="noopener">Podcast</a></li>
+            <li><a href="https://future.christianfarioli.com/newsletter" target="_blank" rel="noopener">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Categories</h4>
+          <ul>
+            {categories.slice(0, 4).map((c) => (
+              <li><a href={paths.category(c)}>{CATEGORY_LABELS[c]}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://linkedin.com/in/christianfarioli" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href={`${main}#contact`}>Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copyright">© {new Date().getFullYear()} Prof. Christian Farioli. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href={`${main}#contact`}>Contact</a>
+          <a href="https://future.christianfarioli.com" target="_blank" rel="noopener">Future</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </BaseLayout>
 
+<script is:inline>
+  // Mobile nav toggle
+  (function () {
+    var t = document.getElementById('navToggle');
+    var l = document.getElementById('navLinks');
+    if (t && l) t.addEventListener('click', function () { t.classList.toggle('active'); l.classList.toggle('active'); });
+
+    // Nav shadow on scroll
+    var nav = document.getElementById('mainNav');
+    function onScroll() { if (nav) nav.classList.toggle('scrolled', window.scrollY > 8); }
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+    // Live client-side search over the cards on this page
+    var input = document.getElementById('searchInput');
+    var grid = document.getElementById('articlesGrid');
+    var featuredSec = document.getElementById('featuredSection');
+    var header = document.getElementById('searchHeader');
+    var count = document.getElementById('searchCount');
+    var noResults = document.getElementById('noResults');
+    if (input && grid) {
+      var cards = Array.prototype.slice.call(grid.querySelectorAll('.article-card'));
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toLowerCase();
+        if (!q) {
+          cards.forEach(function (c) { c.style.display = ''; });
+          if (featuredSec) featuredSec.style.display = '';
+          if (header) header.hidden = true;
+          if (noResults) noResults.hidden = true;
+          return;
+        }
+        if (featuredSec) featuredSec.style.display = 'none';
+        var n = 0;
+        cards.forEach(function (c) {
+          var hay = (c.getAttribute('data-search') || '').toLowerCase();
+          var show = hay.indexOf(q) !== -1;
+          c.style.display = show ? '' : 'none';
+          if (show) n++;
+        });
+        if (header) { header.hidden = false; }
+        if (count) { count.textContent = n + ' result' + (n === 1 ? '' : 's') + ' for "' + input.value + '"'; }
+        if (noResults) noResults.hidden = n !== 0;
+      });
+    }
+  })();
+</script>
+
 <style>
-  /* ===========================================================
-     Brand tokens (locally defined; match BaseLayout for site)
-     =========================================================== */
   :root {
-    --color-bg-primary: #fafaf8;
-    --color-bg-secondary: #f0ede8;
-    --color-text-primary: #1a1a1a;
-    --color-text-secondary: #5a5a5a;
-    --color-border: #e0ddd6;
-    --color-white: #ffffff;
-    --color-accent: #c8302f;
-    --color-accent-hover: #a82524;
-    --color-callout-bg: #0a3d4a;
-    --color-callout-text: #ffffff;
-    --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --color-bg-primary: #FAFAF8;
+    --color-bg-secondary: #F5F4F0;
+    --color-bg-dark: #1A1A1A;
+    --color-text-primary: #0D0D0D;
+    --color-text-secondary: #6B6B6B;
+    --color-text-light: #F5F4F0;
+    --color-accent: #CC0000;
+    --color-accent-hover: #A30000;
+    --color-border: #E8E7E3;
+    --color-white: #FFFFFF;
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-accent: 'Playfair Display', Georgia, serif;
-    --radius-md: 8px;
-    --radius-lg: 16px;
+    --space-xs: 8px; --space-sm: 16px; --space-md: 24px; --space-lg: 32px;
+    --space-xl: 48px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 128px;
+    --max-width: 1200px; --nav-height: 72px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  :global(body) {
+    font-family: var(--font-primary);
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+  }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-  /* ===========================================================
-     Page header
-     =========================================================== */
-  .page-header {
-    padding: 80px 0 48px;
-    text-align: center;
-    background: var(--color-bg-primary);
+  /* Navigation */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000;
+    background: rgba(250, 250, 248, 0.95); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--color-border); transition: box-shadow 0.4s var(--ease);
   }
-  .eyebrow {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--color-accent);
-    margin-bottom: 16px;
+  .nav.scrolled { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+  .nav-inner {
+    max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-lg); height: 100%;
+    display: flex; align-items: center; justify-content: space-between;
   }
-  .page-header h1 {
-    font-family: var(--font-accent);
-    font-size: clamp(40px, 6vw, 72px);
-    font-weight: 500;
-    letter-spacing: -0.025em;
-    line-height: 1.05;
-    margin: 0 0 16px;
-    color: var(--color-text-primary);
+  .nav-logo { display: inline-flex; align-items: center; }
+  .nav-logo img { height: 36px; width: auto; }
+  .nav-links { display: flex; align-items: center; gap: var(--space-lg); }
+  .nav-link {
+    color: var(--color-text-primary); text-decoration: none; font-size: 14px; font-weight: 500;
+    transition: color 0.3s ease; position: relative;
   }
-  .lede {
-    font-size: 18px;
-    line-height: 1.6;
-    color: var(--color-text-secondary);
-    max-width: 720px;
-    margin: 0 auto;
+  .nav-link::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px;
+    background: var(--color-accent); transition: width 0.4s var(--ease);
   }
+  .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+  .nav-cta {
+    background: var(--color-text-primary); color: var(--color-white) !important;
+    padding: var(--space-xs) var(--space-md); border-radius: 6px; transition: background 0.3s var(--ease);
+    font-size: 14px; font-weight: 500; text-decoration: none;
+  }
+  .nav-cta:hover { background: var(--color-accent); }
+  .nav-mobile-toggle {
+    display: none; flex-direction: column; justify-content: center; gap: 5px;
+    width: 32px; height: 32px; cursor: pointer; background: none; border: none; padding: 0;
+  }
+  .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--color-text-primary); transition: all 0.3s ease; margin: 0 auto; }
+  .nav-mobile-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-mobile-toggle.active span:nth-child(2) { opacity: 0; }
+  .nav-mobile-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-  /* ===========================================================
-     Category strip
-     =========================================================== */
-  .category-strip {
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-    padding: 18px 0;
-    background: var(--color-white);
-    position: sticky;
-    top: 0;
-    z-index: 10;
+  /* Hero */
+  .insights-hero {
+    padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-2xl);
+    background: linear-gradient(to bottom, var(--color-bg-secondary), var(--color-bg-primary));
   }
-  .category-strip ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
+  .insights-hero-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-lg); }
+  .insights-masthead { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-xl); }
+  .insights-title { font-family: var(--font-accent); font-size: clamp(36px, 5vw, 56px); font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; margin: 0; }
+  .insights-subtitle { font-size: 18px; color: var(--color-text-secondary); max-width: 600px; margin: var(--space-sm) 0 0; line-height: 1.7; }
+  .search-container { position: relative; width: 100%; max-width: 360px; flex-shrink: 0; }
+  .search-input {
+    width: 100%; padding: var(--space-sm) var(--space-md) var(--space-sm) 48px;
+    border: 1.5px solid var(--color-border); border-radius: 8px; font-size: 15px; font-family: var(--font-primary);
+    background: var(--color-white); transition: all 0.3s var(--ease);
   }
-  .category-strip a {
-    display: inline-block;
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 100px;
-    color: var(--color-text-secondary);
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-  .category-strip a:hover {
-    color: var(--color-text-primary);
-    background: var(--color-bg-secondary);
-  }
-  .category-strip a.active {
-    color: var(--color-white);
-    background: var(--color-text-primary);
-  }
-  .category-strip a.external-pill {
-    border: 1px solid var(--color-border);
-  }
+  .search-input:focus { outline: none; border-color: var(--color-accent); box-shadow: 0 0 0 4px rgba(204,0,0,0.1); }
+  .search-icon { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; color: var(--color-text-secondary); }
 
-  /* ===========================================================
-     Future callout
-     =========================================================== */
-  .future-callout {
-    padding: 64px 0;
-    background: var(--color-bg-primary);
+  /* Category pills */
+  .category-nav {
+    padding: var(--space-md) 0; border-bottom: 1px solid var(--color-border); position: sticky; top: var(--nav-height);
+    background: rgba(250, 250, 248, 0.95); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); z-index: 100;
   }
-  .callout-inner {
-    background: var(--color-callout-bg);
-    color: var(--color-callout-text);
-    border-radius: var(--radius-lg);
-    padding: 48px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 48px;
-    align-items: center;
+  .category-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-lg); }
+  .category-scroll { display: flex; gap: var(--space-xs); overflow-x: auto; scrollbar-width: none; padding-bottom: var(--space-xs); }
+  .category-scroll::-webkit-scrollbar { display: none; }
+  .category-btn {
+    padding: var(--space-xs) var(--space-md); border: 1.5px solid transparent; background: transparent;
+    border-radius: 100px; font-size: 14px; font-weight: 500; color: var(--color-text-secondary);
+    white-space: nowrap; text-decoration: none; transition: all 0.3s var(--ease);
   }
-  .callout-text h2 {
-    font-family: var(--font-accent);
-    font-size: 28px;
-    font-weight: 500;
-    margin: 0 0 16px;
-    line-height: 1.25;
-  }
-  .callout-text p {
-    margin: 0 0 12px;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-  .callout-text .muted {
-    color: rgba(255, 255, 255, 0.75);
-    margin-bottom: 20px;
-  }
-  .callout-text em {
-    font-family: var(--font-accent);
-    font-style: italic;
-    color: #b8e0c2;
-  }
-  .callout-list {
-    list-style: none;
-    margin: 0 0 24px;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 24px;
-  }
-  .callout-list li {
-    position: relative;
-    padding-left: 20px;
-    font-size: 15px;
-  }
-  .callout-list li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: #b8e0c2;
-    font-weight: 700;
-  }
-  .callout-aside {
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    padding-left: 32px;
-  }
-  .callout-tag {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: #b8e0c2;
-    margin-bottom: 8px;
-  }
-  .callout-domain {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 12px;
-  }
-  .callout-tagline {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
-    margin: 0;
-  }
+  .category-btn:hover { color: var(--color-text-primary); border-color: var(--color-border); }
+  .category-btn.active { background: var(--color-text-primary); color: var(--color-white); border-color: var(--color-text-primary); }
 
-  /* ===========================================================
-     Buttons
-     =========================================================== */
-  .btn-primary {
-    display: inline-block;
-    background: var(--color-accent);
-    color: var(--color-white);
-    padding: 12px 24px;
-    border-radius: 100px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .btn-primary:hover {
-    background: var(--color-accent-hover);
-  }
-  .callout-text .btn-primary {
-    background: #b8e0c2;
-    color: #0a3d4a;
-  }
-  .callout-text .btn-primary:hover {
-    background: #a5d4b0;
-  }
+  /* Section label */
+  .section-label { display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-accent); margin-bottom: var(--space-md); }
 
-  /* ===========================================================
-     Results bar
-     =========================================================== */
-  .results-bar {
-    padding: 32px 0 16px;
-    background: var(--color-white);
-  }
-  .results-heading {
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--color-text-secondary);
-    margin: 0 0 4px;
-  }
-  .results-count {
-    font-size: 14px;
-    color: var(--color-text-secondary);
-    margin: 0;
-  }
+  /* Featured */
+  .featured-section { padding: var(--space-3xl) 0; }
+  .featured-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-lg); }
+  .featured-article { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-2xl); align-items: center; }
+  .featured-image { position: relative; display: block; border-radius: 16px; overflow: hidden; aspect-ratio: 16/10; background: var(--color-bg-secondary); }
+  .featured-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
+  .featured-article:hover .featured-image img { transform: scale(1.03); }
+  .featured-badge { position: absolute; top: var(--space-md); left: var(--space-md); background: var(--color-accent); color: var(--color-white); padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+  .featured-content { padding: var(--space-lg) 0; }
+  .featured-category { display: inline-block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent); margin-bottom: var(--space-sm); }
+  .featured-title { font-family: var(--font-accent); font-size: clamp(28px, 3.5vw, 40px); font-weight: 500; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 var(--space-md); }
+  .featured-title a { color: var(--color-text-primary); text-decoration: none; transition: color 0.3s ease; }
+  .featured-title a:hover { color: var(--color-accent); }
+  .featured-excerpt { font-size: 18px; line-height: 1.7; color: var(--color-text-secondary); margin: 0 0 var(--space-lg); }
+  .featured-meta { display: flex; align-items: center; gap: var(--space-md); font-size: 14px; color: var(--color-text-secondary); }
+  .featured-meta span { display: flex; align-items: center; gap: 6px; }
+  .read-time-icon { width: 16px; height: 16px; }
 
-  /* ===========================================================
-     Section labels (Featured, Latest Insights)
-     =========================================================== */
-  .section-label {
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--color-text-secondary);
-    margin: 0 0 24px;
-  }
+  /* Articles grid */
+  .articles-section { padding: var(--space-2xl) 0 var(--space-4xl); background: var(--color-bg-secondary); }
+  .articles-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-lg); }
+  .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-xl); }
+  .article-card { background: var(--color-white); border-radius: 16px; overflow: hidden; border: 1px solid var(--color-border); transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+  .article-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+  .article-card-image { position: relative; display: block; overflow: hidden; aspect-ratio: 16/10; background: var(--color-bg-secondary); }
+  .article-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
+  .article-card:hover .article-card-image img { transform: scale(1.05); }
+  .article-card-category { position: absolute; bottom: var(--space-sm); left: var(--space-sm); background: var(--color-white); padding: 6px 12px; border-radius: 6px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-primary); }
+  .article-card-content { padding: var(--space-lg); }
+  .article-card-title { font-family: var(--font-accent); font-size: 22px; font-weight: 500; line-height: 1.3; margin: 0 0 var(--space-sm); }
+  .article-card-title a { color: var(--color-text-primary); text-decoration: none; transition: color 0.3s ease; }
+  .article-card-title a:hover { color: var(--color-accent); }
+  .article-card-excerpt { font-size: 15px; line-height: 1.6; color: var(--color-text-secondary); margin: 0 0 var(--space-md); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .article-card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: var(--space-md); border-top: 1px solid var(--color-border); }
+  .article-card-author { display: flex; align-items: center; gap: var(--space-sm); }
+  .author-avatar-small { width: 32px; height: 32px; border-radius: 50%; overflow: hidden; background: var(--color-bg-secondary); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: var(--color-text-primary); flex-shrink: 0; }
+  .author-avatar-small img { width: 100%; height: 100%; object-fit: cover; }
+  .author-name { font-size: 13px; font-weight: 600; color: var(--color-text-primary); }
+  .read-time { font-size: 13px; color: var(--color-text-secondary); display: flex; align-items: center; gap: 4px; }
+  .read-time svg { width: 14px; height: 14px; }
+  .empty-state { color: var(--color-text-secondary); font-size: 16px; }
 
-  /* ===========================================================
-     Featured card (big horizontal)
-     =========================================================== */
-  .featured-section {
-    padding: 32px 0 64px;
-    background: var(--color-white);
-  }
-  .featured-card {
-    background: var(--color-bg-primary);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .featured-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-  }
-  .featured-card-link {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-decoration: none;
-    color: inherit;
-  }
-  .featured-card-image {
-    position: relative;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    background: var(--color-bg-secondary);
-  }
-  .featured-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .must-read-badge {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    background: var(--color-accent);
-    color: var(--color-white);
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 6px 12px;
-    border-radius: 100px;
-  }
-  .featured-card-body {
-    padding: 40px 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .card-eyebrow {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--color-accent);
-    margin-bottom: 12px;
-  }
-  .featured-card-body h3 {
-    font-family: var(--font-accent);
-    font-size: clamp(24px, 3vw, 32px);
-    font-weight: 600;
-    line-height: 1.2;
-    margin: 0 0 16px;
-    color: var(--color-text-primary);
-  }
-  .featured-card-body p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--color-text-secondary);
-    margin: 0 0 20px;
-  }
-  .card-meta {
-    display: flex;
-    gap: 4px;
-    align-items: center;
-    font-size: 13px;
-    color: var(--color-text-secondary);
-  }
-  .card-meta time, .card-meta span { display: inline-block; }
-  .meta-sep { margin: 0 6px; }
+  /* Search results header / no-results */
+  .search-results-header { margin-bottom: var(--space-lg); }
+  .search-results-count { color: var(--color-text-secondary); font-size: 14px; }
+  .no-results { text-align: center; padding: var(--space-3xl) 0; }
+  .no-results h3 { font-size: 24px; margin: 0 0 var(--space-sm); font-family: var(--font-accent); font-weight: 500; }
+  .no-results p { color: var(--color-text-secondary); margin: 0; }
 
-  /* ===========================================================
-     Latest list (compact horizontal rows)
-     =========================================================== */
-  .latest-section {
-    padding: 32px 0 64px;
-    background: var(--color-bg-primary);
+  /* Future callout */
+  .future-callout { padding: var(--space-3xl) 0 var(--space-xl); background: var(--color-bg-primary); }
+  .future-callout-wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-lg); }
+  .future-callout-inner {
+    display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-2xl); align-items: center;
+    background: linear-gradient(135deg, var(--color-white) 0%, var(--color-bg-secondary) 100%);
+    border: 1px solid var(--color-border); border-radius: 20px; padding: var(--space-2xl); position: relative; overflow: hidden;
   }
-  .latest-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .latest-item {
-    border-top: 1px solid var(--color-border);
-  }
-  .latest-item:last-child {
-    border-bottom: 1px solid var(--color-border);
-  }
-  .latest-link {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 24px;
-    padding: 24px 0;
-    text-decoration: none;
-    color: inherit;
-    transition: background 0.2s;
-  }
-  .latest-link:hover {
-    background: rgba(200, 48, 47, 0.03);
-  }
-  .latest-link:hover h3 { color: var(--color-accent); }
-  .latest-thumb {
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    border-radius: var(--radius-md);
-    background: var(--color-bg-secondary);
-  }
-  .latest-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .latest-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .latest-body h3 {
-    font-family: var(--font-accent);
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1.3;
-    margin: 0 0 12px;
-    color: var(--color-text-primary);
-    transition: color 0.2s;
-  }
-  .card-meta-row { margin-top: 4px; }
-  .meta-avatar {
-    display: inline-flex;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: var(--color-bg-secondary);
-    margin-right: 8px;
-  }
-  .meta-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .meta-author { font-weight: 500; color: var(--color-text-primary); }
+  .future-callout-inner::before { content: ''; position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(204,0,0,0.06) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+  .future-callout-eyebrow { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--color-accent); margin-bottom: var(--space-sm); }
+  .future-callout-title { font-family: var(--font-accent); font-size: clamp(24px, 3vw, 34px); font-weight: 500; color: var(--color-text-primary); line-height: 1.2; margin: 0 0 var(--space-md); }
+  .future-callout-title em { font-style: italic; color: var(--color-accent); }
+  .future-callout-desc { font-size: 16px; color: var(--color-text-secondary); line-height: 1.65; margin: 0 0 var(--space-lg); }
+  .future-callout-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px var(--space-lg); margin: 0 0 var(--space-lg); padding: 0; }
+  .future-callout-list li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--color-text-primary); font-weight: 500; }
+  .future-callout-list svg { width: 16px; height: 16px; color: var(--color-accent); flex-shrink: 0; }
+  .future-callout-card { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 16px; padding: var(--space-xl); box-shadow: 0 12px 32px rgba(0,0,0,0.05); position: relative; z-index: 1; }
+  .future-callout-card-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-accent); margin-bottom: var(--space-xs); }
+  .future-callout-card-domain { font-size: 18px; font-weight: 600; margin-bottom: var(--space-sm); }
+  .future-callout-card-tagline { color: var(--color-text-secondary); font-size: 14px; margin: 0; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--color-accent); color: var(--color-white); padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background 0.3s var(--ease); }
+  .btn-primary:hover { background: var(--color-accent-hover); }
+  .btn-primary svg { width: 16px; height: 16px; }
 
-  /* ===========================================================
-     Newsletter
-     =========================================================== */
-  .newsletter {
-    padding: 80px 0;
-    background: var(--color-text-primary);
-    color: var(--color-white);
-  }
-  .newsletter-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: center;
-  }
-  .newsletter-text h2 {
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--color-accent);
-    margin: 0 0 16px;
-  }
-  .newsletter-headline {
-    font-family: var(--font-accent);
-    font-size: clamp(28px, 4vw, 40px);
-    font-weight: 500;
-    line-height: 1.15;
-    margin: 0 0 12px;
-  }
-  .newsletter-sub {
-    font-size: 16px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.75);
-    margin: 0;
-  }
-  .newsletter-form {
-    display: flex;
-    gap: 8px;
-  }
-  .newsletter-form input {
-    flex: 1;
-    padding: 14px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--color-white);
-    border-radius: 100px;
-    font-size: 15px;
-    outline: none;
-  }
-  .newsletter-form input::placeholder { color: rgba(255, 255, 255, 0.5); }
-  .newsletter-form input:focus {
-    border-color: var(--color-accent);
-    background: rgba(255, 255, 255, 0.08);
-  }
+  /* Newsletter */
+  .newsletter-section { padding: var(--space-4xl) 0; background: var(--color-bg-dark); color: var(--color-white); }
+  .newsletter-inner { max-width: 700px; margin: 0 auto; padding: 0 var(--space-lg); text-align: center; }
+  .newsletter-label { display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-accent); margin-bottom: var(--space-md); }
+  .newsletter-title { font-family: var(--font-accent); font-size: clamp(32px, 4vw, 48px); font-weight: 500; letter-spacing: -0.02em; margin: 0 0 var(--space-md); }
+  .newsletter-desc { font-size: 18px; color: rgba(255,255,255,0.7); margin: 0 0 var(--space-xl); line-height: 1.7; }
+  .newsletter-form { display: flex; gap: var(--space-sm); max-width: 500px; margin: 0 auto; }
+  .newsletter-input { flex: 1; padding: var(--space-sm) var(--space-md); background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: var(--color-white); font-size: 15px; font-family: var(--font-primary); }
+  .newsletter-input::placeholder { color: rgba(255,255,255,0.5); }
+  .newsletter-input:focus { outline: none; border-color: var(--color-accent); }
+  .newsletter-btn { padding: var(--space-sm) var(--space-xl); background: var(--color-accent); border: none; border-radius: 8px; color: var(--color-white); font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.3s var(--ease); }
+  .newsletter-btn:hover { background: var(--color-accent-hover); transform: translateY(-2px); }
 
-  /* ===========================================================
-     Responsive
-     =========================================================== */
-  @media (max-width: 900px) {
-    .callout-inner { grid-template-columns: 1fr; padding: 32px; }
-    .callout-aside { border-left: none; border-top: 1px solid rgba(255,255,255,0.2); padding-left: 0; padding-top: 24px; }
-    .featured-card-link { grid-template-columns: 1fr; }
-    .featured-card-image { aspect-ratio: 16/9; }
-    .featured-card-body { padding: 32px 24px; }
-    .latest-link { grid-template-columns: 120px 1fr; gap: 16px; }
-    .newsletter-inner { grid-template-columns: 1fr; gap: 32px; }
+  /* Footer */
+  .footer { background: var(--color-bg-dark); color: var(--color-white); padding: var(--space-3xl) 0 var(--space-xl); }
+  .footer-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-lg); }
+  .footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1.2fr; gap: var(--space-lg); padding-bottom: var(--space-2xl); border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .footer-brand h3 { font-size: 20px; font-weight: 600; margin: 0 0 var(--space-sm); }
+  .footer-brand p { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.6; max-width: 300px; margin: 0; }
+  .footer-links h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); margin: 0 0 var(--space-md); }
+  .footer-links ul { list-style: none; margin: 0; padding: 0; }
+  .footer-links li { margin-bottom: var(--space-xs); }
+  .footer-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; transition: color 0.3s ease; }
+  .footer-links a:hover { color: var(--color-white); }
+  .footer-bottom { padding-top: var(--space-xl); display: flex; justify-content: space-between; align-items: center; }
+  .footer-copyright { font-size: 13px; color: rgba(255,255,255,0.4); }
+  .footer-legal { display: flex; gap: var(--space-md); }
+  .footer-legal a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s ease; }
+  .footer-legal a:hover { color: rgba(255,255,255,0.7); }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,250,248,0.98); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); flex-direction: column; align-items: flex-start; padding: 24px var(--space-lg); gap: 18px; box-shadow: 0 16px 48px rgba(0,0,0,0.12); border-top: 1px solid var(--color-border); }
+    .nav-links.active { display: flex; }
+    .nav-mobile-toggle { display: flex; }
+    .insights-masthead { flex-direction: column; align-items: flex-start; gap: var(--space-lg); }
+    .search-container { max-width: 100%; }
+    .featured-article { grid-template-columns: 1fr; gap: var(--space-lg); }
+    .featured-content { padding: 0; }
+    .articles-grid { grid-template-columns: repeat(2, 1fr); }
+    .future-callout-inner { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
   }
-  @media (max-width: 600px) {
-    .page-header { padding: 60px 0 32px; }
-    .category-strip ul { gap: 4px; }
-    .category-strip a { padding: 6px 12px; font-size: 13px; }
-    .callout-list { grid-template-columns: 1fr; }
-    .latest-link { grid-template-columns: 1fr; }
-    .latest-thumb { aspect-ratio: 16/9; }
+  @media (max-width: 640px) {
+    .articles-grid { grid-template-columns: 1fr; }
+    .newsletter-form { flex-direction: column; }
+    .footer-top { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: var(--space-md); }
+    .future-callout-list { grid-template-columns: 1fr; }
   }
 </style>
