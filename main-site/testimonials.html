@@ -1054,5 +1054,22 @@
             observer.observe(el);
         });
     </script>
+
+    <!-- Give initials-only avatars (people without a photo) a deterministic,
+         tasteful colored background so the testimonial wall looks intentional. -->
+    <script>
+        (function () {
+            var palette = ['#CC0000', '#1A1A1A', '#0A3D4A', '#5B2A86', '#1D6F42', '#9C4221', '#2C5282', '#702459'];
+            document.querySelectorAll('.author-avatar').forEach(function (el) {
+                if (el.querySelector('img')) return; // has a real photo — leave it
+                var text = (el.textContent || '').trim();
+                if (!text) return;
+                var h = 0;
+                for (var i = 0; i < text.length; i++) h = text.charCodeAt(i) + ((h << 5) - h);
+                el.style.background = palette[Math.abs(h) % palette.length];
+                el.style.color = '#ffffff';
+            });
+        })();
+    </script>
 </body>
 </html>
