@@ -1,0 +1,8 @@
+# wrangler.toml for the main site Pages project
+# Overrides the root wrangler.toml which is for the insights platform.
+# This file is read by the `christianfarioli-main` Pages project when
+# root_dir is set to `main-site/` in the dashboard.
+
+name = "christianfarioli-main"
+pages_build_output_dir = "."
+compatibility_date = "2025-01-01"
