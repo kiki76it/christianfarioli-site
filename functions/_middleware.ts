@@ -71,7 +71,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     return new Response('Authentication required.', {
       status: 401,
       headers: {
-        'WWW-Authenticate': 'Basic realm="Christian Farioli Admin", charset="UTF-8"',
+        'WWW-Authenticate': 'Basic realm="Prof. Christian Farioli Admin", charset="UTF-8"',
         'Cache-Control': 'no-store',
       },
     });

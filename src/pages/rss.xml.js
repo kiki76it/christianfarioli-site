@@ -17,7 +17,7 @@ export async function GET(context) {
   const origin = context.site?.toString() || 'https://christianfarioli.com';
 
   return rss({
-    title: 'Christian Farioli — Insights',
+    title: 'Prof. Christian Farioli — Insights',
     description: 'Authority insights on AI strategy, leadership, and the future of work.',
     site: context.site,
     items: entries.map((e) => ({
