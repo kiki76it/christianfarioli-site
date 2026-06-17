@@ -35,7 +35,7 @@ export const paths = {
   apiPublish: () => p('/api/publish'),
   rss: () => p('/rss.xml'),
   sitemap: () => p('/sitemap-index.xml'),
-  favicon: () => p('/favicon.svg'),
+  favicon: () => p('/favicon.png'),
   robots: () => p('/robots.txt'),
   /** A public asset (anything in /public). Always prefixed with BASE. */
   publicAsset: (path: string) => p(path.startsWith('/') ? path : `/${path}`),
