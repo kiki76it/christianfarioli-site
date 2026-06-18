@@ -2540,6 +2540,18 @@
             .slide-in-left, .slide-in-right { transform: translateY(24px); }
             .slide-in-left.visible, .slide-in-right.visible { transform: translateY(0); }
         }
+            /* Past Events preview (in Speaking section) */
+        .events-preview { margin-top: var(--space-2xl); text-align: center; }
+        .events-preview-stats { display: flex; justify-content: center; gap: var(--space-2xl); flex-wrap: wrap; margin-bottom: var(--space-xl); }
+        .events-preview-stats div { display: flex; flex-direction: column; }
+        .events-preview-stats strong { font-size: clamp(28px, 3vw, 40px); font-weight: 700; color: var(--color-accent); line-height: 1; }
+        .events-preview-stats span { font-size: 13px; color: var(--color-text-secondary); margin-top: 6px; letter-spacing: 0.03em; }
+        .events-preview-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: var(--space-lg); }
+        .events-preview-item { display: block; border-radius: 10px; overflow: hidden; aspect-ratio: 4 / 3; background: var(--color-bg-secondary); }
+        .events-preview-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+        .events-preview-item:hover img { transform: scale(1.06); }
+        .events-preview-more { margin-top: var(--space-sm); }
+        @media (max-width: 768px) { .events-preview-grid { grid-template-columns: repeat(2, 1fr); } .events-preview-stats { gap: var(--space-lg); } }
     </style>
 <link rel="icon" href="./imgs/favicon.png" type="image/png">
     <style>
@@ -2575,7 +2587,6 @@
                 <a href="/insights/" class="nav-link">Insights</a>
                 <a href="#books" class="nav-link">Books</a>
                 <a href="/testimonials.html" class="nav-link">Testimonials</a>
-                <a href="/past-events.html" class="nav-link">Events</a>
                 <a href="https://future.christianfarioli.com" target="_blank" rel="noopener" class="nav-link">Future</a>
                 <a href="#contact" class="nav-link">Contact</a>
                 <a href="https://calendly.com/chrisfarioli/30min" target="_blank" rel="noopener" class="btn btn-light nav-cta">Work Together</a>
@@ -2833,6 +2844,28 @@
                             <p>AI literacy programs for enterprise leadership teams</p>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Past Events preview -->
+            <div class="events-preview fade-up">
+                <div class="events-preview-stats">
+                    <div><strong>16,000+</strong><span>Executives Trained</span></div>
+                    <div><strong>300+</strong><span>Trainings &amp; Keynotes</span></div>
+                    <div><strong>4</strong><span>Continents</span></div>
+                </div>
+                <div class="events-preview-grid">
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-christian-farioli-cdo-bloomberg-speaker.jpg" alt="Past speaking event" loading="lazy"></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-christian-farioli-nasa-conference.jpg" alt="Past speaking event" loading="lazy"></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-burj-al-arab-digital-marketing.jpg" alt="Past speaking event" loading="lazy"></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-brand-summit-bahrain.jpg" alt="Past speaking event" loading="lazy"></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-christian-farioli-abu-dhabi-training.jpg" alt="Past speaking event" loading="lazy"></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-christian-farioli-build-digital-brands-conference.jpg" alt="Past speaking event" loading="lazy"></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-christian-farioli-speaker-at-google.jpg" alt="Past speaking event" loading="lazy"></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-christian-farioli-conference-speaker.jpg" alt="Past speaking event" loading="lazy"></a>
+                </div>
+                <div class="events-preview-more">
+                    <a href="/past-events.html" class="btn btn-secondary">View All Past Events</a>
                 </div>
             </div>
 
