@@ -2531,6 +2531,12 @@
 
         .bg-dark { background: var(--color-bg-dark); }
         .bg-secondary { background: var(--color-bg-secondary); }
+            /* Mobile horizontal-overflow fix */
+        html { overflow-x: hidden; width: 100%; }
+        @media (max-width: 768px) {
+            .slide-in-left, .slide-in-right { transform: translateY(24px); }
+            .slide-in-left.visible, .slide-in-right.visible { transform: translateY(0); }
+        }
     </style>
 <link rel="icon" href="./imgs/favicon.png" type="image/png">
     <style>
