@@ -456,9 +456,12 @@
                 border-radius: 0 0 20px 20px;
             }
 
-            .nav-links.active {
-                display: flex;
-            }
+            .nav-links.active { display: flex; }
+
+            /* Mobile menu is a light panel — keep links dark/visible regardless of nav-light/scrolled */
+            .nav.nav-light .nav-links .nav-link,
+            .nav.scrolled .nav-links .nav-link { color: var(--color-text-primary); }
+            .nav-links { background: var(--color-bg-primary); }
 
             .nav-mobile-toggle {
                 display: flex;
