@@ -72,10 +72,11 @@ function dateLabel(d?: Date): string | null {
 ---
 <BaseLayout title={title} description={heroSubtitle}>
   <!-- Navigation -->
-  <nav class="nav" id="mainNav">
+  <nav class="nav nav-light" id="mainNav">
     <div class="nav-inner">
       <a href={main} class="nav-logo" aria-label="Prof. Christian Farioli — home">
-        <img src="/imgs/logo-black.png" alt="Prof. Christian Farioli" />
+        <img src="/imgs/logo-white.png" alt="Prof. Christian Farioli" class="logo-top" />
+        <img src="/imgs/logo-black.png" alt="Prof. Christian Farioli" class="logo-scrolled" />
       </a>
       <div class="nav-links" id="navLinks">
         <a href={`${main}#positioning`} class="nav-link">About</a>
@@ -602,4 +603,24 @@ function dateLabel(d?: Date): string | null {
         .nav-dropdown-menu a { display: block; padding: 9px 14px; font-size: 14px; font-weight: 500; color: var(--color-text-primary); text-decoration: none; border-radius: 6px; white-space: nowrap; }
         .nav-dropdown-menu a:hover { background: var(--color-bg-secondary); color: var(--color-accent); }
         @media (max-width: 968px) { .nav-dropdown { flex-direction: column; align-items: center; } .nav-dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; background: transparent; padding: 2px 0 0 0; min-width: 0; text-align: center; } .nav-dropdown-menu a { padding: 8px 0; text-align: center; } .nav-dropdown::after { display: none; } }
+
+  /* === Homepage-style transparent nav over dark hero (match main site) === */
+  .nav { background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%) !important; border-bottom: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .nav.scrolled { background: rgba(250,250,248,0.95) !important; backdrop-filter: blur(24px) !important; -webkit-backdrop-filter: blur(24px) !important; border-bottom: 1px solid var(--color-border) !important; box-shadow: 0 8px 30px rgba(0,0,0,0.06) !important; }
+  .logo-scrolled { display: none; }
+  .logo-top { display: block; }
+  .nav.scrolled .logo-scrolled { display: block; }
+  .nav.scrolled .logo-top { display: none; }
+  .nav-light .nav-link { color: rgba(255,255,255,0.92); }
+  .nav.scrolled .nav-link { color: var(--color-text-primary); }
+  .nav-light .nav-mobile-toggle span { background: var(--color-white); }
+  .nav.scrolled .nav-mobile-toggle span { background: var(--color-text-primary); }
+  /* dark insights hero masthead */
+  .insights-hero { background: var(--color-bg-dark) !important; }
+  .insights-title { color: var(--color-white) !important; }
+  .insights-subtitle { color: rgba(255,255,255,0.72) !important; }
+  @media (max-width: 968px) {
+    .nav.nav-light .nav-links .nav-link, .nav.scrolled .nav-links .nav-link { color: var(--color-text-primary) !important; }
+    .nav-links { background: rgba(250,250,248,0.98) !important; }
+  }
     </style>
