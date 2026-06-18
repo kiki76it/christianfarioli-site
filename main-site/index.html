@@ -11214,28 +11214,5 @@
 })();
 
 </script>
-    <!-- Sticky CTA (appears after 45s, dismissible) -->
-    <div class="sticky-cta" id="stickyCta" role="complementary" aria-label="Book a strategy call">
-        <button class="sticky-cta-close" id="stickyCtaClose" aria-label="Dismiss">&times;</button>
-        <span class="sticky-cta-text">Need help with AI Strategy?</span>
-        <a href="https://calendly.com/chrisfarioli/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a Call</a>
-    </div>
-    <script>
-        (function () {
-            try { if (sessionStorage.getItem('stickyCtaDismissed')) return; } catch (e) {}
-            var el = document.getElementById('stickyCta');
-            if (!el) return;
-            setTimeout(function () { el.classList.add('is-visible'); }, 45000);
-            function hide() { el.classList.remove('is-visible'); }
-            var closeBtn = document.getElementById('stickyCtaClose');
-            if (closeBtn) closeBtn.addEventListener('click', function () { hide(); try { sessionStorage.setItem('stickyCtaDismissed', '1'); } catch (e) {} });
-            var book = el.querySelector('a.btn');
-            if (book) book.addEventListener('click', function () { try { sessionStorage.setItem('stickyCtaDismissed', '1'); } catch (e) {} });
-            var ctaSection = document.getElementById('cta');
-            if (ctaSection && 'IntersectionObserver' in window) {
-                new IntersectionObserver(function (entries) { entries.forEach(function (en) { if (en.isIntersecting) hide(); }); }, { threshold: 0.2 }).observe(ctaSection);
-            }
-        })();
-    </script>
 </body>
 </html>
