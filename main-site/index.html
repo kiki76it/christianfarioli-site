@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WBHW7L4');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prof. Christian Farioli — AI Strategist, Educator & Advisor</title>
@@ -1771,7 +1778,7 @@
 
         /* Button Shine Effect */
         .btn-primary {
-            background: linear-gradient(135deg, var(--color-primary) 0%, #1a1a2e 100%);
+            background: var(--color-text-primary);
             background-size: 200% 200%;
             transition: all 0.5s var(--ease-out-quint), background-position 0.5s var(--ease-out-quint);
         }
@@ -2540,6 +2547,29 @@
             .slide-in-left, .slide-in-right { transform: translateY(24px); }
             .slide-in-left.visible, .slide-in-right.visible { transform: translateY(0); }
         }
+            /* Past Events preview (in Speaking section) */
+        .events-preview { margin-top: var(--space-2xl); text-align: center; }
+        .events-preview-stats { display: flex; justify-content: center; gap: var(--space-2xl); flex-wrap: wrap; margin-bottom: var(--space-xl); }
+        .events-preview-stats div { display: flex; flex-direction: column; }
+        .events-preview-stats strong { font-size: clamp(28px, 3vw, 40px); font-weight: 700; color: var(--color-accent); line-height: 1; }
+        .events-preview-stats span { font-size: 13px; color: var(--color-text-secondary); margin-top: 6px; letter-spacing: 0.03em; }
+        .events-preview-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: var(--space-lg); }
+        .events-preview-item { position: relative; display: block; border-radius: 10px; overflow: hidden; aspect-ratio: 4 / 3; background: var(--color-bg-secondary); }
+        .events-preview-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 24px 12px 10px; font-size: 12px; font-weight: 600; line-height: 1.25; color: #fff; text-align: left; background: linear-gradient(to top, rgba(0,0,0,0.82), rgba(0,0,0,0.35) 60%, transparent); opacity: 0; transition: opacity .3s ease; }
+        .events-preview-item:hover .events-preview-caption { opacity: 1; }
+        @media (max-width: 768px) { .events-preview-caption { opacity: 1; font-size: 11px; padding: 18px 9px 8px; } }
+        .events-preview-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+        .events-preview-item:hover img { transform: scale(1.06); }
+        .events-preview-more { margin-top: var(--space-sm); }
+        @media (max-width: 768px) { .events-preview-grid { grid-template-columns: repeat(2, 1fr); } .events-preview-stats { gap: var(--space-lg); } }
+            /* Speaking nav dropdown */
+        .nav-dropdown { position: relative; display: inline-flex; align-items: center; }
+        .nav-dropdown-menu { position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%) translateY(6px); min-width: 168px; background: var(--color-white); border: 1px solid rgba(0,0,0,0.08); border-radius: 10px; box-shadow: 0 14px 36px rgba(0,0,0,0.12); padding: 6px; opacity: 0; visibility: hidden; transition: opacity .25s ease, transform .25s ease; z-index: 200; }
+        .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 14px; }
+        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .nav-dropdown-menu a { display: block; padding: 9px 14px; font-size: 14px; font-weight: 500; color: var(--color-text-primary); text-decoration: none; border-radius: 6px; white-space: nowrap; }
+        .nav-dropdown-menu a:hover { background: var(--color-bg-secondary); color: var(--color-accent); }
+        @media (max-width: 968px) { .nav-dropdown { flex-direction: column; align-items: center; } .nav-dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; background: transparent; padding: 2px 0 0 0; min-width: 0; text-align: center; } .nav-dropdown-menu a { padding: 8px 0; text-align: center; } .nav-dropdown::after { display: none; } }
     </style>
 <link rel="icon" href="./imgs/favicon.png" type="image/png">
     <style>
@@ -2561,6 +2591,10 @@
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBHW7L4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Navigation -->
     <nav class="nav nav-light" id="mainNav">
         <div class="container nav-inner">
@@ -2571,7 +2605,12 @@
 
             <div class="nav-links" id="navLinks">
                 <a href="#positioning" class="nav-link">About</a>
-                <a href="#speaking" class="nav-link">Speaking</a>
+                <span class="nav-dropdown">
+                    <a href="#speaking" class="nav-link">Speaking</a>
+                    <span class="nav-dropdown-menu">
+                        <a href="/past-events.html">Past Events</a>
+                    </span>
+                </span>
                 <a href="/insights/" class="nav-link">Insights</a>
                 <a href="#books" class="nav-link">Books</a>
                 <a href="/testimonials.html" class="nav-link">Testimonials</a>
@@ -2835,6 +2874,27 @@
                 </div>
             </div>
 
+            <!-- Past Events preview -->
+            <div class="events-preview fade-up">
+                <div class="events-preview-stats">
+                    <div><strong>20,000+</strong><span>Executives Trained</span></div>
+                    <div><strong>300+</strong><span>Trainings &amp; Keynotes</span></div>
+                    <div><strong>4</strong><span>Continents</span></div>
+                </div>
+                <div class="events-preview-grid">
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-christian-farioli-cdo-bloomberg-speaker.jpg" alt="CDO Bloomberg Speaker" loading="lazy"><span class="events-preview-caption">CDO Bloomberg Speaker</span></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-christian-farioli-nasa-conference.jpg" alt="NASA Conference" loading="lazy"><span class="events-preview-caption">NASA Conference</span></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-burj-al-arab-digital-marketing.jpg" alt="Burj Al Arab Digital Marketing" loading="lazy"><span class="events-preview-caption">Burj Al Arab Digital Marketing</span></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-brand-summit-bahrain.jpg" alt="Brand Summit Bahrain" loading="lazy"><span class="events-preview-caption">Brand Summit Bahrain</span></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-christian-farioli-abu-dhabi-training.jpg" alt="Abu Dhabi Training" loading="lazy"><span class="events-preview-caption">Abu Dhabi Training</span></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-christian-farioli-build-digital-brands-conference.jpg" alt="Build Digital Brands Conference" loading="lazy"><span class="events-preview-caption">Build Digital Brands Conference</span></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-christian-farioli-speaker-at-google.jpg" alt="Speaker at Google" loading="lazy"><span class="events-preview-caption">Speaker at Google</span></a>
+                    <a href="/past-events.html" class="events-preview-item"><img src="./imgs/events/event-christian-farioli-conference-speaker.jpg" alt="Conference Speaker" loading="lazy"><span class="events-preview-caption">Conference Speaker</span></a>
+                </div>
+                <div class="events-preview-more">
+                    <a href="/past-events.html" class="btn btn-secondary">View All Past Events</a>
+                </div>
+            </div>
             <div class="speaking-cta fade-up">
                 <a href="https://calendly.com/chrisfarioli/30min" target="_blank" rel="noopener" class="btn btn-primary">Invite Prof. Christian to Speak</a>
             </div>
@@ -11154,28 +11214,5 @@
 })();
 
 </script>
-    <!-- Sticky CTA (appears after 45s, dismissible) -->
-    <div class="sticky-cta" id="stickyCta" role="complementary" aria-label="Book a strategy call">
-        <button class="sticky-cta-close" id="stickyCtaClose" aria-label="Dismiss">&times;</button>
-        <span class="sticky-cta-text">Need help with AI Strategy?</span>
-        <a href="https://calendly.com/chrisfarioli/30min" target="_blank" rel="noopener" class="btn btn-primary">Book a Call</a>
-    </div>
-    <script>
-        (function () {
-            try { if (sessionStorage.getItem('stickyCtaDismissed')) return; } catch (e) {}
-            var el = document.getElementById('stickyCta');
-            if (!el) return;
-            setTimeout(function () { el.classList.add('is-visible'); }, 45000);
-            function hide() { el.classList.remove('is-visible'); }
-            var closeBtn = document.getElementById('stickyCtaClose');
-            if (closeBtn) closeBtn.addEventListener('click', function () { hide(); try { sessionStorage.setItem('stickyCtaDismissed', '1'); } catch (e) {} });
-            var book = el.querySelector('a.btn');
-            if (book) book.addEventListener('click', function () { try { sessionStorage.setItem('stickyCtaDismissed', '1'); } catch (e) {} });
-            var ctaSection = document.getElementById('cta');
-            if (ctaSection && 'IntersectionObserver' in window) {
-                new IntersectionObserver(function (entries) { entries.forEach(function (en) { if (en.isIntersecting) hide(); }); }, { threshold: 0.2 }).observe(ctaSection);
-            }
-        })();
-    </script>
 </body>
 </html>
