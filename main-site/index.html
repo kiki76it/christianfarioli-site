@@ -2533,6 +2533,23 @@
         .bg-secondary { background: var(--color-bg-secondary); }
     </style>
 <link rel="icon" href="./imgs/favicon.png" type="image/png">
+    <style>
+    /* === Conversion CTA bands (additive; existing design tokens) === */
+    .cta-band { padding: var(--space-2xl) 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); text-align: center; }
+    .cta-band--tint { background: var(--color-bg-secondary); }
+    .cta-band .container { max-width: 720px; }
+    .cta-band h2 { font-size: clamp(24px, 3vw, 34px); line-height: 1.2; margin-bottom: var(--space-sm); }
+    .cta-band p { color: var(--color-text-secondary); font-size: clamp(16px, 1.8vw, 19px); line-height: 1.7; margin: 0 auto var(--space-lg); max-width: 600px; }
+    .cta-band-actions { display: flex; gap: var(--space-sm); justify-content: center; flex-wrap: wrap; }
+    /* === Sticky CTA (premium, non-intrusive) === */
+    .sticky-cta { position: fixed; bottom: 24px; right: 24px; z-index: 1200; max-width: 330px; background: var(--color-white); border: 1px solid var(--color-border); border-radius: 14px; box-shadow: 0 18px 44px rgba(0,0,0,0.16); padding: 18px 20px; display: flex; align-items: center; gap: 14px; opacity: 0; transform: translateY(16px); pointer-events: none; transition: opacity .5s ease, transform .5s ease; }
+    .sticky-cta.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .sticky-cta-text { font-size: 14px; font-weight: 600; color: var(--color-text-primary); line-height: 1.35; }
+    .sticky-cta .btn { padding: 10px 18px; font-size: 13px; white-space: nowrap; }
+    .sticky-cta-close { position: absolute; top: 6px; right: 9px; background: none; border: none; font-size: 17px; line-height: 1; color: var(--color-text-secondary); cursor: pointer; padding: 2px 4px; }
+    .sticky-cta-close:hover { color: var(--color-text-primary); }
+    @media (max-width: 520px) { .sticky-cta { left: 16px; right: 16px; bottom: 16px; max-width: none; } }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -2577,8 +2594,8 @@
                 I help executives and organizations move beyond the noise — to develop clear thinking, confident strategy, and the wisdom to lead transformation that actually works.
             </p>
             <div class="hero-ctas blur-in stagger-3">
-                <a href="#manifesto" class="btn btn-light">Read My Approach</a>
-                <a href="#cta" class="btn btn-outline-light">Schedule a Conversation</a>
+                <a href="#cta" class="btn btn-light">Book a Strategy Call</a>
+                <a href="/insights/" class="btn btn-outline-light">Explore Insights</a>
             </div>
         </div>
 
@@ -2736,6 +2753,17 @@
         </div>
     </section>
 
+    <!-- CTA: AI Strategy (after Global Impact) -->
+    <section class="cta-band cta-band--tint">
+        <div class="container">
+            <h2>Let''s Discuss Your AI Strategy</h2>
+            <p>Whether you''re exploring AI adoption, executive education, AISO or leadership transformation, let''s start the conversation.</p>
+            <div class="cta-band-actions">
+                <a href="#cta" class="btn btn-primary">Schedule a Call</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Speaking Section -->
     <section class="section speaking" id="speaking">
         <div class="container">
@@ -2800,6 +2828,17 @@
 
             <div class="speaking-cta fade-up">
                 <a href="#cta" class="btn btn-primary">Invite Prof. Christian to Speak</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA: Speaking & Advisory -->
+    <section class="cta-band">
+        <div class="container">
+            <h2>Need a speaker, advisor or executive educator?</h2>
+            <p>Let''s explore how I can help your organization.</p>
+            <div class="cta-band-actions">
+                <a href="#cta" class="btn btn-primary">Start a Conversation</a>
             </div>
         </div>
     </section>
@@ -3061,12 +3100,12 @@
     <section class="cta" id="cta">
         <div class="container">
             <div class="cta-inner fade-up">
-                <h2 class="text-section-title">Ready to Transform Your AI Strategy?</h2>
-                <p>Let's shape the future of your organization together.</p>
+                <h2 class="text-section-title">Ready to Apply These Ideas?</h2>
+                <p>From executive briefings to enterprise AI transformation, let's explore the next step together.</p>
 
                 <div class="cta-buttons">
-                    <a href="mailto:contact@christianfarioli.com" class="btn btn-primary">Schedule a Conversation</a>
-                    <a href="#speaking" class="btn btn-secondary">Explore Speaking</a>
+                    <a href="mailto:contact@christianfarioli.com" class="btn btn-primary">Schedule a Call</a>
+                    <a href="#speaking" class="btn btn-secondary">View Speaking Topics</a>
                 </div>
 
                 <div class="cta-options">
@@ -3149,10 +3188,10 @@
                 </div>
 
                 <div class="footer-newsletter">
-                    <h4>Stay Informed</h4>
-                    <p>Join leaders receiving insights on AI, strategy, and the future of business.</p>
+                    <h4>Join Executive AI Insights</h4>
+                    <p>Weekly AI insights, leadership frameworks and practical guidance for decision-makers.</p>
                     <form class="footer-newsletter-form" onsubmit="return false;">
-                        <input type="email" placeholder="Enter your email">
+                        <input type="email" placeholder="Enter your email" required>
                         <button type="submit">Subscribe</button>
                     </form>
                 </div>
@@ -11106,5 +11145,28 @@
 })();
 
 </script>
+    <!-- Sticky CTA (appears after 45s, dismissible) -->
+    <div class="sticky-cta" id="stickyCta" role="complementary" aria-label="Book a strategy call">
+        <button class="sticky-cta-close" id="stickyCtaClose" aria-label="Dismiss">&times;</button>
+        <span class="sticky-cta-text">Need help with AI Strategy?</span>
+        <a href="#cta" class="btn btn-primary">Book a Call</a>
+    </div>
+    <script>
+        (function () {
+            try { if (sessionStorage.getItem('stickyCtaDismissed')) return; } catch (e) {}
+            var el = document.getElementById('stickyCta');
+            if (!el) return;
+            setTimeout(function () { el.classList.add('is-visible'); }, 45000);
+            function hide() { el.classList.remove('is-visible'); }
+            var closeBtn = document.getElementById('stickyCtaClose');
+            if (closeBtn) closeBtn.addEventListener('click', function () { hide(); try { sessionStorage.setItem('stickyCtaDismissed', '1'); } catch (e) {} });
+            var book = el.querySelector('a.btn');
+            if (book) book.addEventListener('click', function () { try { sessionStorage.setItem('stickyCtaDismissed', '1'); } catch (e) {} });
+            var ctaSection = document.getElementById('cta');
+            if (ctaSection && 'IntersectionObserver' in window) {
+                new IntersectionObserver(function (entries) { entries.forEach(function (en) { if (en.isIntersecting) hide(); }); }, { threshold: 0.2 }).observe(ctaSection);
+            }
+        })();
+    </script>
 </body>
 </html>
