@@ -2331,14 +2331,12 @@
 
         .testimonial-track {
             position: relative;
-            min-height: 400px;
+            display: grid;
         }
 
         .testimonial-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            grid-column: 1;
+            grid-row: 1;
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.8s var(--ease-out-quint);
@@ -3109,7 +3107,7 @@
                         </div>
                         <div class="testimonial-author-carousel">
                             <div class="author-avatar">
-                                <img src="./imgs/testimonials/michela-simone.png" alt="Michela Simone" loading="lazy">
+                                <span class="author-initials">MS</span>
                             </div>
                             <div class="author-info">
                                 <h4>Michela Simone</h4>
@@ -3130,7 +3128,7 @@
                         </div>
                         <div class="testimonial-author-carousel">
                             <div class="author-avatar">
-                                <img src="./imgs/testimonials/alan-morgan.png" alt="Alan Morgan GCIE" loading="lazy">
+                                <span class="author-initials">AM</span>
                             </div>
                             <div class="author-info">
                                 <h4>Alan Morgan GCIE</h4>
