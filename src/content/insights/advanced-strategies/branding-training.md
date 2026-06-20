@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/02/1708407981585x527104241533497660-feature-5-scaled.jpg"
+featuredImage: "/images/insights/covers/branding-training.jpg"
 featuredImageAlt: "Elevate Your Marketing Game: Unleash Your Skills with Branding Training"
 status: "published"
 publishedAt: 2024-03-08

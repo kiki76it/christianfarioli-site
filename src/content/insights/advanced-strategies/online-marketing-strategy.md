@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/01/Online-Marketing-Strategy.jpg"
+featuredImage: "/images/insights/covers/online-marketing-strategy.jpg"
 featuredImageAlt: "Stay Ahead of the Game: The Ultimate Online Marketing Strategy for Success"
 status: "published"
 publishedAt: 2024-01-26

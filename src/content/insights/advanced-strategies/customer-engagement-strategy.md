@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/01/customer-engagement-strategy-1.jpg"
+featuredImage: "/images/insights/covers/customer-engagement-strategy.jpg"
 featuredImageAlt: "Revolutionize Your Business: Mastering the Art of Customer Engagement Strategy"
 status: "published"
 publishedAt: 2024-01-20

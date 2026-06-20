@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/02/1708407981753x119813652598390830-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/mobile-marketing-training.jpg"
 featuredImageAlt: "Ignite Your Marketing Career: Mobile Marketing Training Uncovered"
 status: "published"
 publishedAt: 2024-03-29

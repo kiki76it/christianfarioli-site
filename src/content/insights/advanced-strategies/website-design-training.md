@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/02/1708407981560x587145533848611600-feature-scaled.jpg"
+featuredImage: "/images/insights/covers/website-design-training.jpg"
 featuredImageAlt: "Master the Digital World: Empowering Website Design Training for Marketing Professionals"
 status: "published"
 publishedAt: 2024-04-01

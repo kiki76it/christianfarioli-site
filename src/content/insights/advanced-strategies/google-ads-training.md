@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/02/1708407981547x142784876803969680-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/google-ads-training.jpg"
 featuredImageAlt: "Conquer the Online Advertising Realm: Intensive Google Ads Training"
 status: "published"
 publishedAt: 2024-03-25

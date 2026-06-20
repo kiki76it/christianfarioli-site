@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/01/1706281068532x287291882372200400-feature.jpeg"
+featuredImage: "/images/insights/covers/web-design-agency.jpeg"
 featuredImageAlt: "Elevate Your Online Presence: Partner with a Leading Web Design Agency"
 status: "published"
 publishedAt: 2024-02-10

@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/02/1708407981541x922659083673681400-feature-3-scaled.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-training-2.jpg"
 featuredImageAlt: "From Novice to Expert: The Journey of Digital Marketing Training"
 status: "published"
 publishedAt: 2024-03-11

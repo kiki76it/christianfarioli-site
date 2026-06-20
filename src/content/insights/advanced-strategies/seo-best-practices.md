@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/01/1704373857071x851674757210996200-feature.jpeg"
+featuredImage: "/images/insights/covers/seo-best-practices.jpeg"
 featuredImageAlt: "Dominating the Digital Landscape: Unveiling SEO Best Practices"
 status: "published"
 publishedAt: 2024-01-18

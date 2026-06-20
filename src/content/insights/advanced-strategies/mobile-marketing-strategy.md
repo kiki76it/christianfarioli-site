@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/01/1704373857625x716931762102221600-feature.jpeg"
+featuredImage: "/images/insights/covers/mobile-marketing-strategy.jpeg"
 featuredImageAlt: "Stay Ahead in the Mobile Game: Elevate Your Marketing Strategy"
 status: "published"
 publishedAt: 2024-01-06

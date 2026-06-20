@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2018/10/social-media-banner.jpg"
+featuredImage: "/images/insights/covers/social-media-live-counters.jpg"
 featuredImageAlt: "Social Media Live Counters"
 status: "published"
 publishedAt: 2018-10-22

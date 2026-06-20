@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2023/06/Digital-Marketing-in-Dubai.jpg"
+featuredImage: "/images/insights/covers/dubais-digital-marketing-wonderland-the-ultimate-guide-to-navigating-the-landsca.jpg"
 featuredImageAlt: "Dubai's Digital Marketing Wonderland: The Ultimate Guide to Navigating the Landscape"
 status: "published"
 publishedAt: 2023-06-07

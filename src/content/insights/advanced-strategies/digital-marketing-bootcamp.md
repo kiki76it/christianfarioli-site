@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/02/1708407981525x777524017317602800-feature-3-scaled.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-bootcamp.jpg"
 featuredImageAlt: "Elevate Your Marketing Skills: Enroll in the Digital Marketing Bootcamp"
 status: "published"
 publishedAt: 2024-03-13

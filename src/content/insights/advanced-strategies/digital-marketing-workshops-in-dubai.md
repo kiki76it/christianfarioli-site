@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/03/1709563004637x815559369793437600-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-workshops-in-dubai.jpg"
 featuredImageAlt: "Harness the Power of Digital: Explore Dubais Best Digital Marketing Workshops"
 status: "published"
 publishedAt: 2024-03-04

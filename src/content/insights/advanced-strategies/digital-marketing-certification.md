@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/02/1708407981493x684165214711138200-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-certification.jpg"
 featuredImageAlt: "The Key to Success: Digital Marketing Certification Unveiled"
 status: "published"
 publishedAt: 2024-03-27

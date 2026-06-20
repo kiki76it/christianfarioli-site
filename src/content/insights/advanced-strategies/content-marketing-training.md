@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/02/1708407981589x412804482075519700-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/content-marketing-training.jpg"
 featuredImageAlt: "Unleash Your Potential: In-Depth Content Marketing Training Program"
 status: "published"
 publishedAt: 2024-03-20

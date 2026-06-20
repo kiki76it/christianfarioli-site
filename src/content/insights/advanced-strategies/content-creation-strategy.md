@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/06/1718868222731x516485601114381000-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/content-creation-strategy.jpg"
 featuredImageAlt: "Driving Engagement: Optimizing Your Content Creation Strategy"
 status: "published"
 publishedAt: 2024-06-21

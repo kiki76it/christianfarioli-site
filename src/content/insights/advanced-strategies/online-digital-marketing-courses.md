@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/02/1708407981531x128823218715934380-feature-4-scaled.jpg"
+featuredImage: "/images/insights/covers/online-digital-marketing-courses.jpg"
 featuredImageAlt: "Master the Digital Landscape: Top Online Digital Marketing Courses"
 status: "published"
 publishedAt: 2024-03-12

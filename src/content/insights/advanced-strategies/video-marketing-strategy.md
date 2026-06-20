@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/06/1718868222721x432832826488004600-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/video-marketing-strategy.jpg"
 featuredImageAlt: "Dominate the Digital Landscape: Top Video Marketing Strategies"
 status: "published"
 publishedAt: 2024-06-21

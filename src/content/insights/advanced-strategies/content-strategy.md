@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/01/1704373857035x301699514165814340-feature.jpeg"
+featuredImage: "/images/insights/covers/content-strategy.jpeg"
 featuredImageAlt: "Content Strategy: Your Key to Conquering the Digital Landscape"
 status: "published"
 publishedAt: 2024-01-07

@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/01/1706281068560x806626957494460000-feature.jpeg"
+featuredImage: "/images/insights/covers/digital-marketing-services.jpeg"
 featuredImageAlt: "Fuel Your Success: Tap into the Benefits of Professional Digital Marketing Services"
 status: "published"
 publishedAt: 2024-02-12

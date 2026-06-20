@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/03/1709563004650x847769898426681500-feature-scaled.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-conferences-in-dubai.jpg"
 featuredImageAlt: "Master the Game: Top Digital Marketing Conferences in Dubai"
 status: "published"
 publishedAt: 2024-03-04

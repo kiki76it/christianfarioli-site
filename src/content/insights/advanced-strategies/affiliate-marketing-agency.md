@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/01/1706281068572x681019496498039400-feature.jpeg"
+featuredImage: "/images/insights/covers/affiliate-marketing-agency.jpeg"
 featuredImageAlt: "Unleash the Power of Partnerships: The Impact of an Affiliate Marketing Agency"
 status: "published"
 publishedAt: 2024-02-01

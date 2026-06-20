@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/06/1718868222431x867212715523560700-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/b2b-marketing-strategy.jpg"
 featuredImageAlt: "Cracking the Code: Secrets to a Winning B2B Marketing Strategy"
 status: "published"
 publishedAt: 2024-06-21
