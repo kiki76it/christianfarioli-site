@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/03/1709563004506x733958272039969800-feature-1-scaled.jpg"
 featuredImageAlt: "Dominating the Dubai Market: Must-Have Digital Marketing Tools"
 status: "published"

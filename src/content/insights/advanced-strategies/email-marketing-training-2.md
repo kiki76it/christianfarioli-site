@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/02/1708407981576x237456683833966000-feature-1-scaled.jpg"
 featuredImageAlt: "The Path to Success: Essential Email Marketing Training for Marketers"
 status: "published"

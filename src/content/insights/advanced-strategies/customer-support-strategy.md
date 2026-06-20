@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/06/1718868222706x537357713898439360-feature-1-scaled.jpg"
 featuredImageAlt: "Customer Delight: Implementing a Winning Customer Support Strategy"
 status: "published"

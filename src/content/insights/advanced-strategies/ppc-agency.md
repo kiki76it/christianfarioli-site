@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1706281068605x987996360833203000-feature.jpeg"
 featuredImageAlt: "Crush Your Competitors: Harness the Power of a Results-Driven PPC Agency"
 status: "published"

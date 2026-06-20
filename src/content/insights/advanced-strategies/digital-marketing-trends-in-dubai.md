@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/03/1709563004486x106746026343806700-feature-scaled.jpg"
 featuredImageAlt: "Elevate Your Strategy: Must-Know Digital Marketing Trends in Dubai"
 status: "published"

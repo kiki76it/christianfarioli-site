@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/06/1718868222717x719043001898811000-feature-scaled.jpg"
 featuredImageAlt: "Mastering the Mobile Game: Crafting an Effective Mobile Marketing Strategy"
 status: "published"

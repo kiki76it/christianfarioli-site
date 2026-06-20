@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/06/1718868222479x280106269062866400-feature-scaled.jpg"
 featuredImageAlt: "Unlocking Success: The Power of a Well-Executed Marketing Automation Strategy"
 status: "published"

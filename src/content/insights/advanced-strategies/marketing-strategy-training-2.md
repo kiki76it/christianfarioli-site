@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/02/1708407981747x166345413632989600-feature-3-scaled.jpg"
 featuredImageAlt: "Ignite Your Marketing Success: Propel Your Career with Strategy Training"
 status: "published"

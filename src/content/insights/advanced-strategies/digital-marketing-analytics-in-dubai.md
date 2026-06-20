@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/03/1709563004492x251763948954227400-feature-scaled.jpg"
 featuredImageAlt: "Driving Business Insights: The Role of Digital Marketing Analytics in Dubai"
 status: "published"

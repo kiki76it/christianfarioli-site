@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/06/1718868222737x102457397306988880-feature-1-scaled.jpg"
 featuredImageAlt: "Shield Your Brand: Crafting an Effective Online Reputation Management Strategy"
 status: "published"

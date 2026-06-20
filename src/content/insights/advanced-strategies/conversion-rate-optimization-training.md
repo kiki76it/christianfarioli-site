@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/02/1708407981600x239311018343557380-feature-4-scaled.jpg"
 featuredImageAlt: "Ignite Your Marketing Success: Propel Your Skills with Conversion Rate Optimization Training"
 status: "published"

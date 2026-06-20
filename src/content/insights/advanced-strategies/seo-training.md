@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/02/1708407981507x539785605398628300-feature-3-scaled.jpg"
 featuredImageAlt: "Unlock the Secrets of Search Rankings: Empower Yourself with SEO Training"
 status: "published"

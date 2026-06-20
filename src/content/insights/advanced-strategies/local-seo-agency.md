@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1706281068617x987177178871443500-feature.jpeg"
 featuredImageAlt: "Elevate Your Online Visibility: The Impact of a Local SEO Agency"
 status: "published"

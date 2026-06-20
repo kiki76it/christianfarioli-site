@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1704373857086x255985112913037950-feature.jpeg"
 featuredImageAlt: "Revolutionize Your Marketing Strategy: Game-changing Digital Marketing Tools"
 status: "published"

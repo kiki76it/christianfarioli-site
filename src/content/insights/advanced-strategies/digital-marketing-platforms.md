@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/Guide-to-Effective-Digital-Marketing-Platforms.jpg"
 featuredImageAlt: "Maximize Your Reach: A Guide to Effective Digital Marketing Platforms"
 status: "published"

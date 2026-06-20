@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1706281068730x666915394558425900-feature.jpeg"
 featuredImageAlt: "Unleash Your Brands Potential: Choosing the Right Content Marketing Agency"
 status: "published"

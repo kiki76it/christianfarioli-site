@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/future-of-digital-marketing-trends.jpg"
 featuredImageAlt: "Ignite Your Growth: Exploring the Future of Digital Marketing Trends"
 status: "published"

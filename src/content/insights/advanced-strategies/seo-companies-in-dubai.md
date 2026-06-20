@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/03/1709563004373x780687760629292500-feature.jpg"
 featuredImageAlt: "Conquer the Digital World: Uncovering the Top SEO Companies in Dubai"
 status: "published"
