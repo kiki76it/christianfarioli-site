@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1706281068564x915358293723255200-feature.jpeg"
 featuredImageAlt: "Unlock Your Brands Potential: Collaborate with an Influencer Marketing Agency"
 status: "published"

@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/06/1718868222734x227098197157943780-feature-1-scaled.jpg"
 featuredImageAlt: "Rise Above the Noise: Building a Powerful Brand Awareness Strategy"
 status: "published"

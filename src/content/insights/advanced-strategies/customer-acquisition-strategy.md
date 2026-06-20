@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/06/1718868222427x337160477567171100-feature-scaled.jpg"
 featuredImageAlt: "Winning the Game: Strategies to Boost Customer Acquisition"
 status: "published"

@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/03/1709563004489x328319237444694400-feature-scaled.jpg"
 featuredImageAlt: "Ignite Your Growth: Powering Up Your Digital Marketing Strategy in Dubai"
 status: "published"

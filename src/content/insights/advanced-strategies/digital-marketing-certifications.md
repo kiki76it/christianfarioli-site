@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1704373857641x135047377377630180-feature.jpg"
 featuredImageAlt: "Invest in Your Future: Boost Your Career with Digital Marketing Certifications"
 status: "published"

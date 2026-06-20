@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/06/1718868222468x904219356525126700-feature-2-scaled.jpg"
 featuredImageAlt: "From Leads to Conversions: Optimizing Your Lead Generation Strategy"
 status: "published"

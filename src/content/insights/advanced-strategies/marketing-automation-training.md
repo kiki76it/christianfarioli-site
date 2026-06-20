@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/02/1708407981738x776394626278647700-feature-2-scaled.jpg"
 featuredImageAlt: "Empower Your Marketing Strategy: Unlocking the Benefits of Automation Training"
 status: "published"

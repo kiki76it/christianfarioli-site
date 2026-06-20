@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/02/1708407981568x181397900494912900-feature-1-scaled.jpg"
 featuredImageAlt: "Harness the Power: The Key to Effective Social Media Marketing Training"
 status: "published"

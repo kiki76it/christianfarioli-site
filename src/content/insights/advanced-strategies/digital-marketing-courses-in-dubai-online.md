@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/03/1709563004673x230477995807932160-feature-scaled.jpg"
 featuredImageAlt: "Boost Your Business: Best Online Marketing Courses in Dubai"
 status: "published"

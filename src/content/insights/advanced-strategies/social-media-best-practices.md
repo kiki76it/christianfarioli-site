@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1704373857536x843610785879018900-feature.jpg"
 featuredImageAlt: "Stay Ahead of the Curve: Embracing Social Media Best Practices"
 status: "published"

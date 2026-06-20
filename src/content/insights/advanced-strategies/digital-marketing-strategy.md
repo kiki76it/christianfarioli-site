@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1704373857053x878858630014320800-feature.jpeg"
 featuredImageAlt: "Supercharge Your Business: Unveiling the Secrets of Digital Marketing Strategy"
 status: "published"

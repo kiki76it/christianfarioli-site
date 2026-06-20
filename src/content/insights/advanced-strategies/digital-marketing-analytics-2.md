@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1706281068752x221400782351586200-feature.jpeg"
 featuredImageAlt: "Measure, Analyze, Succeed: The Key to Effective Digital Marketing"
 status: "published"

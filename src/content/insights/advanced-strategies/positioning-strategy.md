@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/06/1718868222425x427184496779034800-feature-1-scaled.jpg"
 featuredImageAlt: "Positioning Strategy: Ignite Your Brands Potential and Outshine the Competition"
 status: "published"

@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1706281068739x302888677232678850-feature.jpeg"
 featuredImageAlt: "Drive Targeted Traffic: Harness the Power of a Specialized SEM Agency"
 status: "published"

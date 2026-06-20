@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/06/1718868222728x221885922533269000-feature-1-scaled.jpg"
 featuredImageAlt: "Breaking Barriers: Maximizing ROI with an Omni-Channel Marketing Strategy"
 status: "published"

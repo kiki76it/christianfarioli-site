@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/02/1708407981552x309983961152034940-feature-scaled.jpg"
 featuredImageAlt: "Unleash Your Earnings: Dive into the World of Affiliate Marketing Training"
 status: "published"

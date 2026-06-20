@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1706281068579x250717332210291140-feature.jpeg"
 featuredImageAlt: "The Ultimate Guide to the Top Digital Marketing Agency for Your Business"
 status: "published"

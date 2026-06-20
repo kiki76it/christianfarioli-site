@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1706281068756x339780544264017400-feature.jpg"
 featuredImageAlt: "Unleashing Success: Latest Digital Marketing Trends You Cant Ignore"
 status: "published"

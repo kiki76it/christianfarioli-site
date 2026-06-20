@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1706281068724x384260970316874430-feature.jpeg"
 featuredImageAlt: "Stay Ahead of the Curve: The Benefits of Hiring a Digital Advertising Agency"
 status: "published"

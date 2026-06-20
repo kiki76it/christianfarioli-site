@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/03/1709563004667x328564595767393900-feature-scaled.jpg"
 featuredImageAlt: "Driving Success: Digital Marketing Case Studies in Dubai"
 status: "published"

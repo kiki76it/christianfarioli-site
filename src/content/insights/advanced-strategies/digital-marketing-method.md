@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2018/03/Digital-Marketing-Pizza-Method.jpg"
 featuredImageAlt: "Boom…! My unique Digital Marketing Method"
 status: "published"

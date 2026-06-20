@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1706281068575x934322567172171500-feature.jpg"
 featuredImageAlt: "Unlocking Success: How Digital Marketing Specialists Can Skyrocket Your Business"
 status: "published"

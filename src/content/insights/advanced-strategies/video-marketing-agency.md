@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1706281068759x951417566791795700-feature.jpeg"
 featuredImageAlt: "Skyrocket Your Reach: Tap into the Expertise of a Video Marketing Agency"
 status: "published"

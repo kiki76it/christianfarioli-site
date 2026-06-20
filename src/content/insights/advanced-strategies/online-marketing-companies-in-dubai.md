@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/03/1709563004474x867233018942293200-feature-scaled.jpg"
 featuredImageAlt: "From Dubai to Digital Excellence: Online Marketing Companies You Can Trust"
 status: "published"

@@ -8,7 +8,7 @@ tags:
 author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
-  avatar: "/images/authors/christian-farioli.svg"
+  avatar: "/images/authors/christian-farioli.jpg"
 featuredImage: "/images/insights/2024/01/1704373857010x100065036882067700-feature.jpeg"
 featuredImageAlt: "Future-Proof Your Business: Navigating the Ever-Changing SEO Strategy Landscape"
 status: "published"
