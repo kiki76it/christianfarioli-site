@@ -16,6 +16,7 @@ export const INSIGHT_CATEGORIES = [
   'ai-marketing',
   'executive-education',
   'future-of-work',
+  'advanced-strategies',
 ] as const;
 
 export type InsightCategory = (typeof INSIGHT_CATEGORIES)[number];
@@ -28,6 +29,7 @@ export const CATEGORY_LABELS: Record<InsightCategory, string> = {
   'ai-marketing': 'AI Marketing',
   'executive-education': 'Executive Education',
   'future-of-work': 'Future of Work',
+  'advanced-strategies': 'Advanced Strategies',
 };
 
 // ---------------------------------------------------------------------------
