@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "/images/insights/2024/01/Digital-Marketing-Courses.png"
+featuredImage: "/images/insights/2024/01/Digital-Marketing-Courses.jpg"
 featuredImageAlt: "Digital Marketing Revolution: The Ultimate Guide to Digital Marketing Courses"
 status: "published"
 publishedAt: 2024-01-05

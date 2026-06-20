@@ -21,7 +21,7 @@ How does Digital Marketing impact on the product lifecycle? I define it Beyond M
 
 ## Digital Marketing is Market Research
 
-![](/images/insights/2017/12/Facebook-300x113.png)Using Facebook for example we know exactly what our customer would like or not and if we check our competitors we know what our potential customer like and don’t. If we only have 1000 followers and our competitor have 1 million followers, let’s see what our competitor, what our potential clients want. Let’s read our competitor company read, what they post, what they ask, what they engage with. So then we know exactly what our potential customers want.  
+![](/images/insights/2017/12/Facebook-300x113.jpg)Using Facebook for example we know exactly what our customer would like or not and if we check our competitors we know what our potential customer like and don’t. If we only have 1000 followers and our competitor have 1 million followers, let’s see what our competitor, what our potential clients want. Let’s read our competitor company read, what they post, what they ask, what they engage with. So then we know exactly what our potential customers want.  
 
 ## Digital Marketing is Product Design
 
