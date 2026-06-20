@@ -20,6 +20,7 @@ export const GET: APIRoute = async () => {
   urls.push({ loc: `${ORIGIN}/`, priority: '1.0', changefreq: 'weekly', lastmod: today });
   urls.push({ loc: `${ORIGIN}/testimonials.html`, priority: '0.8', changefreq: 'monthly' });
   urls.push({ loc: `${ORIGIN}/past-events.html`, priority: '0.7', changefreq: 'monthly' });
+  urls.push({ loc: `${ORIGIN}/clients.html`, priority: '0.7', changefreq: 'monthly' });
 
   // --- Insights hub + categories ---
   urls.push({ loc: `${ORIGIN}/insights/`, priority: '0.9', changefreq: 'daily', lastmod: today });
