@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "/images/articles/placeholder-hero.svg"
+featuredImage: "/images/insights/generated/internet-marketing-strategy.svg"
 featuredImageAlt: "Unleash Your Potential: Maximizing Results with an Effective Internet Marketing Strategy"
 status: "published"
 publishedAt: 2024-01-15

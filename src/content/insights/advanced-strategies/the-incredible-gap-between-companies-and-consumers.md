@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "/images/articles/placeholder-hero.svg"
+featuredImage: "/images/insights/generated/the-incredible-gap-between-companies-and-consumers.svg"
 featuredImageAlt: "The incredible gap between companies and consumers"
 status: "published"
 publishedAt: 2017-04-27

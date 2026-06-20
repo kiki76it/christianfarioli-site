@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "/images/articles/placeholder-hero.svg"
+featuredImage: "/images/insights/generated/digital-marketing-means-grabbing-the-numbers.svg"
 featuredImageAlt: "Digital Marketing means grabbing the numbers"
 status: "published"
 publishedAt: 2017-01-10

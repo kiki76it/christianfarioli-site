@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#0D0D0D"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#CC0000"/>
+  <circle cx="1050" cy="120" r="180" fill="#CC0000" opacity="0.06"/>
+  <text x="600" y="150" font-family="Inter, sans-serif" font-size="18" font-weight="600" letter-spacing="4" fill="#CC0000" text-anchor="middle">ADVANCED STRATEGIES</text>
+  <text x="600" y="301" font-family="Playfair Display, Georgia, serif" font-size="56" font-weight="500" fill="#FAFAF8" text-anchor="middle">Mastering Strategic</text>
+  <text x="600" y="373" font-family="Playfair Display, Georgia, serif" font-size="56" font-weight="500" fill="#FAFAF8" text-anchor="middle">Digital Marketing</text>
+  <text x="600" y="560" font-family="Inter, sans-serif" font-size="20" font-weight="400" fill="#FAFAF8" opacity="0.6" text-anchor="middle">Prof. Christian Farioli</text>
+</svg>
