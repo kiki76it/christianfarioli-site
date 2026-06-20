@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/1706281068763x866870601574439400-feature.jpeg"
+featuredImage: "/images/insights/2024/01/1706281068763x866870601574439400-feature.jpeg"
 featuredImageAlt: "Unleash Your Online Potential: Why You Need an E-commerce Marketing Agency"
 status: "published"
 publishedAt: 2024-02-24

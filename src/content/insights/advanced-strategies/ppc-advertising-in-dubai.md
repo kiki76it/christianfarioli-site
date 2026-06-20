@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/03/1709563004471x525898610243355840-feature-1-scaled.jpg"
+featuredImage: "/images/insights/2024/03/1709563004471x525898610243355840-feature-1-scaled.jpg"
 featuredImageAlt: "Driving Business Growth: The Art of PPC Advertising in Dubai"
 status: "published"
 publishedAt: 2024-03-04

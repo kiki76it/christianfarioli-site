@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/1706281068524x376059299246966000-feature.jpeg"
+featuredImage: "/images/insights/2024/01/1706281068524x376059299246966000-feature.jpeg"
 featuredImageAlt: "Supercharge Your Strategy: Unleash the Power of an Internet Marketing Agency"
 status: "published"
 publishedAt: 2024-02-07

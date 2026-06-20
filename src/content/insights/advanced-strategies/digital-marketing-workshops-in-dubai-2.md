@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/03/1709563004643x937541010042573200-feature-1-scaled.jpg"
+featuredImage: "/images/insights/2024/03/1709563004643x937541010042573200-feature-1-scaled.jpg"
 featuredImageAlt: "Unveiling the Secrets: Top Digital Marketing Workshops in Dubai"
 status: "published"
 publishedAt: 2024-03-04

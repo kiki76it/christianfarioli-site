@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/02/1708407981727x677784972778627600-feature.jpg"
+featuredImage: "/images/insights/2024/02/1708407981727x677784972778627600-feature.jpg"
 featuredImageAlt: "From Novice to Pro: Corporate Digital Marketing Training Made Easy"
 status: "published"
 publishedAt: 2024-04-03

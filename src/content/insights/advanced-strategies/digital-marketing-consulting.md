@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/1706281068596x147853322039341220-feature.jpeg"
+featuredImage: "/images/insights/2024/01/1706281068596x147853322039341220-feature.jpeg"
 featuredImageAlt: "Maximize Your ROI: Unleashing the Power of Digital Marketing Consulting"
 status: "published"
 publishedAt: 2024-02-05

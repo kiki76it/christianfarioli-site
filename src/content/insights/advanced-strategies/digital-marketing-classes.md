@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/02/1708407981481x192542852800899000-feature-scaled.jpg"
+featuredImage: "/images/insights/2024/02/1708407981481x192542852800899000-feature-scaled.jpg"
 featuredImageAlt: "Empowering Your Marketing Journey: Discover the Benefits of Digital Marketing Classes"
 status: "published"
 publishedAt: 2024-03-03

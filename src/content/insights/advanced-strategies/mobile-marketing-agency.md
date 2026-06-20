@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/1706281068592x969754274845915100-feature.jpg"
+featuredImage: "/images/insights/2024/01/1706281068592x969754274845915100-feature.jpg"
 featuredImageAlt: "Supercharge Your Mobile Campaigns with a Results-Driven Mobile Marketing Agency"
 status: "published"
 publishedAt: 2024-02-20

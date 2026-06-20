@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/1706281068609x439791642490710660-feature.jpeg"
+featuredImage: "/images/insights/2024/01/1706281068609x439791642490710660-feature.jpeg"
 featuredImageAlt: "Maximize Your Online Potential: Unleashing the Power of an Online Marketing Agency"
 status: "published"
 publishedAt: 2024-02-09

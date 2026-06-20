@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/06/1718868222436x987989062544103700-feature-2-scaled.jpg"
+featuredImage: "/images/insights/2024/06/1718868222436x987989062544103700-feature-2-scaled.jpg"
 featuredImageAlt: "The Ultimate Guide to Crafting a Powerful Customer Retention Strategy"
 status: "published"
 publishedAt: 2024-06-21

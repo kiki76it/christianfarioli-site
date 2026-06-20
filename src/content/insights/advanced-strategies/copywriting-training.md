@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/02/1708407981500x535754865804200800-feature-1-scaled.jpg"
+featuredImage: "/images/insights/2024/02/1708407981500x535754865804200800-feature-1-scaled.jpg"
 featuredImageAlt: "Unleash Your Creative Genius: The Key to Copywriting Training"
 status: "published"
 publishedAt: 2024-03-17

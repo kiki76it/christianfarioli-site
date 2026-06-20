@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/Video-Marketing-Strategy.jpg"
+featuredImage: "/images/insights/2024/01/Video-Marketing-Strategy.jpg"
 featuredImageAlt: "Revolutionize Your Marketing: Harnessing the Power of Video Strategy"
 status: "published"
 publishedAt: 2024-01-31

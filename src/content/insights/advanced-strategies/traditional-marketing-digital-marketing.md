@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2017/09/startup-photos-e1506071961309.jpg"
+featuredImage: "/images/insights/2017/09/startup-photos-e1506071961309.jpg"
 featuredImageAlt: "Traditional Marketing vs Digital Marketing"
 status: "published"
 publishedAt: 2017-09-22

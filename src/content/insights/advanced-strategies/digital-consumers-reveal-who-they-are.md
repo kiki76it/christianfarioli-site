@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2017/05/digital-customer.jpg"
+featuredImage: "/images/insights/2017/05/digital-customer.jpg"
 featuredImageAlt: "With Digital, consumers reveal who they are"
 status: "published"
 publishedAt: 2020-02-19

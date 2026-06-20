@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/1706281068556x415802431170265500-feature.jpeg"
+featuredImage: "/images/insights/2024/01/1706281068556x415802431170265500-feature.jpeg"
 featuredImageAlt: "Fuel Your Brands Growth: Unleashing the Power of a Branding Agency"
 status: "published"
 publishedAt: 2024-02-16

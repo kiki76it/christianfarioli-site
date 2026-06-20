@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/03/1709563004469x700066556514961000-feature-scaled.jpg"
+featuredImage: "/images/insights/2024/03/1709563004469x700066556514961000-feature-scaled.jpg"
 featuredImageAlt: "The Dubai Advantage: Harnessing the Power of Content Marketing"
 status: "published"
 publishedAt: 2024-03-04

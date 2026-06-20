@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2017/03/Case-study-1-Paralax.jpg"
+featuredImage: "/images/insights/2017/03/Case-study-1-Paralax.jpg"
 featuredImageAlt: "Here’s why you are confused about Digital Marketing"
 status: "published"
 publishedAt: 2017-01-05

@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/Lead-Generation-Strategy.jpg"
+featuredImage: "/images/insights/2024/01/Lead-Generation-Strategy.jpg"
 featuredImageAlt: "Unlocking Success: The Key Components of an Effective Lead Generation Strategy"
 status: "published"
 publishedAt: 2024-01-25

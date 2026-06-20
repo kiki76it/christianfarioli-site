@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/02/1708407981572x812669256685601000-feature-3.jpg"
+featuredImage: "/images/insights/2024/02/1708407981572x812669256685601000-feature-3.jpg"
 featuredImageAlt: "Conquer the Digital Advertising Landscape: Enroll in PPC Training Today"
 status: "published"
 publishedAt: 2024-03-10
