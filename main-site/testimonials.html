@@ -642,6 +642,21 @@
             .nav.nav-light .nav-links .nav-link, .nav.scrolled .nav-links .nav-link { color: var(--color-text-primary) !important; }
             .nav-links { background: var(--color-bg-primary) !important; }
         }
+            /* More Testimonials (4-column) */
+        .more-testimonials { padding: var(--space-2xl) 0 var(--space-3xl); background: var(--color-bg-primary); }
+        .more-testimonials-head { text-align: center; max-width: 640px; margin: 0 auto var(--space-2xl); }
+        .more-testimonials-head h2 { font-family: var(--font-accent, 'Playfair Display', Georgia, serif); font-size: clamp(28px, 4vw, 40px); font-weight: 500; margin-bottom: var(--space-sm); }
+        .more-testimonials-head p { color: var(--color-text-secondary); font-size: 17px; }
+        .more-testimonials-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .mt-card { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 16px; padding: 32px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; box-shadow: 0 8px 30px rgba(0,0,0,0.04); }
+        .mt-avatar { width: 76px; height: 76px; border-radius: 50%; overflow: hidden; border: 1px solid var(--color-border); margin-bottom: 16px; background: var(--color-bg-secondary); flex-shrink: 0; }
+        .mt-avatar img { width: 100%; height: 100%; object-fit: cover; }
+        .mt-name { font-size: 17px; font-weight: 700; color: var(--color-text-primary); margin-bottom: 6px; }
+        .mt-title { font-size: 13px; color: var(--color-text-secondary); line-height: 1.45; margin-bottom: 16px; min-height: 38px; }
+        .mt-quote-icon { font-family: Georgia, serif; font-size: 30px; line-height: 0.5; color: var(--color-accent); opacity: 0.55; margin-bottom: 16px; }
+        .mt-quote { font-family: var(--font-accent, 'Playfair Display', Georgia, serif); font-style: italic; font-size: 15px; line-height: 1.6; color: var(--color-text-primary); }
+        @media (max-width: 1024px) { .more-testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 560px) { .more-testimonials-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -892,6 +907,81 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- More Testimonials (4-column) -->
+    <section class="more-testimonials">
+        <div class="container">
+            <div class="more-testimonials-head">
+                <h2>More Kind Words</h2>
+                <p>A few more of the leaders and teams Prof. Christian has worked with.</p>
+            </div>
+            <div class="more-testimonials-grid">
+                <div class="mt-card fade-up">
+                    <div class="mt-avatar"><img src="./imgs/testimonials/sushil-bhasin.png" alt="Brigadier Sushil Bhasin, CSP" loading="lazy"></div>
+                    <div class="mt-name">Brigadier Sushil Bhasin, CSP</div>
+                    <div class="mt-title">Certified Speaking Professional | CXO Productivity</div>
+                    <div class="mt-quote-icon">&ldquo;</div>
+                    <p class="mt-quote">&ldquo;I have heard Christian Farioli on more than 4 stages in different countries. He is by far the best Digital Marketing genius I have found. Every event needs the Pizza Marketing Guy — he creates magic!&rdquo;</p>
+                </div>
+
+                <div class="mt-card fade-up">
+                    <div class="mt-avatar"><img src="./imgs/testimonials/aakash-jain.png" alt="Aakash S Jain" loading="lazy"></div>
+                    <div class="mt-name">Aakash S Jain</div>
+                    <div class="mt-title">Program Director | Enterprise Change Architect</div>
+                    <div class="mt-quote-icon">&ldquo;</div>
+                    <p class="mt-quote">&ldquo;Christian is a great trainer and gave us insightful training on Fintech. He explained the disruption industries have gone through and why Fintech is here to stay. I strongly recommend him.&rdquo;</p>
+                </div>
+
+                <div class="mt-card fade-up">
+                    <div class="mt-avatar"><img src="./imgs/testimonials/anil-kumar.png" alt="Anil Kumar" loading="lazy"></div>
+                    <div class="mt-name">Anil Kumar</div>
+                    <div class="mt-title">Head of Sales & Business Development</div>
+                    <div class="mt-quote-icon">&ldquo;</div>
+                    <p class="mt-quote">&ldquo;I had the privilege to attend one of Christian sessions on SEO and PPC and found the content and structure fantastic. His training is easy to understand and his open-minded approach stood out for me.&rdquo;</p>
+                </div>
+
+                <div class="mt-card fade-up">
+                    <div class="mt-avatar"><img src="./imgs/testimonials/khalid-almoulani.png" alt="Khalid Almoulani" loading="lazy"></div>
+                    <div class="mt-name">Khalid Almoulani</div>
+                    <div class="mt-title">Assistant Manager, Family Office</div>
+                    <div class="mt-quote-icon">&ldquo;</div>
+                    <p class="mt-quote">&ldquo;For a five-day course I did not expect to get much out of it. Mr. Christian Farioli taught us valuable information about digital marketing beyond our expectation. His presentation was practical and engaging.&rdquo;</p>
+                </div>
+
+                <div class="mt-card fade-up">
+                    <div class="mt-avatar"><img src="./imgs/testimonials/hasan-kayali.png" alt="Hasan Kayali" loading="lazy"></div>
+                    <div class="mt-name">Hasan Kayali</div>
+                    <div class="mt-title">Managing Director, E-Go Digital</div>
+                    <div class="mt-quote-icon">&ldquo;</div>
+                    <p class="mt-quote">&ldquo;I had the pleasure of attending Christian SEO class. The information was valuable and the delivery engaging. He has a lot of respect for Google and understands how to please it.&rdquo;</p>
+                </div>
+
+                <div class="mt-card fade-up">
+                    <div class="mt-avatar"><img src="./imgs/testimonials/basant-hassan.png" alt="Basant Hassan" loading="lazy"></div>
+                    <div class="mt-name">Basant Hassan</div>
+                    <div class="mt-title">Marketing Strategist | ex-Meta, ex-Uber</div>
+                    <div class="mt-quote-icon">&ldquo;</div>
+                    <p class="mt-quote">&ldquo;Christian possesses an exceptional ability to teach and get the message through. He presented both simple and complex digital concepts in a simple manner. I highly recommend him.&rdquo;</p>
+                </div>
+
+                <div class="mt-card fade-up">
+                    <div class="mt-avatar"><img src="./imgs/testimonials/ehsan-el-obied.png" alt="Eman ELObaid" loading="lazy"></div>
+                    <div class="mt-name">Eman ELObaid</div>
+                    <div class="mt-title">Marketer</div>
+                    <div class="mt-quote-icon">&ldquo;</div>
+                    <p class="mt-quote">&ldquo;Christian was invited to give a keynote at the Digital Marketing Summit in Khartoum, Sudan. The workshops were insightful and current, addressing digital trends in an exciting and inspiring way!&rdquo;</p>
+                </div>
+
+                <div class="mt-card fade-up">
+                    <div class="mt-avatar"><img src="./imgs/testimonials/amin-noghabai.png" alt="Amin Neghabat" loading="lazy"></div>
+                    <div class="mt-name">Amin Neghabat</div>
+                    <div class="mt-title">Co-Founder & CEO, Healthcare</div>
+                    <div class="mt-quote-icon">&ldquo;</div>
+                    <p class="mt-quote">&ldquo;Solid media strategist in the UAE. He utilizes SEO and CPC tactics to ensure your company stays out in front of your customers on major search engines. A good communicator who delivers results.&rdquo;</p>
+                </div>
             </div>
         </div>
     </section>
