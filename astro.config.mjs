@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 
@@ -19,9 +18,6 @@ export default defineConfig({
       rehypePlugins: [rehypeSlug],
       // Allow components used in MDX to be auto-imported from src/components
       optimize: true,
-    }),
-    sitemap({
-      filter: (page) => !page.includes('/admin/') && !page.includes('/api/'),
     }),
   ],
   markdown: {
