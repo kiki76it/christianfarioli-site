@@ -2581,6 +2581,15 @@
         .nav-dropdown-menu a { display: block; padding: 9px 14px; font-size: 14px; font-weight: 500; color: var(--color-text-primary); text-decoration: none; border-radius: 6px; white-space: nowrap; }
         .nav-dropdown-menu a:hover { background: var(--color-bg-secondary); color: var(--color-accent); }
         @media (max-width: 968px) { .nav-dropdown { flex-direction: column; align-items: center; gap: 24px; } .nav-dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; background: transparent; padding: 0; min-width: 0; text-align: center; } .nav-dropdown-menu a { padding: 8px 0; font-size: 14px; font-weight: 500; color: var(--color-text-primary); text-align: center; } .nav-dropdown::after { display: none; } }
+            /* Trusted-by client strip */
+        .trusted-strip { padding: var(--space-2xl) 0; background: var(--color-bg-secondary); text-align: center; }
+        .trusted-label { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: var(--space-lg); }
+        .trusted-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 34px 48px; max-width: 1100px; margin: 0 auto var(--space-lg); }
+        .trusted-logos img { height: 38px; max-width: 130px; object-fit: contain; filter: grayscale(100%); opacity: 0.6; transition: filter .3s ease, opacity .3s ease; }
+        .trusted-logos img:hover { filter: grayscale(0%); opacity: 1; }
+        .trusted-link { font-size: 14px; font-weight: 600; color: var(--color-accent); text-decoration: none; }
+        .trusted-link:hover { text-decoration: underline; }
+        @media (max-width: 600px) { .trusted-logos { gap: 22px 28px; } .trusted-logos img { height: 28px; } }
     </style>
 <link rel="icon" href="./imgs/favicon.png" type="image/png">
     <style>
@@ -2625,6 +2634,7 @@
                 <a href="/insights/" class="nav-link">Insights</a>
                 <a href="#books" class="nav-link">Books</a>
                 <a href="/testimonials.html" class="nav-link">Testimonials</a>
+                <a href="/clients.html" class="nav-link">Clients</a>
                 <a href="https://future.christianfarioli.com" target="_blank" rel="noopener" class="nav-link">Future</a>
                 <a href="#contact" class="nav-link">Contact</a>
                 <a href="https://calendly.com/chrisfarioli/30min" target="_blank" rel="noopener" class="btn btn-light nav-cta">Work Together</a>
@@ -3037,6 +3047,36 @@
     </section>
 
     <!-- Testimonials Section - Premium Rotating Carousel -->
+        <!-- Trusted by (client logos) -->
+    <section class="trusted-strip">
+        <div class="container">
+            <p class="trusted-label">Trusted by leading organizations worldwide</p>
+            <div class="trusted-logos">
+                <img src="./imgs/clients/client-16.jpg" alt="Google" loading="lazy">
+                <img src="./imgs/clients/client-34.png" alt="Huawei" loading="lazy">
+                <img src="./imgs/clients/client-08.jpg" alt="EY" loading="lazy">
+                <img src="./imgs/clients/client-12.png" alt="PwC" loading="lazy">
+                <img src="./imgs/clients/client-09.jpg" alt="World Economic Forum" loading="lazy">
+                <img src="./imgs/clients/client-06.png" alt="NASA" loading="lazy">
+                <img src="./imgs/clients/client-02.jpg" alt="Bloomberg" loading="lazy">
+                <img src="./imgs/clients/client-47.jpg" alt="Thomson Reuters" loading="lazy">
+                <img src="./imgs/clients/client-58.png" alt="Novartis" loading="lazy">
+                <img src="./imgs/clients/client-61.jpg" alt="Bayer" loading="lazy">
+                <img src="./imgs/clients/client-55.png" alt="Eli Lilly" loading="lazy">
+                <img src="./imgs/clients/client-03.png" alt="TEDx" loading="lazy">
+                <img src="./imgs/clients/client-70.jpg" alt="Bvlgari" loading="lazy">
+                <img src="./imgs/clients/client-73.jpg" alt="Ferrari" loading="lazy">
+                <img src="./imgs/clients/client-76.jpg" alt="Armani" loading="lazy">
+                <img src="./imgs/clients/client-50.jpg" alt="Emaar" loading="lazy">
+                <img src="./imgs/clients/client-65.jpg" alt="Etisalat" loading="lazy">
+                <img src="./imgs/clients/client-33.jpg" alt="ESET" loading="lazy">
+                <img src="./imgs/clients/client-74.png" alt="CNBC" loading="lazy">
+                <img src="./imgs/clients/client-75.jpg" alt="Saudi Aramco" loading="lazy">
+            </div>
+            <a href="/clients.html" class="trusted-link">See all clients &rarr;</a>
+        </div>
+    </section>
+
     <section class="testimonials-section" id="testimonials">
         <div class="container">
             <div class="testimonials-header fade-up">
