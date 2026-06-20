@@ -9,13 +9,13 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "/images/insights/2018/04/growth-hacking-e1523547676264.png"
+featuredImage: "/images/insights/2018/04/growth-hacking-e1523547676264.jpg"
 featuredImageAlt: "What is Growth Hacking?"
 status: "published"
 publishedAt: 2020-02-20
 ---
 
-Hi guys. Do you have ever heard this word “Growth Hacking”? Some of you already look around. And I know that because 90.000 of you guys are searching every month in Google what’s Growth Hacking. Don’t you believe me? Look at this chart from [Google Trends](https://trends.google.it/trends/)! ![growth hacking](/images/insights/2018/04/growth-hacking-e1523547676264.png)
+Hi guys. Do you have ever heard this word “Growth Hacking”? Some of you already look around. And I know that because 90.000 of you guys are searching every month in Google what’s Growth Hacking. Don’t you believe me? Look at this chart from [Google Trends](https://trends.google.it/trends/)! ![growth hacking](/images/insights/2018/04/growth-hacking-e1523547676264.jpg)
 
 ## Let’s see what is Growth Hacking
 

@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "/images/insights/2024/01/1704373857047x541426267479468540-feature.png"
+featuredImage: "/images/insights/2024/01/1704373857047x541426267479468540-feature.jpg"
 featuredImageAlt: "From Likes to Leads: Maximizing Results with an Effective Social Media Strategy"
 status: "published"
 publishedAt: 2024-01-27

@@ -17,7 +17,7 @@ publishedAt: 2018-03-06
 
 ## Today I reveal you the first step of my unique Digital Marketing Method. It’s something that no one uses, and I created it during over 20 years as a professional and strategist in Digital Marketing.
 
-Only people, entrepreneurs and managers that participate to my seminars know this in every details. Because during my seminars I go deeper in every strategic element that you’re gonna find here. But soon… I hope veeeery soon.. you’ll find everything about Christian Farioli Method in a new book. Yes! It will be ready in some months… So even if you can’t participate to one of my workshops or seminars, you’ll have the opportunity to discover and to apply a strategic method that is built with a logical sense. Because the perspective is to help you reaching your goal, that is: GETTING RESULTS! ![](/images/insights/2018/03/metodo-farioli.png)
+Only people, entrepreneurs and managers that participate to my seminars know this in every details. Because during my seminars I go deeper in every strategic element that you’re gonna find here. But soon… I hope veeeery soon.. you’ll find everything about Christian Farioli Method in a new book. Yes! It will be ready in some months… So even if you can’t participate to one of my workshops or seminars, you’ll have the opportunity to discover and to apply a strategic method that is built with a logical sense. Because the perspective is to help you reaching your goal, that is: GETTING RESULTS! ![](/images/insights/2018/03/metodo-farioli.jpg)
 
 ## Christian Farioli Digital Marketing Method
 
