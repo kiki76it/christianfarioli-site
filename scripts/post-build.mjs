@@ -34,9 +34,17 @@ async function copyDir(src, dst) {
 }
 
 console.log(`[post-build] Mirroring ${DIST}/ → ${DEST}/`);
+// Astro already built the CMS (incl. published article detail pages) under dist/insights/.
+// Stash it OUTSIDE dist before wiping, then restore it on top of the mirror so the
+// article pages (and any other /insights-routed pages) survive.
+const CMS_TMP = 'dist-cms-tmp';
+await rm(CMS_TMP, { recursive: true, force: true });
+await copyDir(DEST, CMS_TMP);
 await rm(DEST, { recursive: true, force: true });
 await copyDir(DIST, DEST);
-console.log(`[post-build] Done. /insights/ sub-path is now servable.`);
+await copyDir(CMS_TMP, DEST);
+await rm(CMS_TMP, { recursive: true, force: true });
+console.log(`[post-build] Done. /insights/ sub-path is now servable (article pages preserved).`);
 
 // ---------------------------------------------------------------------------
 // Overlay the main site onto the dist ROOT, AFTER the /insights mirror exists.
