@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/1704373857144x551771704558079900-feature.jpeg"
+featuredImage: "/images/insights/2024/01/1704373857144x551771704558079900-feature.jpeg"
 featuredImageAlt: "Unleash the Power of Influence: Crafting an Effective Marketing Strategy"
 status: "published"
 publishedAt: 2024-01-05

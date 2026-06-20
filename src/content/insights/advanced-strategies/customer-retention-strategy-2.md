@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/06/1718868222439x113103419250638160-feature-1-scaled.jpg"
+featuredImage: "/images/insights/2024/06/1718868222439x113103419250638160-feature-1-scaled.jpg"
 featuredImageAlt: "The Power of Loyalty: Unleashing Your Customer Retention Strategy"
 status: "published"
 publishedAt: 2024-06-21

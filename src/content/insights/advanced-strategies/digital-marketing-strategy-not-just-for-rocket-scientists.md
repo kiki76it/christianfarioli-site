@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2023/06/Digital-Marketing-Strategy.jpeg"
+featuredImage: "/images/insights/2023/06/Digital-Marketing-Strategy.jpeg"
 featuredImageAlt: "Digital Marketing: Strategy Not Just for Rocket Scientists!"
 status: "published"
 publishedAt: 2023-06-07

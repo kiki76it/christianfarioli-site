@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/06/1718868222422x985159607568169900-feature-2-scaled.jpg"
+featuredImage: "/images/insights/2024/06/1718868222422x985159607568169900-feature-2-scaled.jpg"
 featuredImageAlt: "Unlocking Growth Potential: The Key Elements of a Content Marketing Strategy"
 status: "published"
 publishedAt: 2024-06-21

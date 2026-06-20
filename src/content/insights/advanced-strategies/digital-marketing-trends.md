@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/future-of-digital-marketing-trends.jpg"
+featuredImage: "/images/insights/2024/01/future-of-digital-marketing-trends.jpg"
 featuredImageAlt: "Ignite Your Growth: Exploring the Future of Digital Marketing Trends"
 status: "published"
 publishedAt: 2024-01-21

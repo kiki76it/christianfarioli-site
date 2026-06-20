@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/1706281068564x915358293723255200-feature.jpeg"
+featuredImage: "/images/insights/2024/01/1706281068564x915358293723255200-feature.jpeg"
 featuredImageAlt: "Unlock Your Brands Potential: Collaborate with an Influencer Marketing Agency"
 status: "published"
 publishedAt: 2024-02-19

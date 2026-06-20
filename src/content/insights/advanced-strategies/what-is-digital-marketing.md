@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2016/12/Digital-Marketing-low.jpg"
+featuredImage: "/images/insights/2016/12/Digital-Marketing-low.jpg"
 featuredImageAlt: "What is Digital Marketing?"
 status: "published"
 publishedAt: 2020-02-21

@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/03/1709563004495x999889138762946000-feature-scaled.jpg"
+featuredImage: "/images/insights/2024/03/1709563004495x999889138762946000-feature-scaled.jpg"
 featuredImageAlt: "Accelerate Your Growth: Get the Best Digital Marketing Consultant in Dubai"
 status: "published"
 publishedAt: 2024-03-04

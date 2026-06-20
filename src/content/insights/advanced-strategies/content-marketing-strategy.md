@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/1704373857095x520104249670390700-feature.jpg"
+featuredImage: "/images/insights/2024/01/1704373857095x520104249670390700-feature.jpg"
 featuredImageAlt: "Dominate the Digital Landscape: Strategies for an Effective Content Marketing Plan"
 status: "published"
 publishedAt: 2024-01-28

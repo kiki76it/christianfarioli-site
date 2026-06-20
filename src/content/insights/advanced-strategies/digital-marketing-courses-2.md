@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/1706281068527x240492820805354050-feature.jpeg"
+featuredImage: "/images/insights/2024/01/1706281068527x240492820805354050-feature.jpeg"
 featuredImageAlt: "Accelerate Your Success: Discover the Power of Digital Marketing Courses"
 status: "published"
 publishedAt: 2024-02-14

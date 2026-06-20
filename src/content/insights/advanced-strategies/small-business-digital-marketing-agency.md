@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/1706281068767x312350853264192800-feature.jpeg"
+featuredImage: "/images/insights/2024/01/1706281068767x312350853264192800-feature.jpeg"
 featuredImageAlt: "Unlock Success: How a Small Business Digital Marketing Agency Can Help You"
 status: "published"
 publishedAt: 2024-03-01

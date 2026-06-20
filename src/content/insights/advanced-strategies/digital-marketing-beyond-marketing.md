@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2017/12/Top-8-Digital-Marketing-Job-Opportunities.jpg"
+featuredImage: "/images/insights/2017/12/Top-8-Digital-Marketing-Job-Opportunities.jpg"
 featuredImageAlt: "Digital Marketing is Beyond Marketing"
 status: "published"
 publishedAt: 2017-12-19
@@ -21,7 +21,7 @@ How does Digital Marketing impact on the product lifecycle? I define it Beyond M
 
 ## Digital Marketing is Market Research
 
-![](https://old.farioli.com/wp-content/uploads/2017/12/Facebook-300x113.png)Using Facebook for example we know exactly what our customer would like or not and if we check our competitors we know what our potential customer like and don’t. If we only have 1000 followers and our competitor have 1 million followers, let’s see what our competitor, what our potential clients want. Let’s read our competitor company read, what they post, what they ask, what they engage with. So then we know exactly what our potential customers want.  
+![](/images/insights/2017/12/Facebook-300x113.png)Using Facebook for example we know exactly what our customer would like or not and if we check our competitors we know what our potential customer like and don’t. If we only have 1000 followers and our competitor have 1 million followers, let’s see what our competitor, what our potential clients want. Let’s read our competitor company read, what they post, what they ask, what they engage with. So then we know exactly what our potential customers want.  
 
 ## Digital Marketing is Product Design
 
@@ -33,7 +33,7 @@ Northwest Airlines, and now KLM Airlines, have been awarded many times by being 
 
 ## Digital Marketing is Corporate Social Responsibility
 
-And even more, if your company is doing **corporate social responsibilit**y, in this case with digital, you blast. Because when you post a special promotion of the day nobody cares, guys. You think as a marketer “It’s amazing! 50% discount, this is incredible!” and you blast your promotion every minutes… and all of your competitor do the same blasting, the same promotion, because they see your page and then they copy. If you are giving 50% discount they will be giving 60%. Because “We are even more clever!” ![Corporate Social Responsability with digital marketing](https://old.farioli.com/wp-content/uploads/2017/12/csr-300x168.jpg)Nobody cares about this! But if you post that you did something amazing, everyone is gonna share that. Everyone shares a good cause. A big example about Vatika, the largest company in India producing shampoos. They did the **[campaign for cancer awareness](https://www.youtube.com/watch?v=QomoNyfkqvg)** and they took in the video a lady who had an advanced cancer stage and she was completely bald without hair, so instead of using shampoo with someone with long and shiny hair, they took a lady without hair. That campaign got massive over 20 times more than any other possible campaign ever launched before. Then people start loving the brand.  
+And even more, if your company is doing **corporate social responsibilit**y, in this case with digital, you blast. Because when you post a special promotion of the day nobody cares, guys. You think as a marketer “It’s amazing! 50% discount, this is incredible!” and you blast your promotion every minutes… and all of your competitor do the same blasting, the same promotion, because they see your page and then they copy. If you are giving 50% discount they will be giving 60%. Because “We are even more clever!” ![Corporate Social Responsability with digital marketing](/images/insights/2017/12/csr-300x168.jpg)Nobody cares about this! But if you post that you did something amazing, everyone is gonna share that. Everyone shares a good cause. A big example about Vatika, the largest company in India producing shampoos. They did the **[campaign for cancer awareness](https://www.youtube.com/watch?v=QomoNyfkqvg)** and they took in the video a lady who had an advanced cancer stage and she was completely bald without hair, so instead of using shampoo with someone with long and shiny hair, they took a lady without hair. That campaign got massive over 20 times more than any other possible campaign ever launched before. Then people start loving the brand.  
 
 ## We are all in marketing now! My personal experience
 

@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/1706281068743x680103428427254900-feature.jpeg"
+featuredImage: "/images/insights/2024/01/1706281068743x680103428427254900-feature.jpeg"
 featuredImageAlt: "From Strategy to Success: Driving Results with Digital Marketing Campaigns"
 status: "published"
 publishedAt: 2024-02-23

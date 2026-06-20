@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/02/1708407981514x752240875746150300-feature-2-scaled.jpg"
+featuredImage: "/images/insights/2024/02/1708407981514x752240875746150300-feature-2-scaled.jpg"
 featuredImageAlt: "Unlocking Insights: The Power of Data Analysis Training"
 status: "published"
 publishedAt: 2024-03-18

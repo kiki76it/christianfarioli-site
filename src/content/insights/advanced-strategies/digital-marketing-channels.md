@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/Digital-Marketing-Channels.png"
+featuredImage: "/images/insights/2024/01/Digital-Marketing-Channels.png"
 featuredImageAlt: "Outperform Your Competitors: Strategies for Effective Digital Marketing Channels"
 status: "published"
 publishedAt: 2024-01-17

@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "https://old.farioli.com/wp-content/uploads/2024/01/Secrets-of-Digital-Marketing-Campaigns.jpg"
+featuredImage: "/images/insights/2024/01/Secrets-of-Digital-Marketing-Campaigns.jpg"
 featuredImageAlt: "Unleash Your Potential: Unveiling the Secrets of Digital Marketing Campaigns"
 status: "published"
 publishedAt: 2024-01-22
