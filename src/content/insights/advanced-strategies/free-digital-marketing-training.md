@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/02/1708407981697x311710907934907400-feature-5-scaled.jpg"
+featuredImage: "/images/insights/covers/free-digital-marketing-training.jpg"
 featuredImageAlt: "Unleash Your Marketing Superpowers: Free Digital Marketing Training"
 status: "published"
 publishedAt: 2024-03-07

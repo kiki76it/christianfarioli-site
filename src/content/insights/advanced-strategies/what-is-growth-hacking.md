@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2018/04/growth-hacking-e1523547676264.jpg"
+featuredImage: "/images/insights/covers/what-is-growth-hacking.jpg"
 featuredImageAlt: "What is Growth Hacking?"
 status: "published"
 publishedAt: 2020-02-20

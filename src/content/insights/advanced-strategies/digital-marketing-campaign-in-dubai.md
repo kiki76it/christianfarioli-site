@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/03/1709563004502x889486224785224800-feature.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-campaign-in-dubai.jpg"
 featuredImageAlt: "Redefine Your Success: Mastering the Art of Digital Marketing Campaigns in Dubai"
 status: "published"
 publishedAt: 2024-03-04

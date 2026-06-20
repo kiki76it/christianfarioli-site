@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/06/1718868222451x514972914958002400-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/online-marketing-strategy-2.jpg"
 featuredImageAlt: "Unlocking Success: The Key Elements of a Powerful Online Marketing Strategy"
 status: "published"
 publishedAt: 2024-06-21

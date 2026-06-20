@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/06/1718868222709x698617552414198900-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/affiliate-marketing-strategy.jpg"
 featuredImageAlt: "Cracking the Code: Secrets of a High-Converting Affiliate Marketing Strategy"
 status: "published"
 publishedAt: 2024-06-21

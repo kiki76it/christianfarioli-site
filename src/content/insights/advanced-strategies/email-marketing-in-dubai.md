@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/03/1709563004461x813006078743872400-feature-scaled.jpg"
+featuredImage: "/images/insights/covers/email-marketing-in-dubai.jpg"
 featuredImageAlt: "Revolutionize Your Marketing: Email Marketing in Dubai Decoded"
 status: "published"
 publishedAt: 2024-03-04

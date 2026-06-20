@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/02/1708407981520x482151634403844540-feature-4-scaled.jpg"
+featuredImage: "/images/insights/covers/google-analytics-training.jpg"
 featuredImageAlt: "Harnessing the Power of Data: Effective Google Analytics Training"
 status: "published"
 publishedAt: 2024-03-14

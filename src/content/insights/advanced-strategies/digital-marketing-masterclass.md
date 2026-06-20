@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/02/1708407981722x545174482345436100-feature-5-scaled.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-masterclass.jpg"
 featuredImageAlt: "Dominate the Digital Landscape: Enroll in the Masterclass Today"
 status: "published"
 publishedAt: 2024-03-03

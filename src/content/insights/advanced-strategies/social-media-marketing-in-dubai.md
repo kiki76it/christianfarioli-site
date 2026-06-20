@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/03/1709563004455x558584305157536500-feature-scaled.jpg"
+featuredImage: "/images/insights/covers/social-media-marketing-in-dubai.jpg"
 featuredImageAlt: "Maximize Your Reach: Social Media Marketing in Dubai Demystified"
 status: "published"
 publishedAt: 2024-03-04

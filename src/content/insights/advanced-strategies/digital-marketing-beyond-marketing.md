@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2017/12/Top-8-Digital-Marketing-Job-Opportunities.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-beyond-marketing.jpg"
 featuredImageAlt: "Digital Marketing is Beyond Marketing"
 status: "published"
 publishedAt: 2017-12-19

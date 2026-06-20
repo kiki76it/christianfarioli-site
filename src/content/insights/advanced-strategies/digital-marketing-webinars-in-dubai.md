@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/03/1709563004646x439194201977987300-feature-scaled.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-webinars-in-dubai.jpg"
 featuredImageAlt: "Dubais Digital Marketing Powerhouses: Must-Watch Webinars"
 status: "published"
 publishedAt: 2024-03-04

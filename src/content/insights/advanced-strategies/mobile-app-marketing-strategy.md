@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/06/1718868222740x310758658107342000-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/mobile-app-marketing-strategy.jpg"
 featuredImageAlt: "Unlocking Success: Powering Your Mobile App with Effective Marketing Strategies"
 status: "published"
 publishedAt: 2024-06-21

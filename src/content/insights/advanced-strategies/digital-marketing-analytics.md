@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/01/Digital-Marketing-Analytics.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-analytics.jpg"
 featuredImageAlt: "Master the Metrics: Navigating the World of Digital Marketing Analytics"
 status: "published"
 publishedAt: 2024-01-13

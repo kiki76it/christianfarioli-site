@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/06/1718868222454x637983325476100200-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/influencer-marketing-strategy.jpg"
 featuredImageAlt: "Skyrocket Your Brand: The Power of a Well-Executed Influencer Marketing Strategy"
 status: "published"
 publishedAt: 2024-06-21

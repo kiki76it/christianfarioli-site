@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/03/1709563004498x717293323092703500-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-roi-in-dubai.jpg"
 featuredImageAlt: "Dubais Digital Marketing ROI Game-Changers"
 status: "published"
 publishedAt: 2024-03-04

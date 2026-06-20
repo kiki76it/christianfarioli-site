@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/01/1706281068735x214789413334860670-feature.jpeg"
+featuredImage: "/images/insights/covers/email-marketing-agency.jpeg"
 featuredImageAlt: "Supercharge Your Campaigns: Unleash the Potential of an Email Marketing Agency"
 status: "published"
 publishedAt: 2024-02-26

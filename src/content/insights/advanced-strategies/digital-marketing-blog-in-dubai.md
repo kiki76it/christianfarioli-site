@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/03/1709563004524x197598174780614600-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-blog-in-dubai.jpg"
 featuredImageAlt: "Mastering the Digital Game: Dubais Ultimate Digital Marketing Blog"
 status: "published"
 publishedAt: 2024-03-04

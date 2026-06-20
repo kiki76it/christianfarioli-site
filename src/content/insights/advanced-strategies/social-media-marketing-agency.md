@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/01/1706281068552x888025130131297200-feature.jpeg"
+featuredImage: "/images/insights/covers/social-media-marketing-agency.jpeg"
 featuredImageAlt: "Maximize Your Reach: Top Benefits of a Social Media Marketing Agency"
 status: "published"
 publishedAt: 2024-02-11

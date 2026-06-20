@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/02/1708407981717x228676050029456450-feature-1-scaled.jpg"
+featuredImage: "/images/insights/covers/lead-generation-training.jpg"
 featuredImageAlt: "Lead the Way: Mastering Lead Generation through Expert Training"
 status: "published"
 publishedAt: 2024-03-31

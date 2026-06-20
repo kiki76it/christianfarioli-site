@@ -24,6 +24,55 @@ const related = resolveRelated(allEntries, data.related);
 
 const publishedISO = data.publishedAt?.toISOString();
 const updatedISO = data.updatedAt?.toISOString();
+
+// ---- Structured data (SEO + AISO rich results) ----
+const ORIGIN = 'https://christianfarioli.com';
+const articleUrl = `${ORIGIN}/insights/${entry.id}/`;
+const articleImage = data.featuredImage?.startsWith('http')
+  ? data.featuredImage
+  : `${ORIGIN}${data.featuredImage}`;
+const jsonLd: Record<string, unknown>[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: data.title,
+    description: data.description,
+    image: articleImage,
+    datePublished: publishedISO,
+    dateModified: updatedISO ?? publishedISO,
+    author: { '@type': 'Person', name: data.author.name, url: `${ORIGIN}/` },
+    publisher: {
+      '@type': 'Person',
+      name: 'Prof. Christian Farioli',
+      url: `${ORIGIN}/`,
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
+    articleSection: CATEGORY_LABELS[data.category],
+    inLanguage: 'en',
+    keywords: (data.tags ?? []).join(', '),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${ORIGIN}/` },
+      { '@type': 'ListItem', position: 2, name: 'Insights', item: `${ORIGIN}/insights/` },
+      { '@type': 'ListItem', position: 3, name: CATEGORY_LABELS[data.category], item: `${ORIGIN}/insights/category/${data.category}/` },
+      { '@type': 'ListItem', position: 4, name: data.title, item: articleUrl },
+    ],
+  },
+];
+if (data.faq?.length) {
+  jsonLd.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: data.faq.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  });
+}
 ---
 <BaseLayout
   title={data.title}
@@ -33,6 +82,10 @@ const updatedISO = data.updatedAt?.toISOString();
   publishedTime={publishedISO}
   modifiedTime={updatedISO}
 >
+  {jsonLd.map((obj) => (
+    <script type="application/ld+json" set:html={JSON.stringify(obj)} />
+  ))}
+
   {preview && !isPublic && (
     <div class="preview-banner">
       <div class="container">

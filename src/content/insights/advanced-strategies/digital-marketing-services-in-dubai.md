@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/03/1709563004451x958283393857239000-feature-scaled.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-services-in-dubai.jpg"
 featuredImageAlt: "Supercharge Your Business: Unleashing Digital Marketing Services in Dubai"
 status: "published"
 publishedAt: 2024-03-04

@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/01/1704373857557x156159392170649900-feature.jpeg"
+featuredImage: "/images/insights/covers/brand-awareness-strategy.jpeg"
 featuredImageAlt: "Ignite Your Brand: Powerful Strategies for Building Brand Awareness"
 status: "published"
 publishedAt: 2024-01-29

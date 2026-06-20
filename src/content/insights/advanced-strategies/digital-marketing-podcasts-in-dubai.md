@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/03/1709563004657x300305998879927230-feature-scaled.jpg"
+featuredImage: "/images/insights/covers/digital-marketing-podcasts-in-dubai.jpg"
 featuredImageAlt: "Dubais Podcast Powerhouses: Unveiling Digital Marketing Gems"
 status: "published"
 publishedAt: 2024-03-04

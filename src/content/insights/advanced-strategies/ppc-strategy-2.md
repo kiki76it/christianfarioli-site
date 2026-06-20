@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.jpg"
-featuredImage: "/images/insights/2024/06/1718868222713x161671807232325120-feature-2-scaled.jpg"
+featuredImage: "/images/insights/covers/ppc-strategy-2.jpg"
 featuredImageAlt: "The Winning Formula: Creating a Foolproof PPC Strategy"
 status: "published"
 publishedAt: 2024-06-21
