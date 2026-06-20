@@ -28,7 +28,7 @@ export function p(path: string): string {
 
 export const paths = {
   home: () => p('/'),
-  insights: (slug: string) => p(`/insights/${slug}/`),
+  insights: (slug: string) => p(`/${slug}/`),
   category: (cat: string) => p(`/category/${cat}/`),
   adminHome: () => p('/admin/'),
   adminPreview: (slug: string) => p(`/admin/preview/${slug}/`),
