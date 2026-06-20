@@ -30,12 +30,17 @@ const data = entry.data;
 const info = STATUS_INFO[data.status];
 const advanceTo = defaultAdvance(data.status);
 const next = nextStatuses(data.status);
+// Build a GitHub web-editor URL so "Edit File" works from any browser (no local
+// checkout / VS Code needed). entry.filePath carries the correct .md/.mdx extension.
+const repoFilePath = entry.filePath ?? `src/content/insights/${entry.id}.mdx`;
+const editUrl = `https://github.com/kiki76it/christianfarioli-site/edit/main/${repoFilePath}`;
+const fileName = repoFilePath.split('/').pop();
 ---
 <ArticleLayout entry={entry} allEntries={all} preview={true}>
   <Content />
 </ArticleLayout>
 
-<script define:vars={{ slug: entry.id, status: data.status, scheduledFor: data.scheduledFor, advanceTo, next, apiPath: paths.apiPublish() }}>
+<script define:vars={{ slug: entry.id, status: data.status, scheduledFor: data.scheduledFor, advanceTo, next, apiPath: paths.apiPublish(), editUrl, fileName }}>
   // Admin helpers shown only in preview. They POST to the local API endpoint that
   // the automation scripts also use; in static-only deploys the API may be unavailable
   // and these buttons become read-only summaries.
@@ -45,18 +50,15 @@ const next = nextStatuses(data.status);
     banner.innerHTML = `
       <div class="container">
         <span class="status">${status}</span>
-        <span class="filename">${slug}.mdx</span>
+        <span class="filename">${fileName}</span>
         <div class="actions">
-          <button data-action="edit" class="btn btn-secondary">Edit File</button>
+          <a href="${editUrl}" target="_blank" rel="noopener" class="btn btn-secondary">Edit on GitHub</a>
           ${advanceTo ? `<button data-action="advance" class="btn btn-primary">Advance → ${advanceTo}</button>` : ''}
         </div>
       </div>
     `;
     document.body.prepend(banner);
 
-    banner.querySelector('[data-action="edit"]')?.addEventListener('click', () => {
-      window.open(`vscode://file${window.location.pathname.replace('/admin/preview/', '/src/content/insights/').replace(/\/$/, '')}.mdx`, '_blank');
-    });
     banner.querySelector('[data-action="advance"]')?.addEventListener('click', async () => {
       const r = await fetch(apiPath, {
         method: 'POST',
