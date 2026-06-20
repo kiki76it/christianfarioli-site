@@ -9,7 +9,7 @@ author:
   name: "Prof. Christian Farioli"
   role: "AI Strategist, Educator & Advisor"
   avatar: "/images/authors/christian-farioli.svg"
-featuredImage: "/images/articles/placeholder-hero.svg"
+featuredImage: "/images/insights/generated/strategic-digital-marketing.svg"
 featuredImageAlt: "Mastering the Art of Strategic Digital Marketing: A Comprehensive Guide"
 status: "published"
 publishedAt: 2024-06-21
