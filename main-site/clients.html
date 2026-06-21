@@ -723,18 +723,6 @@
         </div>
     </section>
 
-    <!-- Filter Section -->
-    <section class="filter-section">
-        <div class="filter-container">
-            <button class="filter-btn active" data-filter="all">All Testimonials</button>
-            <button class="filter-btn" data-filter="speaking">Speaking</button>
-            <button class="filter-btn" data-filter="ai-strategy">AI Strategy</button>
-            <button class="filter-btn" data-filter="training">Training</button>
-            <button class="filter-btn" data-filter="consulting">Consulting</button>
-            <button class="filter-btn" data-filter="fintech">FinTech</button>
-        </div>
-    </section>
-
     <!-- Clients logo wall -->
     <section class="clients-section">
         <div class="container">
@@ -914,29 +902,6 @@
     </footer>
 
     <script>
-        // Filter functionality
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const testimonials = document.querySelectorAll('.testimonial-card-page');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Update active state
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filter = btn.dataset.filter;
-
-                testimonials.forEach(testimonial => {
-                    const categories = testimonial.dataset.category;
-                    if (filter === 'all' || categories.includes(filter)) {
-                        testimonial.classList.remove('hidden');
-                    } else {
-                        testimonial.classList.add('hidden');
-                    }
-                });
-            });
-        });
-
         // Scroll animations
         const observerOptions = {
             root: null,
