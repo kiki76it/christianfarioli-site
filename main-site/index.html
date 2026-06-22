@@ -12,6 +12,7 @@
     <script src="https://aladinia.app/tracking.js?key=yb_4ce1b3b5" async></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="image" href="./imgs/hero-poster.jpg">
     <title>Prof. Christian Farioli — AI Strategist, Educator & Advisor</title>
     <meta name="description" content="Helping leaders navigate artificial intelligence with clarity, strategic thinking, and human-centered wisdom.">
     <link rel="canonical" href="https://christianfarioli.com/">
@@ -31,7 +32,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"></noscript>
 
     <style>
         /* ============================================
@@ -2652,8 +2654,8 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="./videos/Christian Farioli Header 2 (No Sound).mp4" type="video/mp4">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="./imgs/hero-poster.jpg">
+            <source src="./videos/hero-header.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
 
