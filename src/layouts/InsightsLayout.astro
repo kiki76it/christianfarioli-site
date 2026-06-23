@@ -92,7 +92,7 @@ function dateLabel(d?: Date): string | null {
         <a href="/clients.html" class="nav-link">Clients</a>
         <a href="https://future.christianfarioli.com" target="_blank" rel="noopener" class="nav-link">Future</a>
         <a href={`${main}#contact`} class="nav-link">Contact</a>
-        <a href={`${main}#cta`} class="nav-cta">Work Together</a>
+        <a href="https://calendly.com/chrisfarioli/30min" target="_blank" rel="noopener" class="nav-cta">Work Together</a>
       </div>
       <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -422,11 +422,11 @@ function dateLabel(d?: Date): string | null {
   }
   .nav-link:hover::after, .nav-link.active::after { width: 100%; }
   .nav-cta {
-    background: var(--color-text-primary); color: var(--color-white) !important;
+    background: var(--color-accent); color: var(--color-white) !important;
     padding: var(--space-xs) var(--space-md); border-radius: 6px; transition: background 0.3s var(--ease);
     font-size: 14px; font-weight: 500; text-decoration: none;
   }
-  .nav-cta:hover { background: var(--color-accent); }
+  .nav-cta:hover { background: var(--color-accent-hover); }
   .nav-mobile-toggle {
     display: none; flex-direction: column; justify-content: center; gap: 5px;
     width: 32px; height: 32px; cursor: pointer; background: none; border: none; padding: 0;
