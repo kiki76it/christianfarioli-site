@@ -1856,7 +1856,7 @@
         }
 
         .nav.hidden {
-            transform: translateY(-100%);
+            transform: translateY(0);
         }
 
         .nav-link {
@@ -3393,14 +3393,8 @@
             const scrollPercent = docHeight > 0 ? scrollTop / docHeight : 0;
             scrollProgress.style.transform = `scaleX(${scrollPercent})`;
 
-            // Hide/show nav based on scroll direction
-            if (scrollTop > lastScrollTop && scrollTop > 200) {
-                // Scrolling down - hide nav
-                nav.classList.add('hidden');
-            } else {
-                // Scrolling up - show nav
-                nav.classList.remove('hidden');
-            }
+            // Nav stays visible at all times (sticky) — hide-on-scroll removed
+            nav.classList.remove('hidden');
 
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
             ticking = false;
