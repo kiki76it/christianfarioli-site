@@ -39,3 +39,5 @@
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+  # Agent discovery (RFC 8288): advertise the LLM-facing site description
+  Link: </llms.txt>; rel="describedby"; type="text/plain"
