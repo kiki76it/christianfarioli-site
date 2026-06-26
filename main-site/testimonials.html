@@ -684,10 +684,13 @@
       .gr-sub a{color:var(--color-accent);font-weight:600;text-decoration:none}
       .gr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:var(--space-lg)}
       .gr-card{background:var(--color-white);border:1px solid var(--color-border);border-radius:12px;padding:var(--space-lg);display:flex;flex-direction:column}
-      .gr-card-stars{font-size:.95rem;margin-bottom:var(--space-sm)}
+      .gr-card-head{display:flex;align-items:center;gap:12px;margin-bottom:var(--space-md)}
+      .gr-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:1rem;flex-shrink:0;font-family:var(--font-primary)}
+      .gr-card-meta{display:flex;flex-direction:column;gap:2px}
+      .gr-card-author{font-weight:600;color:var(--color-text-primary);font-size:.95rem}
+      .gr-card-stars{font-size:.9rem}
       .gr-card-text{color:var(--color-text-secondary);line-height:1.7;font-size:.95rem;margin-bottom:var(--space-md);flex:1}
-      .gr-card-author{font-weight:600;color:var(--color-text-primary);font-size:.9rem}
-      .gr-via{color:var(--color-text-secondary);font-size:.78rem;margin-top:2px}
+      .gr-via{color:var(--color-text-secondary);font-size:.78rem}
     </style>
 </head>
 <body>
@@ -1360,87 +1363,157 @@
         </div>
         <div class="gr-grid">
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#2C5282" aria-hidden="true">KC</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">Karen Cutler</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">Professor Christian was absolutely brilliant at sharing the future of Digital Marketing to an international audience, who welcomed him with standing applause and recognition for his superior intellect and business brilliance.</p>
-            <div class="gr-card-author">Karen Cutler</div>
             <div class="gr-via">via Google</div>
           </div>
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#CC0000" aria-hidden="true">JO</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">John O'Reilly</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">Fascinating expose on the history and future of AI. Quite remarkable view of the future. Extraordinary… Thank you.</p>
-            <div class="gr-card-author">John O'Reilly</div>
             <div class="gr-via">via Google</div>
           </div>
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#9C4221" aria-hidden="true">MH</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">Muhammad Hasan</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">Attended a two-day training provided by Prof. Farioli and it was exceptional. The session offered valuable insights into the future of technology and AI, blending theory with practical applications. Trainers expertise and ability to simplify complex concepts made it both engaging and inspiring. Highly recommend for anyone looking to stay ahead in the fintech landscape!</p>
-            <div class="gr-card-author">Muhammad Hasan</div>
             <div class="gr-via">via Google</div>
           </div>
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#2C5282" aria-hidden="true">GD</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">George de la Cour</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">Great presentation on a subject which is going to be the new Google and YouTube combined, except bigger: AISO. Amazing.</p>
-            <div class="gr-card-author">George de la Cour</div>
             <div class="gr-via">via Google</div>
           </div>
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#9C4221" aria-hidden="true">FM</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">Frank Mulcahy</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">Christian is an incredible instructor, he has an incredible command on Digital Marketing. I am amazed every time I listen in on his lectures. I highly recommend Christian</p>
-            <div class="gr-card-author">Frank Mulcahy</div>
             <div class="gr-via">via Google</div>
           </div>
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#0A3D4A" aria-hidden="true">SH</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">Suzanne Halal</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">Amazing experience, training, knowledge, all the information needed for a solid Digital Marketing Activity! Very well structured, clear and exhaustive information. Great Trainer, and good material that will really be useful to practice on our own. I truly recommend this training for anyone who needs this topic.</p>
-            <div class="gr-card-author">Suzanne Halal</div>
             <div class="gr-via">via Google</div>
           </div>
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#9C4221" aria-hidden="true">AK</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">Alex Kei</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">Christian Farioli is one of the Digital Marketing Experts I consult when I feel stuck, as he has real-world experience and also he is a very creative person, always finding out-of-the-box methods to make things work properly. Besides that, he is a very entertaining trainer and his lectures are very pleasant to attend.</p>
-            <div class="gr-card-author">Alex Kei</div>
             <div class="gr-via">via Google</div>
           </div>
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#CC0000" aria-hidden="true">AK</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">Abdulaziz Kaki</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">Got the Chance to meet Mr Farioli at a 2 days intensive Digital Marketing Course in MBSC, King Abdullah Econmic City, KSA. I must say that Mr. Farioli is a very knowledgeable man in this field; I certainly gained a lot of knowledge that I look forward to implement in my businesses.</p>
-            <div class="gr-card-author">Abdulaziz Kaki</div>
             <div class="gr-via">via Google</div>
           </div>
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#2C5282" aria-hidden="true">DA</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">Dalal Aldhobaib</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">I attended 5 days Digital Marketing course with Christian, I came out knowing a-lot about digital marketing mire than I expected. Christian is a great teacher, knowing many techniques and tricks that will improve your race.</p>
-            <div class="gr-card-author">Dalal Aldhobaib</div>
             <div class="gr-via">via Google</div>
           </div>
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#0A3D4A" aria-hidden="true">GV</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">Gloria Vinyals</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">I believe every professional needs to be literate in AI to succeed nowadays! The best summary of a very interesting conference!</p>
-            <div class="gr-card-author">Gloria Vinyals</div>
             <div class="gr-via">via Google</div>
           </div>
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#1A1A1A" aria-hidden="true">DC</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">David Cavanagh</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">What a great presentation at the Team Cavanagh AI Wealth Workshop 2026</p>
-            <div class="gr-card-author">David Cavanagh</div>
             <div class="gr-via">via Google</div>
           </div>
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#1D6F42" aria-hidden="true">AK</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">Arlene Kemp</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">Attended an AI conference where Dr Christian was a speaker. He is very knowledgeable and an exceptional speaker.</p>
-            <div class="gr-card-author">Arlene Kemp</div>
             <div class="gr-via">via Google</div>
           </div>
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#5B2A86" aria-hidden="true">KG</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">Khatia Gaprindashvili</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">Thank you for your insightful and engaging presentation. It was truly captivating and left a lasting impression. I appreciate the effort and expertise you shared with us.</p>
-            <div class="gr-card-author">Khatia Gaprindashvili</div>
             <div class="gr-via">via Google</div>
           </div>
           <div class="gr-card fade-up">
-            <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+            <div class="gr-card-head">
+              <div class="gr-avatar" style="background:#9C4221" aria-hidden="true">KE</div>
+              <div class="gr-card-meta">
+                <div class="gr-card-author">Kash Em</div>
+                <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
+              </div>
+            </div>
             <p class="gr-card-text">Eye opening talk, incredible stats - and overall great guy!</p>
-            <div class="gr-card-author">Kash Em</div>
             <div class="gr-via">via Google</div>
           </div>
         </div>
