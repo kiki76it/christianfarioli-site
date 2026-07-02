@@ -2661,6 +2661,12 @@
       .speaking-card:hover,.insight-card:hover,.book-item:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.12)}
       /* 5) book 3D tilt */
       .book-cover,.book-item-thumb{transform-style:preserve-3d;will-change:transform;transition:transform .3s ease}
+      /* 5b) touch feedback (mobile) */
+      @media (hover:none){
+        .speaking-card:active,.insight-card:active,.book-item:active{transform:translateY(-4px) scale(.99);box-shadow:0 14px 30px rgba(0,0,0,.14);transition-duration:.15s}
+        .btn:active,.nav-cta:active{transform:scale(.96);transition-duration:.1s}
+        .gr-card:active,.home-faq-item:active{transform:translateY(-3px);transition:transform .15s ease}
+      }
       @media (prefers-reduced-motion:reduce){
         .marquee-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}
         .hero-video{animation:none}
