@@ -2596,12 +2596,9 @@
             /* Trusted-by client strip */
         .trusted-strip { padding: var(--space-2xl) 0; background: var(--color-bg-secondary); text-align: center; }
         .trusted-label { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: var(--space-lg); }
-        .trusted-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 34px 48px; max-width: 1100px; margin: 0 auto var(--space-lg); }
-        .trusted-logos img { height: 38px; max-width: 130px; object-fit: contain; filter: grayscale(100%); opacity: 0.6; transition: filter .3s ease, opacity .3s ease; }
-        .trusted-logos img:hover { filter: grayscale(0%); opacity: 1; }
         .trusted-link { font-size: 14px; font-weight: 600; color: var(--color-accent); text-decoration: none; }
         .trusted-link:hover { text-decoration: underline; }
-        @media (max-width: 600px) { .trusted-logos { gap: 22px 28px; } .trusted-logos img { height: 28px; } }
+        
     </style>
 <link rel="icon" href="./imgs/favicon.png" type="image/png">
     <style>
@@ -2639,6 +2636,36 @@
       .google-badge-stars{color:#FBBC04;font-size:.95rem;letter-spacing:1px}
       .google-badge-text{color:var(--color-text-light);font-size:.9rem}
       .google-badge-text strong{color:var(--color-white)}
+    </style>
+    <style>
+      /* 3) logo marquee */
+      .marquee{overflow:hidden;position:relative;max-width:1200px;margin:0 auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+      .marquee+.marquee{margin-top:30px}
+      .marquee-track{display:flex;align-items:center;gap:72px;width:max-content;animation:marquee-scroll 48s linear infinite;padding:4px 0}
+      .marquee-reverse .marquee-track{animation-direction:reverse}
+      .marquee:hover .marquee-track{animation-play-state:paused}
+      .marquee img{height:38px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(100%);opacity:.55;transition:filter .3s ease,opacity .3s ease,transform .3s ease}
+      .marquee img:hover{filter:none;opacity:1;transform:scale(1.08)}
+      .trusted-link{display:inline-block;margin-top:34px}
+      @keyframes marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+      @media (max-width:600px){.marquee-track{gap:44px}.marquee img{height:30px}}
+      /* 6) Ken Burns + grain */
+      .hero-video{animation:heroKB 26s ease-in-out infinite alternate;will-change:transform}
+      @keyframes heroKB{from{transform:scale(1)}to{transform:scale(1.07)}}
+      .hero-grain{position:absolute;top:0;left:0;width:100%;height:calc(100% - 72px);margin-top:72px;pointer-events:none;z-index:2;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");mix-blend-mode:overlay}
+      /* 4) manifesto progressive highlight */
+      .manifesto-quote .mw{opacity:.22;transition:opacity .3s ease}
+      .manifesto-quote .mw.on{opacity:1}
+      /* 5) card lifts */
+      .speaking-card,.insight-card,.book-item{transition:transform .35s cubic-bezier(0.22,1,0.36,1),box-shadow .35s ease}
+      .speaking-card:hover,.insight-card:hover,.book-item:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.12)}
+      /* 5) book 3D tilt */
+      .book-cover,.book-item-thumb{transform-style:preserve-3d;will-change:transform;transition:transform .3s ease}
+      @media (prefers-reduced-motion:reduce){
+        .marquee-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}
+        .hero-video{animation:none}
+        .manifesto-quote .mw{opacity:1}
+      }
     </style>
 </head>
 <body>
@@ -2684,6 +2711,7 @@
             <source src="./videos/hero-header.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
+        <div class="hero-grain" aria-hidden="true"></div>
 
         <div class="hero-content">
             <span class="hero-tagline fade-up">Professor & AI Strategist</span>
@@ -2713,28 +2741,63 @@
     <section class="trusted-strip">
         <div class="container">
             <p class="trusted-label">Trusted by leading organizations worldwide</p>
-            <div class="trusted-logos">
-                <picture><source type="image/webp" srcset="./imgs/clients/client-16.webp"><img width="627" height="318" src="./imgs/clients/client-16.jpg" alt="Google" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-34.webp"><img width="340" height="114" src="./imgs/clients/client-34.png" alt="Huawei" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-08.webp"><img width="340" height="141" src="./imgs/clients/client-08.jpg" alt="EY" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-12.webp"><img width="282" height="179" src="./imgs/clients/client-12.png" alt="PwC" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-09.webp"><img width="300" height="300" src="./imgs/clients/client-09.jpg" alt="World Economic Forum" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-06.webp"><img width="284" height="147" src="./imgs/clients/client-06.png" alt="NASA" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-02.webp"><img width="331" height="112" src="./imgs/clients/client-02.jpg" alt="Bloomberg" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-47.webp"><img width="149" height="90" src="./imgs/clients/client-47.jpg" alt="Thomson Reuters" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-58.webp"><img width="340" height="340" src="./imgs/clients/client-58.png" alt="Novartis" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-61.webp"><img width="316" height="308" src="./imgs/clients/client-61.jpg" alt="Bayer" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-55.webp"><img width="340" height="176" src="./imgs/clients/client-55.png" alt="Eli Lilly" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-03.webp"><img width="178" height="149" src="./imgs/clients/client-03.png" alt="TEDx" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-70.webp"><img width="768" height="769" src="./imgs/clients/client-70.jpg" alt="Bvlgari" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-73.webp"><img width="470" height="325" src="./imgs/clients/client-73.jpg" alt="Ferrari" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-76.webp"><img width="300" height="300" src="./imgs/clients/client-76.jpg" alt="Armani" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-50.webp"><img width="400" height="400" src="./imgs/clients/client-50.jpg" alt="Emaar" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-65.webp"><img width="225" height="225" src="./imgs/clients/client-65.jpg" alt="Etisalat" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-33.webp"><img width="257" height="120" src="./imgs/clients/client-33.jpg" alt="ESET" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-74.webp"><img width="225" height="225" src="./imgs/clients/client-74.png" alt="CNBC" loading="lazy"></picture>
-                <picture><source type="image/webp" srcset="./imgs/clients/client-75.webp"><img width="305" height="214" src="./imgs/clients/client-75.jpg" alt="Saudi Aramco" loading="lazy"></picture>
+            <div class="marquee">
+                <div class="marquee-track">
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-13.webp"><img loading="lazy" src="./imgs/clients/client-13.png" alt="Google" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-36.webp"><img loading="lazy" src="./imgs/clients/client-36.png" alt="Huawei" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-03.webp"><img loading="lazy" src="./imgs/clients/client-03.png" alt="NASA" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-05.webp"><img loading="lazy" src="./imgs/clients/client-05.png" alt="TEDx" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-11.webp"><img loading="lazy" src="./imgs/clients/client-11.png" alt="World Economic Forum" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-02.webp"><img loading="lazy" src="./imgs/clients/client-02.jpg" alt="Bloomberg" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-76.webp"><img loading="lazy" src="./imgs/clients/client-76.jpg" alt="CNBC" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-44.webp"><img loading="lazy" src="./imgs/clients/client-44.png" alt="Thomson Reuters" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-09.webp"><img loading="lazy" src="./imgs/clients/client-09.jpg" alt="PwC" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-10.webp"><img loading="lazy" src="./imgs/clients/client-10.png" alt="EY" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-60.webp"><img loading="lazy" src="./imgs/clients/client-60.png" alt="Novartis" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-58.webp"><img loading="lazy" src="./imgs/clients/client-58.png" alt="Bayer" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-13.webp"><img loading="lazy" src="./imgs/clients/client-13.png" alt="Google" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-36.webp"><img loading="lazy" src="./imgs/clients/client-36.png" alt="Huawei" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-03.webp"><img loading="lazy" src="./imgs/clients/client-03.png" alt="NASA" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-05.webp"><img loading="lazy" src="./imgs/clients/client-05.png" alt="TEDx" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-11.webp"><img loading="lazy" src="./imgs/clients/client-11.png" alt="World Economic Forum" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-02.webp"><img loading="lazy" src="./imgs/clients/client-02.jpg" alt="Bloomberg" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-76.webp"><img loading="lazy" src="./imgs/clients/client-76.jpg" alt="CNBC" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-44.webp"><img loading="lazy" src="./imgs/clients/client-44.png" alt="Thomson Reuters" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-09.webp"><img loading="lazy" src="./imgs/clients/client-09.jpg" alt="PwC" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-10.webp"><img loading="lazy" src="./imgs/clients/client-10.png" alt="EY" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-60.webp"><img loading="lazy" src="./imgs/clients/client-60.png" alt="Novartis" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-58.webp"><img loading="lazy" src="./imgs/clients/client-58.png" alt="Bayer" height="38"></picture>
+                </div>
             </div>
+            <div class="marquee marquee-reverse">
+                <div class="marquee-track">
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-67.webp"><img loading="lazy" src="./imgs/clients/client-67.png" alt="Etisalat" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-52.webp"><img loading="lazy" src="./imgs/clients/client-52.png" alt="Emaar" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-78.webp"><img loading="lazy" src="./imgs/clients/client-78.jpg" alt="ADNOC" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-79.webp"><img loading="lazy" src="./imgs/clients/client-79.jpg" alt="Mubadala" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-77.webp"><img loading="lazy" src="./imgs/clients/client-77.jpg" alt="Saudi Aramco" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-75.webp"><img loading="lazy" src="./imgs/clients/client-75.jpg" alt="Ferrari" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-72.webp"><img loading="lazy" src="./imgs/clients/client-72.jpg" alt="Bvlgari" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-73.webp"><img loading="lazy" src="./imgs/clients/client-73.jpg" alt="Armani" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-57.webp"><img loading="lazy" src="./imgs/clients/client-57.png" alt="Eli Lilly" height="38"></picture>
+                    <img loading="lazy" src="./imgs/clients/coca-cola.svg" alt="Coca-Cola" height="38">
+                    <img loading="lazy" src="./imgs/clients/schneider-electric.svg" alt="Schneider Electric" height="38">
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-63.webp"><img loading="lazy" src="./imgs/clients/client-63.png" alt="Burj Al Arab" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-67.webp"><img loading="lazy" src="./imgs/clients/client-67.png" alt="Etisalat" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-52.webp"><img loading="lazy" src="./imgs/clients/client-52.png" alt="Emaar" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-78.webp"><img loading="lazy" src="./imgs/clients/client-78.jpg" alt="ADNOC" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-79.webp"><img loading="lazy" src="./imgs/clients/client-79.jpg" alt="Mubadala" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-77.webp"><img loading="lazy" src="./imgs/clients/client-77.jpg" alt="Saudi Aramco" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-75.webp"><img loading="lazy" src="./imgs/clients/client-75.jpg" alt="Ferrari" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-72.webp"><img loading="lazy" src="./imgs/clients/client-72.jpg" alt="Bvlgari" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-73.webp"><img loading="lazy" src="./imgs/clients/client-73.jpg" alt="Armani" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-57.webp"><img loading="lazy" src="./imgs/clients/client-57.png" alt="Eli Lilly" height="38"></picture>
+                    <img loading="lazy" src="./imgs/clients/coca-cola.svg" alt="Coca-Cola" height="38">
+                    <img loading="lazy" src="./imgs/clients/schneider-electric.svg" alt="Schneider Electric" height="38">
+                    <picture><source type="image/webp" srcset="./imgs/clients/client-63.webp"><img loading="lazy" src="./imgs/clients/client-63.png" alt="Burj Al Arab" height="38"></picture>
+                </div>
+            </div>
+            
             <a href="/clients.html" class="trusted-link">See all clients &rarr;</a>
         </div>
     </section>
@@ -11291,5 +11354,58 @@
 })();
 
 </script>
+    <script>
+    (function(){
+      var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      /* 2) stat count-up */
+      var nums=document.querySelectorAll('.stat-number span');
+      function runCount(el){
+        var raw=el.textContent.trim(), hasComma=raw.indexOf(',')>-1, target=parseInt(raw.replace(/,/g,''),10);
+        if(!target&&target!==0)return;
+        if(rm){el.textContent=raw;return;}
+        var t0=null,dur=1600;
+        function fmt(n){return hasComma?n.toLocaleString('en-US'):String(n);}
+        function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);var e=1-Math.pow(1-p,3);
+          el.textContent=fmt(Math.round(target*e));
+          if(p<1)requestAnimationFrame(step);else el.textContent=fmt(target);}
+        el.textContent='0';requestAnimationFrame(step);
+      }
+      if(nums.length){var seen=new WeakSet();
+        var io=new IntersectionObserver(function(es){es.forEach(function(en){
+          if(en.isIntersecting&&!seen.has(en.target)){seen.add(en.target);runCount(en.target);io.unobserve(en.target);}});},{threshold:.5});
+        nums.forEach(function(n){io.observe(n);});}
+      /* 4) manifesto word highlight */
+      var q=document.querySelector('.manifesto-quote');
+      if(q){
+        (function wrap(node){Array.prototype.slice.call(node.childNodes).forEach(function(c){
+          if(c.nodeType===3){var frag=document.createDocumentFragment();
+            c.textContent.split(/(\s+)/).forEach(function(tok){
+              if(/^\s*$/.test(tok)){frag.appendChild(document.createTextNode(tok));}
+              else{var s=document.createElement('span');s.className='mw';s.textContent=tok;frag.appendChild(s);}});
+            node.replaceChild(frag,c);}
+          else if(c.nodeType===1){wrap(c);}});})(q);
+        var words=q.querySelectorAll('.mw');
+        function upd(){var r=q.getBoundingClientRect(),vh=window.innerHeight;
+          var p=(vh*0.9-r.top)/(r.height+vh*0.45);p=Math.max(0,Math.min(1,p));
+          var n=Math.floor(p*words.length);
+          for(var i=0;i<words.length;i++){words[i].classList.toggle('on',i<n);}}
+        if(rm){words.forEach(function(w){w.classList.add('on');});}
+        else{window.addEventListener('scroll',upd,{passive:true});upd();}
+      }
+      if(rm)return;
+      /* 5) magnetic buttons */
+      document.querySelectorAll('.btn,.nav-cta').forEach(function(b){
+        b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();
+          var dx=(e.clientX-r.left-r.width/2)/(r.width/2),dy=(e.clientY-r.top-r.height/2)/(r.height/2);
+          b.style.transform='translate('+(dx*4)+'px,'+(dy*3)+'px)';});
+        b.addEventListener('mouseleave',function(){b.style.transform='';});});
+      /* 5) book 3D tilt */
+      document.querySelectorAll('.book-cover,.book-item-thumb').forEach(function(c){
+        c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();
+          var dx=(e.clientX-r.left-r.width/2)/(r.width/2),dy=(e.clientY-r.top-r.height/2)/(r.height/2);
+          c.style.transform='perspective(700px) rotateY('+(dx*7)+'deg) rotateX('+(-dy*5)+'deg)';});
+        c.addEventListener('mouseleave',function(){c.style.transform='';});});
+    })();
+    </script>
 </body>
 </html>
