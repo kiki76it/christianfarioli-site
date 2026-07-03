@@ -2639,16 +2639,16 @@
     </style>
     <style>
       /* 3) logo marquee */
-      .marquee{overflow:hidden;position:relative;max-width:1200px;margin:0 auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+      .marquee{overflow:hidden;position:relative;max-width:1200px;margin:0 auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
       .marquee+.marquee{margin-top:30px}
-      .marquee-track{display:flex;align-items:center;gap:72px;width:max-content;animation:marquee-scroll 48s linear infinite;padding:4px 0}
-      .marquee-reverse .marquee-track{animation-direction:reverse}
+      .marquee-track{display:flex;align-items:center;gap:92px;width:max-content;animation:marquee-scroll 65s linear infinite;padding:8px 0}
+      .marquee-reverse .marquee-track{animation-direction:reverse;animation-duration:78s}
       .marquee:hover .marquee-track{animation-play-state:paused}
       .marquee img{height:38px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(100%);opacity:.55;transition:filter .3s ease,opacity .3s ease,transform .3s ease}
-      .marquee img:hover{filter:none;opacity:1;transform:scale(1.08)}
+      .marquee img:hover{filter:none;opacity:1;transform:scale(1.03)}
       .trusted-link{display:inline-block;margin-top:34px}
       @keyframes marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-      @media (max-width:600px){.marquee-track{gap:44px}.marquee img{height:30px}}
+      @media (max-width:600px){.marquee-track{gap:52px;animation-duration:50s}.marquee-reverse .marquee-track{animation-duration:58s}.marquee img{height:30px}}
       /* 6) Ken Burns + grain */
       .hero-video{animation:heroKB 26s ease-in-out infinite alternate;will-change:transform}
       @keyframes heroKB{from{transform:scale(1)}to{transform:scale(1.07)}}
