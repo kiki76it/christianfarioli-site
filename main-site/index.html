@@ -2641,14 +2641,14 @@
       /* 3) logo marquee */
       .marquee{overflow:hidden;position:relative;max-width:1200px;margin:0 auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
       .marquee+.marquee{margin-top:30px}
-      .marquee-track{display:flex;align-items:center;gap:92px;width:max-content;padding:8px 0}
+      .marquee-track{display:flex;align-items:center;gap:92px;width:max-content;padding:8px 0;background:var(--color-bg-secondary)}
       
       
-      .marquee img{height:46px;width:auto;max-width:170px;object-fit:contain;filter:grayscale(100%)!important;opacity:.6;mix-blend-mode:multiply;transition:filter .3s ease,opacity .3s ease,transform .3s ease}
+      .marquee img{height:52px;width:auto;max-width:185px;object-fit:contain;filter:grayscale(100%)!important;opacity:.6;mix-blend-mode:multiply;transition:filter .3s ease,opacity .3s ease,transform .3s ease}
       .marquee img:hover{filter:grayscale(0)!important;opacity:1;transform:scale(1.03)}
       .trusted-link{display:inline-block;margin-top:34px}
       
-      @media (max-width:600px){.marquee-track{gap:52px}.marquee img{height:34px}}
+      @media (max-width:600px){.marquee-track{gap:52px}.marquee img{height:38px}}
       /* 6) Ken Burns + grain */
       .hero-video{animation:heroKB 26s ease-in-out infinite alternate;will-change:transform}
       @keyframes heroKB{from{transform:scale(1)}to{transform:scale(1.07)}}
@@ -2749,58 +2749,58 @@
             <p class="trusted-label">Trusted by leading organizations worldwide</p>
             <div class="marquee">
                 <div class="marquee-track">
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-13.webp"><img loading="lazy" src="./imgs/clients/client-13.png" alt="Google" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-36.webp"><img loading="lazy" src="./imgs/clients/client-36.png" alt="Huawei" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-03.webp"><img loading="lazy" src="./imgs/clients/client-03.png" alt="NASA" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-05.webp"><img loading="lazy" src="./imgs/clients/client-05.png" alt="TEDx" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-11.webp"><img loading="lazy" src="./imgs/clients/client-11.png" alt="World Economic Forum" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-02.webp"><img loading="lazy" src="./imgs/clients/client-02.jpg" alt="Bloomberg" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-76.webp"><img loading="lazy" src="./imgs/clients/client-76.jpg" alt="CNBC" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-44.webp"><img loading="lazy" src="./imgs/clients/client-44.png" alt="Thomson Reuters" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-09.webp"><img loading="lazy" src="./imgs/clients/client-09.jpg" alt="PwC" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-10.webp"><img loading="lazy" src="./imgs/clients/client-10.png" alt="EY" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-60.webp"><img loading="lazy" src="./imgs/clients/client-60.png" alt="Novartis" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-58.webp"><img loading="lazy" src="./imgs/clients/client-58.png" alt="Bayer" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-13.webp"><img loading="lazy" src="./imgs/clients/client-13.png" alt="Google" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-36.webp"><img loading="lazy" src="./imgs/clients/client-36.png" alt="Huawei" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-03.webp"><img loading="lazy" src="./imgs/clients/client-03.png" alt="NASA" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-05.webp"><img loading="lazy" src="./imgs/clients/client-05.png" alt="TEDx" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-11.webp"><img loading="lazy" src="./imgs/clients/client-11.png" alt="World Economic Forum" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-02.webp"><img loading="lazy" src="./imgs/clients/client-02.jpg" alt="Bloomberg" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-76.webp"><img loading="lazy" src="./imgs/clients/client-76.jpg" alt="CNBC" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-44.webp"><img loading="lazy" src="./imgs/clients/client-44.png" alt="Thomson Reuters" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-09.webp"><img loading="lazy" src="./imgs/clients/client-09.jpg" alt="PwC" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-10.webp"><img loading="lazy" src="./imgs/clients/client-10.png" alt="EY" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-60.webp"><img loading="lazy" src="./imgs/clients/client-60.png" alt="Novartis" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-58.webp"><img loading="lazy" src="./imgs/clients/client-58.png" alt="Bayer" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-13.webp"><img loading="lazy" src="./imgs/clients/mq/client-13.png" alt="Google" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-36.webp"><img loading="lazy" src="./imgs/clients/mq/client-36.png" alt="Huawei" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-03.webp"><img loading="lazy" src="./imgs/clients/mq/client-03.png" alt="NASA" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-05.webp"><img loading="lazy" src="./imgs/clients/mq/client-05.png" alt="TEDx" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-11.webp"><img loading="lazy" src="./imgs/clients/mq/client-11.png" alt="World Economic Forum" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-02.webp"><img loading="lazy" src="./imgs/clients/mq/client-02.png" alt="Bloomberg" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-76.webp"><img loading="lazy" src="./imgs/clients/mq/client-76.png" alt="CNBC" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-44.webp"><img loading="lazy" src="./imgs/clients/mq/client-44.png" alt="Thomson Reuters" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-09.webp"><img loading="lazy" src="./imgs/clients/mq/client-09.png" alt="PwC" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-10.webp"><img loading="lazy" src="./imgs/clients/mq/client-10.png" alt="EY" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-60.webp"><img loading="lazy" src="./imgs/clients/mq/client-60.png" alt="Novartis" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-58.webp"><img loading="lazy" src="./imgs/clients/mq/client-58.png" alt="Bayer" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-13.webp"><img loading="lazy" src="./imgs/clients/mq/client-13.png" alt="Google" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-36.webp"><img loading="lazy" src="./imgs/clients/mq/client-36.png" alt="Huawei" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-03.webp"><img loading="lazy" src="./imgs/clients/mq/client-03.png" alt="NASA" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-05.webp"><img loading="lazy" src="./imgs/clients/mq/client-05.png" alt="TEDx" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-11.webp"><img loading="lazy" src="./imgs/clients/mq/client-11.png" alt="World Economic Forum" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-02.webp"><img loading="lazy" src="./imgs/clients/mq/client-02.png" alt="Bloomberg" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-76.webp"><img loading="lazy" src="./imgs/clients/mq/client-76.png" alt="CNBC" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-44.webp"><img loading="lazy" src="./imgs/clients/mq/client-44.png" alt="Thomson Reuters" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-09.webp"><img loading="lazy" src="./imgs/clients/mq/client-09.png" alt="PwC" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-10.webp"><img loading="lazy" src="./imgs/clients/mq/client-10.png" alt="EY" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-60.webp"><img loading="lazy" src="./imgs/clients/mq/client-60.png" alt="Novartis" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-58.webp"><img loading="lazy" src="./imgs/clients/mq/client-58.png" alt="Bayer" height="46"></picture>
                 </div>
             </div>
             <div class="marquee marquee-reverse">
                 <div class="marquee-track">
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-67.webp"><img loading="lazy" src="./imgs/clients/client-67.png" alt="Etisalat" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-52.webp"><img loading="lazy" src="./imgs/clients/client-52.png" alt="Emaar" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-78.webp"><img loading="lazy" src="./imgs/clients/client-78.jpg" alt="ADNOC" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-79.webp"><img loading="lazy" src="./imgs/clients/client-79.jpg" alt="Mubadala" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-77.webp"><img loading="lazy" src="./imgs/clients/client-77.jpg" alt="Saudi Aramco" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-75.webp"><img loading="lazy" src="./imgs/clients/client-75.jpg" alt="Ferrari" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-72.webp"><img loading="lazy" src="./imgs/clients/client-72.jpg" alt="Bvlgari" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-73.webp"><img loading="lazy" src="./imgs/clients/client-73.jpg" alt="Armani" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-57.webp"><img loading="lazy" src="./imgs/clients/client-57.png" alt="Eli Lilly" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-67.webp"><img loading="lazy" src="./imgs/clients/mq/client-67.png" alt="Etisalat" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-52.webp"><img loading="lazy" src="./imgs/clients/mq/client-52.png" alt="Emaar" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-78.webp"><img loading="lazy" src="./imgs/clients/mq/client-78.png" alt="ADNOC" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-79.webp"><img loading="lazy" src="./imgs/clients/mq/client-79.png" alt="Mubadala" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-77.webp"><img loading="lazy" src="./imgs/clients/mq/client-77.png" alt="Saudi Aramco" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-75.webp"><img loading="lazy" src="./imgs/clients/mq/client-75.png" alt="Ferrari" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-72.webp"><img loading="lazy" src="./imgs/clients/mq/client-72.png" alt="Bvlgari" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-73.webp"><img loading="lazy" src="./imgs/clients/mq/client-73.png" alt="Armani" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-57.webp"><img loading="lazy" src="./imgs/clients/mq/client-57.png" alt="Eli Lilly" height="46"></picture>
                     <img loading="lazy" src="./imgs/clients/coca-cola.svg" alt="Coca-Cola" height="38">
                     <img loading="lazy" src="./imgs/clients/schneider-electric.svg" alt="Schneider Electric" height="38">
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-63.webp"><img loading="lazy" src="./imgs/clients/client-63.png" alt="Burj Al Arab" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-67.webp"><img loading="lazy" src="./imgs/clients/client-67.png" alt="Etisalat" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-52.webp"><img loading="lazy" src="./imgs/clients/client-52.png" alt="Emaar" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-78.webp"><img loading="lazy" src="./imgs/clients/client-78.jpg" alt="ADNOC" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-79.webp"><img loading="lazy" src="./imgs/clients/client-79.jpg" alt="Mubadala" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-77.webp"><img loading="lazy" src="./imgs/clients/client-77.jpg" alt="Saudi Aramco" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-75.webp"><img loading="lazy" src="./imgs/clients/client-75.jpg" alt="Ferrari" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-72.webp"><img loading="lazy" src="./imgs/clients/client-72.jpg" alt="Bvlgari" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-73.webp"><img loading="lazy" src="./imgs/clients/client-73.jpg" alt="Armani" height="38"></picture>
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-57.webp"><img loading="lazy" src="./imgs/clients/client-57.png" alt="Eli Lilly" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-63.webp"><img loading="lazy" src="./imgs/clients/mq/client-63.png" alt="Burj Al Arab" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-67.webp"><img loading="lazy" src="./imgs/clients/mq/client-67.png" alt="Etisalat" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-52.webp"><img loading="lazy" src="./imgs/clients/mq/client-52.png" alt="Emaar" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-78.webp"><img loading="lazy" src="./imgs/clients/mq/client-78.png" alt="ADNOC" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-79.webp"><img loading="lazy" src="./imgs/clients/mq/client-79.png" alt="Mubadala" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-77.webp"><img loading="lazy" src="./imgs/clients/mq/client-77.png" alt="Saudi Aramco" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-75.webp"><img loading="lazy" src="./imgs/clients/mq/client-75.png" alt="Ferrari" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-72.webp"><img loading="lazy" src="./imgs/clients/mq/client-72.png" alt="Bvlgari" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-73.webp"><img loading="lazy" src="./imgs/clients/mq/client-73.png" alt="Armani" height="46"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-57.webp"><img loading="lazy" src="./imgs/clients/mq/client-57.png" alt="Eli Lilly" height="46"></picture>
                     <img loading="lazy" src="./imgs/clients/coca-cola.svg" alt="Coca-Cola" height="38">
                     <img loading="lazy" src="./imgs/clients/schneider-electric.svg" alt="Schneider Electric" height="38">
-                    <picture><source type="image/webp" srcset="./imgs/clients/client-63.webp"><img loading="lazy" src="./imgs/clients/client-63.png" alt="Burj Al Arab" height="38"></picture>
+                    <picture><source type="image/webp" srcset="./imgs/clients/mq/client-63.webp"><img loading="lazy" src="./imgs/clients/mq/client-63.png" alt="Burj Al Arab" height="46"></picture>
                 </div>
             </div>
             
