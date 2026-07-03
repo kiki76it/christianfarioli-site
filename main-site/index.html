@@ -2644,11 +2644,11 @@
       .marquee-track{display:flex;align-items:center;gap:92px;width:max-content;padding:8px 0}
       
       
-      .marquee img{height:38px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(100%);opacity:.55;transition:filter .3s ease,opacity .3s ease,transform .3s ease}
-      .marquee img:hover{filter:none;opacity:1;transform:scale(1.03)}
+      .marquee img{height:46px;width:auto;max-width:170px;object-fit:contain;filter:grayscale(100%)!important;opacity:.6;mix-blend-mode:multiply;transition:filter .3s ease,opacity .3s ease,transform .3s ease}
+      .marquee img:hover{filter:grayscale(0)!important;opacity:1;transform:scale(1.03)}
       .trusted-link{display:inline-block;margin-top:34px}
       
-      @media (max-width:600px){.marquee-track{gap:52px}.marquee img{height:30px}}
+      @media (max-width:600px){.marquee-track{gap:52px}.marquee img{height:34px}}
       /* 6) Ken Burns + grain */
       .hero-video{animation:heroKB 26s ease-in-out infinite alternate;will-change:transform}
       @keyframes heroKB{from{transform:scale(1)}to{transform:scale(1.07)}}
