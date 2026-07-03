@@ -2641,14 +2641,14 @@
       /* 3) logo marquee */
       .marquee{overflow:hidden;position:relative;max-width:1200px;margin:0 auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
       .marquee+.marquee{margin-top:30px}
-      .marquee-track{display:flex;align-items:center;gap:92px;width:max-content;animation:marquee-scroll 65s linear infinite;padding:8px 0}
-      .marquee-reverse .marquee-track{animation-direction:reverse;animation-duration:78s}
-      .marquee:hover .marquee-track{animation-play-state:paused}
+      .marquee-track{display:flex;align-items:center;gap:92px;width:max-content;padding:8px 0}
+      
+      
       .marquee img{height:38px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(100%);opacity:.55;transition:filter .3s ease,opacity .3s ease,transform .3s ease}
       .marquee img:hover{filter:none;opacity:1;transform:scale(1.03)}
       .trusted-link{display:inline-block;margin-top:34px}
-      @keyframes marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-      @media (max-width:600px){.marquee-track{gap:52px;animation-duration:50s}.marquee-reverse .marquee-track{animation-duration:58s}.marquee img{height:30px}}
+      
+      @media (max-width:600px){.marquee-track{gap:52px}.marquee img{height:30px}}
       /* 6) Ken Burns + grain */
       .hero-video{animation:heroKB 26s ease-in-out infinite alternate;will-change:transform}
       @keyframes heroKB{from{transform:scale(1)}to{transform:scale(1.07)}}
@@ -11398,6 +11398,28 @@
         if(rm){words.forEach(function(w){w.classList.add('on');});}
         else{window.addEventListener('scroll',upd,{passive:true});upd();}
       }
+      /* 3) JS-driven marquee (immune to OS reduced-motion clamping) */
+      document.querySelectorAll('.marquee').forEach(function(m){
+        var track=m.querySelector('.marquee-track');if(!track)return;
+        var dir=m.classList.contains('marquee-reverse')?1:-1;
+        var speed=(window.innerWidth<600?46:38)*(dir===1?0.85:1);
+        var x=0,last=null,paused=false,visible=true;
+        m.addEventListener('mouseenter',function(){paused=true;});
+        m.addEventListener('mouseleave',function(){paused=false;});
+        new IntersectionObserver(function(es){visible=es[0].isIntersecting;}).observe(m);
+        function frame(ts){
+          if(last===null)last=ts;
+          var dt=Math.min((ts-last)/1000,0.1);last=ts;
+          if(!paused&&visible){
+            var half=track.scrollWidth/2;
+            if(half>0){x+=dir*speed*dt;
+              if(x<=-half)x+=half; if(x>0)x-=half;
+              track.style.transform='translateX('+x+'px)';}
+          }
+          requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      });
       if(rm)return;
       /* 5) magnetic buttons */
       document.querySelectorAll('.btn,.nav-cta').forEach(function(b){
