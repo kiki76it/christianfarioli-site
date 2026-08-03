@@ -638,7 +638,7 @@
         .event-item { display: block; position: relative; margin: 0 0 16px; break-inside: avoid; border-radius: 12px; overflow: hidden; background: var(--color-bg-secondary); text-decoration: none; }
         .event-item img { width: 100%; height: auto; display: block; transition: transform .5s ease; }
         .event-item:hover img { transform: scale(1.05); }
-        .event-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 14px 12px; font-size: 13px; font-weight: 600; color: #fff; background: linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0)); opacity: 0; transition: opacity .3s ease; }
+        .event-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 14px 12px; font-size: 13px; font-weight: 600; color: #fff; background: linear-gradient(to top, rgba(0,0,0,0.82), rgba(0,0,0,0)); opacity: 1; transition: opacity .3s ease; }
         .event-item:hover .event-caption { opacity: 1; }
         @media (max-width: 900px) { .events-grid { columns: 3 200px; } }
         @media (max-width: 600px) { .events-grid { columns: 2 150px; column-gap: 10px; } .event-item { margin-bottom: 10px; } .event-caption { opacity: 1; font-size: 11px; padding: 22px 10px 9px; } }
@@ -723,6 +723,18 @@
     <section class="events-section">
         <div class="container">
             <div class="events-grid">
+                <a class="event-item" href="./imgs/events/event-lamborghini-museum-entrance.jpg" data-caption="Lamborghini Museum">
+                    <img src="./imgs/events/event-lamborghini-museum-entrance.jpg" alt="Lamborghini Museum" loading="lazy">
+                    <span class="event-caption">Lamborghini Museum</span>
+                </a>
+                <a class="event-item" href="./imgs/events/event-lamborghini-museum.jpg" data-caption="Lamborghini Museum, Sant'Agata Bolognese">
+                    <img src="./imgs/events/event-lamborghini-museum.jpg" alt="Lamborghini Museum, Sant'Agata Bolognese" loading="lazy">
+                    <span class="event-caption">Lamborghini Museum, Sant'Agata Bolognese</span>
+                </a>
+                <a class="event-item" href="./imgs/events/event-museo-ferrari-maranello.jpg" data-caption="Museo Ferrari, Maranello">
+                    <img src="./imgs/events/event-museo-ferrari-maranello.jpg" alt="Museo Ferrari, Maranello" loading="lazy">
+                    <span class="event-caption">Museo Ferrari, Maranello</span>
+                </a>
                 <a class="event-item" href="./imgs/events/event-20200117_144800-scaled.jpg" data-caption="Training & Speaking Event">
                     <img src="./imgs/events/event-20200117_144800-scaled.jpg" alt="Training & Speaking Event" loading="lazy">
                     <span class="event-caption">Training & Speaking Event</span>
