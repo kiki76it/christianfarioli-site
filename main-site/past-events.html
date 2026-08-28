@@ -680,6 +680,36 @@
             .nav-links { background: var(--color-bg-primary) !important; }
         }
     </style>
+    <style>
+        /* Mobile nav toggle (parity with homepage) */
+        .nav-mobile-toggle { display: none; flex-direction: column; gap: 5px; padding: 8px; cursor: pointer; }
+        .nav-mobile-toggle span { width: 22px; height: 2px; background: var(--color-text-primary); transition: all var(--transition-base); border-radius: 2px; }
+        .nav-light .nav-mobile-toggle span { background: var(--color-white); }
+        .nav.scrolled .nav-mobile-toggle span { background: var(--color-text-primary); }
+        .nav-mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .nav-mobile-toggle.active span:nth-child(2) { opacity: 0; }
+        .nav-mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: var(--color-bg-primary);
+                backdrop-filter: blur(24px);
+                flex-direction: column;
+                padding: 32px 24px;
+                gap: 24px;
+                box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+                border-radius: 0 0 20px 20px;
+            }
+            .nav-links.active { display: flex; }
+            .nav.nav-light .nav-links .nav-link,
+            .nav.scrolled .nav-links .nav-link { color: var(--color-text-primary); }
+            .nav-mobile-toggle { display: flex; }
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -692,7 +722,7 @@
             <a href="./index.html" class="nav-logo">
                 <img src="./imgs/logo-white-2x.png" alt="Prof. Christian Farioli" class="logo-top" style="height: 50px;"><img src="./imgs/logo-black-2x.png" alt="Prof. Christian Farioli" class="logo-scrolled" style="height: 50px;">
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
                 <a href="./index.html#positioning" class="nav-link">About</a>
                 <span class="nav-dropdown">
                     <a href="./index.html#speaking" class="nav-link">Speaking</a>
@@ -707,6 +737,12 @@
                 <a href="https://future.christianfarioli.com" target="_blank" rel="noopener" class="nav-link">Future</a>
                 <a href="./index.html#cta" class="nav-cta">Work Together</a>
             </div>
+
+            <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -1153,5 +1189,22 @@
     })();
     </script>
     <script>(function(){var n=document.getElementById('mainNav');if(!n)return;function s(){if(window.scrollY>40){n.classList.add('scrolled');}else{n.classList.remove('scrolled');}}window.addEventListener('scroll',s,{passive:true});s();})();</script>
+    <script>
+        (function () {
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            if (!navToggle || !navLinks) return;
+            navToggle.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+            document.querySelectorAll('.nav-links a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    navLinks.classList.remove('active');
+                    navToggle.classList.remove('active');
+                });
+            });
+        })();
+    </script>
 </body>
 </html>
