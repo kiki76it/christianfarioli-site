@@ -982,13 +982,15 @@
             position: relative;
             border-radius: 16px;
             overflow: hidden;
-            min-height: 400px;
+            align-self: center;
+            width: 100%;
         }
 
         .speaking-featured img {
+            display: block;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            aspect-ratio: 16 / 9;
         }
 
         .speaking-featured-overlay {
@@ -996,7 +998,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: var(--space-xl);
+            padding: var(--space-lg);
             background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
         }
 
@@ -1069,8 +1071,13 @@
                 grid-template-columns: 1fr;
             }
 
-            .speaking-featured {
-                min-height: 280px;
+        }
+
+        @media (max-width: 540px) {
+            .speaking-featured-overlay {
+                position: static;
+                padding: var(--space-md);
+                background: var(--color-bg-dark);
             }
         }
 
@@ -2127,14 +2134,6 @@
             transform: scale(1.03);
         }
 
-        .speaking-featured img {
-            transition: transform 0.8s var(--ease-out-quint);
-        }
-
-        .speaking-featured:hover img {
-            transform: scale(1.05);
-        }
-
         /* ============================================
            FOOTER LINK HOVER
         ============================================ */
@@ -3051,7 +3050,7 @@
 
             <div class="speaking-grid">
                 <div class="speaking-featured fade-up">
-                    <picture><source type="image/webp" srcset="./imgs/Christian-Farioli-Speaker-on-Stage.webp"><img loading="lazy" width="800" height="600" src="./imgs/Christian-Farioli-Speaker-on-Stage.jpg" alt="Prof. Christian Farioli delivering keynote"></picture>
+                    <img loading="lazy" decoding="async" width="1920" height="1080" src="./imgs/nasa-standing-ovation-20260909.jpg" alt="Prof. Christian Farioli on stage with a NASA backdrop">
                     <div class="speaking-featured-overlay">
                         <h3>Keynote Speaking</h3>
                         <p>TEDx, Davos, major global conferences, and corporate events</p>
