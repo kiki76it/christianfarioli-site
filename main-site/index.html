@@ -2599,6 +2599,71 @@
         .trusted-link { font-size: 14px; font-weight: 600; color: var(--color-accent); text-decoration: none; }
         .trusted-link:hover { text-decoration: underline; }
         
+
+        /* Landscape stage photo: styles limited to the positioning section. */
+        #positioning .positioning-grid {
+            grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+            gap: 40px 48px;
+            align-items: center;
+        }
+
+        #positioning .positioning-content > p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        #positioning .positioning-image img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3 / 2;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+            transform: none;
+        }
+
+        #positioning .positioning-image-badge {
+            position: static;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            margin-top: 16px;
+            padding: 18px 24px;
+            border: 1px solid var(--color-border);
+            box-shadow: none;
+        }
+
+        #positioning .positioning-image-badge span {
+            margin-bottom: 0;
+        }
+
+        #positioning .positioning-quote {
+            grid-column: 1 / -1;
+            margin: 0;
+            padding: 28px 32px;
+        }
+
+        @media (max-width: 968px) {
+            #positioning .positioning-grid {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 540px) {
+            #positioning {
+                padding-top: 64px;
+                padding-bottom: 64px;
+            }
+
+            #positioning .positioning-image-badge {
+                padding: 16px 20px;
+            }
+
+            #positioning .positioning-quote {
+                padding: 24px;
+            }
+        }
     </style>
 <link rel="icon" href="./imgs/favicon.png" type="image/png">
     <style>
@@ -2867,21 +2932,21 @@
                         My work bridges the gap between what's technically possible and what's strategically sound. I help leaders cut through the hype, understand what AI actually means for their organizations, and develop strategies that create real, lasting value. I also share these perspectives as a <a href="https://forbes.com.mx/author/prof-christian-farioli/" target="_blank" rel="noopener">Forbes contributor</a>.
                     </p>
 
-                    <div class="positioning-quote">
-                        <blockquote>
-                            "The goal isn't to implement AI — it's to transform how your organization thinks, decides, and creates value."
-                        </blockquote>
-                    </div>
-
                     <a href="https://calendly.com/chrisfarioli/30min" target="_blank" rel="noopener" class="btn btn-primary mt-lg">Let's Work Together</a>
                 </div>
 
                 <div class="positioning-image slide-in-right fade-up stagger-2">
-                    <picture><source type="image/webp" srcset="./imgs/IMG_0240-2-scaled.webp"><img width="1200" height="1600" src="./imgs/IMG_0240-2-scaled.jpg" alt="Prof. Christian Farioli - AI Strategist" loading="lazy"></picture>
+                    <img width="1080" height="720" src="./imgs/christian-farioli-on-stage-20260909.jpg" alt="Prof. Christian Farioli speaking on stage in an auditorium" loading="lazy" decoding="async">
                     <div class="positioning-image-badge">
                         <span>Trusted by leaders from</span>
                         <strong>30+ Countries</strong>
                     </div>
+                </div>
+
+                <div class="positioning-quote">
+                    <blockquote>
+                        "The goal isn't to implement AI — it's to transform how your organization thinks, decides, and creates value."
+                    </blockquote>
                 </div>
             </div>
         </div>
