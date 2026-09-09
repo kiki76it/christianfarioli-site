@@ -1192,6 +1192,64 @@
             color: var(--color-text-secondary);
         }
 
+        .forbes-publication {
+            display: grid;
+            grid-template-columns: 144px minmax(0, 1fr) auto;
+            align-items: center;
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+            padding: var(--space-lg);
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            transition: border-color var(--transition-base);
+        }
+
+        .forbes-publication:hover {
+            border-color: var(--color-accent);
+        }
+
+        .forbes-publication:focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 4px;
+        }
+
+        .forbes-publication-logo {
+            display: block;
+        }
+
+        .forbes-publication-logo img {
+            width: 144px;
+            height: auto;
+            filter: brightness(0);
+        }
+
+        .forbes-publication-copy h3 {
+            margin-bottom: var(--space-xs);
+            font-size: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .forbes-publication-copy p {
+            color: var(--color-text-secondary);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .forbes-publication-action {
+            color: var(--color-accent);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .forbes-publication {
+                grid-template-columns: minmax(0, 1fr);
+                gap: var(--space-md);
+                padding: var(--space-md);
+            }
+        }
+
         @media (max-width: 968px) {
             .books-grid {
                 grid-template-columns: 1fr;
@@ -3183,6 +3241,15 @@
                     </a>
                 </div>
             </div>
+
+            <a href="https://forbes.com.mx/author/prof-christian-farioli/" target="_blank" rel="noopener" class="forbes-publication fade-up">
+                <picture class="forbes-publication-logo"><source type="image/webp" srcset="./imgs/forbes-logo.webp"><img loading="lazy" src="./imgs/forbes-logo.png" alt="Forbes" width="351" height="88"></picture>
+                <div class="forbes-publication-copy">
+                    <h3>Forbes Contributor</h3>
+                    <p>I write for Forbes M&eacute;xico, sharing perspectives on AI, business strategy and leadership.</p>
+                </div>
+                <span class="forbes-publication-action">Read my articles on Forbes <span aria-hidden="true">&nearr;</span></span>
+            </a>
         </div>
     </section>
 
