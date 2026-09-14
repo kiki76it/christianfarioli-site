@@ -39,6 +39,8 @@ export const paths = {
   robots: () => p('/robots.txt'),
   /** A public asset (anything in /public). Always prefixed with BASE. */
   publicAsset: (path: string) => p(path.startsWith('/') ? path : `/${path}`),
+  /** Dedicated speaking page on the main site, outside the Insights base. */
+  speaking: () => '/ai-keynote-speaker-dubai/',
   /** Root of the main site (one level up from /insights/). */
   mainSite: () => (BASE ? BASE.replace(/\/insights\/?$/, '') || '/' : '/'),
 };

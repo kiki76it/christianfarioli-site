@@ -81,7 +81,7 @@ function dateLabel(d?: Date): string | null {
       <div class="nav-links" id="navLinks">
         <a href={`${main}#positioning`} class="nav-link">About</a>
         <span class="nav-dropdown">
-          <a href={`${main}#speaking`} class="nav-link">Speaking</a>
+          <a href={paths.speaking()} class="nav-link">Speaking</a>
           <span class="nav-dropdown-menu">
             <a href="/past-events.html">Past Events</a>
           </span>
@@ -279,7 +279,7 @@ function dateLabel(d?: Date): string | null {
           <h4>Navigate</h4>
           <ul>
             <li><a href={`${main}#positioning`}>About</a></li>
-            <li><a href={`${main}#speaking`}>Speaking</a></li>
+            <li><a href={paths.speaking()}>Speaking</a></li>
             <li><a href={paths.home()}>Insights</a></li>
             <li><a href={`${main}#books`}>Books</a></li>
             <li><a href="/testimonials.html">Testimonials</a></li>
