@@ -15,7 +15,7 @@ import BaseLayout from './BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { CATEGORY_LABELS, INSIGHT_CATEGORIES, type InsightCategory } from '~/content.config';
 import { publicOnly, sortByDateDesc, imageSrc, avatarSrc } from '~/lib/insights';
-import { paths } from '~/lib/links';
+import { absolute, paths } from '~/lib/links';
 
 interface Props {
   title: string;
@@ -70,7 +70,7 @@ function dateLabel(d?: Date): string | null {
   return d ? d.toLocaleDateString('en-US', { year: 'numeric', month: 'long' }) : null;
 }
 ---
-<BaseLayout title={title} description={heroSubtitle}>
+<BaseLayout title={title} description={heroSubtitle} canonical={absolute(category ? paths.category(category) : paths.home())}>
   <!-- Navigation -->
   <nav class="nav nav-light" id="mainNav">
     <div class="nav-inner">

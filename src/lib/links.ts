@@ -34,7 +34,8 @@ export const paths = {
   adminPreview: (slug: string) => p(`/admin/preview/${slug}/`),
   apiPublish: () => p('/api/publish'),
   rss: () => p('/rss.xml'),
-  sitemap: () => p('/sitemap-index.xml'),
+  /** One canonical sitemap covers the main site and Insights. */
+  sitemap: () => '/sitemap.xml',
   favicon: () => p('/favicon.png'),
   robots: () => p('/robots.txt'),
   /** A public asset (anything in /public). Always prefixed with BASE. */
