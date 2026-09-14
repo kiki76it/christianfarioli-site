@@ -92,6 +92,7 @@ const insights = defineCollection({
       // ----- Identity -----
       title: z.string().min(10).max(140),
       description: z.string().min(40).max(280), // meta description length
+      language: z.enum(['en', 'en-GB']).default('en'),
       slug: z.string().optional(), // optional override; defaults to filename
 
       // ----- Classification -----
