@@ -9,6 +9,6 @@
     },
     "strictNullChecks": true,
     "allowJs": true,
-    "types": ["@cloudflare/workers-types", "astro/client"]
+    "types": ["@cloudflare/workers-types", "astro/client", "node"]
   }
 }

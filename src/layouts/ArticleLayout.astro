@@ -18,6 +18,8 @@ interface Props {
 
 const { entry, allEntries, preview = false } = Astro.props;
 const data = entry.data;
+const language = data.language ?? 'en';
+const dateLocale = language === 'en' ? 'en-US' : language;
 const info = statusInfo(data.status);
 const isPublic = data.status === 'published';
 const related = resolveRelated(allEntries, data.related);
@@ -28,9 +30,7 @@ const updatedISO = data.updatedAt?.toISOString();
 // ---- Structured data (SEO + AISO rich results) ----
 const ORIGIN = 'https://christianfarioli.com';
 const articleUrl = `${ORIGIN}/insights/${entry.id}/`;
-const articleImage = data.featuredImage?.startsWith('http')
-  ? data.featuredImage
-  : `${ORIGIN}${data.featuredImage}`;
+const articleImage = absolute(imageSrc(data.featuredImage), ORIGIN);
 const jsonLd: Record<string, unknown>[] = [
   {
     '@context': 'https://schema.org',
@@ -48,7 +48,7 @@ const jsonLd: Record<string, unknown>[] = [
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
     articleSection: CATEGORY_LABELS[data.category],
-    inLanguage: 'en',
+    inLanguage: language,
     keywords: (data.tags ?? []).join(', '),
   },
   {
@@ -75,6 +75,7 @@ if (data.faq?.length) {
 }
 ---
 <BaseLayout
+  lang={language}
   title={data.title}
   description={data.description}
   ogImage={imageSrc(data.featuredImage) || undefined}
@@ -96,7 +97,7 @@ if (data.faq?.length) {
     </div>
   )}
 
-  <article class="article">
+  <article class="article" id="main">
     <header class="article-header">
       <div class="container">
         <div class="article-meta-top">
@@ -125,7 +126,7 @@ if (data.faq?.length) {
           <div class="article-dates">
             {data.publishedAt && (
               <time datetime={data.publishedAt.toISOString()}>
-                Published {data.publishedAt.toLocaleDateString('en-US', {
+                Published {data.publishedAt.toLocaleDateString(dateLocale, {
                   year: 'numeric', month: 'long', day: 'numeric',
                 })}
               </time>
@@ -299,6 +300,22 @@ if (data.faq?.length) {
     gap: 8px;
     font-size: 13px;
     color: var(--color-text-secondary);
+  }
+
+  @media (max-width: 540px) {
+    .article-byline {
+      display: grid;
+      grid-template-columns: 40px minmax(0, 1fr);
+      gap: 10px 14px;
+      width: 100%;
+      max-width: 420px;
+      padding: 20px;
+      border-radius: var(--radius-md);
+    }
+    .article-dates {
+      grid-column: 1 / -1;
+      flex-wrap: wrap;
+    }
   }
 
   .article-hero-image {
