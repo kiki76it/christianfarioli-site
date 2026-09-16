@@ -4,8 +4,9 @@
 
 import BaseLayout from './BaseLayout.astro';
 import SiteNav from '~/components/SiteNav.astro';
+import ArticleByline from '~/components/ArticleByline.astro';
 import { CATEGORY_LABELS } from '~/content.config';
-import { insightHref, resolveRelated, imageSrc, avatarSrc } from '~/lib/insights';
+import { insightHref, resolveRelated, imageSrc } from '~/lib/insights';
 import { paths, absolute } from '~/lib/links';
 import { statusInfo } from '~/lib/status';
 import type { CollectionEntry } from 'astro:content';
@@ -113,29 +114,12 @@ if (data.faq?.length) {
         <h1>{data.title}</h1>
         <p class="article-description">{data.description}</p>
 
-        <div class="article-byline">
-          {data.author.avatar && (
-            <img
-              src={avatarSrc(data.author.avatar)}
-              alt={data.author.name}
-              class="author-avatar"
-            />
-          )}
-          <div class="author-meta">
-            <div class="author-name">{data.author.name}</div>
-            {data.author.role && <div class="author-role">{data.author.role}</div>}
-          </div>
-          <div class="article-dates">
-            {data.publishedAt && (
-              <time datetime={data.publishedAt.toISOString()}>
-                Published {data.publishedAt.toLocaleDateString(dateLocale, {
-                  year: 'numeric', month: 'long', day: 'numeric',
-                })}
-              </time>
-            )}
-            {data.readingTime && <span>· {data.readingTime} min read</span>}
-          </div>
-        </div>
+        <ArticleByline
+          author={data.author}
+          publishedAt={data.publishedAt}
+          readingTime={data.readingTime}
+          dateLocale={dateLocale}
+        />
       </div>
     </header>
 
@@ -280,47 +264,6 @@ if (data.faq?.length) {
     max-width: 720px;
     margin: 0 auto 32px;
   }
-  .article-byline {
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
-    padding: 16px 24px;
-    background: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: 100px;
-    text-align: left;
-  }
-  .author-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  .author-name { font-weight: 600; font-size: 14px; }
-  .author-role { font-size: 12px; color: var(--color-text-secondary); }
-  .article-dates {
-    display: flex;
-    gap: 8px;
-    font-size: 13px;
-    color: var(--color-text-secondary);
-  }
-
-  @media (max-width: 540px) {
-    .article-byline {
-      display: grid;
-      grid-template-columns: 40px minmax(0, 1fr);
-      gap: 10px 14px;
-      width: 100%;
-      max-width: 420px;
-      padding: 20px;
-      border-radius: var(--radius-md);
-    }
-    .article-dates {
-      grid-column: 1 / -1;
-      flex-wrap: wrap;
-    }
-  }
-
   .article-hero-image {
     margin: 32px 0 48px;
   }
