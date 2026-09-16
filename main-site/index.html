@@ -1113,18 +1113,6 @@
         .book-cover {
             flex-shrink: 0;
             width: 180px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 16px 48px rgba(0,0,0,0.15);
-        }
-
-        .book-cover img {
-            width: 100%;
-            transition: transform var(--transition-base);
-        }
-
-        .book-featured:hover .book-cover img {
-            transform: scale(1.03);
         }
 
         .book-info h3 {
@@ -1157,29 +1145,12 @@
             padding: var(--space-md);
             background: var(--color-bg-secondary);
             border-radius: 12px;
-            transition: all var(--transition-base);
-        }
-
-        .book-item:hover {
-            background: var(--color-bg-dark);
-        }
-
-        .book-item:hover * {
-            color: var(--color-white) !important;
         }
 
         .book-item-thumb {
             width: 56px;
-            height: 76px;
-            border-radius: 4px;
-            overflow: hidden;
             flex-shrink: 0;
-        }
-
-        .book-item-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            align-self: flex-start;
         }
 
         .book-item-info h4 {
@@ -2021,22 +1992,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
-        .book-item {
-            transition: all 0.4s var(--ease-out-quint);
-        }
-
-        .book-item:hover {
-            transform: translateX(8px);
-        }
-
-        .book-item:hover .book-item-thumb img {
-            transform: scale(1.05);
-        }
-
-        .book-item-thumb img {
-            transition: transform 0.5s var(--ease-out-quint);
-        }
-
         /* ============================================
            TYPOGRAPHY ANIMATIONS
         ============================================ */
@@ -2785,13 +2740,11 @@
       .manifesto-quote .mw{opacity:.22;transition:opacity .3s ease}
       .manifesto-quote .mw.on{opacity:1}
       /* 5) card lifts */
-      .speaking-card,.insight-card,.book-item{transition:transform .35s cubic-bezier(0.22,1,0.36,1),box-shadow .35s ease}
-      .speaking-card:hover,.insight-card:hover,.book-item:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.12)}
-      /* 5) book 3D tilt */
-      .book-cover,.book-item-thumb{transform-style:preserve-3d;will-change:transform;transition:transform .3s ease}
+      .speaking-card,.insight-card{transition:transform .35s cubic-bezier(0.22,1,0.36,1),box-shadow .35s ease}
+      .speaking-card:hover,.insight-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.12)}
       /* 5b) touch feedback (mobile) */
       @media (hover:none){
-        .speaking-card:active,.insight-card:active,.book-item:active{transform:translateY(-4px) scale(.99);box-shadow:0 14px 30px rgba(0,0,0,.14);transition-duration:.15s}
+        .speaking-card:active,.insight-card:active{transform:translateY(-4px) scale(.99);box-shadow:0 14px 30px rgba(0,0,0,.14);transition-duration:.15s}
         .btn:active,.nav-cta:active{transform:scale(.96);transition-duration:.1s}
         .gr-card:active,.home-faq-item:active{transform:translateY(-3px);transition:transform .15s ease}
       }
@@ -2801,6 +2754,8 @@
         .manifesto-quote .mw{opacity:1}
       }
     </style>
+    <link rel="stylesheet" href="./css/book-volumes.css">
+    <script src="./js/book-volumes.js" defer></script>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -2858,9 +2813,9 @@
                 <a href="https://calendly.com/chrisfarioli/30min" target="_blank" rel="noopener" class="btn btn-light">Book a Strategy Call</a>
                 <a href="/insights/" class="btn btn-outline-light">Explore Insights</a>
             </div>
-            <a href="https://www.google.com/maps/place/?q=place_id:ChIJJ3_yb6oUXz4ROKXjJDShu1s" target="_blank" rel="noopener" class="google-badge blur-in stagger-3" aria-label="4.9 stars on Google from 43 reviews">
+            <a href="https://christianfarioli.com/testimonials" target="_blank" rel="noopener" class="google-badge blur-in stagger-3" aria-label="4.9 stars on Google from 62 reviews — read testimonials">
                 <span class="google-badge-stars" aria-hidden="true">★★★★★</span>
-                <span class="google-badge-text"><strong>4.9</strong> on Google · 43 reviews</span>
+                <span class="google-badge-text"><strong>4.9</strong> on Google · 62 reviews</span>
             </a>
             <a href="https://forbes.com.mx/author/prof-christian-farioli/" target="_blank" rel="noopener" class="forbes-cred" aria-label="Featured in Forbes">
                 <span class="forbes-cred-label">Featured in</span>
@@ -3206,9 +3161,17 @@
             </div>
 
             <div class="books-grid">
-                <div class="book-featured fade-up">
-                    <div class="book-cover">
+                <div class="book-featured">
+                    <div class="book-cover book-stage book-stage--ai" data-book-stage>
+                        <div class="book-volume">
+                        <div class="book-front">
                         <picture><source type="image/webp" srcset="./imgs/book-pizza-ai-cover.webp"><img loading="lazy" width="800" height="1220" src="./imgs/book-pizza-ai-cover.jpg" alt="Pizza and A.I. book cover"></picture>
+                        </div>
+                        <span class="book-spine" aria-hidden="true"></span>
+                        <span class="book-pages book-pages--side" aria-hidden="true"></span>
+                        <span class="book-pages book-pages--top" aria-hidden="true"></span>
+                        <span class="book-pages book-pages--bottom" aria-hidden="true"></span>
+                        </div>
                     </div>
                     <div class="book-info">
                         <h3>Pizza and A.I.</h3>
@@ -3221,18 +3184,34 @@
                 </div>
 
                 <div class="books-list">
-                    <a href="https://www.amazon.com/-/en/Pizza-Guide-Digital-Marketing-Delicious/dp/0648505049/" target="_blank" rel="noopener" class="book-item fade-up stagger-1" style="text-decoration:none;color:inherit;">
-                        <div class="book-item-thumb">
+                    <a href="https://www.amazon.com/-/en/Pizza-Guide-Digital-Marketing-Delicious/dp/0648505049/" target="_blank" rel="noopener" class="book-item" style="text-decoration:none;color:inherit;">
+                        <div class="book-item-thumb book-stage book-stage--marketing" data-book-stage>
+                            <div class="book-volume">
+                            <div class="book-front">
                             <picture><source type="image/webp" srcset="./imgs/book-pizza-guide-to-digital-marketing.webp"><img loading="lazy" width="1050" height="1600" src="./imgs/book-pizza-guide-to-digital-marketing.jpg" alt="The Pizza Guide to Digital Marketing cover"></picture>
+                            </div>
+                            <span class="book-spine" aria-hidden="true"></span>
+                            <span class="book-pages book-pages--side" aria-hidden="true"></span>
+                            <span class="book-pages book-pages--top" aria-hidden="true"></span>
+                            <span class="book-pages book-pages--bottom" aria-hidden="true"></span>
+                            </div>
                         </div>
                         <div class="book-item-info">
                             <h4>The Pizza Guide to Digital Marketing</h4>
                             <p>A delicious first byte of the biggest business game changers of your lifetime</p>
                         </div>
                     </a>
-                    <a href="https://www.amazon.com/-/en/Christian-Farioli-ebook/dp/B007QPOX7S/" target="_blank" rel="noopener" class="book-item fade-up stagger-2" style="text-decoration:none;color:inherit;">
-                        <div class="book-item-thumb">
+                    <a href="https://www.amazon.com/-/en/Christian-Farioli-ebook/dp/B007QPOX7S/" target="_blank" rel="noopener" class="book-item" style="text-decoration:none;color:inherit;">
+                        <div class="book-item-thumb book-stage book-stage--discipline" data-book-stage>
+                            <div class="book-volume">
+                            <div class="book-front">
                             <img loading="lazy" width="286" height="445" src="./imgs/book-disciplina-per-la-vita.jpg" alt="Disciplina per la Vita cover">
+                            </div>
+                            <span class="book-spine" aria-hidden="true"></span>
+                            <span class="book-pages book-pages--side" aria-hidden="true"></span>
+                            <span class="book-pages book-pages--top" aria-hidden="true"></span>
+                            <span class="book-pages book-pages--bottom" aria-hidden="true"></span>
+                            </div>
                         </div>
                         <div class="book-item-info">
                             <h4>Disciplina per la Vita</h4>
@@ -3877,6 +3856,8 @@
         // IMAGE LAZY LOAD WITH BLUR
         // ============================================
         document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            // Book covers stay sharp; their only animation is the volume's tilt.
+            if (img.closest('#books .book-stage')) return;
             img.style.filter = 'blur(10px)';
             img.style.transition = 'filter 0.5s ease';
 
@@ -3981,12 +3962,6 @@
           var dx=(e.clientX-r.left-r.width/2)/(r.width/2),dy=(e.clientY-r.top-r.height/2)/(r.height/2);
           b.style.transform='translate('+(dx*4)+'px,'+(dy*3)+'px)';});
         b.addEventListener('mouseleave',function(){b.style.transform='';});});
-      /* 5) book 3D tilt */
-      document.querySelectorAll('.book-cover,.book-item-thumb').forEach(function(c){
-        c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();
-          var dx=(e.clientX-r.left-r.width/2)/(r.width/2),dy=(e.clientY-r.top-r.height/2)/(r.height/2);
-          c.style.transform='perspective(700px) rotateY('+(dx*7)+'deg) rotateX('+(-dy*5)+'deg)';});
-        c.addEventListener('mouseleave',function(){c.style.transform='';});});
     })();
     </script>
 </body>

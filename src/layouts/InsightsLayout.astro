@@ -12,6 +12,7 @@
 //   8. Footer
 
 import BaseLayout from './BaseLayout.astro';
+import SiteNav from '~/components/SiteNav.astro';
 import { getCollection } from 'astro:content';
 import { CATEGORY_LABELS, INSIGHT_CATEGORIES, type InsightCategory } from '~/content.config';
 import { publicOnly, sortByDateDesc, imageSrc, avatarSrc } from '~/lib/insights';
@@ -71,33 +72,7 @@ function dateLabel(d?: Date): string | null {
 }
 ---
 <BaseLayout title={title} description={heroSubtitle} canonical={absolute(category ? paths.category(category) : paths.home())}>
-  <!-- Navigation -->
-  <nav class="nav nav-light" id="mainNav">
-    <div class="nav-inner">
-      <a href={main} class="nav-logo" aria-label="Prof. Christian Farioli — home">
-        <img src="/imgs/logo-white-2x.png" alt="Prof. Christian Farioli" class="logo-top" />
-        <img src="/imgs/logo-black-2x.png" alt="Prof. Christian Farioli" class="logo-scrolled" />
-      </a>
-      <div class="nav-links" id="navLinks">
-        <a href={`${main}#positioning`} class="nav-link">About</a>
-        <span class="nav-dropdown">
-          <a href={paths.speaking()} class="nav-link">Speaking</a>
-          <span class="nav-dropdown-menu">
-            <a href="/past-events.html">Past Events</a>
-          </span>
-        </span>
-        <a href={paths.home()} class="nav-link active">Insights</a>
-        <a href={`${main}#books`} class="nav-link">Books</a>
-        <a href="/testimonials.html" class="nav-link">Testimonials</a>
-        <a href="/clients.html" class="nav-link">Clients</a>
-        <a href="https://future.christianfarioli.com" target="_blank" rel="noopener" class="nav-link">Future</a>
-        <a href="https://calendly.com/chrisfarioli/30min" target="_blank" rel="noopener" class="nav-cta">Work Together</a>
-      </div>
-      <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+  <SiteNav overlay />
 
   <main id="main">
     <!-- Hero masthead -->
@@ -323,17 +298,7 @@ function dateLabel(d?: Date): string | null {
 </BaseLayout>
 
 <script is:inline>
-  // Mobile nav toggle
   (function () {
-    var t = document.getElementById('navToggle');
-    var l = document.getElementById('navLinks');
-    if (t && l) t.addEventListener('click', function () { t.classList.toggle('active'); l.classList.toggle('active'); });
-
-    // Nav shadow on scroll
-    var nav = document.getElementById('mainNav');
-    function onScroll() { if (nav) nav.classList.toggle('scrolled', window.scrollY > 8); }
-    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
-
     // Live client-side search over the cards on this page
     var input = document.getElementById('searchInput');
     var grid = document.getElementById('articlesGrid');
@@ -397,46 +362,6 @@ function dateLabel(d?: Date): string | null {
     margin: 0;
   }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-
-  /* Navigation */
-  .nav {
-    position: fixed; top: 0; left: 0; right: 0; height: var(--nav-height); z-index: 1000;
-    background: rgba(250, 250, 248, 0.95); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
-    border-bottom: 1px solid var(--color-border); transition: box-shadow 0.4s var(--ease);
-  }
-  .nav.scrolled { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
-  .nav-inner {
-    max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-lg); height: 100%;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .nav-logo { display: inline-flex; align-items: center; }
-  .nav-logo img { height: 48px; width: auto; }
-  .nav-links { display: flex; align-items: center; gap: var(--space-lg); }
-  .nav-link {
-    color: var(--color-text-primary); text-decoration: none; font-size: 14px; font-weight: 500;
-    transition: color 0.3s ease; position: relative;
-  }
-  .nav-link::after {
-    content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px;
-    background: var(--color-accent); transition: width 0.4s var(--ease);
-  }
-  .nav-link:hover::after, .nav-link.active::after { width: 100%; }
-  .nav-cta {
-    margin-left: 8px;
-    background: var(--color-accent); color: var(--color-white) !important;
-    padding: var(--space-xs) var(--space-md); border-radius: 6px; transition: all 0.3s var(--ease);
-    font-size: 14px; font-weight: 500; text-decoration: none;
-  }
-  .nav-cta:hover { transform: scale(1.02); background: var(--color-accent-hover); }
-  @media (max-width: 968px) { .nav-cta { margin-left: 0; margin-top: 8px; } }
-  .nav-mobile-toggle {
-    display: none; flex-direction: column; justify-content: center; gap: 5px;
-    width: 32px; height: 32px; cursor: pointer; background: none; border: none; padding: 0;
-  }
-  .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--color-text-primary); transition: all 0.3s ease; margin: 0 auto; }
-  .nav-mobile-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .nav-mobile-toggle.active span:nth-child(2) { opacity: 0; }
-  .nav-mobile-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
   /* Hero */
   .insights-hero {
@@ -580,9 +505,6 @@ function dateLabel(d?: Date): string | null {
 
   /* Responsive */
   @media (max-width: 968px) {
-    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(250,250,248,0.98); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); flex-direction: column; align-items: flex-start; padding: 24px var(--space-lg); gap: 18px; box-shadow: 0 16px 48px rgba(0,0,0,0.12); border-top: 1px solid var(--color-border); }
-    .nav-links.active { display: flex; }
-    .nav-mobile-toggle { display: flex; }
     .insights-masthead { flex-direction: column; align-items: flex-start; gap: var(--space-lg); }
     .search-container { max-width: 100%; }
     .featured-article { grid-template-columns: 1fr; gap: var(--space-lg); }
@@ -598,32 +520,8 @@ function dateLabel(d?: Date): string | null {
     .footer-bottom { flex-direction: column; gap: var(--space-md); }
     .future-callout-list { grid-template-columns: 1fr; }
   }
-        /* Speaking nav dropdown */
-        .nav-dropdown { position: relative; display: inline-flex; align-items: center; }
-        .nav-dropdown-menu { position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%) translateY(6px); min-width: 168px; background: var(--color-white); border: 1px solid rgba(0,0,0,0.08); border-radius: 10px; box-shadow: 0 14px 36px rgba(0,0,0,0.12); padding: 6px; opacity: 0; visibility: hidden; transition: opacity .25s ease, transform .25s ease; z-index: 200; }
-        .nav-dropdown::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 14px; }
-        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-        .nav-dropdown-menu a { display: block; padding: 9px 14px; font-size: 14px; font-weight: 500; color: var(--color-text-primary); text-decoration: none; border-radius: 6px; white-space: nowrap; }
-        .nav-dropdown-menu a:hover { background: var(--color-bg-secondary); color: var(--color-accent); }
-        @media (max-width: 968px) { .nav-dropdown { flex-direction: column; align-items: center; gap: 24px; width: 100%; } .nav-dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; background: transparent; padding: 0; min-width: 0; width: 100%; text-align: center; } .nav-dropdown-menu a { display: block; width: 100%; padding: 8px 0; font-size: 14px; font-weight: 500; color: var(--color-text-primary); text-align: center; background: transparent; border-radius: 0; } .nav-dropdown-menu a:hover { background: transparent; color: var(--color-accent); } .nav-dropdown::after { display: none; } }
-
-  /* === Homepage-style transparent nav over dark hero (match main site) === */
-  .nav { background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%) !important; border-bottom: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
-  .nav.scrolled { background: rgba(250,250,248,0.95) !important; backdrop-filter: blur(24px) !important; -webkit-backdrop-filter: blur(24px) !important; border-bottom: 1px solid var(--color-border) !important; box-shadow: 0 8px 30px rgba(0,0,0,0.06) !important; }
-  .logo-scrolled { display: none; }
-  .logo-top { display: block; }
-  .nav.scrolled .logo-scrolled { display: block; }
-  .nav.scrolled .logo-top { display: none; }
-  .nav-light .nav-link { color: rgba(255,255,255,0.92); }
-  .nav.scrolled .nav-link { color: var(--color-text-primary); }
-  .nav-light .nav-mobile-toggle span { background: var(--color-white); }
-  .nav.scrolled .nav-mobile-toggle span { background: var(--color-text-primary); }
   /* dark insights hero masthead */
   .insights-hero { background: var(--color-bg-dark) !important; }
   .insights-title { color: var(--color-white) !important; }
   .insights-subtitle { color: rgba(255,255,255,0.72) !important; }
-  @media (max-width: 968px) {
-    .nav.nav-light .nav-links .nav-link, .nav.scrolled .nav-links .nav-link { color: var(--color-text-primary) !important; }
-    .nav-links { background: rgba(250,250,248,0.98) !important; }
-  }
     </style>

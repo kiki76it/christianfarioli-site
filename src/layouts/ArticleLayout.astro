@@ -3,6 +3,7 @@
 // Layout for a single insight article. Includes the executive summary, FAQ, and related.
 
 import BaseLayout from './BaseLayout.astro';
+import SiteNav from '~/components/SiteNav.astro';
 import { CATEGORY_LABELS } from '~/content.config';
 import { insightHref, resolveRelated, imageSrc, avatarSrc } from '~/lib/insights';
 import { paths, absolute } from '~/lib/links';
@@ -84,6 +85,7 @@ if (data.faq?.length) {
   publishedTime={publishedISO}
   modifiedTime={updatedISO}
 >
+  <SiteNav sticky={!preview} />
   {jsonLd.map((obj) => (
     <script type="application/ld+json" set:html={JSON.stringify(obj)} />
   ))}
@@ -229,6 +231,7 @@ if (data.faq?.length) {
 </BaseLayout>
 
 <style>
+  .article, .article :global([id]) { scroll-margin-top: 88px; }
   .preview-banner {
     background: var(--color-bg-dark);
     color: var(--color-text-light);
