@@ -1,0 +1,178 @@
+/* Book artwork only: text, links and the Forbes publication retain their layout. */
+#books .book-stage {
+    --book-depth: 18px;
+    --book-cloth: #17121c;
+    --book-rest-y: -8deg;
+    --book-shadow-height: 20px;
+    position: relative;
+    overflow: visible;
+}
+
+#books .book-stage--marketing {
+    --book-depth: 5px;
+    --book-cloth: #bf531a;
+}
+
+#books .book-stage--discipline {
+    --book-depth: 4px;
+    --book-cloth: #982724;
+}
+
+#books .book-item-thumb {
+    --book-shadow-height: 8px;
+}
+
+#books .book-volume,
+#books .book-front {
+    position: relative;
+    width: 100%;
+}
+
+#books .book-volume {
+    /* The parent is the stationary hit area, even when the front moves. */
+    pointer-events: none;
+}
+
+#books .book-front picture,
+#books .book-front img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#books .book-front img {
+    /* Native width/height attributes reserve the complete cover's proportions. */
+    object-fit: contain;
+    border-radius: 1px;
+}
+
+#books .book-spine,
+#books .book-pages {
+    display: none;
+    pointer-events: none;
+}
+
+#books .book-item:focus-visible,
+#books .book-info .btn:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 5px;
+}
+
+@supports (transform-style: preserve-3d) and (perspective: 900px) {
+    #books .book-stage {
+        perspective: 1200px;
+        perspective-origin: 50% 30%;
+    }
+
+    #books .book-stage::after {
+        content: "";
+        position: absolute;
+        left: 1%;
+        bottom: calc(var(--book-shadow-height) * -0.6);
+        width: 105%;
+        height: var(--book-shadow-height);
+        background: radial-gradient(ellipse, rgba(37, 28, 22, 0.2), rgba(37, 28, 22, 0) 70%);
+        opacity: 0.8;
+        pointer-events: none;
+        transform: translateX(3px);
+    }
+
+    #books .book-volume {
+        transform-style: preserve-3d;
+        transform-origin: 50% 50% calc(var(--book-depth) * -0.5);
+        transform: rotateX(-2deg) rotateY(var(--book-rest-y));
+    }
+
+    #books .book-front {
+        backface-visibility: hidden;
+        border-radius: 1px;
+        box-shadow: 0 2px 4px rgba(25, 20, 18, 0.12);
+    }
+
+    #books .book-front::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        /* A narrow binding crease and soft light, without obscuring the artwork. */
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.16), transparent 1.5%, rgba(255, 255, 255, 0.07) 2%, transparent 4%, transparent 96%, rgba(0, 0, 0, 0.09));
+    }
+
+    #books .book-spine,
+    #books .book-pages {
+        display: block;
+        position: absolute;
+        backface-visibility: hidden;
+    }
+
+    #books .book-spine {
+        top: 0;
+        left: 0;
+        width: var(--book-depth);
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent 45%), var(--book-cloth);
+        transform-origin: left center;
+        transform: translateZ(calc(var(--book-depth) * -1)) rotateY(-90deg);
+    }
+
+    #books .book-pages {
+        background-color: #eee9df;
+        /* Fine paper layers; no fabricated editorial material. */
+        background-image: repeating-linear-gradient(90deg, transparent 0 1px, rgba(109, 95, 75, 0.1) 1px 2px);
+    }
+
+    #books .book-pages--side {
+        top: 1px;
+        left: calc(100% - 1px);
+        width: calc(var(--book-depth) - 2px);
+        height: calc(100% - 2px);
+        transform-origin: left center;
+        transform: translateZ(-1px) rotateY(90deg);
+    }
+
+    #books .book-pages--top,
+    #books .book-pages--bottom {
+        left: 1px;
+        width: calc(100% - 2px);
+        height: calc(var(--book-depth) - 2px);
+        background-image: repeating-linear-gradient(0deg, transparent 0 1px, rgba(109, 95, 75, 0.1) 1px 2px);
+        transform-origin: center top;
+    }
+
+    #books .book-pages--top {
+        top: 1px;
+        transform: translateZ(calc(1px - var(--book-depth))) rotateX(90deg);
+    }
+
+    #books .book-pages--bottom {
+        top: calc(100% - 1px);
+        transform: translateZ(-1px) rotateX(-90deg);
+    }
+
+    @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+        #books .book-stage {
+            --book-rest-y: -12deg;
+        }
+
+        #books .book-volume {
+            transform: translateY(var(--book-lift, 0px))
+                rotateX(calc(-2deg + var(--book-tilt-x, 0deg)))
+                rotateY(calc(var(--book-rest-y) + var(--book-tilt-y, 0deg)));
+            transition: transform 500ms cubic-bezier(0.2, 0.65, 0.3, 1);
+        }
+
+        #books .book-stage::after {
+            transition: transform 500ms ease, opacity 500ms ease;
+        }
+
+        #books .book-stage.is-tracking .book-volume {
+            transition-duration: 180ms;
+        }
+
+        #books .book-stage.is-tracking::after {
+            opacity: 0.6;
+            transform: translate(3px, 2px) scaleX(1.06);
+        }
+    }
+}
