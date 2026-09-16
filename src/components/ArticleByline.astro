@@ -1,0 +1,141 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { avatarSrc } from '~/lib/insights';
+import { getPostAuthorSignature } from '~/lib/author-signatures';
+
+interface Props {
+  author: CollectionEntry<'insights'>['data']['author'];
+  publishedAt?: Date;
+  readingTime?: number;
+  dateLocale: string;
+}
+
+const { author, publishedAt, readingTime, dateLocale } = Astro.props;
+const signature = getPostAuthorSignature(author.name);
+---
+<div class:list={['article-byline', { 'article-byline--signature': signature }]}>
+  {author.avatar && (
+    <img src={avatarSrc(author.avatar)} alt={author.name} class="author-avatar" />
+  )}
+  <div class="author-meta">
+    <div class="author-name">{author.name}</div>
+    {signature ? (
+      <div class="author-qualifications">
+        {signature.map((line) => <p>{line}</p>)}
+      </div>
+    ) : (
+      author.role && <div class="author-role">{author.role}</div>
+    )}
+  </div>
+  <div class="article-dates">
+    {publishedAt && (
+      <time datetime={publishedAt.toISOString()}>
+        Published {publishedAt.toLocaleDateString(dateLocale, {
+          year: 'numeric', month: 'long', day: 'numeric',
+        })}
+      </time>
+    )}
+    {readingTime && <span>· {readingTime} min read</span>}
+  </div>
+</div>
+
+<style>
+  /* Preserve the original byline presentation for other authors. */
+  .article-byline {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 100px;
+    text-align: left;
+  }
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .author-name { font-weight: 600; font-size: 14px; }
+  .author-role { font-size: 12px; color: var(--color-text-secondary); }
+  .article-dates {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+  }
+
+  @media (max-width: 540px) {
+    .article-byline {
+      display: grid;
+      grid-template-columns: 40px minmax(0, 1fr);
+      gap: 10px 14px;
+      width: 100%;
+      max-width: 420px;
+      padding: 20px;
+      border-radius: var(--radius-md);
+    }
+    .article-dates {
+      grid-column: 1 / -1;
+      flex-wrap: wrap;
+    }
+  }
+
+  .article-byline--signature {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    grid-template-areas:
+      'avatar name dates'
+      'avatar qualifications qualifications';
+    align-items: start;
+    gap: 8px 16px;
+    width: 100%;
+    max-width: 900px;
+    margin-inline: auto;
+    padding: 22px 24px;
+    border-radius: var(--radius-lg);
+  }
+  .article-byline--signature .author-avatar { grid-area: avatar; }
+  .article-byline--signature .author-meta { display: contents; }
+  .article-byline--signature .author-name {
+    grid-area: name;
+    min-width: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .author-qualifications {
+    grid-area: qualifications;
+    min-width: 0;
+    font-size: 14.5px;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    overflow-wrap: break-word;
+  }
+  .author-qualifications p { margin: 0; }
+  .author-qualifications p + p { margin-top: 4px; }
+  .article-byline--signature .article-dates {
+    grid-area: dates;
+    align-self: center;
+    justify-self: end;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    min-width: 0;
+  }
+
+  @media (max-width: 680px) {
+    .article-byline--signature {
+      grid-template-columns: 40px minmax(0, 1fr);
+      grid-template-areas:
+        'avatar name'
+        'qualifications qualifications'
+        'dates dates';
+      gap: 14px;
+      padding: 20px;
+      border-radius: var(--radius-md);
+    }
+    .article-byline--signature .author-name { align-self: center; }
+    .article-byline--signature .article-dates { justify-self: start; }
+  }
+</style>
