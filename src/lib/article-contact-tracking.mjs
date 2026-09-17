@@ -2,12 +2,12 @@
  * Queue one click event on the existing GTM dataLayer. Transport and any configured
  * consent stay with the existing container; neither is configured by this helper.
  * It adds no tracker, consent state, callback or navigation wait.
- * No title, canonical URL, WhatsApp message or visitor data enters the event.
+ * No title, canonical URL or visitor data enters the event.
  * @param {{dataLayer?: {push: (event: Record<string, string>) => unknown}}} host
  * @param {{articleCtaLink?: string, articleSlug?: string, ctaVariant?: string, ctaPosition?: string}} data
  */
 export function trackArticleContactClick(host, data) {
-  if (!['booking', 'whatsapp'].includes(data.articleCtaLink ?? '') || !data.articleSlug
+  if (data.articleCtaLink !== 'booking' || !data.articleSlug
     || !['general', 'marketing', 'ai', 'training'].includes(data.ctaVariant ?? '')
     || !['end_article', 'mid_article'].includes(data.ctaPosition ?? '')) return;
   try {

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { ARTICLE_CONTACT, ARTICLE_CTA_COPY, articleWhatsAppUrl, resolveArticleCTA } from '../src/lib/article-contact-cta.mjs';
+import { ARTICLE_CTA_COPY, resolveArticleCTA } from '../src/lib/article-contact-cta.mjs';
 import { trackArticleContactClick } from '../src/lib/article-contact-tracking.mjs';
 
 test('explicit B2B override wins over category with exact marketing description', () => {
@@ -17,16 +17,8 @@ test('specific existing categories have deterministic variants and broad categor
     'unknown-future-category': 'general', constructor: 'general',
   })) assert.equal(resolveArticleCTA('new-post', category).variant, variant);
 });
-test('WhatsApp message preserves punctuation, title and supplied production canonical', () => {
-  const title = 'AI & growth: “R&D” + 100% / café?';
-  const canonical = 'https://christianfarioli.com/insights/ai-strategy/example/';
-  const url = new URL(articleWhatsAppUrl(title, canonical));
-  assert.equal(url.origin + url.pathname, ARTICLE_CONTACT.whatsappUrl);
-  assert.equal(url.searchParams.get('text'), `Hi Christian, I’ve just read your article “${title}”. I’d like to discuss how you could help our organisation.\n\n${canonical}`);
-  assert.equal([...url.searchParams.keys()].length, 1);
-});
 test('each contact click queues one minimal event through the existing dataLayer', () => {
-  for (const [articleCtaLink, ctaPosition] of [['booking', 'end_article'], ['whatsapp', 'end_article'], ['booking', 'mid_article']]) {
+  for (const [articleCtaLink, ctaPosition] of [['booking', 'end_article'], ['booking', 'mid_article']]) {
     const dataLayer = [];
     trackArticleContactClick({ dataLayer }, { articleCtaLink, articleSlug: 'category/post', ctaVariant: 'marketing', ctaPosition });
     assert.deepEqual(dataLayer, [{ event: 'article_contact_click', contact_method: articleCtaLink,
