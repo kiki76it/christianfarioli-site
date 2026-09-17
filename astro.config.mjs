@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
+import rehypeArticleContactCTA from './src/lib/rehype-article-contact-cta.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,12 +16,13 @@ export default defineConfig({
   integrations: [
     mdx({
       remarkPlugins: [remarkGfm],
-      rehypePlugins: [rehypeSlug],
+      rehypePlugins: [rehypeSlug, rehypeArticleContactCTA],
       // Allow components used in MDX to be auto-imported from src/components
       optimize: true,
     }),
   ],
   markdown: {
+    rehypePlugins: [rehypeArticleContactCTA],
     shikiConfig: {
       theme: 'github-light',
       wrap: true,

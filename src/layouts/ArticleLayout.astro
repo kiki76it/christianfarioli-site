@@ -5,6 +5,7 @@
 import BaseLayout from './BaseLayout.astro';
 import SiteNav from '~/components/SiteNav.astro';
 import ArticleByline from '~/components/ArticleByline.astro';
+import ArticleContactCTA from '~/components/ArticleContactCTA.astro';
 import { CATEGORY_LABELS } from '~/content.config';
 import { insightHref, resolveRelated, imageSrc } from '~/lib/insights';
 import { paths, absolute } from '~/lib/links';
@@ -173,6 +174,8 @@ if (data.faq?.length) {
             </dl>
           </section>
         )}
+
+        <ArticleContactCTA slug={entry.id} category={data.category} title={data.title} canonicalUrl={articleUrl} />
 
         {data.tags.length > 0 && (
           <div class="article-tags">
