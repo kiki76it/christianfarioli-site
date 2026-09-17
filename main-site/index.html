@@ -3816,12 +3816,20 @@
         document.querySelectorAll('img[loading="lazy"]').forEach(img => {
             // Book covers stay sharp; their only animation is the volume's tilt.
             if (img.closest('#books .book-stage')) return;
+            const revealImage = () => {
+                img.style.filter = 'blur(0)';
+                img.removeEventListener('load', revealImage);
+                img.removeEventListener('error', revealImage);
+            };
+            img.addEventListener('load', revealImage, { once: true });
+            img.addEventListener('error', revealImage, { once: true });
+            // Cached images may have finished before this script could listen.
+            if (img.complete) {
+                revealImage();
+                return;
+            }
             img.style.filter = 'blur(10px)';
             img.style.transition = 'filter 0.5s ease';
-
-            img.addEventListener('load', () => {
-                img.style.filter = 'blur(0)';
-            });
         });
     </script>
 
