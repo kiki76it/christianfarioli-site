@@ -1,0 +1,51 @@
+---
+import { ARTICLE_CONTACT, articleWhatsAppUrl, resolveArticleCTA } from '~/lib/article-contact-cta.mjs';
+import { imageSrc } from '~/lib/insights';
+import '~/styles/article-contact-cta.css';
+
+interface Props {
+  slug: string;
+  category: string;
+  title: string;
+  canonicalUrl: string;
+}
+
+const { slug, category, title, canonicalUrl } = Astro.props;
+const copy = resolveArticleCTA(slug, category);
+---
+<section class="article-contact-cta" aria-labelledby="article-contact-title" data-cta-position="end_article">
+  <img class="article-contact-cta__portrait" src={imageSrc(ARTICLE_CONTACT.portrait)} alt="" width="64" height="64" loading="lazy" decoding="async" />
+  <div class="article-contact-cta__content">
+    <p class="article-contact-cta__author">{ARTICLE_CONTACT.authorName}</p>
+    <h2 id="article-contact-title">{copy.title}</h2>
+    <p class="article-contact-cta__description">{copy.description}</p>
+    <a class="article-contact-cta__booking" href={ARTICLE_CONTACT.bookingUrl} target="_blank" rel="noopener noreferrer"
+      data-article-cta-link="booking" data-article-slug={slug} data-cta-variant={copy.variant} data-cta-position="end_article">
+      {ARTICLE_CONTACT.bookingLabel}
+    </a>
+    <p class="article-contact-cta__message">
+      {ARTICLE_CONTACT.messagePrompt}{' '}
+      <a href={articleWhatsAppUrl(title, canonicalUrl)} target="_blank" rel="noopener noreferrer"
+        data-article-cta-link="whatsapp" data-article-slug={slug} data-cta-variant={copy.variant} data-cta-position="end_article">{ARTICLE_CONTACT.messageLabel}</a>
+    </p>
+  </div>
+</section>
+
+<script>
+  import { trackArticleContactClick } from '~/lib/article-contact-tracking.mjs';
+  // Astro bundles this script once. Native links also work without JavaScript.
+  document.addEventListener('click', (event) => {
+    const link = event.target instanceof Element
+      ? event.target.closest<HTMLAnchorElement>('a[data-article-cta-link]') : null;
+    // The collection entry ID is authoritative, including future filename/slug
+    // normalization that may differ from the Markdown compiler's file path.
+    const articleLink = link?.closest('article')?.querySelector<HTMLAnchorElement>('.article-contact-cta__booking');
+    if (link) trackArticleContactClick(window as Window & {
+      dataLayer?: { push: (event: Record<string, string>) => unknown };
+    }, {
+      ...link.dataset,
+      articleSlug: articleLink?.dataset.articleSlug,
+      ctaVariant: articleLink?.dataset.ctaVariant,
+    });
+  });
+</script>

@@ -1,0 +1,96 @@
+/* Loaded only by the shared article CTA; all rules are limited to the CTA. */
+.article-contact-cta {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 24px;
+  margin: 56px 0 0;
+  padding: 32px;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+.article-contact-cta__portrait {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.article-contact-cta__content { min-width: 0; }
+.article-contact-cta__author {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+.article-contact-cta h2 {
+  margin: 0 0 16px;
+  font-family: var(--font-accent);
+  font-size: clamp(26px, 3vw, 32px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+.article-contact-cta__description {
+  margin: 0 0 24px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+.article-contact-cta__booking {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  max-width: 100%;
+  padding: 13px 20px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+.article-contact-cta__booking:hover {
+  background: var(--color-accent-hover);
+  color: var(--color-white);
+}
+.article-contact-cta__message {
+  margin: 12px 0 0;
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+.article-contact-cta__message a {
+  display: inline-block;
+  min-height: 44px;
+  padding: 9px 0;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.article-contact-cta a:focus-visible,
+.article-body .article-contact-reminder a:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+.article-body .article-contact-reminder {
+  margin: 40px 0;
+  padding: 12px 0 12px 20px;
+  border-left: 2px solid var(--color-border);
+  font-size: 17px;
+}
+.article-body .article-contact-reminder p { margin: 0; }
+.article-body .article-contact-reminder a {
+  display: inline-block;
+  min-height: 44px;
+  padding: 7px 0;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .article-contact-cta {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 24px 20px;
+    margin-top: 48px;
+  }
+  .article-contact-cta__booking { width: 100%; }
+}

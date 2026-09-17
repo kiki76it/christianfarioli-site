@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="Prof. Christian Farioli — AI Strategist, Educator & Advisor">
     <meta name="twitter:description" content="Helping leaders navigate artificial intelligence with clarity, strategic thinking, and human-centered wisdom.">
     <meta name="twitter:image" content="https://christianfarioli.com/imgs/Christian-Farioli-Speaker-on-Stage.jpg">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://christianfarioli.com/#christian-farioli","name":"Prof. Christian Farioli","givenName":"Christian","familyName":"Farioli","honorificPrefix":"Prof.","url":"https://christianfarioli.com/","image":"https://christianfarioli.com/images/authors/christian-farioli.jpg","jobTitle":"AI Strategist, Educator, Speaker, Author & Advisor","description":"Prof. Christian Farioli is a global AI strategist, keynote speaker, executive educator and Forbes contributor who has trained 20,000+ executives across 30+ countries and delivered 160+ keynotes on 4 continents, helping leaders navigate artificial intelligence with clarity, strategy, and human-centered wisdom.","worksFor":{"@type":"Organization","name":"Prof. Christian Farioli"},"knowsLanguage":["English","Italian"],"knowsAbout":["Artificial Intelligence","AI Strategy","AI Leadership","Generative AI","AI Search Intent Optimization","Keynote Speaking","Executive Advisory","Corporate Training","AI Literacy","Digital Marketing","Digital Transformation","Executive Education","Future of Work"],"sameAs":["https://www.linkedin.com/in/christianfarioli","https://www.facebook.com/ChrisFarioli","https://www.youtube.com/c/ChristianFarioli","https://x.com/ChrisFarioli","https://www.instagram.com/chrisfarioli","https://www.pinterest.com/christianfarioli","https://wikitia.com/wiki/Christian_Farioli","https://forbes.com.mx/author/prof-christian-farioli/"]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://christianfarioli.com/#christian-farioli","name":"Prof. Christian Farioli","givenName":"Christian","familyName":"Farioli","honorificPrefix":"Prof.","url":"https://christianfarioli.com/","image":"https://christianfarioli.com/images/authors/christian-farioli.jpg","jobTitle":"AI Strategist, Educator, Speaker, Author & Advisor","description":"Prof. Christian Farioli is a global AI strategist, keynote speaker, executive educator and Forbes contributor who has trained 20,000+ executives across 30+ countries and delivered 200+ keynotes on 4 continents, helping leaders navigate artificial intelligence with clarity, strategy, and human-centered wisdom.","worksFor":{"@type":"Organization","name":"Prof. Christian Farioli"},"knowsLanguage":["English","Italian"],"knowsAbout":["Artificial Intelligence","AI Strategy","AI Leadership","Generative AI","AI Search Intent Optimization","Keynote Speaking","Executive Advisory","Corporate Training","AI Literacy","Digital Marketing","Digital Transformation","Executive Education","Future of Work"],"sameAs":["https://www.linkedin.com/in/christianfarioli","https://www.facebook.com/ChrisFarioli","https://www.youtube.com/c/ChristianFarioli","https://x.com/ChrisFarioli","https://www.instagram.com/chrisfarioli","https://www.pinterest.com/christianfarioli","https://wikitia.com/wiki/Christian_Farioli","https://forbes.com.mx/author/prof-christian-farioli/"]}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Pizza and A.I. - A Tasty Combo for Insightful Managers","author":{"@id":"https://christianfarioli.com/#christian-farioli"},"inLanguage":"en","about":["Artificial Intelligence","ChatGPT","Business Strategy","Management"]}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"The Pizza Guide to Digital Marketing","author":{"@id":"https://christianfarioli.com/#christian-farioli"},"inLanguage":"en","about":["Digital Marketing","Business Strategy"]}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Book","name":"Disciplina per la Vita","author":[{"@id":"https://christianfarioli.com/#christian-farioli"},{"@type":"Person","name":"Bob Urichuck"}],"inLanguage":"it","about":["Personal Development","Discipline","Self-Improvement"]}</script>
@@ -3004,7 +3004,7 @@
                             <path d="M2 12l10 5 10-5"/>
                         </svg>
                     </div>
-                    <div class="stat-number"><span>160</span>+</div>
+                    <div class="stat-number"><span>200</span>+</div>
                     <div class="stat-label">Keynotes</div>
                 </div>
                 <div class="stat-item fade-up stagger-4">
@@ -3763,48 +3763,6 @@
         });
 
         // ============================================
-        // SMOOTH REVEAL FOR STATS NUMBERS
-        // ============================================
-        const statNumbers = document.querySelectorAll('.stat-number span');
-
-        const animateValue = (element, start, end, duration) => {
-            const range = end - start;
-            const increment = range / (duration / 16);
-            let current = start;
-
-            const animate = () => {
-                current += increment;
-                if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
-                    element.textContent = end.toLocaleString();
-                } else {
-                    element.textContent = Math.floor(current).toLocaleString();
-                    requestAnimationFrame(animate);
-                }
-            };
-            animate();
-        };
-
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const span = entry.target.querySelector('span');
-                    if (span && !span.classList.contains('animated')) {
-                        // Remove commas and parse the actual number
-                        const rawText = span.textContent.replace(/,/g, '');
-                        const endValue = parseInt(rawText);
-                        span.classList.add('animated');
-                        animateValue(span, 0, endValue, 2000);
-                    }
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.stat-number').forEach(stat => {
-            statsObserver.observe(stat);
-        });
-
-        // ============================================
         // TESTIMONIAL CAROUSEL AUTO-ROTATION
         // ============================================
         const carouselTrack = document.querySelector('.testimonial-track');
@@ -3885,23 +3843,6 @@
     <script>
     (function(){
       var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      /* 2) stat count-up */
-      var nums=document.querySelectorAll('.stat-number span');
-      function runCount(el){
-        var raw=el.textContent.trim(), hasComma=raw.indexOf(',')>-1, target=parseInt(raw.replace(/,/g,''),10);
-        if(!target&&target!==0)return;
-        if(rm){el.textContent=raw;return;}
-        var t0=null,dur=1600;
-        function fmt(n){return hasComma?n.toLocaleString('en-US'):String(n);}
-        function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);var e=1-Math.pow(1-p,3);
-          el.textContent=fmt(Math.round(target*e));
-          if(p<1)requestAnimationFrame(step);else el.textContent=fmt(target);}
-        el.textContent='0';requestAnimationFrame(step);
-      }
-      if(nums.length){var seen=new WeakSet();
-        var io=new IntersectionObserver(function(es){es.forEach(function(en){
-          if(en.isIntersecting&&!seen.has(en.target)){seen.add(en.target);runCount(en.target);io.unobserve(en.target);}});},{threshold:.5});
-        nums.forEach(function(n){io.observe(n);});}
       /* 4) manifesto word highlight */
       var q=document.querySelector('.manifesto-quote');
       if(q){
@@ -3964,5 +3905,6 @@
         b.addEventListener('mouseleave',function(){b.style.transform='';});});
     })();
     </script>
+    <script src="./js/global-impact.js" defer></script>
 </body>
 </html>

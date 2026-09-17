@@ -1,5 +1,6 @@
 ---
 import { paths } from '~/lib/links';
+import { ARTICLE_CONTACT } from '~/lib/article-contact-cta.mjs';
 
 interface Props {
   /** Preserve the transparent header over the Insights masthead. */
@@ -33,7 +34,7 @@ const main = paths.mainSite();
       <a href="/testimonials.html" class="nav-link">Testimonials</a>
       <a href="/clients.html" class="nav-link">Clients</a>
       <a href="https://future.christianfarioli.com" target="_blank" rel="noopener" class="nav-link">Future</a>
-      <a href="https://calendly.com/chrisfarioli/30min" target="_blank" rel="noopener" class="nav-cta">Work Together</a>
+      <a href={ARTICLE_CONTACT.bookingUrl} target="_blank" rel="noopener" class="nav-cta">Work Together</a>
     </div>
   </div>
 </nav>
