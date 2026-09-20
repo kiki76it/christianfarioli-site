@@ -54,6 +54,19 @@
   background: var(--color-accent-hover);
   color: var(--color-white);
 }
+.article-contact-cta__message {
+  margin: 12px 0 0;
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+.article-contact-cta__message a {
+  display: inline-block;
+  min-height: 44px;
+  padding: 9px 0;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .article-contact-cta a:focus-visible,
 .article-body .article-contact-reminder a:focus-visible {
   outline: 3px solid var(--color-accent);
