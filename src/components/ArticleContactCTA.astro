@@ -1,15 +1,17 @@
 ---
-import { ARTICLE_CONTACT, resolveArticleCTA } from '~/lib/article-contact-cta.mjs';
+import { ARTICLE_CONTACT, articleCTAWhatsAppUrl, resolveArticleCTA } from '~/lib/article-contact-cta.mjs';
 import { imageSrc } from '~/lib/insights';
 import '~/styles/article-contact-cta.css';
 
 interface Props {
   slug: string;
   category: string;
+  canonicalUrl?: string;
 }
 
-const { slug, category } = Astro.props;
+const { slug, category, canonicalUrl } = Astro.props;
 const copy = resolveArticleCTA(slug, category);
+const whatsappUrl = articleCTAWhatsAppUrl(slug, canonicalUrl);
 ---
 <section class="article-contact-cta" aria-labelledby="article-contact-title" data-cta-position="end_article">
   <img class="article-contact-cta__portrait" src={imageSrc(ARTICLE_CONTACT.portrait)} alt="" width="64" height="64" loading="lazy" decoding="async" />
@@ -19,8 +21,15 @@ const copy = resolveArticleCTA(slug, category);
     <p class="article-contact-cta__description">{copy.description}</p>
     <a class="article-contact-cta__booking" href={ARTICLE_CONTACT.bookingUrl} target="_blank" rel="noopener noreferrer"
       data-article-cta-link="booking" data-article-slug={slug} data-cta-variant={copy.variant} data-cta-position="end_article">
-      {ARTICLE_CONTACT.bookingLabel}
+      {copy.bookingLabel ?? ARTICLE_CONTACT.bookingLabel}
     </a>
+    {copy.whatsapp && whatsappUrl && (
+      <p class="article-contact-cta__message">
+        {copy.whatsapp.prompt}{' '}
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
+          data-article-cta-link="whatsapp" data-article-slug={slug} data-cta-variant={copy.variant} data-cta-position="end_article">{copy.whatsapp.label}</a>
+      </p>
+    )}
   </div>
 </section>
 

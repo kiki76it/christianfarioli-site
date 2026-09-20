@@ -127,7 +127,7 @@ function dateLabel(d?: Date): string | null {
             <div class="featured-content">
               <span class="featured-category">{CATEGORY_LABELS[featured.data.category]}</span>
               <h2 class="featured-title"><a href={paths.insights(featured.id)}>{featured.data.title}</a></h2>
-              <p class="featured-excerpt">{featured.data.description}</p>
+              <p class="featured-excerpt">{featured.data.excerpt ?? featured.data.description}</p>
               <div class="featured-meta">
                 {dateLabel(featured.data.publishedAt) && <span>{dateLabel(featured.data.publishedAt)}</span>}
                 {featured.data.readingTime && (
@@ -166,7 +166,7 @@ function dateLabel(d?: Date): string | null {
                 </a>
                 <div class="article-card-content">
                   <h3 class="article-card-title"><a href={paths.insights(entry.id)}>{entry.data.title}</a></h3>
-                  <p class="article-card-excerpt">{entry.data.description}</p>
+                  <p class="article-card-excerpt">{entry.data.excerpt ?? entry.data.description}</p>
                   <div class="article-card-footer">
                     <div class="article-card-author">
                       <span class="author-avatar-small">

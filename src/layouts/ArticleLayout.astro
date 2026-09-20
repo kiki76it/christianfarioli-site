@@ -79,13 +79,14 @@ if (data.faq?.length) {
 ---
 <BaseLayout
   lang={language}
-  title={data.title}
+  title={data.seoTitle ?? data.title}
   description={data.description}
   ogImage={imageSrc(data.featuredImage) || undefined}
   ogType="article"
   canonical={articleUrl}
   publishedTime={publishedISO}
   modifiedTime={updatedISO}
+  noindex={preview}
 >
   <SiteNav sticky={!preview} />
   {jsonLd.map((obj) => (
@@ -113,7 +114,7 @@ if (data.faq?.length) {
           )}
         </div>
         <h1>{data.title}</h1>
-        <p class="article-description">{data.description}</p>
+        <p class="article-description">{data.excerpt ?? data.description}</p>
 
         <ArticleByline
           author={data.author}
@@ -175,7 +176,7 @@ if (data.faq?.length) {
           </section>
         )}
 
-        <ArticleContactCTA slug={entry.id} category={data.category} />
+        <ArticleContactCTA slug={entry.id} category={data.category} canonicalUrl={articleUrl} />
 
         {data.tags.length > 0 && (
           <div class="article-tags">
@@ -205,7 +206,7 @@ if (data.faq?.length) {
                   <div>
                     <span class="related-category">{CATEGORY_LABELS[r.data.category]}</span>
                     <h3>{r.data.title}</h3>
-                    <p>{r.data.description}</p>
+                    <p>{r.data.excerpt ?? r.data.description}</p>
                   </div>
                 </a>
               </li>

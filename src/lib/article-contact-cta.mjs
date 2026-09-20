@@ -42,11 +42,25 @@ export const ARTICLE_CTA_CATEGORIES = Object.freeze({
 
 // Reviewed per-post choices take precedence over the primary category.
 // Add future editorial overrides here without modifying article content.
-/** @type {Readonly<Record<string, {variant: ArticleCTAVariant, title?: string}>>} */
+/** @typedef {{url: string, prompt: string, label: string, message: string}} ArticleCTAWhatsApp */
+/** @type {Readonly<Record<string, {variant: ArticleCTAVariant, title?: string, description?: string, bookingLabel?: string, whatsapp?: ArticleCTAWhatsApp}>>} */
 export const ARTICLE_CTA_OVERRIDES = Object.freeze({
   'advanced-strategies/b2b-marketing-strategy': {
     variant: 'marketing',
     title: 'What would a stronger B2B strategy look like for your business?',
+  },
+  'executive-education/corporate-ai-training-cost-dubai': {
+    variant: 'training',
+    title: 'Planning AI training for your team in Dubai?',
+    description: 'Share your team size, roles, learning priorities and preferred dates. Let’s discuss the right programme for your organisation and a tailored training proposal.',
+    bookingLabel: 'Book a Call with Christian',
+    whatsapp: {
+      // Existing public contact in main-site/index.html; enabled for this post only.
+      url: 'https://wa.me/971509596182',
+      prompt: 'Prefer to request a quote in writing?',
+      label: 'WhatsApp',
+      message: 'Hi Christian, I’ve read your guide to corporate AI training costs in Dubai. I’d like to discuss a training proposal for our team.\n\nOur team size:\nRoles or departments:\nMain learning priorities:\nPreferred dates and format:',
+    },
   },
 });
 
@@ -56,5 +70,18 @@ export function resolveArticleCTA(slug, category) {
     ? ARTICLE_CTA_OVERRIDES[slug] : undefined;
   const variant = override?.variant ?? (Object.hasOwn(ARTICLE_CTA_CATEGORIES, category)
     ? ARTICLE_CTA_CATEGORIES[category] : 'general');
-  return { variant, ...ARTICLE_CTA_COPY[variant], ...(override?.title ? { title: override.title } : {}) };
+  return { variant, ...ARTICLE_CTA_COPY[variant], ...override };
+}
+
+/**
+ * Optional per-post message, using the same production canonical as the layout.
+ * An article without an explicit WhatsApp override never receives a message link.
+ * @param {string} slug
+ * @param {string | undefined} canonicalUrl
+ */
+export function articleCTAWhatsAppUrl(slug, canonicalUrl) {
+  const contact = Object.hasOwn(ARTICLE_CTA_OVERRIDES, slug)
+    ? ARTICLE_CTA_OVERRIDES[slug].whatsapp : undefined;
+  if (!contact || !canonicalUrl) return undefined;
+  return `${contact.url}?text=${encodeURIComponent(`${contact.message}\n\n${canonicalUrl}`)}`;
 }
