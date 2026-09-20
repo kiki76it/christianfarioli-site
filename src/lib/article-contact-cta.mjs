@@ -53,7 +53,6 @@ export const ARTICLE_CTA_OVERRIDES = Object.freeze({
     variant: 'training',
     title: 'Planning AI training for your team in Dubai?',
     description: 'Share your team size, roles, learning priorities and preferred dates. Let’s discuss the right programme for your organisation and a tailored training proposal.',
-    bookingLabel: 'Book a Call with Christian',
     whatsapp: {
       // Existing public contact in main-site/index.html; enabled for this post only.
       url: 'https://wa.me/971509596182',

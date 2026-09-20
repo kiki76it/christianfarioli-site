@@ -26,7 +26,7 @@ test('AI training cost article has the exact requested per-post CTA', () => {
   assert.equal(copy.variant, 'training');
   assert.equal(copy.title, 'Planning AI training for your team in Dubai?');
   assert.equal(copy.description, 'Share your team size, roles, learning priorities and preferred dates. Let’s discuss the right programme for your organisation and a tailored training proposal.');
-  assert.equal(copy.bookingLabel, 'Book a Call with Christian');
+  assert.equal(copy.bookingLabel ?? ARTICLE_CONTACT.bookingLabel, 'Book a Call with Prof.Christian');
   assert.equal(copy.whatsapp.prompt, 'Prefer to request a quote in writing?');
   assert.equal(copy.whatsapp.label, 'WhatsApp');
   assert.equal(ARTICLE_CONTACT.bookingUrl, 'https://calendly.com/chrisfarioli/30min');
