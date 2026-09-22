@@ -4,6 +4,7 @@
 
 import { CATEGORY_LABELS, INSIGHT_CATEGORIES, type InsightCategory } from '../content.config';
 import { paths, p } from './links';
+import { isRedirectedInsight } from './insight-redirects.mjs';
 import type { CollectionEntry } from 'astro:content';
 
 export type InsightEntry = CollectionEntry<'insights'>;
@@ -79,7 +80,7 @@ export function isPubliclyVisible(
   now: Date = new Date(),
 ): boolean {
   const { status, scheduledFor, draft } = entry.data;
-  if (draft) return false;
+  if (draft || isRedirectedInsight(entry.id)) return false;
   if (status === 'published') return true;
   if (status === 'scheduled' && scheduledFor) {
     return scheduledFor.getTime() <= now.getTime();
