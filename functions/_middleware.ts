@@ -10,6 +10,8 @@
 //   ADMIN_USERNAME  (default: "admin")
 //   ADMIN_PASSWORD  (required in production)
 
+import { insightRedirectPath } from '../src/lib/insight-redirects.mjs';
+
 interface Env {
   ADMIN_USERNAME?: string;
   ADMIN_PASSWORD?: string;
@@ -19,6 +21,14 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   const { request, env, next } = context;
   const url = new URL(request.url);
   const path = url.pathname;
+
+  // Consolidate duplicate imports with a permanent redirect. Pages _redirects
+  // rules do not run for Function-served requests, so this belongs here.
+  const redirectPath = insightRedirectPath(path);
+  if (redirectPath) {
+    url.pathname = redirectPath;
+    return Response.redirect(url.toString(), 301);
+  }
 
   // ---------------------------------------------------------------------
   // 1) Main site — anything that ISN'T the /insights/* namespace is served
