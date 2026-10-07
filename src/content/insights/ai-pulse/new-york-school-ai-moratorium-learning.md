@@ -21,7 +21,7 @@ featuredImage: /images/insights/covers/the-ceo-guide-to-ai-governance.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli with a chessboard and symbols of
   AI governance
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: New York City Mayor's Office
@@ -30,7 +30,9 @@ sources:
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-03'
 ---
 
 A polished answer can conceal a missing ability. That is a problem for a school assessing learning, and for a business assessing whether a new employee can handle an unfamiliar situation. AI makes the distinction between producing an answer and understanding it harder to ignore.

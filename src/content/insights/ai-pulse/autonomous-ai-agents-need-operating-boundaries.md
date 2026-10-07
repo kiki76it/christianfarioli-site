@@ -1,8 +1,12 @@
 ---
-title: "Autonomous AI Agents Need Operating Boundaries"
-seoTitle: "Autonomous AI Agents Need Operating Boundaries"
-description: "Dream's research into a near-autonomous cyber campaign raises a management question: who controls the identities, permissions and actions of an AI team?"
-excerpt: "Dream's research into a near-autonomous cyber campaign raises a management question: who controls the identities, permissions and actions of an AI team?"
+title: Autonomous AI Agents Need Operating Boundaries
+seoTitle: Autonomous AI Agents Need Operating Boundaries
+description: >-
+  Dream's research into a near-autonomous cyber campaign raises a management
+  question: who controls the identities, permissions and actions of an AI team?
+excerpt: >-
+  Dream's research into a near-autonomous cyber campaign raises a management
+  question: who controls the identities, permissions and actions of an AI team?
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,22 +15,29 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Dream Research Labs"
-    title: "Inside a Multi-Agent AI Framework Used to Compromise Government Entities in Asia"
-    url: "https://dreamgroup.com/blog/inside-a-multi-agent-ai-framework-used-to-compromise-government-entities-in-asia"
+  - name: Dream Research Labs
+    title: >-
+      Inside a Multi-Agent AI Framework Used to Compromise Government Entities
+      in Asia
+    url: >-
+      https://dreamgroup.com/blog/inside-a-multi-agent-ai-framework-used-to-compromise-government-entities-in-asia
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-12'
 ---
 
 ## What happened

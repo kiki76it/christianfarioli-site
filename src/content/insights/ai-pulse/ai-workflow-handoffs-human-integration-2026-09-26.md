@@ -16,13 +16,16 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering AI strategy at a
   chessboard
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: Fortune
     url: 'https://fortune.com/2026/09/26/agentic-ai-saas-human-middleware-microsoft/'
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-27'
 ---
 
 On 26 September 2026, Microsoft's Bryan Goode argued in Fortune that people still bridge software gaps. This was commentary, not a product launch.

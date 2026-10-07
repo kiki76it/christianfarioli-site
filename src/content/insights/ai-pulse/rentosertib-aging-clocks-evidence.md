@@ -21,7 +21,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering a chessboard beside a
   digital brain
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: Nature Biotechnology
@@ -29,7 +29,9 @@ sources:
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-08'
 ---
 
 An impressive number can travel further than the explanation of what it measures. AI-related research deserves particular care here: a promising result can become a much stronger claim as it moves from a paper to a headline and then into a presentation.

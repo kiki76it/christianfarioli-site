@@ -21,7 +21,7 @@ featuredImage: /images/insights/covers/the-ceo-guide-to-ai-governance.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli with a chessboard and symbols of
   AI governance
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: OpenAI
@@ -29,7 +29,9 @@ sources:
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-17'
 ---
 
 When an AI workflow behaves unexpectedly, a confident explanation is less useful than a reconstructable record. The organisation needs to know what was requested, what happened and what it can establish from the evidence before deciding how to respond.

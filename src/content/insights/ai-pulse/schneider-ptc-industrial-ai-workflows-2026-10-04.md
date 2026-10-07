@@ -18,7 +18,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering AI strategy at a
   chessboard
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: 'Reuters, published by MarketScreener'
@@ -29,6 +29,9 @@ sources:
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-10-05'
 ---
 
 On 4 October 2026, reporting described Schneider Electric as nearing a roughly $20 billion deal for industrial software company PTC. On 5 October, the companies confirmed a definitive agreement valuing PTC's equity at approximately $22.6 billion. The development directs attention towards a part of AI strategy that a chatbot demonstration can easily overlook: the systems where work actually happens.

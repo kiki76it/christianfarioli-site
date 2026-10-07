@@ -18,7 +18,7 @@ featuredImage: /images/insights/covers/social-media-strategy.jpg
 featuredImageAlt: >-
   Editorial illustration of people, connected screens and digital communication
   symbols
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: OpenAI
@@ -26,6 +26,9 @@ sources:
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-10-06'
 ---
 
 On 5 October 2026, OpenAI announced plans to test visual advertisements alongside image generation in ChatGPT. The initial US test is scheduled for later in October. For marketers, the interesting question is how to be useful when a person is exploring a possibility before they have formed a conventional product search.

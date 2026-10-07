@@ -18,7 +18,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering AI strategy at a
   chessboard
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: Anthropic
@@ -26,6 +26,9 @@ sources:
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-10-03'
 ---
 
 On 2 October 2026, Anthropic announced Claude Frontier Academy, backed by a $100 million commitment and an aim to train 10,000 Frontier Deployed Engineers by the end of 2027. The announcement puts attention on an unglamorous part of enterprise AI: the work required after a convincing demonstration.

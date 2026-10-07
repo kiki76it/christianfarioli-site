@@ -16,7 +16,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering AI strategy at a
   chessboard
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: Blue Cross Blue Shield Association
@@ -24,6 +24,9 @@ sources:
       https://www.bcbs.com/about-us/association-news/bcbsa-analysis-ai-coding-tools-affects-healthcare-costs
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-25'
 ---
 
 On 24 September 2026, the Blue Cross Blue Shield Association published an analysis linking more intensive hospital coding to an estimated $942 million in additional costs for its member plans. Its concern about AI-assisted billing poses a broader management question: whose definition of success is an automation project serving?

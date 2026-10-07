@@ -21,7 +21,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering a chessboard beside a
   digital brain
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: The Guardian
@@ -32,7 +32,9 @@ sources:
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-13'
 ---
 
 An entry-level role is both a job and a route into more difficult work. If a company changes the tasks juniors perform, it should also examine how they will develop the judgement expected of experienced colleagues.

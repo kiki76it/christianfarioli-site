@@ -17,7 +17,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli beside a chessboard and an
   illuminated AI network, representing strategic decisions
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: 'Reuters, published by MarketScreener'
@@ -26,6 +26,9 @@ sources:
       https://www.marketscreener.com/news/meta-testing-a-human-concierge-for-its-new-personal-ai-agent-muse-ce785ad8de8cf025
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-23'
 ---
 
 On 22 September 2026, Reuters reported that Meta had tested human contractors handling some calls made through its Muse AI assistant. The report concerned an internal employee test and raised questions about disclosure and access to sensitive information.

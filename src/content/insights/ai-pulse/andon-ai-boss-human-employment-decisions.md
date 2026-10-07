@@ -1,8 +1,14 @@
 ---
-title: "An AI Boss Recommended a Dismissal. Humans Still Owned the Decision."
-seoTitle: "An AI Boss Recommended a Dismissal. Humans Still Owned the Decision."
-description: "Andon Labs' retail experiment shows why an AI recommendation about an employee requires accountable human judgement, reliable records and a clear route to challenge."
-excerpt: "Andon Labs' retail experiment shows why an AI recommendation about an employee requires accountable human judgement, reliable records and a clear route to challenge."
+title: An AI Boss Recommended a Dismissal. Humans Still Owned the Decision.
+seoTitle: An AI Boss Recommended a Dismissal. Humans Still Owned the Decision.
+description: >-
+  Andon Labs' retail experiment shows why an AI recommendation about an employee
+  requires accountable human judgement, reliable records and a clear route to
+  challenge.
+excerpt: >-
+  Andon Labs' retail experiment shows why an AI recommendation about an employee
+  requires accountable human judgement, reliable records and a clear route to
+  challenge.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,22 +17,26 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Andon Labs"
-    title: "AI bosses are slow to fire and quick to hire"
-    url: "https://andonlabs.com/blog/ai-bosses-2"
+  - name: Andon Labs
+    title: AI bosses are slow to fire and quick to hire
+    url: 'https://andonlabs.com/blog/ai-bosses-2'
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-16'
 ---
 
 ## What happened

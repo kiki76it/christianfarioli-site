@@ -1,8 +1,14 @@
 ---
-title: "Microduck's Early Orders Point to Accessible Robotics Learning"
-seoTitle: "Microduck's Early Orders Point to Accessible Robotics Learning"
-description: "Hugging Face's reported Microduck orders show interest in hands-on robotics. Pre-order demand is distinct from delivered hardware, useful skills and operational value."
-excerpt: "Hugging Face's reported Microduck orders show interest in hands-on robotics. Pre-order demand is distinct from delivered hardware, useful skills and operational value."
+title: Microduck's Early Orders Point to Accessible Robotics Learning
+seoTitle: Microduck's Early Orders Point to Accessible Robotics Learning
+description: >-
+  Hugging Face's reported Microduck orders show interest in hands-on robotics.
+  Pre-order demand is distinct from delivered hardware, useful skills and
+  operational value.
+excerpt: >-
+  Hugging Face's reported Microduck orders show interest in hands-on robotics.
+  Pre-order demand is distinct from delivered hardware, useful skills and
+  operational value.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,25 +17,32 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Pollen Robotics"
-    title: "Meet Microduck"
-    url: "https://pollen-robotics.com/microduck/blog/introducing-microduck/"
-  - name: "Business Insider, syndicated by Yahoo"
-    title: "Hugging Face says sales for its robot ducks topped $2.6 million in 24 hours"
-    url: "https://tech.yahoo.com/ai/meta-ai/articles/hugging-face-says-roller-skating-164314293.html"
+  - name: Pollen Robotics
+    title: Meet Microduck
+    url: 'https://pollen-robotics.com/microduck/blog/introducing-microduck/'
+  - name: 'Business Insider, syndicated by Yahoo'
+    title: >-
+      Hugging Face says sales for its robot ducks topped $2.6 million in 24
+      hours
+    url: >-
+      https://tech.yahoo.com/ai/meta-ai/articles/hugging-face-says-roller-skating-164314293.html
 related:
   - slug: executive-education/corporate-ai-training-cost-dubai
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-29'
 ---
 
 ## What happened

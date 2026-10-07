@@ -21,7 +21,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering a chessboard beside a
   digital brain
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: Fergus via GlobeNewswire
@@ -32,7 +32,9 @@ sources:
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-14'
 ---
 
 A skilled trade business can finish the physical job and still have considerable work left to do. Notes need organising, materials need recording and the customer needs an accurate account of what was completed. That surrounding administration is a practical place to examine AI.

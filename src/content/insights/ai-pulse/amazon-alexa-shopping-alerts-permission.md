@@ -19,7 +19,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering a chessboard beside a
   digital brain
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: Amazon
@@ -28,7 +28,9 @@ sources:
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-02'
 ---
 
 A customer does not always begin shopping with a search. Sometimes the intention sits quietly in the background: the next book from a favourite author, a new device in a familiar range, or tickets for an artist they follow. An assistant that remembers that intention can influence when shopping begins.

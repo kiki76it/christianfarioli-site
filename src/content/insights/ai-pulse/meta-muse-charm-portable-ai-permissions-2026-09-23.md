@@ -18,7 +18,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli beside a chessboard and an
   illuminated AI network, representing strategic decisions
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: Meta
@@ -26,6 +26,9 @@ sources:
     url: 'https://www.meta.com/en-gb/blog/meta-connect-2026-everything-we-announced/'
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-24'
 ---
 
 On 23 September 2026, Meta introduced Muse Charm at its Connect event, describing a pocket-sized device for interacting with its personal AI agent by voice. The business question is how people retain a clear understanding of what an agent is allowed to do when asking it becomes easier and more immediate.

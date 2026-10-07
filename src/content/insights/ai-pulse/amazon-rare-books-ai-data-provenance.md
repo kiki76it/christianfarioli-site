@@ -1,8 +1,14 @@
 ---
-title: "Amazon's Reported Book Scanning Raises a Data Provenance Question"
-seoTitle: "Amazon's Reported Book Scanning Raises a Data Provenance Question"
-description: "An investigation into books arriving at an Amazon facility highlights a business issue beyond model choice: where valuable AI data comes from and how it is used."
-excerpt: "An investigation into books arriving at an Amazon facility highlights a business issue beyond model choice: where valuable AI data comes from and how it is used."
+title: Amazon's Reported Book Scanning Raises a Data Provenance Question
+seoTitle: Amazon's Reported Book Scanning Raises a Data Provenance Question
+description: >-
+  An investigation into books arriving at an Amazon facility highlights a
+  business issue beyond model choice: where valuable AI data comes from and how
+  it is used.
+excerpt: >-
+  An investigation into books arriving at an Amazon facility highlights a
+  business issue beyond model choice: where valuable AI data comes from and how
+  it is used.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,22 +17,29 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "404 Media"
-    title: "We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility"
-    url: "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/"
+  - name: 404 Media
+    title: >-
+      We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training
+      Facility
+    url: >-
+      https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-18'
 ---
 
 ## What happened

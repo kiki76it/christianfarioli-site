@@ -1,8 +1,14 @@
 ---
-title: "Meta's Project OT Report Puts Useful Work Ahead of AI Activity"
-seoTitle: "Meta's Project OT Report Puts Useful Work Ahead of AI Activity"
-description: "Reuters' investigation into Meta's restructuring plans highlights the need to measure customer outcomes, reliability and rework alongside increased AI-assisted output."
-excerpt: "Reuters' investigation into Meta's restructuring plans highlights the need to measure customer outcomes, reliability and rework alongside increased AI-assisted output."
+title: Meta's Project OT Report Puts Useful Work Ahead of AI Activity
+seoTitle: Meta's Project OT Report Puts Useful Work Ahead of AI Activity
+description: >-
+  Reuters' investigation into Meta's restructuring plans highlights the need to
+  measure customer outcomes, reliability and rework alongside increased
+  AI-assisted output.
+excerpt: >-
+  Reuters' investigation into Meta's restructuring plans highlights the need to
+  measure customer outcomes, reliability and rework alongside increased
+  AI-assisted output.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,22 +17,29 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Reuters, syndicated by The Economic Times"
-    title: "Mark Zuckerberg had a bold plan to replace Meta staff with AI. Here's how it imploded."
-    url: "https://m.economictimes.com/ai/ai-insights/mark-zuckerberg-had-a-bold-plan-to-replace-meta-staff-with-ai-heres-how-it-imploded-/amp_articleshow/133538291.cms"
+  - name: 'Reuters, syndicated by The Economic Times'
+    title: >-
+      Mark Zuckerberg had a bold plan to replace Meta staff with AI. Here's how
+      it imploded.
+    url: >-
+      https://m.economictimes.com/ai/ai-insights/mark-zuckerberg-had-a-bold-plan-to-replace-meta-staff-with-ai-heres-how-it-imploded-/amp_articleshow/133538291.cms
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-27'
 ---
 
 ## What happened

@@ -18,7 +18,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli beside a chessboard and an
   illuminated AI network, representing strategic decisions
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: 'Reuters, published by Investing.com'
@@ -27,6 +27,9 @@ sources:
       https://www.investing.com/news/economic-indicators/ai-could-boost-latam-caribbean-economy-51-but-wages-may-fall-idb-says-4909514
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-22'
 ---
 
 On 21 September 2026, Reuters reported forthcoming Inter-American Development Bank research suggesting that AI could expand output in Latin America and the Caribbean while leaving workers with very different wage outcomes. The distinction depends partly on whether people can move into activities that grow.

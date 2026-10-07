@@ -46,6 +46,17 @@ test('timestamp validation rejects date-only, local-time and impossible dates', 
   for (const date of ['2026-10-07T07:00:00+04:00', '2024-02-29T03:00:00.123Z', '2026-10-07T07:00:00-05:30']) assert.equal(isOffsetTimestamp(date), true, date);
 });
 
+test('source edition preserves a calendar date without becoming a publication clock', () => {
+  const { data } = prepareAiPulseDraft(payload());
+  for (const sourceEditionDate of ['2026-08-12', '2024-02-29']) {
+    assert.deepEqual(aiPulseErrors({ ...data, sourceEditionDate }, content), []);
+  }
+  for (const sourceEditionDate of ['2026-02-29', '2026-04-31', '2026-10-07T00:00:00Z', 'today', new Date()]) {
+    assert.throws(() => assertAiPulse({ ...data, sourceEditionDate }, content), /sourceEditionDate/);
+  }
+  assert.throws(() => assertAiPulse({ ...data, status: 'published', sourceEditionDate: '2026-08-12' }, content), /requires publishedAt/);
+});
+
 test('external intake remains draft and frontmatter survives quotes and multiline text', () => {
   const draft = prepareAiPulseDraft(payload({ title: 'An internal "quoted" test: safe output', internal_test: true }));
   const parsed = matter(draft.markdown);

@@ -1,8 +1,12 @@
 ---
-title: "China's AI Sovereignty Response Makes Business Options Worth Testing"
-seoTitle: "China's AI Sovereignty Response Makes Business Options Worth Testing"
-description: "China's 19 August response to proposed rival AI blocs highlights the practical value of knowing which parts of an AI operation can move and which cannot."
-excerpt: "China's 19 August response to proposed rival AI blocs highlights the practical value of knowing which parts of an AI operation can move and which cannot."
+title: China's AI Sovereignty Response Makes Business Options Worth Testing
+seoTitle: China's AI Sovereignty Response Makes Business Options Worth Testing
+description: >-
+  China's 19 August response to proposed rival AI blocs highlights the practical
+  value of knowing which parts of an AI operation can move and which cannot.
+excerpt: >-
+  China's 19 August response to proposed rival AI blocs highlights the practical
+  value of knowing which parts of an AI operation can move and which cannot.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,25 +15,31 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Reuters Connect"
-    title: "China urges respect for digital sovereignty in AI race"
-    url: "https://www.reutersconnect.com/item/china-urges-respect-for-digital-sovereignty-in-ai-race/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBNjQ0ODE5MDgyMDI2UlAx"
-  - name: "Reuters, syndicated by Investing.com"
-    title: "China urges respect for digital sovereignty in AI race"
-    url: "https://www.investing.com/news/world-news/china-urges-respect-for-digital-sovereignty-in-ai-race-4866598"
+  - name: Reuters Connect
+    title: China urges respect for digital sovereignty in AI race
+    url: >-
+      https://www.reutersconnect.com/item/china-urges-respect-for-digital-sovereignty-in-ai-race/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBNjQ0ODE5MDgyMDI2UlAx
+  - name: 'Reuters, syndicated by Investing.com'
+    title: China urges respect for digital sovereignty in AI race
+    url: >-
+      https://www.investing.com/news/world-news/china-urges-respect-for-digital-sovereignty-in-ai-race-4866598
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-19'
 ---
 
 ## What happened

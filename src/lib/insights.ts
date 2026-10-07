@@ -105,7 +105,9 @@ export function sortByDateDesc(entries: InsightEntry[]): InsightEntry[] {
   return [...entries].sort((a, b) => {
     const aTime = a.data.publishedAt?.getTime() ?? a.data.scheduledFor?.getTime() ?? 0;
     const bTime = b.data.publishedAt?.getTime() ?? b.data.scheduledFor?.getTime() ?? 0;
-    return bTime - aTime;
+    // A single archive release can publish many editions at the same instant.
+    // Preserve the original pack order only as a tie-break; never backdate news.
+    return bTime - aTime || (b.data.sourceEditionDate ?? '').localeCompare(a.data.sourceEditionDate ?? '');
   });
 }
 

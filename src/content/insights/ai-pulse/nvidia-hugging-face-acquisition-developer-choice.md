@@ -19,7 +19,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering a chessboard beside a
   digital brain
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: NVIDIA
@@ -27,7 +27,9 @@ sources:
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-04'
 ---
 
 When an organisation adopts an AI model, it also adopts a route for finding it, evaluating it and keeping it usable. Those routes can become strategic dependencies even when the underlying technology is available from several suppliers.

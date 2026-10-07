@@ -1,8 +1,14 @@
 ---
-title: "Amazon's Drone Expansion Puts the Customer Outcome First"
-seoTitle: "Amazon's Drone Expansion Puts the Customer Outcome First"
-description: "Amazon's planned Prime Air expansion illustrates a useful adoption test: whether a technical capability improves an outcome customers value and operations can support."
-excerpt: "Amazon's planned Prime Air expansion illustrates a useful adoption test: whether a technical capability improves an outcome customers value and operations can support."
+title: Amazon's Drone Expansion Puts the Customer Outcome First
+seoTitle: Amazon's Drone Expansion Puts the Customer Outcome First
+description: >-
+  Amazon's planned Prime Air expansion illustrates a useful adoption test:
+  whether a technical capability improves an outcome customers value and
+  operations can support.
+excerpt: >-
+  Amazon's planned Prime Air expansion illustrates a useful adoption test:
+  whether a technical capability improves an outcome customers value and
+  operations can support.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,25 +17,32 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Amazon"
-    title: "Amazon Prime Air drone delivery is expanding to nearly 500 US cities and towns this year"
-    url: "https://www.aboutamazon.com/news/transportation/amazon-prime-air-drone-delivery-expansion"
-  - name: "Amazon, distributed by Public"
-    title: "What you need to know about Amazon: August 19, 2026"
-    url: "https://www.publicnow.com/view/84FC415B50FB31270BDF077832F7766A77A0E422"
+  - name: Amazon
+    title: >-
+      Amazon Prime Air drone delivery is expanding to nearly 500 US cities and
+      towns this year
+    url: >-
+      https://www.aboutamazon.com/news/transportation/amazon-prime-air-drone-delivery-expansion
+  - name: 'Amazon, distributed by Public'
+    title: 'What you need to know about Amazon: August 19, 2026'
+    url: 'https://www.publicnow.com/view/84FC415B50FB31270BDF077832F7766A77A0E422'
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-20'
 ---
 
 ## What happened

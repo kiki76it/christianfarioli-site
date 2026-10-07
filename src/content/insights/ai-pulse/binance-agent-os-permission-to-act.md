@@ -1,8 +1,14 @@
 ---
-title: "Binance Agent OS Shows Why Permission to Act Changes AI Risk"
-seoTitle: "Binance Agent OS Shows Why Permission to Act Changes AI Risk"
-description: "Binance's Agent OS connects AI applications with financial tools. The management lesson is to define authority, exposure and supervision before granting execution rights."
-excerpt: "Binance's Agent OS connects AI applications with financial tools. The management lesson is to define authority, exposure and supervision before granting execution rights."
+title: Binance Agent OS Shows Why Permission to Act Changes AI Risk
+seoTitle: Binance Agent OS Shows Why Permission to Act Changes AI Risk
+description: >-
+  Binance's Agent OS connects AI applications with financial tools. The
+  management lesson is to define authority, exposure and supervision before
+  granting execution rights.
+excerpt: >-
+  Binance's Agent OS connects AI applications with financial tools. The
+  management lesson is to define authority, exposure and supervision before
+  granting execution rights.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,22 +17,29 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Binance"
-    title: "Binance Introduces Agent OS to Connect AI Applications to Financial Infrastructure"
-    url: "https://www.prnewswire.com/news-releases/binance-introduces-agent-os-to-connect-ai-applications-to-financial-infrastructure-302856306.html"
+  - name: Binance
+    title: >-
+      Binance Introduces Agent OS to Connect AI Applications to Financial
+      Infrastructure
+    url: >-
+      https://www.prnewswire.com/news-releases/binance-introduces-agent-os-to-connect-ai-applications-to-financial-infrastructure-302856306.html
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-21'
 ---
 
 ## What happened

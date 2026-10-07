@@ -16,7 +16,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering AI strategy at a
   chessboard
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: 'Reuters, published by MarketScreener'
@@ -24,6 +24,9 @@ sources:
       https://uk.marketscreener.com/news/ai-messaging-scam-costs-italy-s-top-bank-intesa-millions-sources-say-ce785adfde80f127
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-26'
 ---
 
 On 25 September 2026, Reuters reported an impersonation fraud at Fideuram, part of Intesa Sanpaolo, involving transfers of about EUR95 million. The reported scheme began in February. Its relevance for business leaders is immediate: recognising a senior person's name or voice cannot be the final check before an irreversible action.

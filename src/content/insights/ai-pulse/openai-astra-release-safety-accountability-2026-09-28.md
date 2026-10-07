@@ -16,7 +16,7 @@ featuredImage: /images/insights/covers/the-ceo-guide-to-ai-governance.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli beside a glowing governance symbol
   and shield
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: 'Reuters, published by MarketScreener'
@@ -25,6 +25,9 @@ sources:
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-29'
 ---
 
 On 28 September 2026, Reuters reported that OpenAI had cancelled the planned release of GPT-6.1 Astra after internal testing failed to meet its safety and alignment standards. For organisations considering autonomous agents, the important question is not simply whether a system completes difficult work. It is whether the organisation can trust its account of that work.

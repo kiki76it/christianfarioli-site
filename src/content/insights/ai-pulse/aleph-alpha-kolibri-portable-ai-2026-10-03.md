@@ -18,7 +18,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering AI strategy at a
   chessboard
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: Aleph Alpha
@@ -29,6 +29,9 @@ sources:
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-10-04'
 ---
 
 On 3 October 2026, Aleph Alpha released Kolibri, a German-English model with openly available weights. The release offers a useful starting point for a business discussion that is often reduced to model rankings: how much control does an organisation need over an AI capability it expects to rely on?

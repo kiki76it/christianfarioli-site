@@ -18,7 +18,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli beside a chessboard and an
   illuminated AI network, representing strategic decisions
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: 'Reuters, published by Investing.com'
@@ -29,6 +29,9 @@ sources:
       https://www.investing.com/news/stock-market-news/us-treasurys-bessent-chinas-he-to-launch-talks-on-ai-trade-critical-minerals-4908142
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-21'
 ---
 
 On 20 September 2026, US Treasury Secretary Scott Bessent said Washington had proposed a mechanism for notifying China about AI incidents with national-security implications. The proposal, reported by Reuters, raises a useful question for business leaders: if an AI-enabled process caused a serious problem, how would the right people find out?

@@ -37,6 +37,10 @@ export function aiPulseErrors(data, body, { allowDates = false, now = new Date()
   if (data.internalTest && data.status !== 'draft') errors.push('An internal test must remain a draft; replace it with verified editorial content before review');
   if (data.status === 'published' && !data.publishedAt) errors.push('Published AI Pulse requires publishedAt');
   if (data.status === 'scheduled' && !data.scheduledFor) errors.push('Scheduled AI Pulse requires scheduledFor');
+  if (data.sourceEditionDate !== undefined) {
+    const edition = data.sourceEditionDate;
+    if (typeof edition !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(edition) || !Number.isFinite(Date.parse(edition)) || new Date(edition).toISOString().slice(0, 10) !== edition) errors.push('AI Pulse sourceEditionDate must be the original pack calendar date');
+  }
   for (const field of ['publishedAt', 'scheduledFor', 'updatedAt']) {
     if (data[field] !== undefined && !timestamp(data[field])) errors.push(`AI Pulse ${field} must be a quoted ISO date and time with seconds and a timezone (e.g. 2026-10-07T07:00:00+04:00)`);
   }

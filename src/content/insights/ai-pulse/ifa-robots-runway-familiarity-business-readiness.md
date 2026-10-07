@@ -19,7 +19,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering a chessboard beside a
   digital brain
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: IFA Berlin
@@ -30,7 +30,9 @@ sources:
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-06'
 ---
 
 A robot on a runway is easy to remember. A robot that quietly completes a useful task for several months is harder to demonstrate in a short video. Businesses need to keep both forms of attention in perspective when evaluating embodied AI.

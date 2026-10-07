@@ -18,7 +18,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering AI strategy at a
   chessboard
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: 'Reuters, published by StreetInsider'
@@ -26,6 +26,9 @@ sources:
       https://www.streetinsider.com/Reuters/Trump+confirms+meeting+with+Anthropics+Amodei%2C+repeats+dismissal+of+AI+fears/27108718.html
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-28'
 ---
 
 On 27 September 2026, Reuters reported that Donald Trump had confirmed plans for a dinner with Anthropic chief executive Dario Amodei. The planned meeting put competing views on AI development in the same room. For businesses, it raises a familiar issue: important conversations need a path into decisions that survive beyond the conversation.

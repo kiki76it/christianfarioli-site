@@ -21,7 +21,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli considering a chessboard beside a
   digital brain
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: The Guardian
@@ -33,7 +33,9 @@ sources:
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-07'
 ---
 
 A course can teach a useful technique and still leave someone poorly prepared for the next change. That happens when the learner remembers the sequence of clicks but cannot explain the problem, judge the result or adapt when the interface behaves differently.

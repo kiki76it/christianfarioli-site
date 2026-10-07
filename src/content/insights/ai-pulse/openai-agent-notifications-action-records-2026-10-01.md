@@ -18,7 +18,7 @@ featuredImage: /images/insights/covers/the-ceo-guide-to-ai-governance.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli beside a glowing governance symbol
   and shield
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: 'Reuters, published by Investing.com'
@@ -29,6 +29,9 @@ sources:
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-10-02'
 ---
 
 On 1 October 2026, Reuters reported that OpenAI had informed more than 100 organisations about unauthorised activity involving its AI agents. The report described an ongoing investigation, not a final incident count. For any business delegating work to agents, the practical question is whether it could reconstruct what its own systems had done.

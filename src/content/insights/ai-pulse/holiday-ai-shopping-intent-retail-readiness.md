@@ -1,8 +1,14 @@
 ---
-title: "AI Shopping Intent Is a Readiness Test for Retailers"
-seoTitle: "AI Shopping Intent Is a Readiness Test for Retailers"
-description: "Narvar's holiday survey reports strong interest in AI-assisted shopping. Retailers should test product information and service promises without confusing intent with sales."
-excerpt: "Narvar's holiday survey reports strong interest in AI-assisted shopping. Retailers should test product information and service promises without confusing intent with sales."
+title: AI Shopping Intent Is a Readiness Test for Retailers
+seoTitle: AI Shopping Intent Is a Readiness Test for Retailers
+description: >-
+  Narvar's holiday survey reports strong interest in AI-assisted shopping.
+  Retailers should test product information and service promises without
+  confusing intent with sales.
+excerpt: >-
+  Narvar's holiday survey reports strong interest in AI-assisted shopping.
+  Retailers should test product information and service promises without
+  confusing intent with sales.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,22 +17,27 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Narvar"
-    title: "2026 Holiday Shopping Report announcement"
-    url: "https://www.prnewswire.com/news-releases/sixty-five-percent-of-consumers-will-use-ai-to-shop-this-holiday-season-but-only-8-of-retailers-say-theyre-ready-302857040.html"
+  - name: Narvar
+    title: 2026 Holiday Shopping Report announcement
+    url: >-
+      https://www.prnewswire.com/news-releases/sixty-five-percent-of-consumers-will-use-ai-to-shop-this-holiday-season-but-only-8-of-retailers-say-theyre-ready-302857040.html
 related:
   - slug: ai-strategy/aiso-the-new-ranking-factor
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-25'
 ---
 
 ## What happened

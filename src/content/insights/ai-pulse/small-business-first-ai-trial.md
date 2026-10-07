@@ -1,8 +1,14 @@
 ---
-title: "How a Small Business Can Design Its First AI Trial"
-seoTitle: "How a Small Business Can Design Its First AI Trial"
-description: "A practical proposal for a small business AI trial: choose one recurring problem, protect customer information, measure accepted outcomes and decide what to do next."
-excerpt: "A practical proposal for a small business AI trial: choose one recurring problem, protect customer information, measure accepted outcomes and decide what to do next."
+title: How a Small Business Can Design Its First AI Trial
+seoTitle: How a Small Business Can Design Its First AI Trial
+description: >-
+  A practical proposal for a small business AI trial: choose one recurring
+  problem, protect customer information, measure accepted outcomes and decide
+  what to do next.
+excerpt: >-
+  A practical proposal for a small business AI trial: choose one recurring
+  problem, protect customer information, measure accepted outcomes and decide
+  what to do next.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,22 +17,26 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "The Guardian"
-    title: "Gene Marks' small-business commentary"
-    url: "https://www.theguardian.com/technology/2026/aug/30/ai-small-business"
+  - name: The Guardian
+    title: Gene Marks' small-business commentary
+    url: 'https://www.theguardian.com/technology/2026/aug/30/ai-small-business'
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-31'
 ---
 
 ## What happened

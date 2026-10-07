@@ -1,8 +1,14 @@
 ---
-title: "Better AI-Assisted Answers Still Need Independent Thinking"
-seoTitle: "Better AI-Assisted Answers Still Need Independent Thinking"
-description: "A Bocconi and OpenAI experiment found different benefits from ChatGPT access and causal-reasoning training. The practical question is what a workplace assessment rewards."
-excerpt: "A Bocconi and OpenAI experiment found different benefits from ChatGPT access and causal-reasoning training. The practical question is what a workplace assessment rewards."
+title: Better AI-Assisted Answers Still Need Independent Thinking
+seoTitle: Better AI-Assisted Answers Still Need Independent Thinking
+description: >-
+  A Bocconi and OpenAI experiment found different benefits from ChatGPT access
+  and causal-reasoning training. The practical question is what a workplace
+  assessment rewards.
+excerpt: >-
+  A Bocconi and OpenAI experiment found different benefits from ChatGPT access
+  and causal-reasoning training. The practical question is what a workplace
+  assessment rewards.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,22 +17,29 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "OpenAI Economic Research"
-    title: "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training"
-    url: "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/"
+  - name: OpenAI Economic Research
+    title: >-
+      Better answers, broader thinking: What students gain from ChatGPT and
+      critical-thinking training
+    url: >-
+      https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/
 related:
   - slug: executive-education/corporate-ai-training-cost-dubai
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-28'
 ---
 
 ## What happened

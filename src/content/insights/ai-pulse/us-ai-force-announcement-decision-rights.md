@@ -21,7 +21,7 @@ featuredImage: /images/insights/covers/the-ceo-guide-to-ai-governance.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli with a chessboard and symbols of
   AI governance
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: The American Presidency Project
@@ -30,7 +30,9 @@ sources:
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-20'
 ---
 
 Naming an AI leader can make an organisation's priorities visible. It does not, on its own, explain who can approve a deployment, inspect its operation or stop it when the conditions change. Those decision rights require their own work.

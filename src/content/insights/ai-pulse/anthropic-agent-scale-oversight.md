@@ -21,7 +21,7 @@ featuredImage: /images/insights/covers/the-ceo-guide-to-ai-governance.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli with a chessboard and symbols of
   AI governance
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: Anthropic
@@ -31,7 +31,9 @@ sources:
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-18'
 ---
 
 An organisation can increase the amount of work it delegates faster than it increases the capacity to inspect that work. That imbalance is worth considering before the number of AI agents becomes a success metric in its own right.

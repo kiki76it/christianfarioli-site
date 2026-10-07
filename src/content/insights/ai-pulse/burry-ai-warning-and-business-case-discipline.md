@@ -1,8 +1,14 @@
 ---
-title: "Burry's AI Warning Is a Test of Business Case Discipline"
-seoTitle: "Burry's AI Warning Is a Test of Business Case Discipline"
-description: "Michael Burry's comparison with earlier bubbles is an opinion, not a forecast to adopt. Executives can use it to stress-test their own AI spending assumptions."
-excerpt: "Michael Burry's comparison with earlier bubbles is an opinion, not a forecast to adopt. Executives can use it to stress-test their own AI spending assumptions."
+title: Burry's AI Warning Is a Test of Business Case Discipline
+seoTitle: Burry's AI Warning Is a Test of Business Case Discipline
+description: >-
+  Michael Burry's comparison with earlier bubbles is an opinion, not a forecast
+  to adopt. Executives can use it to stress-test their own AI spending
+  assumptions.
+excerpt: >-
+  Michael Burry's comparison with earlier bubbles is an opinion, not a forecast
+  to adopt. Executives can use it to stress-test their own AI spending
+  assumptions.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,22 +17,26 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Business Insider, syndicated by AOL"
-    title: "Michael Burry compares the AI narrative with earlier bubbles"
-    url: "https://www.aol.com/articles/big-short-michael-burry-says-100807000.html"
+  - name: 'Business Insider, syndicated by AOL'
+    title: Michael Burry compares the AI narrative with earlier bubbles
+    url: 'https://www.aol.com/articles/big-short-michael-burry-says-100807000.html'
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-14'
 ---
 
 ## What happened

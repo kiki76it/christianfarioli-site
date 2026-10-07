@@ -18,7 +18,7 @@ featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli with a chessboard and a glowing AI
   network, representing strategic choices
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: DNB
@@ -28,6 +28,9 @@ sources:
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-10-07'
 ---
 
 On 6 October 2026, DNB announced plans to reduce its Technology & Services workforce by about 400 full-time equivalents as part of a wider restructuring. The announcement raises a question that reaches beyond banking: when AI changes the work, how should leaders decide what happens to the people doing it?

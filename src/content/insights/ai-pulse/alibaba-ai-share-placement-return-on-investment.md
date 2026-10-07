@@ -1,8 +1,14 @@
 ---
-title: "Alibaba's AI Funding Plan Brings the Return Question Into Focus"
-seoTitle: "Alibaba's AI Funding Plan Brings the Return Question Into Focus"
-description: "Alibaba's share placement and the market reaction put a familiar executive question in sharp relief: how will a large AI commitment produce measurable value?"
-excerpt: "Alibaba's share placement and the market reaction put a familiar executive question in sharp relief: how will a large AI commitment produce measurable value?"
+title: Alibaba's AI Funding Plan Brings the Return Question Into Focus
+seoTitle: Alibaba's AI Funding Plan Brings the Return Question Into Focus
+description: >-
+  Alibaba's share placement and the market reaction put a familiar executive
+  question in sharp relief: how will a large AI commitment produce measurable
+  value?
+excerpt: >-
+  Alibaba's share placement and the market reaction put a familiar executive
+  question in sharp relief: how will a large AI commitment produce measurable
+  value?
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,25 +17,30 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Alibaba Group"
-    title: "Pricing of HK$80 Billion Placing of New Shares in Hong Kong"
-    url: "https://www.alibabagroup.com/en-US/document-2028384807859257344"
-  - name: "Reuters, syndicated by Investing.com"
-    title: "Alibaba stock slumps in Hong Kong after share placement to fund AI"
-    url: "https://www.investing.com/news/stock-market-news/alibaba-stock-slumps-in-hong-kong-after-102-billion-share-placement-to-fund-ai-4872593"
+  - name: Alibaba Group
+    title: Pricing of HK$80 Billion Placing of New Shares in Hong Kong
+    url: 'https://www.alibabagroup.com/en-US/document-2028384807859257344'
+  - name: 'Reuters, syndicated by Investing.com'
+    title: Alibaba stock slumps in Hong Kong after share placement to fund AI
+    url: >-
+      https://www.investing.com/news/stock-market-news/alibaba-stock-slumps-in-hong-kong-after-102-billion-share-placement-to-fund-ai-4872593
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-24'
 ---
 
 ## What happened

@@ -156,7 +156,8 @@ test('AI Pulse RSS is valid, has its canonical self link and contains only publi
     const document = await documentAt(pathname);
     assertIndexable(document);
     const article = assertArticle(document, pathname);
-    assert.equal(Date.parse(item.pubDate), Date.parse(article.datePublished));
+    // RFC 822 RSS dates preserve whole seconds, while JSON-LD can retain milliseconds.
+    assert.equal(Date.parse(item.pubDate), Math.floor(Date.parse(article.datePublished) / 1000) * 1000);
   }
 });
 

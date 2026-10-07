@@ -1,8 +1,14 @@
 ---
-title: "AI Productivity Does Not Guarantee Lower Costs"
-seoTitle: "AI Productivity Does Not Guarantee Lower Costs"
-description: "Petra Tschudin's comments on AI and inflation offer a useful planning reminder: long-term productivity gains and near-term costs can move in different directions."
-excerpt: "Petra Tschudin's comments on AI and inflation offer a useful planning reminder: long-term productivity gains and near-term costs can move in different directions."
+title: AI Productivity Does Not Guarantee Lower Costs
+seoTitle: AI Productivity Does Not Guarantee Lower Costs
+description: >-
+  Petra Tschudin's comments on AI and inflation offer a useful planning
+  reminder: long-term productivity gains and near-term costs can move in
+  different directions.
+excerpt: >-
+  Petra Tschudin's comments on AI and inflation offer a useful planning
+  reminder: long-term productivity gains and near-term costs can move in
+  different directions.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,25 +17,31 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Reuters, syndicated by Investing.com"
-    title: "Artificial intelligence could push up inflation, SNB's Tschudin says"
-    url: "https://www.investing.com/news/economy-news/artificial-intelligence-could-push-up-inflation--snbs-tschudin-says-4871908"
-  - name: "Swiss National Bank"
-    title: "Interview with Petra Tschudin in Finanz und Wirtschaft"
-    url: "https://www.snb.ch/de/publications/communication/interviews/int_20260824_gpe"
+  - name: 'Reuters, syndicated by Investing.com'
+    title: 'Artificial intelligence could push up inflation, SNB''s Tschudin says'
+    url: >-
+      https://www.investing.com/news/economy-news/artificial-intelligence-could-push-up-inflation--snbs-tschudin-says-4871908
+  - name: Swiss National Bank
+    title: Interview with Petra Tschudin in Finanz und Wirtschaft
+    url: >-
+      https://www.snb.ch/de/publications/communication/interviews/int_20260824_gpe
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-22'
 ---
 
 ## What happened

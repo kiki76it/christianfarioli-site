@@ -21,7 +21,7 @@ featuredImage: /images/insights/covers/the-ceo-guide-to-ai-governance.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli with a chessboard and symbols of
   AI governance
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: Meta
@@ -29,7 +29,9 @@ sources:
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-09'
 ---
 
 Giving an assistant useful context is different from giving it authority to act. A personal agent can make that distinction easy to overlook because the interaction feels like a conversation, while the consequences may involve accounts, messages and commitments.

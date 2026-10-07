@@ -21,7 +21,7 @@ featuredImage: /images/insights/covers/the-ceo-guide-to-ai-governance.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli with a chessboard and symbols of
   AI governance
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: Ant International via PR Newswire
@@ -30,7 +30,9 @@ sources:
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-10'
 ---
 
 Knowing who initiated a payment is essential. Knowing whether that actor was authorised to make this particular purchase is a separate problem. AI agents make both questions more visible because software can potentially carry a transaction from a broad instruction to checkout.

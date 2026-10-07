@@ -1,8 +1,14 @@
 ---
-title: "A US AI Coalition Draft Puts Vendor Dependency on the Agenda"
-seoTitle: "A US AI Coalition Draft Puts Vendor Dependency on the Agenda"
-description: "Reuters' report of a proposed US message to AI partners highlights dependency risk. It calls for practical contingency planning, not treating a draft as binding policy."
-excerpt: "Reuters' report of a proposed US message to AI partners highlights dependency risk. It calls for practical contingency planning, not treating a draft as binding policy."
+title: A US AI Coalition Draft Puts Vendor Dependency on the Agenda
+seoTitle: A US AI Coalition Draft Puts Vendor Dependency on the Agenda
+description: >-
+  Reuters' report of a proposed US message to AI partners highlights dependency
+  risk. It calls for practical contingency planning, not treating a draft as
+  binding policy.
+excerpt: >-
+  Reuters' report of a proposed US message to AI partners highlights dependency
+  risk. It calls for practical contingency planning, not treating a draft as
+  binding policy.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,22 +17,27 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Reuters, syndicated by Investing.com"
-    title: "US to tell partners they must pick sides in AI race with China"
-    url: "https://www.investing.com/news/world-news/exclusiveus-to-tell-partners-they-must-pick-sides-in-ai-race-with-china-4861859"
+  - name: 'Reuters, syndicated by Investing.com'
+    title: US to tell partners they must pick sides in AI race with China
+    url: >-
+      https://www.investing.com/news/world-news/exclusiveus-to-tell-partners-they-must-pick-sides-in-ai-race-with-china-4861859
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-15'
 ---
 
 ## What happened

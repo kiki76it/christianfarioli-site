@@ -1,8 +1,14 @@
 ---
-title: "A More Capable Mac mini Still Needs an AI Operating Plan"
-seoTitle: "A More Capable Mac mini Still Needs an AI Operating Plan"
-description: "Apple's August Mac mini announcement puts local agentic computing in view. Buying hardware still leaves decisions about access, supervision and useful work."
-excerpt: "Apple's August Mac mini announcement puts local agentic computing in view. Buying hardware still leaves decisions about access, supervision and useful work."
+title: A More Capable Mac mini Still Needs an AI Operating Plan
+seoTitle: A More Capable Mac mini Still Needs an AI Operating Plan
+description: >-
+  Apple's August Mac mini announcement puts local agentic computing in view.
+  Buying hardware still leaves decisions about access, supervision and useful
+  work.
+excerpt: >-
+  Apple's August Mac mini announcement puts local agentic computing in view.
+  Buying hardware still leaves decisions about access, supervision and useful
+  work.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,22 +17,27 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Apple"
-    title: "Mac mini with M6 and M5 Pro announcement"
-    url: "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/"
+  - name: Apple
+    title: Mac mini with M6 and M5 Pro announcement
+    url: >-
+      https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-26'
 ---
 
 ## What happened

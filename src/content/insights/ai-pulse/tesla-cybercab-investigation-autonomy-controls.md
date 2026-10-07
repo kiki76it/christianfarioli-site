@@ -19,7 +19,7 @@ featuredImage: /images/insights/covers/the-ceo-guide-to-ai-governance.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli with a chessboard and symbols of
   AI governance
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: NHTSA
@@ -28,7 +28,9 @@ sources:
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
 readingTime: 3
-draft: true
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-09-05'
 ---
 
 Removing a familiar control changes more than the interface. It changes what a person can do when something unexpected happens. That is an engineering question for a vehicle and an operating question for any business delegating consequential actions to software.

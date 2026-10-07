@@ -18,7 +18,7 @@ featuredImage: /images/insights/covers/the-ceo-guide-to-ai-governance.jpg
 featuredImageAlt: >-
   Editorial illustration of Christian Farioli beside a glowing governance symbol
   and shield
-status: draft
+status: published
 schemaType: NewsArticle
 sources:
   - name: 'Reuters, published by Investing.com'
@@ -29,6 +29,9 @@ sources:
 related:
   - slug: ai-leadership/the-ceo-guide-to-ai-governance
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
+draft: false
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-10-01'
 ---
 
 On 30 September 2026, Google announced Gemini 4 Argon, initially making it available to selected cybersecurity partners. Reuters reported that Google gave no timetable for public release. For a business planning its next AI project, that distinction matters: an announced capability is not yet a resource on which an operating plan can depend.

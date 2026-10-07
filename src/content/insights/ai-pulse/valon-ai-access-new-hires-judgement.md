@@ -1,8 +1,14 @@
 ---
-title: "Valon's AI Access Rule Puts Judgement Into Onboarding"
-seoTitle: "Valon's AI Access Rule Puts Judgement Into Onboarding"
-description: "Valon's restrictions for new hires and its projected token savings raise a practical question: how do employees learn enough to check the AI tools they use?"
-excerpt: "Valon's restrictions for new hires and its projected token savings raise a practical question: how do employees learn enough to check the AI tools they use?"
+title: Valon's AI Access Rule Puts Judgement Into Onboarding
+seoTitle: Valon's AI Access Rule Puts Judgement Into Onboarding
+description: >-
+  Valon's restrictions for new hires and its projected token savings raise a
+  practical question: how do employees learn enough to check the AI tools they
+  use?
+excerpt: >-
+  Valon's restrictions for new hires and its projected token savings raise a
+  practical question: how do employees learn enough to check the AI tools they
+  use?
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,25 +17,30 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Andrew Wang, Valon CEO"
-    title: "Explanation of Valon's temporary AI access restriction for new hires"
-    url: "https://www.linkedin.com/posts/wangandrewd_two-weeks-ago-we-turned-off-ai-access-for-activity-7495524960489062400-rnyM"
-  - name: "Business Insider, syndicated by Yahoo"
-    title: "New hires at this AI startup have to earn their AI privileges"
-    url: "https://uk.finance.yahoo.com/news/hires-ai-startup-earn-ai-092201199.html"
+  - name: 'Andrew Wang, Valon CEO'
+    title: Explanation of Valon's temporary AI access restriction for new hires
+    url: >-
+      https://www.linkedin.com/posts/wangandrewd_two-weeks-ago-we-turned-off-ai-access-for-activity-7495524960489062400-rnyM
+  - name: 'Business Insider, syndicated by Yahoo'
+    title: New hires at this AI startup have to earn their AI privileges
+    url: 'https://uk.finance.yahoo.com/news/hires-ai-startup-earn-ai-092201199.html'
 related:
   - slug: executive-education/corporate-ai-training-cost-dubai
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-30'
 ---
 
 ## What happened

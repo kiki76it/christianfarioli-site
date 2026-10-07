@@ -104,6 +104,7 @@ const insights = defineCollection({
 
       // ----- Timing -----
       publishedAt: z.coerce.date().optional(), // required only when status=published
+      sourceEditionDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(), // original pack edition, never a publication timestamp
       updatedAt: z.coerce.date().optional(),
       readingTime: z.number().int().positive().optional(), // auto-computed if missing
 

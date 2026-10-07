@@ -1,8 +1,12 @@
 ---
-title: "Stripe and OpenRouter Put AI Routing in the Business Spotlight"
-seoTitle: "Stripe and OpenRouter Put AI Routing in the Business Spotlight"
-description: "Reported acquisition terms drew the attention, but the management issue is how companies select models, control usage and measure the cost of useful AI work."
-excerpt: "Reported acquisition terms drew the attention, but the management issue is how companies select models, control usage and measure the cost of useful AI work."
+title: Stripe and OpenRouter Put AI Routing in the Business Spotlight
+seoTitle: Stripe and OpenRouter Put AI Routing in the Business Spotlight
+description: >-
+  Reported acquisition terms drew the attention, but the management issue is how
+  companies select models, control usage and measure the cost of useful AI work.
+excerpt: >-
+  Reported acquisition terms drew the attention, but the management issue is how
+  companies select models, control usage and measure the cost of useful AI work.
 language: en-GB
 category: ai-pulse
 tags:
@@ -11,25 +15,32 @@ tags:
   - leadership
 author:
   name: Prof. Christian Farioli
-  role: AI Keynote Speaker, Educator & Author
+  role: 'AI Keynote Speaker, Educator & Author'
   avatar: /images/authors/christian-farioli.jpg
   links:
-    website: https://christianfarioli.com/
+    website: 'https://christianfarioli.com/'
 featuredImage: /images/insights/covers/why-ai-strategy-beats-ai-tools.jpg
-featuredImageAlt: Editorial illustration of Christian Farioli with chess pieces and digital technology symbols
-status: draft
-draft: true
+featuredImageAlt: >-
+  Editorial illustration of Christian Farioli with chess pieces and digital
+  technology symbols
+status: published
+draft: false
 schemaType: NewsArticle
 readingTime: 3
 sources:
-  - name: "Bloomberg"
-    title: "Stripe Clinches Over $7 Billion Deal to Buy AI Firm OpenRouter"
-    url: "https://news.bloomberglaw.com/mergers-and-acquisitions/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion"
-  - name: "Stripe"
-    title: "Stripe agrees to acquire OpenRouter to help businesses optimize token routing and usage"
-    url: "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter"
+  - name: Bloomberg
+    title: Stripe Clinches Over $7 Billion Deal to Buy AI Firm OpenRouter
+    url: >-
+      https://news.bloomberglaw.com/mergers-and-acquisitions/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion
+  - name: Stripe
+    title: >-
+      Stripe agrees to acquire OpenRouter to help businesses optimize token
+      routing and usage
+    url: 'https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter'
 related:
   - slug: ai-strategy/why-ai-strategy-beats-ai-tools
+publishedAt: '2026-10-07T18:50:43.598Z'
+sourceEditionDate: '2026-08-17'
 ---
 
 ## What happened
