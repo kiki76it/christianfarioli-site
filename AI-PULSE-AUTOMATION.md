@@ -1,5 +1,9 @@
 # AI Pulse website publishing contract
 
+## Daily integration added on 7 October 2026
+
+The owner subsequently authorised processing the existing Dropbox packs and publishing their separate AI Pulse articles. The implemented local consumer and deterministic, protected-PR publisher are documented in [the daily workflow](docs/ai-pulse-daily-workflow.md). They reuse the existing social packs without modifying Daily Social Content V3. The interface and original website-side scope below remain background documentation; use the daily workflow for the operational setup and current checks.
+
 ## Architecture and scope
 
 The inspected website uses Astro 5, filesystem content collections and Cloudflare Pages. Insights are normal `.md`/`.mdx` entries in `src/content/insights`; categories are the existing enum, now including `ai-pulse`. This implementation does not create a WordPress taxonomy, install a plugin or configure Yoast. No active WordPress publishing endpoint has been identified for this site. The legacy `/insights/api/publish` stub is not a working publishing API.
