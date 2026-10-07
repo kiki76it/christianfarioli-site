@@ -5,32 +5,11 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-// ---------------------------------------------------------------------------
-// Category enum — the 7 allowed categories from the brand spec
-// ---------------------------------------------------------------------------
-export const INSIGHT_CATEGORIES = [
-  'ai-strategy',
-  'human-centered-ai',
-  'ai-leadership',
-  'aiso',
-  'ai-marketing',
-  'executive-education',
-  'future-of-work',
-  'advanced-strategies',
-] as const;
-
+// Shared taxonomy, including the native AI Pulse Insights category.
+import { INSIGHT_CATEGORIES, CATEGORY_LABELS } from './lib/categories.mjs';
+import { aiPulseErrors, isWebUrl } from './lib/ai-pulse.mjs';
+export { INSIGHT_CATEGORIES, CATEGORY_LABELS };
 export type InsightCategory = (typeof INSIGHT_CATEGORIES)[number];
-
-export const CATEGORY_LABELS: Record<InsightCategory, string> = {
-  'ai-strategy': 'AI Strategy',
-  'human-centered-ai': 'Human-Centered AI',
-  'ai-leadership': 'AI Leadership',
-  'aiso': 'AISO',
-  'ai-marketing': 'AI Marketing',
-  'executive-education': 'Executive Education',
-  'future-of-work': 'Future of Work',
-  'advanced-strategies': 'Advanced Strategies',
-};
 
 // ---------------------------------------------------------------------------
 // Status enum — the 4-state publishing workflow
@@ -87,8 +66,13 @@ const insights = defineCollection({
   // Use glob loader for file-system based MDX articles in src/content/insights/
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/insights' }),
 
-  schema: ({ image }) =>
-    z.object({
+  schema: () =>
+    z.preprocess((input, ctx) => {
+      for (const message of aiPulseErrors(input)) {
+        ctx.addIssue({ code: z.ZodIssueCode.custom, message });
+      }
+      return input;
+    }, z.object({
       // ----- Identity -----
       title: z.string().min(10).max(140),
       description: z.string().min(40).max(280), // meta description length
@@ -104,6 +88,12 @@ const insights = defineCollection({
       // ----- Authorship -----
       author: author,
       contributors: z.array(author).default([]), // for co-authored pieces
+      sources: z.array(z.object({
+        name: z.string().trim().min(1),
+        title: z.string().trim().min(1).optional(),
+        url: z.string().refine(isWebUrl, 'Source URL must use HTTP(S)'),
+      })).default([]),
+      schemaType: z.enum(['Article', 'BlogPosting', 'NewsArticle']).optional(),
 
       // ----- Media -----
       // String path: a URL or root-relative path (e.g. "/images/foo.jpg").
@@ -114,11 +104,13 @@ const insights = defineCollection({
 
       // ----- Timing -----
       publishedAt: z.coerce.date().optional(), // required only when status=published
+      sourceEditionDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(), // original pack edition, never a publication timestamp
       updatedAt: z.coerce.date().optional(),
       readingTime: z.number().int().positive().optional(), // auto-computed if missing
 
       // ----- Workflow -----
       status: z.enum(INSIGHT_STATUSES).default('draft'),
+      internalTest: z.boolean().default(false), // never eligible for public output
       scheduledFor: z.coerce.date().optional(), // required only when status=scheduled
       reviewedBy: z.string().optional(), // editor who approved for review
       reviewedAt: z.coerce.date().optional(),
@@ -133,7 +125,7 @@ const insights = defineCollection({
       draft: z.boolean().default(false), // hide from lists
       pinned: z.boolean().default(false), // show at top
       featured: z.boolean().default(false), // show in featured strip
-    }),
+    })),
 });
 
 // ---------------------------------------------------------------------------

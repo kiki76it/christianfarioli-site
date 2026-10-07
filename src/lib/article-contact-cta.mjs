@@ -1,4 +1,5 @@
 // Shared by the Astro component and the Markdown/MDX build-time reminder.
+import { INSIGHTS_CONTENT_CTA_OVERRIDES } from './insights-content-cta.mjs';
 // Booking destination verified against SiteNav.astro and main-site/index.html.
 export const ARTICLE_CONTACT = Object.freeze({
   bookingUrl: 'https://calendly.com/chrisfarioli/30min',
@@ -45,6 +46,7 @@ export const ARTICLE_CTA_CATEGORIES = Object.freeze({
 /** @typedef {{url: string, prompt: string, label: string, message: string}} ArticleCTAWhatsApp */
 /** @type {Readonly<Record<string, {variant: ArticleCTAVariant, title?: string, description?: string, bookingLabel?: string, whatsapp?: ArticleCTAWhatsApp}>>} */
 export const ARTICLE_CTA_OVERRIDES = Object.freeze({
+  ...INSIGHTS_CONTENT_CTA_OVERRIDES,
   'advanced-strategies/b2b-marketing-strategy': {
     variant: 'marketing',
     title: 'What would a stronger B2B strategy look like for your business?',

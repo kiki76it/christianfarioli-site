@@ -1,0 +1,8 @@
+---
+import { getCollection } from 'astro:content';
+import InsightsLayout from '~/layouts/InsightsLayout.astro';
+import { AI_PULSE_INTRO } from '~/lib/ai-pulse-archive';
+
+const entries = await getCollection('insights');
+---
+<InsightsLayout title="AI Pulse" description={AI_PULSE_INTRO} category="ai-pulse" entries={entries} />

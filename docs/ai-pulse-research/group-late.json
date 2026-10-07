@@ -1,0 +1,282 @@
+[
+  {
+    "editionDate": "2026-09-21",
+    "packfilename": "Daily Content Pack - 2026-09-21.docx",
+    "packSHA256": "a467ca20d1994dd7e3790053b54bc3dafede4ea586ae3c30471eb704620702ac",
+    "id": "ai-pulse/us-china-ai-incident-notification-proposal-2026-09-20",
+    "title": "The AI Incident Hotline Question Every Business Should Ask",
+    "newsDate": "2026-09-20",
+    "primaryUrls": [
+      "https://www.investing.com/news/stock-market-news/us-treasurys-bessent-chinas-he-to-launch-talks-on-ai-trade-critical-minerals-4908142"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 608
+  },
+  {
+    "editionDate": "2026-09-22",
+    "packfilename": "Daily Content Pack - 2026-09-22.docx",
+    "packSHA256": "a1a714d473436b5d726528275679086a742f9862238f30588ddafec810eeba75",
+    "id": "ai-pulse/idb-ai-growth-worker-mobility-scenarios-2026-09-21",
+    "title": "AI Growth Depends on Whether People Can Move into New Work",
+    "newsDate": "2026-09-21",
+    "primaryUrls": [
+      "https://www.investing.com/news/economic-indicators/ai-could-boost-latam-caribbean-economy-51-but-wages-may-fall-idb-says-4909514"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 614
+  },
+  {
+    "editionDate": "2026-09-23",
+    "packfilename": "Daily Content Pack - 2026-09-23.docx",
+    "packSHA256": "01da3faf017786cd178a6903f77807f88d0038c98de56d127fa476cada6160b7",
+    "id": "ai-pulse/meta-muse-human-concierge-disclosure-2026-09-22",
+    "title": "Meta's Muse Test Shows Why Human Handoffs Must Be Visible",
+    "newsDate": "2026-09-22",
+    "primaryUrls": [
+      "https://www.marketscreener.com/news/meta-testing-a-human-concierge-for-its-new-personal-ai-agent-muse-ce785ad8de8cf025"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 599
+  },
+  {
+    "editionDate": "2026-09-24",
+    "packfilename": "Daily Content Pack - 2026-09-24.docx",
+    "packSHA256": "a934627671231d99854f4bf21562b24340f8a8413be96ad125feb31e19f49281",
+    "id": "ai-pulse/meta-muse-charm-portable-ai-permissions-2026-09-23",
+    "title": "Muse Charm Makes the AI Permission Question More Portable",
+    "newsDate": "2026-09-23",
+    "primaryUrls": [
+      "https://www.meta.com/en-gb/blog/meta-connect-2026-everything-we-announced/"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 620
+  },
+  {
+    "editionDate": "2026-09-25",
+    "packfilename": "Daily Content Pack - 2026-09-25.docx",
+    "packSHA256": "cfa7ea568edd6cdd60133fcaad5f79c1cccca5d3cd506e84516b9d8c9cb41bea",
+    "id": "ai-pulse/bcbsa-ai-coding-costs-incentives-2026-09-24",
+    "title": "AI Coding Costs Raise a Harder Question About Business Value",
+    "newsDate": "2026-09-24",
+    "primaryUrls": [
+      "https://www.bcbs.com/about-us/association-news/bcbsa-analysis-ai-coding-tools-affects-healthcare-costs"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 580
+  },
+  {
+    "editionDate": "2026-09-26",
+    "packfilename": "Daily Content Pack - 2026-09-26.docx",
+    "packSHA256": "b917bf17d9627ad454af58cb405ec6d58926966f868268c8bac3575fa7329853",
+    "id": "ai-pulse/intesa-voice-impersonation-authorisation-2026-09-25",
+    "title": "A Familiar Voice Is Not Payment Authorisation",
+    "newsDate": "2026-09-25",
+    "primaryUrls": [
+      "https://uk.marketscreener.com/news/ai-messaging-scam-costs-italy-s-top-bank-intesa-millions-sources-say-ce785adfde80f127"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 572
+  },
+  {
+    "editionDate": "2026-09-27",
+    "packfilename": "Daily Content Pack - 2026-09-27.docx",
+    "packSHA256": "b5b350ae7988efdd938ae97618a9e5490fe129340b3f6bd56a48fade82390e28",
+    "id": "ai-pulse/ai-workflow-handoffs-human-integration-2026-09-26",
+    "title": "AI Productivity Can Disappear Between Two Systems",
+    "newsDate": "2026-09-26",
+    "primaryUrls": [
+      "https://fortune.com/2026/09/26/agentic-ai-saas-human-middleware-microsoft/"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 587
+  },
+  {
+    "editionDate": "2026-09-28",
+    "packfilename": "Daily Content Pack - 2026-09-28.docx",
+    "packSHA256": "c42c4f252a901baab911e2b491c37545710dc0a46c522cad0dac5e39af448c08",
+    "id": "ai-pulse/trump-amodei-meeting-ai-governance-2026-09-27",
+    "title": "AI Governance Needs More Than Access to the Decision-Maker",
+    "newsDate": "2026-09-27",
+    "primaryUrls": [
+      "https://www.streetinsider.com/Reuters/Trump+confirms+meeting+with+Anthropics+Amodei%2C+repeats+dismissal+of+AI+fears/27108718.html"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 579
+  },
+  {
+    "editionDate": "2026-09-29",
+    "packfilename": "Daily Content Pack - 2026-09-29.docx",
+    "packSHA256": "9830a5de83ca4a3e9686bb4a33ba44241f047b0c24678ae3ef8be662dc4a10ac",
+    "id": "ai-pulse/openai-astra-release-safety-accountability-2026-09-28",
+    "title": "An AI Agent Must Account for What It Actually Did",
+    "newsDate": "2026-09-28",
+    "primaryUrls": [
+      "https://www.marketscreener.com/news/openai-shelves-new-ai-model-release-over-safety-concerns-ce785addd981f023"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 589
+  },
+  {
+    "editionDate": "2026-09-30",
+    "packfilename": "Daily Content Pack - 2026-09-30.docx",
+    "packSHA256": "4ba0bc2bf15ee9492b1fc0f3df892da512d68d7c7dcb593fda1b2103886b8900",
+    "id": "ai-pulse/anthropic-infrastructure-commitments-exit-options-2026-09-29",
+    "title": "The AI Contract Matters as Much as the AI Capability",
+    "newsDate": "2026-09-29",
+    "primaryUrls": [
+      "https://www.investing.com/news/stock-market-news/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows-4922031"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 586
+  },
+  {
+    "editionDate": "2026-10-01",
+    "packfilename": "Daily Content Pack - 2026-10-01.docx",
+    "packSHA256": "bc59ccedf82dd77f5d01e1e738452d28aa77709de0bf9537512bfba5e7dfccd5",
+    "id": "ai-pulse/gemini-4-argon-access-business-readiness-2026-09-30",
+    "title": "A Model Announcement Is Not a Business Deployment Plan",
+    "newsDate": "2026-09-30",
+    "primaryUrls": [
+      "https://www.investing.com/news/stock-market-news/google-announces-gemini-4-flagship-ai-model-after-months-of-delays-4925832",
+      "https://deepmind.google/models/gemini/"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 587
+  },
+  {
+    "editionDate": "2026-10-02",
+    "packfilename": "Daily Content Pack - 2026-10-02.docx",
+    "packSHA256": "099781e176103be4a5faf1db2e193ac2c11efd5433e7f897865e26e4c112802c",
+    "id": "ai-pulse/openai-agent-notifications-action-records-2026-10-01",
+    "title": "AI Agent Incidents Make Action Records a Business Requirement",
+    "newsDate": "2026-10-01",
+    "primaryUrls": [
+      "https://www.investing.com/news/stock-market-news/openai-alerts-more-than-100-groups-about-rogue-ai-agent-activity-4928610",
+      "https://openai.com/hugging-face-incident-and-misalignment/"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset.",
+      "Living primary page has a different notification total from dated Reuters report; explicit attribution preserved."
+    ],
+    "wordCount": 573
+  },
+  {
+    "editionDate": "2026-10-03",
+    "packfilename": "Daily Content Pack - 2026-10-03.docx",
+    "packSHA256": "3b7780f11ffc97fff47b6652394b516570dc6a9a7c3235143028b4af4205d8eb",
+    "id": "ai-pulse/anthropic-frontier-academy-business-handover-2026-10-02",
+    "title": "AI Deployment Needs People Who Can Finish the Handover",
+    "newsDate": "2026-10-02",
+    "primaryUrls": [
+      "https://www.anthropic.com/news/claude-frontier-academy"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 602
+  },
+  {
+    "editionDate": "2026-10-04",
+    "packfilename": "Daily Content Pack - 2026-10-04.docx",
+    "packSHA256": "8248aee5bcc0110dac9638020f4fa5689b6ac03df87331bad1353bde45566399",
+    "id": "ai-pulse/aleph-alpha-kolibri-portable-ai-2026-10-03",
+    "title": "Kolibri Puts the Cost of AI Independence on the Agenda",
+    "newsDate": "2026-10-03",
+    "primaryUrls": [
+      "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+      "https://huggingface.co/Aleph-Alpha/Kolibri-1-BF16"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 587
+  },
+  {
+    "editionDate": "2026-10-05",
+    "packfilename": "Daily Content Pack - 2026-10-05.docx",
+    "packSHA256": "f672a026840081bdbfcdc567ff08063593e6e3fcfceb7ff1679094d446e4a924",
+    "id": "ai-pulse/schneider-ptc-industrial-ai-workflows-2026-10-04",
+    "title": "The Schneider-PTC Deal Points Beyond the Chatbot",
+    "newsDate": "2026-10-04",
+    "primaryUrls": [
+      "https://ae.marketscreener.com/news/france-s-schneider-electric-nears-20-billion-deal-to-buy-us-software-group-ptc-ft-reports-ce785ddbdc81ff20",
+      "https://www.ptc.com/en/news/2026/schneider-electric-to-acquire-ptc"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset.",
+      "Pack talks report supplemented by dated 5 October definitive agreement; acquisition not closed."
+    ],
+    "wordCount": 587
+  },
+  {
+    "editionDate": "2026-10-06",
+    "packfilename": "Daily Content Pack - 2026-10-06.docx",
+    "packSHA256": "ccbeb7b0e15a02ae2bfa9c8c2fe611aaed8b55f712031093d79092c5f336703d",
+    "id": "ai-pulse/chatgpt-visual-ads-intention-marketing-2026-10-05",
+    "title": "ChatGPT Visual Ads Bring Marketing Closer to the Moment of Intention",
+    "newsDate": "2026-10-05",
+    "primaryUrls": [
+      "https://openai.com/index/new-chatgpt-ads-format-and-measurement/"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; publication date unset."
+    ],
+    "wordCount": 595
+  },
+  {
+    "editionDate": "2026-10-07",
+    "packfilename": "Daily Content Pack - 2026-10-07.docx",
+    "packSHA256": "fb56bb7b259b804570c1aef76baca5c5fb5f8fa0715494fc563b2ba5ff7f0fb7",
+    "id": "ai-pulse/dnb-ai-agents-workforce-restructuring-2026-10-06",
+    "title": "DNB's AI Restructuring Puts Leadership Choices in Focus",
+    "newsDate": "2026-10-06",
+    "primaryUrls": [
+      "https://www.ir.dnb.no/press-and-reports/press-releases/dnb-making-organisational-changes-technology-services-2485833"
+    ],
+    "status": "draft",
+    "openIssues": [
+      "Author editorial review pending; no publication date assigned.",
+      "Source timezone label not resolved; no clock time or UTC conversion used.",
+      "Reuters link not relied upon; facts attributed to verified DNB announcement."
+    ],
+    "wordCount": 628
+  }
+]

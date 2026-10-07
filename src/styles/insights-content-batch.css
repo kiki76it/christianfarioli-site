@@ -1,0 +1,40 @@
+/* Opt-in article tables only; no site chrome or existing article styles change. */
+.article-body .insights-batch-table {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+.article-body .insights-batch-table:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+.article-body .insights-batch-table table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+}
+.article-body .insights-batch-table caption {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.article-body .insights-batch-table th,
+.article-body .insights-batch-table td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid var(--color-border);
+  overflow-wrap: anywhere;
+}
+.article-body .insights-batch-table thead th {
+  background: var(--color-bg-secondary);
+  font-weight: 600;
+}
+.article-body .insights-batch-table th[scope='row'] { font-weight: 600; }

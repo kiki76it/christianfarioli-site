@@ -1,9 +1,7 @@
 {
   "version": 1,
-  "include": ["/", "/insights", "/insights/*", "/admin", "/admin/*", "/category", "/category/*", "/api", "/api/*"],
+  "include": ["/*"],
   "exclude": [
-    "/_astro/*",
-    "/images/*",
     "/*.css",
     "/*.js",
     "/*.svg",

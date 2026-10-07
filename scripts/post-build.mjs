@@ -4,7 +4,7 @@
 // served from a sub-path with all asset paths resolving correctly.
 
 import { cp, mkdir, readdir, rm } from 'node:fs/promises';
-import { join, resolve } from 'node:path';
+import { join, resolve, sep } from 'node:path';
 
 const DIST = 'dist';
 const SUBPATH = 'insights';
@@ -59,3 +59,14 @@ const MAIN_SITE = 'main-site';
 console.log(`[post-build] Overlaying ${MAIN_SITE}/ → ${DIST}/ (main site at root)`);
 await copyDir(MAIN_SITE, DIST);
 console.log('[post-build] Main site overlaid at root. christianfarioli.com/ now serves the main site.');
+
+// The mirror is a deployment detail, not a second publishing surface. Keep
+// drafts only behind the existing /insights/admin authentication boundary,
+// and keep new public pages at their single canonical locations.
+for (const relativePath of ['admin', 'ai-pulse', 'insights/editorial-policy']) {
+  const target = resolve(DIST, relativePath);
+  if (!target.startsWith(resolve(DIST) + sep)) {
+    throw new Error(`Refusing to remove a path outside dist: ${target}`);
+  }
+  await rm(target, { recursive: true, force: true });
+}

@@ -5,6 +5,7 @@
 import { CATEGORY_LABELS, INSIGHT_CATEGORIES, type InsightCategory } from '../content.config';
 import { paths, p } from './links';
 import { isRedirectedInsight } from './insight-redirects.mjs';
+import { assertAiPulse } from './ai-pulse.mjs';
 import type { CollectionEntry } from 'astro:content';
 
 export type InsightEntry = CollectionEntry<'insights'>;
@@ -80,7 +81,13 @@ export function isPubliclyVisible(
   now: Date = new Date(),
 ): boolean {
   const { status, scheduledFor, draft } = entry.data;
-  if (draft || isRedirectedInsight(entry.id)) return false;
+  if (entry.data.category === 'ai-pulse') assertAiPulse(entry.data, entry.body, { allowDates: true, now });
+  if (draft || entry.data.internalTest || isRedirectedInsight(entry.id)) return false;
+  // News timestamps describe actual publication, never a future build date.
+  if (entry.data.category === 'ai-pulse' && entry.data.publishedAt && entry.data.publishedAt.getTime() > now.getTime()) return false;
+  if (entry.data.category === 'ai-pulse' && status === 'published') {
+    return Boolean(entry.data.publishedAt && entry.data.publishedAt.getTime() <= now.getTime());
+  }
   if (status === 'published') return true;
   if (status === 'scheduled' && scheduledFor) {
     return scheduledFor.getTime() <= now.getTime();
@@ -98,7 +105,9 @@ export function sortByDateDesc(entries: InsightEntry[]): InsightEntry[] {
   return [...entries].sort((a, b) => {
     const aTime = a.data.publishedAt?.getTime() ?? a.data.scheduledFor?.getTime() ?? 0;
     const bTime = b.data.publishedAt?.getTime() ?? b.data.scheduledFor?.getTime() ?? 0;
-    return bTime - aTime;
+    // A single archive release can publish many editions at the same instant.
+    // Preserve the original pack order only as a tie-break; never backdate news.
+    return bTime - aTime || (b.data.sourceEditionDate ?? '').localeCompare(a.data.sourceEditionDate ?? '');
   });
 }
 

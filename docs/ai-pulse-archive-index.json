@@ -1,0 +1,921 @@
+{
+  "createdAt": "2026-10-07T16:54:27.065Z",
+  "purpose": "Approved archive release; pack dates are separate from the actual website publication timestamp",
+  "sourceFolder": "SM Chris DBOX",
+  "firstEdition": "2026-08-12",
+  "lastEdition": "2026-10-07",
+  "missingEditions": [
+    "2026-08-13",
+    "2026-09-01"
+  ],
+  "editionCount": 55,
+  "draftCount": 0,
+  "records": [
+    {
+      "editionDate": "2026-10-07",
+      "packSHA256": "fb56bb7b259b804570c1aef76baca5c5fb5f8fa0715494fc563b2ba5ff7f0fb7",
+      "id": "ai-pulse/dnb-ai-agents-workforce-restructuring-2026-10-06",
+      "title": "DNB's AI Restructuring Puts Leadership Choices in Focus",
+      "newsDate": "2026-10-06",
+      "primaryUrls": [
+        "https://www.ir.dnb.no/press-and-reports/press-releases/dnb-making-organisational-changes-technology-services-2485833"
+      ],
+      "status": "published",
+      "openIssues": [
+        "Source timezone label not resolved; no clock time or UTC conversion used.",
+        "Reuters link not relied upon; facts attributed to verified DNB announcement."
+      ],
+      "wordCount": 632,
+      "packFileName": "Daily Content Pack - 2026-10-07.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-10-06",
+      "packSHA256": "ccbeb7b0e15a02ae2bfa9c8c2fe611aaed8b55f712031093d79092c5f336703d",
+      "id": "ai-pulse/chatgpt-visual-ads-intention-marketing-2026-10-05",
+      "title": "ChatGPT Visual Ads Bring Marketing Closer to the Moment of Intention",
+      "newsDate": "2026-10-05",
+      "primaryUrls": [
+        "https://openai.com/index/new-chatgpt-ads-format-and-measurement/"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 599,
+      "packFileName": "Daily Content Pack - 2026-10-06.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-10-05",
+      "packSHA256": "f672a026840081bdbfcdc567ff08063593e6e3fcfceb7ff1679094d446e4a924",
+      "id": "ai-pulse/schneider-ptc-industrial-ai-workflows-2026-10-04",
+      "title": "The Schneider-PTC Deal Points Beyond the Chatbot",
+      "newsDate": "2026-10-04",
+      "primaryUrls": [
+        "https://ae.marketscreener.com/news/france-s-schneider-electric-nears-20-billion-deal-to-buy-us-software-group-ptc-ft-reports-ce785ddbdc81ff20",
+        "https://www.ptc.com/en/news/2026/schneider-electric-to-acquire-ptc"
+      ],
+      "status": "published",
+      "openIssues": [
+        "Pack talks report supplemented by dated 5 October definitive agreement; acquisition not closed."
+      ],
+      "wordCount": 591,
+      "packFileName": "Daily Content Pack - 2026-10-05.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-10-04",
+      "packSHA256": "8248aee5bcc0110dac9638020f4fa5689b6ac03df87331bad1353bde45566399",
+      "id": "ai-pulse/aleph-alpha-kolibri-portable-ai-2026-10-03",
+      "title": "Kolibri Puts the Cost of AI Independence on the Agenda",
+      "newsDate": "2026-10-03",
+      "primaryUrls": [
+        "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+        "https://huggingface.co/Aleph-Alpha/Kolibri-1-BF16"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 591,
+      "packFileName": "Daily Content Pack - 2026-10-04.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-10-03",
+      "packSHA256": "3b7780f11ffc97fff47b6652394b516570dc6a9a7c3235143028b4af4205d8eb",
+      "id": "ai-pulse/anthropic-frontier-academy-business-handover-2026-10-02",
+      "title": "AI Deployment Needs People Who Can Finish the Handover",
+      "newsDate": "2026-10-02",
+      "primaryUrls": [
+        "https://www.anthropic.com/news/claude-frontier-academy"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 606,
+      "packFileName": "Daily Content Pack - 2026-10-03.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-10-02",
+      "packSHA256": "099781e176103be4a5faf1db2e193ac2c11efd5433e7f897865e26e4c112802c",
+      "id": "ai-pulse/openai-agent-notifications-action-records-2026-10-01",
+      "title": "AI Agent Incidents Make Action Records a Business Requirement",
+      "newsDate": "2026-10-01",
+      "primaryUrls": [
+        "https://www.investing.com/news/stock-market-news/openai-alerts-more-than-100-groups-about-rogue-ai-agent-activity-4928610",
+        "https://openai.com/hugging-face-incident-and-misalignment/"
+      ],
+      "status": "published",
+      "openIssues": [
+        "Living primary page has a different notification total from dated Reuters report; explicit attribution preserved."
+      ],
+      "wordCount": 578,
+      "packFileName": "Daily Content Pack - 2026-10-02.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-10-01",
+      "packSHA256": "bc59ccedf82dd77f5d01e1e738452d28aa77709de0bf9537512bfba5e7dfccd5",
+      "id": "ai-pulse/gemini-4-argon-access-business-readiness-2026-09-30",
+      "title": "A Model Announcement Is Not a Business Deployment Plan",
+      "newsDate": "2026-09-30",
+      "primaryUrls": [
+        "https://www.investing.com/news/stock-market-news/google-announces-gemini-4-flagship-ai-model-after-months-of-delays-4925832",
+        "https://deepmind.google/models/gemini/"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 591,
+      "packFileName": "Daily Content Pack - 2026-10-01.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-30",
+      "packSHA256": "4ba0bc2bf15ee9492b1fc0f3df892da512d68d7c7dcb593fda1b2103886b8900",
+      "id": "ai-pulse/anthropic-infrastructure-commitments-exit-options-2026-09-29",
+      "title": "The AI Contract Matters as Much as the AI Capability",
+      "newsDate": "2026-09-29",
+      "primaryUrls": [
+        "https://www.investing.com/news/stock-market-news/anthropics-518-billion-ai-buildout-hinges-largely-on-deals-that-cannot-be-canceled-filing-shows-4922031"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 590,
+      "packFileName": "Daily Content Pack - 2026-09-30.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-29",
+      "packSHA256": "9830a5de83ca4a3e9686bb4a33ba44241f047b0c24678ae3ef8be662dc4a10ac",
+      "id": "ai-pulse/openai-astra-release-safety-accountability-2026-09-28",
+      "title": "An AI Agent Must Account for What It Actually Did",
+      "newsDate": "2026-09-28",
+      "primaryUrls": [
+        "https://www.marketscreener.com/news/openai-shelves-new-ai-model-release-over-safety-concerns-ce785addd981f023"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 593,
+      "packFileName": "Daily Content Pack - 2026-09-29.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-28",
+      "packSHA256": "c42c4f252a901baab911e2b491c37545710dc0a46c522cad0dac5e39af448c08",
+      "id": "ai-pulse/trump-amodei-meeting-ai-governance-2026-09-27",
+      "title": "AI Governance Needs More Than Access to the Decision-Maker",
+      "newsDate": "2026-09-27",
+      "primaryUrls": [
+        "https://www.streetinsider.com/Reuters/Trump+confirms+meeting+with+Anthropics+Amodei%2C+repeats+dismissal+of+AI+fears/27108718.html"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 583,
+      "packFileName": "Daily Content Pack - 2026-09-28.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-27",
+      "packSHA256": "b5b350ae7988efdd938ae97618a9e5490fe129340b3f6bd56a48fade82390e28",
+      "id": "ai-pulse/ai-workflow-handoffs-human-integration-2026-09-26",
+      "title": "AI Productivity Can Disappear Between Two Systems",
+      "newsDate": "2026-09-26",
+      "primaryUrls": [
+        "https://fortune.com/2026/09/26/agentic-ai-saas-human-middleware-microsoft/"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 591,
+      "packFileName": "Daily Content Pack - 2026-09-27.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-26",
+      "packSHA256": "b917bf17d9627ad454af58cb405ec6d58926966f868268c8bac3575fa7329853",
+      "id": "ai-pulse/intesa-voice-impersonation-authorisation-2026-09-25",
+      "title": "A Familiar Voice Is Not Payment Authorisation",
+      "newsDate": "2026-09-25",
+      "primaryUrls": [
+        "https://uk.marketscreener.com/news/ai-messaging-scam-costs-italy-s-top-bank-intesa-millions-sources-say-ce785adfde80f127"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 576,
+      "packFileName": "Daily Content Pack - 2026-09-26.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-25",
+      "packSHA256": "cfa7ea568edd6cdd60133fcaad5f79c1cccca5d3cd506e84516b9d8c9cb41bea",
+      "id": "ai-pulse/bcbsa-ai-coding-costs-incentives-2026-09-24",
+      "title": "AI Coding Costs Raise a Harder Question About Business Value",
+      "newsDate": "2026-09-24",
+      "primaryUrls": [
+        "https://www.bcbs.com/about-us/association-news/bcbsa-analysis-ai-coding-tools-affects-healthcare-costs"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 584,
+      "packFileName": "Daily Content Pack - 2026-09-25.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-24",
+      "packSHA256": "a934627671231d99854f4bf21562b24340f8a8413be96ad125feb31e19f49281",
+      "id": "ai-pulse/meta-muse-charm-portable-ai-permissions-2026-09-23",
+      "title": "Muse Charm Makes the AI Permission Question More Portable",
+      "newsDate": "2026-09-23",
+      "primaryUrls": [
+        "https://www.meta.com/en-gb/blog/meta-connect-2026-everything-we-announced/"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 624,
+      "packFileName": "Daily Content Pack - 2026-09-24.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-23",
+      "packSHA256": "01da3faf017786cd178a6903f77807f88d0038c98de56d127fa476cada6160b7",
+      "id": "ai-pulse/meta-muse-human-concierge-disclosure-2026-09-22",
+      "title": "Meta's Muse Test Shows Why Human Handoffs Must Be Visible",
+      "newsDate": "2026-09-22",
+      "primaryUrls": [
+        "https://www.marketscreener.com/news/meta-testing-a-human-concierge-for-its-new-personal-ai-agent-muse-ce785ad8de8cf025"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 603,
+      "packFileName": "Daily Content Pack - 2026-09-23.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-22",
+      "packSHA256": "a1a714d473436b5d726528275679086a742f9862238f30588ddafec810eeba75",
+      "id": "ai-pulse/idb-ai-growth-worker-mobility-scenarios-2026-09-21",
+      "title": "AI Growth Depends on Whether People Can Move into New Work",
+      "newsDate": "2026-09-21",
+      "primaryUrls": [
+        "https://www.investing.com/news/economic-indicators/ai-could-boost-latam-caribbean-economy-51-but-wages-may-fall-idb-says-4909514"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 618,
+      "packFileName": "Daily Content Pack - 2026-09-22.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-21",
+      "packSHA256": "a467ca20d1994dd7e3790053b54bc3dafede4ea586ae3c30471eb704620702ac",
+      "id": "ai-pulse/us-china-ai-incident-notification-proposal-2026-09-20",
+      "title": "The AI Incident Hotline Question Every Business Should Ask",
+      "newsDate": "2026-09-20",
+      "primaryUrls": [
+        "https://www.investing.com/news/stock-market-news/us-treasurys-bessent-chinas-he-to-launch-talks-on-ai-trade-critical-minerals-4908142"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 612,
+      "packFileName": "Daily Content Pack - 2026-09-21.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-20",
+      "packSHA256": "64e1c5ff63fcdd59364ae3260f537c1f21732b4cacffb9ef776a8ba5d7bc4de2",
+      "id": "ai-pulse/us-ai-force-announcement-decision-rights",
+      "title": "The US AI Force Pledge Highlights the Need for Defined Decision Rights",
+      "newsDate": "2026-09-19",
+      "primaryUrls": [
+        "https://www.presidency.ucsb.edu/documents/truth-social-posts-september-19-2026"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 573,
+      "packFileName": "Daily Content Pack - 2026-09-20.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-19",
+      "packSHA256": "42cd9e91a052dd111b85ea4631a53d8a0d0bf58882e4f8b4a7c29bc6f2009de7",
+      "id": "ai-pulse/anthropic-accenture-embedded-evaluation",
+      "title": "Anthropic and Accenture's Evaluation Plan Makes Independence a Design Question",
+      "newsDate": "2026-09-18",
+      "primaryUrls": [
+        "https://www.anthropic.com/news/accenture-embedded-evaluation"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 578,
+      "packFileName": "Daily Content Pack - 2026-09-19.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-18",
+      "packSHA256": "1c034d35b6970befc48104b2af3816a67dc6e00395339674d7b9039427747884",
+      "id": "ai-pulse/anthropic-agent-scale-oversight",
+      "title": "Anthropic's 30,000-Agent Snapshot Raises the Question of Oversight Capacity",
+      "newsDate": "2026-09-17",
+      "primaryUrls": [
+        "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+        "https://www.anthropic.com/research"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 579,
+      "packFileName": "Daily Content Pack - 2026-09-18.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-17",
+      "packSHA256": "506c5bae52292afc677f43b0e0d383fea2364029099a3ef9d644fbf95e4a719f",
+      "id": "ai-pulse/openai-misalignment-reporting-business-incidents",
+      "title": "OpenAI's Misalignment Reports Make Incident Records a Management Priority",
+      "newsDate": "2026-09-16",
+      "primaryUrls": [
+        "https://openai.com/index/model-misalignment-reporting-framework/"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 575,
+      "packFileName": "Daily Content Pack - 2026-09-17.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-16",
+      "packSHA256": "7bd0675d289a5b5a5ada46e0a58e4cc7aa761afcefd15d85eaddc1bdf2518fcc",
+      "id": "ai-pulse/deloitte-uk-worker-ai-spending",
+      "title": "Workers Paying for AI Reveal a Gap in the Approved Toolset",
+      "newsDate": "2026-09-16",
+      "primaryUrls": [
+        "https://www.deloitte.com/uk/en/about/press-room/british-workers-spend-one-billion-pounds-of-their-own-money-on-gen-ai-for-work.html"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 587,
+      "packFileName": "Daily Content Pack - 2026-09-16.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-15",
+      "packSHA256": "05eceaf5596d8c791ef4f6b4f551d1861fff47303a153b74a553f12e88ca03db",
+      "id": "ai-pulse/microsoft-ai-code-shutdown-control",
+      "title": "Microsoft's Draft AI Code Makes Stopping a System an Operating Requirement",
+      "newsDate": "2026-09-14",
+      "primaryUrls": [
+        "https://microsoft.ai/code-of-conduct/"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 589,
+      "packFileName": "Daily Content Pack - 2026-09-15.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-14",
+      "packSHA256": "cd08b3551d95b2d7c2b6c1c6f505156b12ea476c5680e09c0a1000725472e069",
+      "id": "ai-pulse/fergus-ai-trades-administration",
+      "title": "Fergus Puts Trades Administration at the Centre of Its AI Plans",
+      "newsDate": "2026-09-13",
+      "primaryUrls": [
+        "https://www.globenewswire.com/news-release/2026/09/13/3360663/0/en/fergus-launches-ai-first-job-management-for-tradespeople.html",
+        "https://help.fergus.com/en/articles/16935791-what-is-ai-at-fergus"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 592,
+      "packFileName": "Daily Content Pack - 2026-09-14.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-13",
+      "packSHA256": "7460cce07713f24367da49c32a8ca71a8c924db11512fa561853505130d897e3",
+      "id": "ai-pulse/computing-graduate-pathways-ai-practice",
+      "title": "Computing Graduate Pathways Need Deliberate Practice as AI Changes Work",
+      "newsDate": "2026-09-12",
+      "primaryUrls": [
+        "https://www.theguardian.com/education/2026/sep/12/ai-computer-science-graduates-job-prospects-uk-data",
+        "https://www.graduateoutcomes.ac.uk/results/"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 591,
+      "packFileName": "Daily Content Pack - 2026-09-13.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-12",
+      "packSHA256": "555da39cefdbe474b6a979a923d22b64bf87e381929bed4a364cb3966d7d91d0",
+      "id": "ai-pulse/nvidia-anthropic-ipo-talks-supplier-dependencies",
+      "title": "NVIDIA's Reported Anthropic IPO Talks Highlight Supplier Dependencies",
+      "newsDate": "2026-09-11",
+      "primaryUrls": [
+        "https://www.investing.com/news/stock-market-news/exclusivenvidia-in-talks-to-invest-in-anthropics-mega-ipo-sources-say-4898552"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 574,
+      "packFileName": "Daily Content Pack - 2026-09-12.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-11",
+      "packSHA256": "82edb1cf669b44d0d88c4d16f98bffef66522bc08798ab0d945c32300c3a6560",
+      "id": "ai-pulse/wipro-ai-capacity-redeployment",
+      "title": "Wipro's AI Capacity Claim Puts Redeployment Under the Spotlight",
+      "newsDate": "2026-09-10",
+      "primaryUrls": [
+        "https://www.streetinsider.com/Reuters/Wipros%2BAI%2Bpush%2Bfrees%2Bcapacity%2Bequivalent%2Bto%2B20,000%2Bworkers,%2BCTO%2Bsays/27044379.html"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 577,
+      "packFileName": "Daily Content Pack - 2026-09-11.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-10",
+      "packSHA256": "b28552f2c92d2883e853529650171036ab1bb582156d11c3ebc224a36a75d75a",
+      "id": "ai-pulse/ant-mastercard-visa-know-your-agent",
+      "title": "Know Your Agent Is a Payment Identity Step, Not a Spending Mandate",
+      "newsDate": "2026-09-10",
+      "primaryUrls": [
+        "https://www.prnewswire.com/apac/news-releases/ant-international-mastercard-and-visa-initiate-collaboration-on-know-your-agent-interoperability-to-scale-agentic-commerce-302874102.html"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 564,
+      "packFileName": "Daily Content Pack - 2026-09-10.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-09",
+      "packSHA256": "c1997a1d171a08497d40f2765bdfc76c6b938b9cf7f7904bc3f8d9f4aa33a0c7",
+      "id": "ai-pulse/meta-muse-agent-permissions",
+      "title": "Meta's Muse Makes Permission Design a Personal AI Priority",
+      "newsDate": "2026-09-08",
+      "primaryUrls": [
+        "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 580,
+      "packFileName": "Daily Content Pack - 2026-09-09.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-08",
+      "packSHA256": "d36225fd9e622d009b52ba0f2fe402a238e0fb0453f3754bc77f88ac8ffdd093",
+      "id": "ai-pulse/rentosertib-aging-clocks-evidence",
+      "title": "AI-Designed Rentosertib Shows Why Biomarkers Need Careful Interpretation",
+      "newsDate": "2026-09-07",
+      "primaryUrls": [
+        "https://www.nature.com/articles/s41587-026-03286-y"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 583,
+      "packFileName": "Daily Content Pack - 2026-09-08.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-07",
+      "packSHA256": "45ce77ea158cb258859295f04d27e01e146367388748c7dad9245439877cb994",
+      "id": "ai-pulse/ai-skills-training-adaptability",
+      "title": "AI Skills Training Needs a Way to Adapt",
+      "newsDate": "2026-09-06",
+      "primaryUrls": [
+        "https://www.theguardian.com/technology/2026/sep/06/daniel-susskind-father-studies-ai-artificial-intelligence-what-parents-need-know",
+        "https://www.oecd.org/en/publications/skills-in-the-ai-age_972bd15e-en/full-report/component-4.html"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 578,
+      "packFileName": "Daily Content Pack - 2026-09-07.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-06",
+      "packSHA256": "e06c4350b9bad962ac5159bccc0ad76f8430cb457c609455ce80a24941c2fa5c",
+      "id": "ai-pulse/ifa-robots-runway-familiarity-business-readiness",
+      "title": "Robots on IFA's Runway Show the Difference Between Familiar and Useful",
+      "newsDate": "2026-09-05",
+      "primaryUrls": [
+        "https://www.ifa-berlin.com/programme/robots-on-the-runway",
+        "https://www.reutersconnect.com/item/germany-humanoid-robots-take-the-runway-at-ifa-2026-in-berlin/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX01UMVpVTUEwMDBKNzVCSEs"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 561,
+      "packFileName": "Daily Content Pack - 2026-09-06.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-05",
+      "packSHA256": "456f3545e39b214ef7f9000ed2f0c43cc495da2b71c859368bf9d8825bb29f59",
+      "id": "ai-pulse/tesla-cybercab-investigation-autonomy-controls",
+      "title": "The Cybercab Inquiry Highlights the Controls Autonomy Needs",
+      "newsDate": "2026-09-04",
+      "primaryUrls": [
+        "https://www.nhtsa.gov/press-releases/investigation-tesla-cybercab-self-certification"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 555,
+      "packFileName": "Daily Content Pack - 2026-09-05.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-04",
+      "packSHA256": "82a300bf10444f8ae131997e1eec45cd227fcded8c07334bc525f126f8eb45a7",
+      "id": "ai-pulse/nvidia-hugging-face-acquisition-developer-choice",
+      "title": "NVIDIA's Hugging Face Deal Makes Developer Choice a Strategy Issue",
+      "newsDate": "2026-09-03",
+      "primaryUrls": [
+        "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 553,
+      "packFileName": "Daily Content Pack - 2026-09-04.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-03",
+      "packSHA256": "cba3175fb441fb3729b378a932f78919ad39240dc7b54f685277b9a0270b3b67",
+      "id": "ai-pulse/new-york-school-ai-moratorium-learning",
+      "title": "New York's School AI Pause Raises a Workplace Learning Question",
+      "newsDate": "2026-09-02",
+      "primaryUrls": [
+        "https://www.nyc.gov/mayors-office/news/2026/09/mayor-mamdani-and-chancellor-samuels-put-students-first-with-nat"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 572,
+      "packFileName": "Daily Content Pack - 2026-09-03.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-09-02",
+      "packSHA256": "eaeedf9762165bf8383af29a7f3adf50a223de92b586693622cfa102734e1693",
+      "id": "ai-pulse/amazon-alexa-shopping-alerts-permission",
+      "title": "Alexa's Shopping Alerts Put Permission Before the Purchase",
+      "newsDate": "2026-09-01",
+      "primaryUrls": [
+        "https://www.aboutamazon.com/news/retail/how-to-use-amazon-shopping-ai-assistant"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 582,
+      "packFileName": "Daily Content Pack - 2026-09-02.docx",
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-31",
+      "packFileName": "Daily Content Pack - 2026-08-31.docx",
+      "packSHA256": "ea681d5b3a7c87974bd79f028fc0e3b8b5641e1b7c914676df27b73abba3d5f0",
+      "id": "ai-pulse/small-business-first-ai-trial",
+      "title": "How a Small Business Can Design Its First AI Trial",
+      "newsDate": "2026-08-30",
+      "primaryUrls": [
+        "https://www.theguardian.com/technology/2026/aug/30/ai-small-business"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 535,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-30",
+      "packFileName": "Daily Content Pack - 2026-08-30.docx",
+      "packSHA256": "599a7e65d6e00bcbaf69f040b5584aba911b145999c5b8be6fa4ab6e81cbe3f0",
+      "id": "ai-pulse/valon-ai-access-new-hires-judgement",
+      "title": "Valon's AI Access Rule Puts Judgement Into Onboarding",
+      "newsDate": "2026-08-29",
+      "primaryUrls": [
+        "https://www.linkedin.com/posts/wangandrewd_two-weeks-ago-we-turned-off-ai-access-for-activity-7495524960489062400-rnyM",
+        "https://uk.finance.yahoo.com/news/hires-ai-startup-earn-ai-092201199.html"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 530,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-29",
+      "packFileName": "Daily Content Pack - 2026-08-29.docx",
+      "packSHA256": "e488d294953128c1a52b185fbc4cc9a9ca79878b24fec0c01956b2c95cde2f15",
+      "id": "ai-pulse/microduck-orders-accessible-robotics-learning",
+      "title": "Microduck's Early Orders Point to Accessible Robotics Learning",
+      "newsDate": "2026-08-28",
+      "primaryUrls": [
+        "https://pollen-robotics.com/microduck/blog/introducing-microduck/",
+        "https://tech.yahoo.com/ai/meta-ai/articles/hugging-face-says-roller-skating-164314293.html"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 531,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-28",
+      "packFileName": "Daily Content Pack - 2026-08-28.docx",
+      "packSHA256": "3259b9aef2bac3999baa901ff91ab87b6fc2e962485202a6d96909924bd1352a",
+      "id": "ai-pulse/chatgpt-study-quality-and-original-thinking",
+      "title": "Better AI-Assisted Answers Still Need Independent Thinking",
+      "newsDate": "2026-08-27",
+      "primaryUrls": [
+        "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 533,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-27",
+      "packFileName": "Daily Content Pack - 2026-08-27.docx",
+      "packSHA256": "0d5d54c1f1f0ec9f875e326ba6a6c3f7a69dfd0c6e5ad0d38c6c7e61cd555760",
+      "id": "ai-pulse/meta-project-ot-measure-useful-work",
+      "title": "Meta's Project OT Report Puts Useful Work Ahead of AI Activity",
+      "newsDate": "2026-08-26",
+      "primaryUrls": [
+        "https://m.economictimes.com/ai/ai-insights/mark-zuckerberg-had-a-bold-plan-to-replace-meta-staff-with-ai-heres-how-it-imploded-/amp_articleshow/133538291.cms"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 522,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-26",
+      "packFileName": "Daily Content Pack - 2026-08-26.docx",
+      "packSHA256": "396cd9166350dde6a69fde9cac095caa8c62d3a781d8cabc917094e1f1199d16",
+      "id": "ai-pulse/mac-mini-local-ai-still-needs-an-owner",
+      "title": "A More Capable Mac mini Still Needs an AI Operating Plan",
+      "newsDate": "2026-08-25",
+      "primaryUrls": [
+        "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 536,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-25",
+      "packFileName": "Daily Content Pack - 2026-08-25.docx",
+      "packSHA256": "afaa52fe89dbbbb66299bb185908866439647fd3b7b34b0b40dc26aab35c3271",
+      "id": "ai-pulse/holiday-ai-shopping-intent-retail-readiness",
+      "title": "AI Shopping Intent Is a Readiness Test for Retailers",
+      "newsDate": "2026-08-24",
+      "primaryUrls": [
+        "https://www.prnewswire.com/news-releases/sixty-five-percent-of-consumers-will-use-ai-to-shop-this-holiday-season-but-only-8-of-retailers-say-theyre-ready-302857040.html"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 536,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-24",
+      "packFileName": "Daily Content Pack - 2026-08-24.docx",
+      "packSHA256": "f5ea763c4bb972f5b27a62b40e0e899ff96d93582af0934c85439790e074e3b0",
+      "id": "ai-pulse/alibaba-ai-share-placement-return-on-investment",
+      "title": "Alibaba's AI Funding Plan Brings the Return Question Into Focus",
+      "newsDate": "2026-08-24",
+      "primaryUrls": [
+        "https://www.alibabagroup.com/en-US/document-2028384807859257344",
+        "https://www.investing.com/news/stock-market-news/alibaba-stock-slumps-in-hong-kong-after-102-billion-share-placement-to-fund-ai-4872593"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 529,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-23",
+      "packFileName": "Daily Content Pack - 2026-08-23.docx",
+      "packSHA256": "e982088e5cf9154c96afa0881abee61272b06c88b4b95396fa7fe8979e48e304",
+      "id": "ai-pulse/robot-games-speed-is-not-operational-readiness",
+      "title": "At the Robot Games, Speed Is Only One Measure",
+      "newsDate": "2026-08-22",
+      "primaryUrls": [
+        "https://apnews.com/article/86cb8e310843151a77057e4cb764b4e2"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 525,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-22",
+      "packFileName": "Daily Content Pack - 2026-08-22.docx",
+      "packSHA256": "92e77ab6baba20524b0c9cd4db2bac47b213299d23cc55c698d159f2115eeb25",
+      "id": "ai-pulse/ai-productivity-does-not-guarantee-lower-costs",
+      "title": "AI Productivity Does Not Guarantee Lower Costs",
+      "newsDate": "2026-08-21",
+      "primaryUrls": [
+        "https://www.investing.com/news/economy-news/artificial-intelligence-could-push-up-inflation--snbs-tschudin-says-4871908",
+        "https://www.snb.ch/de/publications/communication/interviews/int_20260824_gpe"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 535,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-21",
+      "packFileName": "Daily Content Pack - 2026-08-21.docx",
+      "packSHA256": "d1ef5fbff9b2549e39cf0b536beda43be74c60b259b0bb0f6720652e219cbb6a",
+      "id": "ai-pulse/binance-agent-os-permission-to-act",
+      "title": "Binance Agent OS Shows Why Permission to Act Changes AI Risk",
+      "newsDate": "2026-08-20",
+      "primaryUrls": [
+        "https://www.prnewswire.com/news-releases/binance-introduces-agent-os-to-connect-ai-applications-to-financial-infrastructure-302856306.html"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 517,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-20",
+      "packFileName": "Daily Content Pack - 2026-08-20.docx",
+      "packSHA256": "dc0164fc15d2d242f84e97b3f2e0a2dd211177f38ce4df6aa8428fe4607b5def",
+      "id": "ai-pulse/amazon-drone-expansion-outcomes-before-technology",
+      "title": "Amazon's Drone Expansion Puts the Customer Outcome First",
+      "newsDate": "2026-08-19",
+      "primaryUrls": [
+        "https://www.aboutamazon.com/news/transportation/amazon-prime-air-drone-delivery-expansion",
+        "https://www.publicnow.com/view/84FC415B50FB31270BDF077832F7766A77A0E422"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 525,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-19",
+      "packFileName": "Daily Content Pack - 2026-08-19 V3.docx",
+      "packSHA256": "92585bb49049e31a32ed5fb53462cbba7e758e85a96c3a5c592b5729df54c083",
+      "id": "ai-pulse/china-ai-sovereignty-response-business-options",
+      "title": "China's AI Sovereignty Response Makes Business Options Worth Testing",
+      "newsDate": "2026-08-19",
+      "primaryUrls": [
+        "https://www.reutersconnect.com/item/china-urges-respect-for-digital-sovereignty-in-ai-race/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBNjQ0ODE5MDgyMDI2UlAx",
+        "https://www.investing.com/news/world-news/china-urges-respect-for-digital-sovereignty-in-ai-race-4866598"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 523,
+      "canonicalSelectionReason": "Select explicitly revised V3.docx; it replaces the earlier OpenAI/Hugging Face Hero with the China AI-camp response. Do not import earlier-pack links",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-18",
+      "packFileName": "Daily Content Pack - 2026-08-18.docx",
+      "packSHA256": "a49ed4f40da35847f0a0cd0420242c3ceb8903bad7369a1f1bae48733411df1d",
+      "id": "ai-pulse/amazon-rare-books-ai-data-provenance",
+      "title": "Amazon's Reported Book Scanning Raises a Data Provenance Question",
+      "newsDate": "2026-08-17",
+      "primaryUrls": [
+        "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 534,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-17",
+      "packFileName": "Daily Content Pack - 2026-08-17.docx",
+      "packSHA256": "41089b185ed531b9b9aececac79909eb7b27c23039f9290e0c0b5d7759af0728",
+      "id": "ai-pulse/stripe-openrouter-ai-routing-business-value",
+      "title": "Stripe and OpenRouter Put AI Routing in the Business Spotlight",
+      "newsDate": "2026-08-16",
+      "primaryUrls": [
+        "https://news.bloomberglaw.com/mergers-and-acquisitions/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion",
+        "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 533,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-16",
+      "packFileName": "Daily Content Pack - 2026-08-16.docx",
+      "packSHA256": "b5f69013230712299ec8116d31d6f0d071609bb848ff24484af5c33df18af119",
+      "id": "ai-pulse/andon-ai-boss-human-employment-decisions",
+      "title": "An AI Boss Recommended a Dismissal. Humans Still Owned the Decision.",
+      "newsDate": "2026-08-14",
+      "primaryUrls": [
+        "https://andonlabs.com/blog/ai-bosses-2"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 525,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-15",
+      "packFileName": "Daily Content Pack - 2026-08-15.docx",
+      "packSHA256": "e51af4691b447950a544a0c20707aaac8387073367786feda35f3eeffcae29d3",
+      "id": "ai-pulse/us-ai-coalition-draft-and-vendor-dependency",
+      "title": "A US AI Coalition Draft Puts Vendor Dependency on the Agenda",
+      "newsDate": "2026-08-14",
+      "primaryUrls": [
+        "https://www.investing.com/news/world-news/exclusiveus-to-tell-partners-they-must-pick-sides-in-ai-race-with-china-4861859"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 533,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-14",
+      "packFileName": "Daily Content Pack - 2026-08-14.docx",
+      "packSHA256": "0606b3084db9987e1c5fe4f46271a4bc89f8c673478699dfde1a79b82f29cdce",
+      "id": "ai-pulse/burry-ai-warning-and-business-case-discipline",
+      "title": "Burry's AI Warning Is a Test of Business Case Discipline",
+      "newsDate": "2026-08-14",
+      "primaryUrls": [
+        "https://www.aol.com/articles/big-short-michael-burry-says-100807000.html"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 530,
+      "canonicalSelectionReason": "Only daily pack for this date",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    },
+    {
+      "editionDate": "2026-08-12",
+      "packFileName": "Daily Content Pack - 2026-08-12 FRESH.docx",
+      "packSHA256": "14b8b88e174a4c0cfe7c3edb20d9d0a825bc8eb5677540db76149d49db43965a",
+      "id": "ai-pulse/autonomous-ai-agents-need-operating-boundaries",
+      "title": "Autonomous AI Agents Need Operating Boundaries",
+      "newsDate": "2026-08-12",
+      "primaryUrls": [
+        "https://dreamgroup.com/blog/inside-a-multi-agent-ai-framework-used-to-compromise-government-entities-in-asia"
+      ],
+      "status": "published",
+      "openIssues": [],
+      "wordCount": 539,
+      "canonicalSelectionReason": "Select FRESH.docx as explicit freshness edition; Markdown companion has the same Hero and identical four-URL set, so keep as companion evidence rather than another edition",
+      "publishedAt": "2026-10-07T18:50:43.598Z"
+    }
+  ],
+  "publicationAuthorisation": "User: autorizzo tutto e pubblica tutto, 7 October 2026",
+  "publishedAt": "2026-10-07T18:50:43.598Z",
+  "publishedCount": 55
+}

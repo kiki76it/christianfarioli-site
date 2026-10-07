@@ -1,0 +1,116 @@
+---
+title: 'Human-in-the-Loop AI: What Does It Actually Mean for Business?'
+seoTitle: Human-in-the-Loop AI for Business | Making Review Meaningful
+description: >-
+  Understand human-in-the-loop AI through a practical workflow covering review
+  before action, evidence, exceptions, monitoring and the authority to stop.
+excerpt: >-
+  Human oversight needs more than an approval button. Follow a customer enquiry
+  from AI draft to checked response, with explicit responsibilities, escalation
+  and a workable route back to manual handling.
+language: en-GB
+category: human-centered-ai
+tags:
+  - governance
+  - risk
+author:
+  name: Prof. Christian Farioli
+  role: 'AI Keynote Speaker, Educator & Author'
+  avatar: /images/authors/christian-farioli.jpg
+  links:
+    website: 'https://christianfarioli.com/'
+featuredImage: /images/insights/covers/email-marketing-training.jpg
+featuredImageAlt: Hands typing on a white keyboard beside a mouse and yellow wristwatch
+status: published
+draft: false
+readingTime: 7
+related:
+  - slug: human-centered-ai/human-control-ai-deployment
+publishedAt: '2026-10-07T18:50:43.598Z'
+---
+
+Human-in-the-loop AI means giving a person a defined, usable opportunity to influence an AI-assisted process. In this article, the focus is business operations: someone checks a proposed result, corrects it, authorises an action or takes over when the system reaches its limits.
+
+The important question is what that person can actually do. An employee who sees a message after it has been sent cannot prevent that message. A reviewer who cannot inspect the supporting evidence cannot reliably verify its claims. Adding a person's name to the workflow does not resolve either problem.
+
+My recommendation is to describe the intervention precisely: who reviews what, using which evidence, before which consequence, and with what power to change the outcome.
+
+## Three different jobs for human supervision
+
+**Preventive review** happens before a consequential action. For example, a service adviser checks a proposed customer reply before sending it. The workflow waits for the decision.
+
+**Monitoring** looks at operation over time: recurring errors, complaints, missed exceptions or a growing review queue. It helps the owner improve or suspend the process, but reviewing yesterday's messages does not prevent yesterday's mistakes.
+
+**Exception handling** returns a case to a person when it falls outside the permitted scope or cannot be resolved from available evidence. It needs a destination and a response plan. A warning that nobody owns is an unresolved case, not a completed handoff.
+
+These functions can coexist. They require different attention and should not be treated as interchangeable labels for supervision.
+
+## An example: reviewing a customer reply before it leaves
+
+Consider a hypothetical distributor whose customers ask about products and deliveries. An AI assistant prepares replies using approved product information and authorised order records. A service adviser reviews every outgoing response in this example. This is a proposed operating design, not a client case or a claim about a particular product.
+
+One customer asks whether an order will arrive before an event on Friday. The drafting task looks straightforward, but an unsupported delivery promise could leave the customer making plans on the wrong basis.
+
+### 1. Establish what the assistant may prepare
+
+The assistant can summarise the enquiry, retrieve relevant records and draft a response. It cannot change the order, promise compensation or send the message. Those boundaries should be reflected in the connected system's permissions.
+
+The business owner identifies which records may be used and which questions need specialist handling. In our example, an order status can inform the draft, while a request to guarantee an exceptional delivery date goes to the fulfilment team. Missing information remains an open question; it must not become a plausible promise.
+
+### 2. Present the evidence alongside the draft
+
+The adviser sees the customer's original request, the proposed reply and the relevant source records, including when they were last updated. A summary alone is insufficient if it leaves out a qualification in the customer's message.
+
+Suppose the order record says the goods are awaiting dispatch, while a general webpage gives typical delivery times. The reviewer needs to see that distinction. A general estimate does not establish this order's arrival date. The interface should expose missing or conflicting information instead of presenting a polished paragraph as though every sentence had been verified.
+
+### 3. Give the reviewer a decision to make
+
+The adviser checks that the draft addresses the actual question, identifies the correct order and makes only statements supported by current records. They also check the recipient, tone and any personal information included. Reading for fluency is a different task from checking whether a promise is justified.
+
+The available decisions are to approve, edit and recheck, reject the draft, or escalate the case. The adviser should not need to approve a flawed answer to move work out of the queue. Microsoft's [Guidelines for Human-AI Interaction](https://www.microsoft.com/en-us/research/wp-content/uploads/2019/01/Guidelines-for-Human-AI-Interaction-camera-ready.pdf) recommend making unwanted AI assistance easy to dismiss and incorrect results easy to correct. Those are useful design principles for this review step.
+
+Here, the adviser removes the unsupported arrival assurance and asks fulfilment to confirm what can be stated. The customer receives a checked answer when that evidence is available, or an approved acknowledgement that accurately explains the outstanding check.
+
+### 4. Connect approval to the exact action
+
+Approval applies to the final text, named recipient and intended channel. If the system generates another version after review, the previous approval should not silently cover it. Material changes require another check.
+
+Before sending, the workflow also confirms that the underlying order information has not changed in a way that invalidates the answer. Keep a proportionate record of the approved version and what was actually sent. This lets the team investigate a disputed reply without guessing which draft the adviser saw.
+
+The practical test is simple: can an unreviewed revision or an unexpected recipient bypass the adviser? If it can, the approval step does not control the action it is meant to govern.
+
+### 5. Make exceptions actionable and allow a stop
+
+Unclear delivery evidence goes to a named fulfilment contact, with a backup when that person is absent. The handoff includes the request, records already checked, proposed response and unresolved question. Set an escalation time appropriate to the customer's need; a stalled case should remain visible.
+
+Google's [People + AI Guidebook](https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/) emphasises that a transition to manual handling needs enough context for the person to understand the situation and continue. For this workflow, a generic error notification is therefore insufficient.
+
+If the assistant repeatedly retrieves the wrong order or its access controls fail, the service lead can suspend its use. Pending drafts are held and the team uses its established manual process. Restart requires the owner to check the cause and test the correction, rather than simply clearing the queue.
+
+### 6. Review what happened after sending
+
+The service owner examines complaints, corrections, escalation delays and a sample of replies that passed review. Looking only at rejected drafts would miss mistakes that reviewers accepted.
+
+Measure review time and repeated rework alongside response time. If drafting becomes faster but advisers spend longer reconstructing evidence, the arrangement may not improve the service. Feedback should lead to specific changes, such as removing an unreliable source, narrowing the assistant's scope or making an important record easier to inspect.
+
+Monitoring complements the earlier checks. It does not retrospectively turn an unchecked message into an approved one.
+
+## Give reviewers the conditions to exercise judgement
+
+A useful review needs four things: information, competence, time and authority. Treat these as operating requirements, rather than personal qualities the employee is expected to supply unaided.
+
+Information means access to the relevant original evidence. Competence means understanding the service, the system's limitations and the signs that a case needs another specialist. Training should include finding deliberate errors and explaining why a draft is unacceptable, not only producing a correct answer with AI.
+
+Time means a workload that permits those checks. If a review queue grows beyond capacity, the manager must adjust coverage, scope or service expectations. Keeping the same deadline while requiring additional verification creates an unresolved capacity problem.
+
+Authority means being able to withhold approval, seek help and stop the affected process. A reviewer should be able to challenge a system output without being penalised for failing to accept it quickly. Responsibility for designing and resourcing the workflow remains with management; placing an employee at the final step does not transfer every underlying risk to them.
+
+## Rehearse the review before relying on it
+
+Before expanding the workflow, run a normal enquiry and deliberately difficult cases: an outdated source, conflicting records, a changed recipient and an absent escalation contact. Ask the intended reviewers to work through them using the actual interface and ordinary working conditions.
+
+Observe whether they find the problem, locate the evidence and use the correct route. If they can explain the policy but cannot stop a message, the mechanism needs repair. If the required judgement exceeds their expertise, change the assignment or keep that task outside the workflow.
+
+Human participation cannot guarantee safety or compliance. This example is not suitable as a ready-made process for every activity, particularly where mistakes could cause serious harm or require specialist judgement. Choosing which decisions need which controls is the separate question covered in [Where Should Humans Stay in Control When Companies Deploy AI?](/insights/human-centered-ai/human-control-ai-deployment/).
+
+Start with one workflow and walk through one routine case and one exception with its reviewer and business owner. Write down the evidence required, the action that must wait and the person who can suspend it. Then test those arrangements in practice before treating the words "human in the loop" as a description of how your business actually operates.

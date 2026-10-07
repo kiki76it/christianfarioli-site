@@ -7,6 +7,8 @@ import rehypeArticleContactCTA from './src/lib/rehype-article-contact-cta.mjs';
 
 // https://astro.build/config
 export default defineConfig({
+  // Keep content caches isolated when local review worktrees share dependencies.
+  cacheDir: './.astro/cache',
   site: process.env.PUBLIC_SITE_URL || 'https://christianfarioli.com',
   // The platform is served from a sub-path on the main site:
   //   https://christianfarioli.com/insights/
