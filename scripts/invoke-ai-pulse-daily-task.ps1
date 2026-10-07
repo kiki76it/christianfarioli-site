@@ -3,6 +3,7 @@ param(
   [Parameter(Mandatory=$true)][string]$NodePath
 )
 $ErrorActionPreference='Stop'
+$PSDefaultParameterValues['Out-File:Encoding']='utf8'
 $config=Get-Content -LiteralPath $ConfigPath -Raw -Encoding UTF8 | ConvertFrom-Json
 if($config.mode -ne 'draft') { throw 'Only draft intake is supported' }
 $preflight=& $NodePath (Join-Path $PSScriptRoot 'run-ai-pulse-daily.mjs') --config $ConfigPath --preflight
