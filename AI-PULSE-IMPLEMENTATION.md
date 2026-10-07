@@ -35,6 +35,8 @@ Additional files needed during verification: `astro.config.mjs` (isolated cache)
 
 ## Integration and limits
 
+Release follow-up: removed the specific Future domain/tagline card requested by the owner from the shared Insights archive. The surrounding callout now uses one column. Production build and 19 output/regression tests passed again (one fixture-only check skipped).
+
 See `AI-PULSE-AUTOMATION.md` for the exact JSON/native-field mapping, CLI, GitHub REST endpoints, least-privilege authentication and WordPress boundary. Daily Social Content V3 is not connected. A timed static publication requires an actual rebuild and successful deployment; an eligible scheduled timestamp alone does not update the live site.
 
 Local schema validation is not a claim of Google indexing, Google News/Discover acceptance, Preferred Sources eligibility or field Core Web Vitals. The first real article still needs verified facts, appropriate image rights and Christian's editorial responsibility. No plugin or Google News sitemap engine was installed.
