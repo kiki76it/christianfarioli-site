@@ -81,7 +81,6 @@ const collectionSchema = isAiPulse ? {
 } : undefined;
 
 const categories = INSIGHT_CATEGORIES;
-const currentPath = Astro.url.pathname;
 
 // Main site lives at the domain root (one level up from /insights).
 const main = paths.mainSite();
@@ -138,7 +137,7 @@ function dateLabel(d?: Date): string | null {
     <nav class="category-nav" aria-label="Categories">
       <div class="category-inner">
         <div class="category-scroll">
-          <a href={paths.home()} class:list={["category-btn", { active: currentPath === paths.home() }]} aria-current={currentPath === paths.home() ? 'page' : undefined}>All</a>
+          <a href={paths.home()} class:list={["category-btn", { active: !category }]} aria-current={!category ? 'page' : undefined}>All</a>
           {categories.map((c) => (
             <a
               href={paths.category(c)}

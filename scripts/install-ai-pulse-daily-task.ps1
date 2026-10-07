@@ -1,11 +1,11 @@
 param(
   [Parameter(Mandatory=$true)][string]$ConfigPath,
-  [string]$TaskName = 'ChristianFarioli - AI Pulse Daily Draft'
+  [string]$TaskName = 'ChristianFarioli - AI Pulse Daily'
 )
 $ErrorActionPreference = 'Stop'
 $taskConfig = (Resolve-Path -LiteralPath $ConfigPath).Path
 $config = Get-Content -LiteralPath $taskConfig -Raw -Encoding UTF8 | ConvertFrom-Json
-if ($config.mode -ne 'draft') { throw 'Only local draft intake can be scheduled' }
+if ($config.mode -ne 'draft' -or $config.publication.enabled -ne $true) { throw 'Require separate draft intake and authorised publication' }
 if (-not (Test-Path -LiteralPath $config.codexExe -PathType Leaf)) { throw 'Configured Codex binary is missing' }
 if (-not (Test-Path -LiteralPath $config.sourceDirectory -PathType Container)) { throw 'Dropbox source folder is missing' }
 $runner = Join-Path $PSScriptRoot 'invoke-ai-pulse-daily-task.ps1'
@@ -14,6 +14,9 @@ $taskShell = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershe
 if(-not (Test-Path -LiteralPath $taskShell -PathType Leaf)) { throw 'Windows PowerShell executable is missing' }
 $preflight=& $taskNode (Join-Path $PSScriptRoot 'run-ai-pulse-daily.mjs') --config $taskConfig --preflight
 if($LASTEXITCODE -ne 0) { throw 'Read-only path preflight failed; task not registered' }
+$publicationPreflight=& $taskNode (Join-Path $PSScriptRoot 'publish-ai-pulse-daily.mjs') --config $taskConfig --preflight
+if($LASTEXITCODE -ne 0) { throw 'Read-only publication preflight failed; task not registered' }
+if(($publicationPreflight | ConvertFrom-Json).status -ne 'publication-paths-validated') { throw 'Unexpected publication preflight result' }
 foreach ($value in @($taskConfig,$runner,$taskNode,$taskShell)) { if($value.Contains('"')) { throw 'Unexpected quote in task path' } }
 if (Get-ScheduledTask -TaskName $TaskName -ErrorAction SilentlyContinue) { throw 'Task already exists; inspect it before updating' }
 $identity = [System.Security.Principal.WindowsIdentity]::GetCurrent()
@@ -24,10 +27,10 @@ $escape = { param($value) [System.Security.SecurityElement]::Escape($value) }
 $xml = @"
 <?xml version="1.0" encoding="UTF-16"?>
 <Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
-  <RegistrationInfo><Description>Read stable Daily Content Packs, verify public sources and create local AI Pulse drafts. No publication or deployment. Requires logged-in user, Dropbox sync and Codex authentication.</Description></RegistrationInfo>
+  <RegistrationInfo><Description>Read stable Daily Content Packs, verify public sources, create one draft and publish its exact validated content through a protected GitHub PR after build and both Cloudflare checks. Requires logged-in user, Dropbox sync, Codex authentication and Git Credential Manager.</Description></RegistrationInfo>
   <Triggers><CalendarTrigger><Repetition><Interval>PT1H</Interval><Duration>PT12H</Duration><StopAtDurationEnd>false</StopAtDurationEnd></Repetition><StartBoundary>$start</StartBoundary><Enabled>true</Enabled><ScheduleByDay><DaysInterval>1</DaysInterval></ScheduleByDay></CalendarTrigger></Triggers>
   <Principals><Principal id="Author"><UserId>$sid</UserId><LogonType>InteractiveToken</LogonType><RunLevel>LeastPrivilege</RunLevel></Principal></Principals>
-  <Settings><MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy><DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries><StopIfGoingOnBatteries>false</StopIfGoingOnBatteries><StartWhenAvailable>true</StartWhenAvailable><AllowStartOnDemand>true</AllowStartOnDemand><Enabled>true</Enabled><Hidden>false</Hidden><ExecutionTimeLimit>PT20M</ExecutionTimeLimit></Settings>
+  <Settings><MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy><DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries><StopIfGoingOnBatteries>false</StopIfGoingOnBatteries><StartWhenAvailable>true</StartWhenAvailable><AllowStartOnDemand>true</AllowStartOnDemand><Enabled>true</Enabled><Hidden>false</Hidden><ExecutionTimeLimit>PT30M</ExecutionTimeLimit></Settings>
   <Actions Context="Author"><Exec><Command>$(& $escape $taskShell)</Command><Arguments>$(& $escape $arguments)</Arguments><WorkingDirectory>$(& $escape (Split-Path $PSScriptRoot -Parent))</WorkingDirectory></Exec></Actions>
 </Task>
 "@
