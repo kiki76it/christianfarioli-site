@@ -14,6 +14,8 @@ interface Props {
   ogImage?: string;
   /** Set to true to exclude from sitemap and search engines. */
   noindex?: boolean;
+  /** Allow large image previews for AI Pulse without changing other pages. */
+  maxImagePreview?: 'large';
   /** Override the canonical URL. */
   canonical?: string;
   /** Page type for Open Graph. */
@@ -30,6 +32,7 @@ const {
   description = 'Authority insights on AI strategy, leadership, and the future of work — by Prof. Christian Farioli.',
   ogImage,
   noindex = false,
+  maxImagePreview,
   canonical,
   ogType = 'website',
   publishedTime,
@@ -64,7 +67,12 @@ const fullOgImage = ogImage
 
     <title>{title}</title>
     <meta name="description" content={description} />
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {(noindex || maxImagePreview) && (
+      <meta name="robots" content={[
+        ...(noindex ? ['noindex', 'nofollow'] : []),
+        ...(maxImagePreview ? [`max-image-preview:${maxImagePreview}`] : []),
+      ].join(', ')} />
+    )}
 
     <!-- Canonical -->
     <link rel="canonical" href={canonicalUrl} />

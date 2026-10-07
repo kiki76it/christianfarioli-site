@@ -8,7 +8,8 @@ import InsightsLayout from '~/layouts/InsightsLayout.astro';
 import { CATEGORY_LABELS, INSIGHT_CATEGORIES, type InsightCategory } from '~/content.config';
 
 export const getStaticPaths: GetStaticPaths = () => {
-  return INSIGHT_CATEGORIES.map((category) => ({
+  // AI Pulse uses its canonical /insights/ai-pulse/ archive only.
+  return INSIGHT_CATEGORIES.filter((category) => category !== 'ai-pulse').map((category) => ({
     params: { category },
     props: { category },
   }));

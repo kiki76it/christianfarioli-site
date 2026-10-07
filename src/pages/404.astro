@@ -1,0 +1,17 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import SiteNav from '~/components/SiteNav.astro';
+import { paths } from '~/lib/links';
+---
+<BaseLayout title="Page not found | Prof. Christian Farioli" noindex>
+  <SiteNav />
+  <main id="main" class="container missing-page">
+    <h1>Page not found</h1>
+    <p>This page is unavailable. Browse Insights for the latest articles.</p>
+    <a class="btn btn-primary" href={paths.home()}>Explore Insights</a>
+  </main>
+</BaseLayout>
+<style>
+  .missing-page { padding-block: 96px; min-height: 60vh; }
+  h1 { font-family: var(--font-accent); font-size: clamp(32px, 5vw, 56px); }
+</style>

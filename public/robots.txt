@@ -4,5 +4,7 @@ Allow: /
 # Block admin and API paths from crawlers
 Disallow: /admin/
 Disallow: /api/
+Disallow: /insights/admin/
+Disallow: /insights/api/
 
 Sitemap: https://christianfarioli.com/sitemap.xml

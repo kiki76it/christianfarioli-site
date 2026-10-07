@@ -1,0 +1,73 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import SiteNav from '~/components/SiteNav.astro';
+import { absolute, paths } from '~/lib/links';
+---
+<BaseLayout
+  title="Editorial Policy | Prof. Christian Farioli"
+  description="The editorial principles behind Christian Farioli's Insights and AI Pulse: accuracy, clear sourcing, original analysis and accountable human judgement."
+  canonical={absolute(paths.editorialPolicy())}
+  lang="en-GB"
+>
+  <SiteNav sticky />
+  <main id="main">
+    <header class="policy-hero">
+      <div class="reading-container">
+        <a class="policy-eyebrow" href={paths.home()}>Insights</a>
+        <h1>Editorial Policy</h1>
+        <p>Clear facts. Attributed sources. Accountable perspectives.</p>
+      </div>
+    </header>
+    <article class="policy-body reading-container">
+      <p>Insights and <a href={paths.category('ai-pulse')}>AI Pulse</a> help business leaders understand developments in artificial intelligence and their practical implications. These principles guide what we publish.</p>
+
+      <h2>Accuracy and attribution</h2>
+      <p>We check factual claims against primary sources wherever possible, including company announcements, research papers, filings and regulatory publications. Reputable reporting provides additional context. AI Pulse articles link to their sources so readers can examine the evidence. We do not invent quotations, sources or events, or reproduce substantial passages from others' work.</p>
+
+      <h2>Facts, analysis and opinion</h2>
+      <p>We distinguish what happened from our analysis of why it matters and Prof. Christian Farioli's perspective. Uncertainty, forecasts and speculation are identified as such. Business implications and relevant links to evergreen Insights add context to the news.</p>
+
+      <h2>Dates, updates and corrections</h2>
+      <p>AI Pulse displays the original publication date and time. An updated date represents a meaningful editorial change, not a routine rebuild or metadata adjustment. Material corrections are explained in the article. To report an error, <a href={`${paths.mainSite()}#contact`}>contact us</a> with the article link and supporting evidence.</p>
+
+      <h2>AI assistance and editorial responsibility</h2>
+      <p>AI may assist with research, analysis and production. Every published perspective remains under the editorial responsibility of Prof. Christian Farioli. AI-generated suggestions are checked against sources before publication; they are not evidence in themselves.</p>
+
+      <h2>Transparency</h2>
+      <p>Articles identify their author and relevant sources. Any sponsorship, material commercial relationship or other relevant conflict of interest is disclosed where it affects an article.</p>
+
+      <p class="policy-author">Learn more <a href={`${paths.mainSite()}#positioning`}>about Prof. Christian Farioli</a> and his work.</p>
+    </article>
+  </main>
+  <footer class="policy-footer">
+    <div class="container">
+      <p>Prof. Christian Farioli</p>
+      <nav aria-label="Footer">
+        <a href={paths.home()}>Insights</a>
+        <a href={paths.category('ai-pulse')}>AI Pulse</a>
+        <a href={`${paths.mainSite()}#contact`}>Contact</a>
+        <a href="https://www.linkedin.com/in/christianfarioli" rel="noopener" target="_blank">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+</BaseLayout>
+
+<style>
+  .policy-hero { background: var(--color-bg-dark); color: var(--color-white); padding: 80px 0 64px; }
+  .policy-eyebrow { display: inline-block; margin-bottom: 18px; text-transform: uppercase; letter-spacing: .16em; font-size: 12px; color: var(--color-white); }
+  h1 { font-family: var(--font-accent); font-size: clamp(36px, 6vw, 56px); font-weight: 500; }
+  .policy-hero p { margin: 16px 0 0; color: rgba(255,255,255,.75); }
+  .policy-body { padding-top: 56px; padding-bottom: 72px; }
+  .policy-body h2 { font-family: var(--font-accent); font-size: clamp(24px, 4vw, 30px); margin-top: 40px; }
+  .policy-body p { margin: 0 0 20px; }
+  .policy-body a { text-decoration: underline; text-underline-offset: 3px; color: var(--color-accent); overflow-wrap: anywhere; }
+  .policy-author { padding-top: 24px; border-top: 1px solid var(--color-border); margin-top: 36px !important; }
+  .policy-footer { padding: 40px 0; background: var(--color-bg-dark); color: var(--color-white); }
+  .policy-footer p { margin: 0 0 16px; font-weight: 600; }
+  .policy-footer nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 14px; }
+  a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+  @media (max-width: 640px) {
+    .policy-hero { padding: 48px 0; }
+    .policy-body { padding-top: 36px; padding-bottom: 48px; }
+  }
+</style>

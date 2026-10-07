@@ -17,7 +17,7 @@
 import { mkdirSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { randomUUID } from 'node:crypto';
+import { INSIGHT_CATEGORIES } from '../src/lib/categories.mjs';
 
 const args = process.argv.slice(2);
 const flags = {};
@@ -58,7 +58,11 @@ if (!slug) {
 }
 slug = slugify(slug);
 
-const VALID_CATEGORIES = ['ai-strategy', 'human-centered-ai', 'ai-leadership', 'aiso', 'ai-marketing', 'executive-education', 'future-of-work'];
+const VALID_CATEGORIES = INSIGHT_CATEGORIES;
+if (flags.category === 'ai-pulse') {
+  console.error('  AI Pulse requires sources and editorial sections. Use npm run content:ai-pulse -- --file article.json (draft only).');
+  process.exit(1);
+}
 let subdir = '';
 let filename;
 if (slug.includes('/')) {
@@ -104,7 +108,6 @@ featuredImageAlt: "${flags['featured-image-alt'] || 'Hero image'}"
 status: "${flags.status || 'draft'}"
 ${flags.status === 'scheduled' ? `scheduledFor: ${flags['scheduled-for'] || today}` : ''}
 ${flags.status === 'published' ? `publishedAt: ${flags['published-at'] || today}` : ''}
-readingTime: 0
 keyTakeaways: []
 faq: []
 related: []
@@ -130,7 +133,7 @@ Wrap up.
 `;
 
 mkdirSync(dirname(fullPath), { recursive: true });
-writeFileSync(fullPath, frontmatter);
+writeFileSync(fullPath, frontmatter, { flag: 'wx' });
 
 console.log(`  ✓ Created: ${fullPath.replace(process.cwd() + '/', '')}`);
 console.log(`    Status: ${flags.status || 'draft'}`);

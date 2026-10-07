@@ -8,6 +8,8 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
+import { INSIGHT_CATEGORIES } from '../src/lib/categories.mjs';
+import { aiPulseErrors } from '../src/lib/ai-pulse.mjs';
 
 const ROOT = fileURLToPath(new URL('../src/content/insights/', import.meta.url));
 const errors = [];
@@ -19,7 +21,7 @@ let scheduled = 0;
 let published = 0;
 
 const REQUIRED = ['title', 'description', 'category', 'author', 'featuredImage', 'featuredImageAlt', 'status'];
-const VALID_CATEGORIES = ['ai-strategy', 'human-centered-ai', 'ai-leadership', 'aiso', 'ai-marketing', 'executive-education', 'future-of-work'];
+const VALID_CATEGORIES = INSIGHT_CATEGORIES;
 const VALID_STATUSES = ['draft', 'review', 'scheduled', 'published'];
 
 function walk(dir) {
@@ -37,7 +39,8 @@ function validateFile(path) {
   total++;
   const rel = relative(process.cwd(), path);
   const raw = readFileSync(path, 'utf8');
-  const { data } = matter(raw);
+  const { data, content } = matter(raw);
+  for (const error of aiPulseErrors(data, content)) errors.push(`${rel}: ${error}`);
 
   for (const key of REQUIRED) {
     if (data[key] === undefined || data[key] === null || data[key] === '') {

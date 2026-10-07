@@ -5,6 +5,8 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { publicOnly, sortByDateDesc } from '~/lib/insights';
 import { INSIGHT_CATEGORIES } from '~/content.config';
+import { AI_PULSE_PAGE_SIZE, aiPulseEntries, aiPulsePageCount } from '~/lib/ai-pulse-archive';
+import { absolute, paths } from '~/lib/links';
 
 const ORIGIN = 'https://christianfarioli.com';
 const escapeXml = (value: string) => value.replace(/[<>&"']/g, (character) => ({
@@ -31,11 +33,23 @@ export const GET: APIRoute = async () => {
   urls.push({ loc: `${ORIGIN}/clients.html`, priority: '0.7', changefreq: 'monthly' });
   urls.push({ loc: `${ORIGIN}/faq.html`, priority: '0.6', changefreq: 'monthly' });
   urls.push({ loc: `${ORIGIN}/privacy.html`, priority: '0.3', changefreq: 'yearly' });
+  urls.push({ loc: absolute(paths.editorialPolicy(), ORIGIN), priority: '0.4', changefreq: 'yearly' });
 
   // --- Insights hub + categories ---
   urls.push({ loc: `${ORIGIN}/insights/`, priority: '0.9', changefreq: 'daily', lastmod: latestUpdate(published) });
   for (const c of INSIGHT_CATEGORIES) {
-    urls.push({ loc: `${ORIGIN}/insights/category/${c}/`, priority: '0.6', changefreq: 'weekly', lastmod: latestUpdate(published.filter((entry) => entry.data.category === c)) });
+    urls.push({ loc: absolute(paths.category(c), ORIGIN), priority: '0.6', changefreq: c === 'ai-pulse' ? 'daily' : 'weekly', lastmod: latestUpdate(published.filter((entry) => entry.data.category === c)) });
+  }
+
+  // Each news archive page has its own canonical and actual content dates.
+  const pulse = aiPulseEntries(published);
+  for (let page = 2; page <= aiPulsePageCount(pulse.length); page++) {
+    urls.push({
+      loc: absolute(paths.aiPulsePage(page), ORIGIN),
+      priority: '0.5',
+      changefreq: 'daily',
+      lastmod: latestUpdate(pulse.slice((page - 1) * AI_PULSE_PAGE_SIZE, page * AI_PULSE_PAGE_SIZE)),
+    });
   }
 
   // --- Every published article (auto-updates as content is added) ---

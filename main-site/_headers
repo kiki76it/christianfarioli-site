@@ -34,6 +34,14 @@
   Content-Type: application/javascript; charset=utf-8
 
 # Standard security headers
+/insights/admin/*
+  Cache-Control: private, no-store, max-age=0
+  X-Robots-Tag: noindex, nofollow
+
+/admin/*
+  Cache-Control: private, no-store, max-age=0
+  X-Robots-Tag: noindex, nofollow
+
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN

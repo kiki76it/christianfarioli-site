@@ -29,7 +29,10 @@ export function p(path: string): string {
 export const paths = {
   home: () => p('/'),
   insights: (slug: string) => p(`/${slug}/`),
-  category: (cat: string) => p(`/category/${cat}/`),
+  category: (cat: string) => cat === 'ai-pulse' ? p('/ai-pulse/') : p(`/category/${cat}/`),
+  aiPulsePage: (page = 1) => page === 1 ? p('/ai-pulse/') : p(`/ai-pulse/page/${page}/`),
+  aiPulseFeed: () => p('/ai-pulse/feed.xml'),
+  editorialPolicy: () => '/editorial-policy/',
   adminHome: () => p('/admin/'),
   adminPreview: (slug: string) => p(`/admin/preview/${slug}/`),
   apiPublish: () => p('/api/publish'),

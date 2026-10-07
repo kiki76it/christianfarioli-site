@@ -5,6 +5,7 @@
 import { CATEGORY_LABELS, INSIGHT_CATEGORIES, type InsightCategory } from '../content.config';
 import { paths, p } from './links';
 import { isRedirectedInsight } from './insight-redirects.mjs';
+import { assertAiPulse } from './ai-pulse.mjs';
 import type { CollectionEntry } from 'astro:content';
 
 export type InsightEntry = CollectionEntry<'insights'>;
@@ -80,7 +81,13 @@ export function isPubliclyVisible(
   now: Date = new Date(),
 ): boolean {
   const { status, scheduledFor, draft } = entry.data;
-  if (draft || isRedirectedInsight(entry.id)) return false;
+  if (entry.data.category === 'ai-pulse') assertAiPulse(entry.data, entry.body, { allowDates: true, now });
+  if (draft || entry.data.internalTest || isRedirectedInsight(entry.id)) return false;
+  // News timestamps describe actual publication, never a future build date.
+  if (entry.data.category === 'ai-pulse' && entry.data.publishedAt && entry.data.publishedAt.getTime() > now.getTime()) return false;
+  if (entry.data.category === 'ai-pulse' && status === 'published') {
+    return Boolean(entry.data.publishedAt && entry.data.publishedAt.getTime() <= now.getTime());
+  }
   if (status === 'published') return true;
   if (status === 'scheduled' && scheduledFor) {
     return scheduledFor.getTime() <= now.getTime();

@@ -1,0 +1,23 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import InsightsLayout from '~/layouts/InsightsLayout.astro';
+import { AI_PULSE_INTRO, aiPulseEntries, aiPulsePageCount } from '~/lib/ai-pulse-archive';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const entries = await getCollection('insights');
+  const pageCount = aiPulsePageCount(aiPulseEntries(entries).length);
+  // Page one exists only at /ai-pulse/, never at /page/1/.
+  return Array.from({ length: pageCount - 1 }, (_, index) => ({
+    params: { page: String(index + 2) },
+    props: { entries, pageNumber: index + 2 },
+  }));
+};
+
+interface Props {
+  entries: CollectionEntry<'insights'>[];
+  pageNumber: number;
+}
+const { entries, pageNumber } = Astro.props;
+---
+<InsightsLayout title="AI Pulse" description={AI_PULSE_INTRO} category="ai-pulse" entries={entries} pageNumber={pageNumber} />

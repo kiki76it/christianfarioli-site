@@ -11,6 +11,7 @@
 //   ADMIN_PASSWORD  (required in production)
 
 import { insightRedirectPath } from '../src/lib/insight-redirects.mjs';
+import { aiPulseRedirectPath, isAdminPath, normalizeRequestPath } from '../src/lib/ai-pulse-routing.mjs';
 
 interface Env {
   ADMIN_USERNAME?: string;
@@ -20,11 +21,19 @@ interface Env {
 export const onRequest: PagesFunction<Env> = async (context) => {
   const { request, env, next } = context;
   const url = new URL(request.url);
-  const path = url.pathname;
+  const rawPath = url.pathname;
+  const path = normalizeRequestPath(rawPath);
+  if (path === null) {
+    return new Response('Invalid request path.', {
+      status: 400,
+      headers: { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow' },
+    });
+  }
+  const adminRequest = isAdminPath(rawPath);
 
   // Consolidate duplicate imports with a permanent redirect. Pages _redirects
   // rules do not run for Function-served requests, so this belongs here.
-  const redirectPath = insightRedirectPath(path);
+  const redirectPath = insightRedirectPath(path) ?? aiPulseRedirectPath(path);
   if (redirectPath) {
     url.pathname = redirectPath;
     return Response.redirect(url.toString(), 301);
@@ -42,25 +51,22 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     path === '/insights/' ||
     path.startsWith('/insights/');
 
-  if (!isInsightsPath) {
+  if (!isInsightsPath && !adminRequest) {
     return next();
   }
 
   // ---------------------------------------------------------------------
-  // 2) Admin auth — only gate /insights/admin/* (not /insights/api/* etc).
+  // 2) Gate both admin namespaces and every encoded equivalent.
   // ---------------------------------------------------------------------
-  if (path.includes('/admin')) {
+  if (adminRequest) {
     const expectedUser = env.ADMIN_USERNAME || 'admin';
     const expectedPass = env.ADMIN_PASSWORD;
 
     if (!expectedPass) {
-      // Fail closed in production, fail open in dev.
-      // @ts-ignore - import.meta.env is Vite's, available in dev
-      if (typeof import.meta !== 'undefined' && import.meta.env?.DEV) {
-        console.warn('[admin-auth] ADMIN_PASSWORD not set; skipping auth in dev mode.');
-        return next();
-      }
-      return new Response('Admin auth not configured.', { status: 503 });
+      return new Response('Admin auth not configured.', {
+        status: 503,
+        headers: { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow' },
+      });
     }
 
     const auth = request.headers.get('Authorization');
@@ -71,7 +77,11 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         const user = decoded.slice(0, idx);
         const pass = decoded.slice(idx + 1);
         if (user === expectedUser && pass === expectedPass) {
-          return next();
+          const upstream = await next();
+          const response = new Response(upstream.body, upstream);
+          response.headers.set('Cache-Control', 'private, no-store, max-age=0');
+          response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+          return response;
         }
       } catch {
         // Malformed auth header — fall through to challenge.
@@ -83,6 +93,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
       headers: {
         'WWW-Authenticate': 'Basic realm="Prof. Christian Farioli Admin", charset="UTF-8"',
         'Cache-Control': 'no-store',
+        'X-Robots-Tag': 'noindex, nofollow',
       },
     });
   }
