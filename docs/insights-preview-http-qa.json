@@ -1,0 +1,575 @@
+{
+  "checkedAt": "2026-10-07T16:08:33.326Z",
+  "baseUrl": "http://127.0.0.1:8795",
+  "runtimeCreatedAt": "2026-10-07T16:00:11.741Z",
+  "scope": "Local HTTP requests only; no build, source edits or publication",
+  "requestCount": 42,
+  "passed": 42,
+  "failed": 0,
+  "results": [
+    {
+      "kind": "article",
+      "code": "A1",
+      "path": "/insights/ai-marketing/ai-training-marketing-teams-dubai/",
+      "status": 200,
+      "canonical": "https://christianfarioli.com/insights/ai-marketing/ai-training-marketing-teams-dubai/",
+      "actualStatus": 200,
+      "bodyBytes": 27047,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "productionAnalyticsAbsent": true,
+      "dateMetaAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "article",
+      "code": "A2",
+      "path": "/insights/ai-marketing/ai-marketing-strategy-without-more-tools/",
+      "status": 200,
+      "canonical": "https://christianfarioli.com/insights/ai-marketing/ai-marketing-strategy-without-more-tools/",
+      "actualStatus": 200,
+      "bodyBytes": 25887,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "productionAnalyticsAbsent": true,
+      "dateMetaAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "article",
+      "code": "A3",
+      "path": "/insights/ai-marketing/ai-marketing-agency-vs-traditional-digital-agency/",
+      "status": 200,
+      "canonical": "https://christianfarioli.com/insights/ai-marketing/ai-marketing-agency-vs-traditional-digital-agency/",
+      "actualStatus": 200,
+      "bodyBytes": 25496,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "productionAnalyticsAbsent": true,
+      "dateMetaAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "article",
+      "code": "A4",
+      "path": "/insights/ai-marketing/prepare-marketing-teams-for-ai/",
+      "status": 200,
+      "canonical": "https://christianfarioli.com/insights/ai-marketing/prepare-marketing-teams-for-ai/",
+      "actualStatus": 200,
+      "bodyBytes": 25136,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "productionAnalyticsAbsent": true,
+      "dateMetaAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "article",
+      "code": "B1",
+      "path": "/insights/future-of-work/digital-employees-vs-human-employees/",
+      "status": 200,
+      "canonical": "https://christianfarioli.com/insights/future-of-work/digital-employees-vs-human-employees/",
+      "actualStatus": 200,
+      "bodyBytes": 26397,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "productionAnalyticsAbsent": true,
+      "dateMetaAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "article",
+      "code": "B2",
+      "path": "/insights/future-of-work/ai-middle-management/",
+      "status": 200,
+      "canonical": "https://christianfarioli.com/insights/future-of-work/ai-middle-management/",
+      "actualStatus": 200,
+      "bodyBytes": 25492,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "productionAnalyticsAbsent": true,
+      "dateMetaAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "article",
+      "code": "B3",
+      "path": "/insights/future-of-work/ai-leadership-offsite/",
+      "status": 200,
+      "canonical": "https://christianfarioli.com/insights/future-of-work/ai-leadership-offsite/",
+      "actualStatus": 200,
+      "bodyBytes": 25435,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "productionAnalyticsAbsent": true,
+      "dateMetaAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "article",
+      "code": "B4",
+      "path": "/insights/future-of-work/which-jobs-will-ai-change-first/",
+      "status": 200,
+      "canonical": "https://christianfarioli.com/insights/future-of-work/which-jobs-will-ai-change-first/",
+      "actualStatus": 200,
+      "bodyBytes": 25377,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "productionAnalyticsAbsent": true,
+      "dateMetaAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "article",
+      "code": "C1",
+      "path": "/insights/human-centered-ai/human-in-the-loop-ai-business/",
+      "status": 200,
+      "canonical": "https://christianfarioli.com/insights/human-centered-ai/human-in-the-loop-ai-business/",
+      "actualStatus": 200,
+      "bodyBytes": 23656,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "productionAnalyticsAbsent": true,
+      "dateMetaAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "article",
+      "code": "C2",
+      "path": "/insights/human-centered-ai/ai-augment-people-not-reduce-headcount/",
+      "status": 200,
+      "canonical": "https://christianfarioli.com/insights/human-centered-ai/ai-augment-people-not-reduce-headcount/",
+      "actualStatus": 200,
+      "bodyBytes": 26085,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "productionAnalyticsAbsent": true,
+      "dateMetaAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "article",
+      "code": "C3",
+      "path": "/insights/human-centered-ai/human-control-ai-deployment/",
+      "status": 200,
+      "canonical": "https://christianfarioli.com/insights/human-centered-ai/human-control-ai-deployment/",
+      "actualStatus": 200,
+      "bodyBytes": 25905,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "productionAnalyticsAbsent": true,
+      "dateMetaAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "article",
+      "code": "C4",
+      "path": "/insights/human-centered-ai/introduce-ai-without-losing-employee-trust/",
+      "status": 200,
+      "canonical": "https://christianfarioli.com/insights/human-centered-ai/introduce-ai-without-losing-employee-trust/",
+      "actualStatus": 200,
+      "bodyBytes": 24685,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "productionAnalyticsAbsent": true,
+      "dateMetaAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "category",
+      "category": "ai-marketing",
+      "path": "/insights/category/ai-marketing/",
+      "status": 200,
+      "noindex": true,
+      "actualStatus": 200,
+      "bodyBytes": 25608,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "canonical": "https://christianfarioli.com/insights/category/ai-marketing/",
+      "productionAnalyticsAbsent": true,
+      "batchCards": [
+        {
+          "id": "ai-marketing/ai-training-marketing-teams-dubai",
+          "present": true
+        },
+        {
+          "id": "ai-marketing/ai-marketing-strategy-without-more-tools",
+          "present": true
+        },
+        {
+          "id": "ai-marketing/ai-marketing-agency-vs-traditional-digital-agency",
+          "present": true
+        },
+        {
+          "id": "ai-marketing/prepare-marketing-teams-for-ai",
+          "present": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "category",
+      "category": "future-of-work",
+      "path": "/insights/category/future-of-work/",
+      "status": 200,
+      "noindex": true,
+      "actualStatus": 200,
+      "bodyBytes": 25471,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "canonical": "https://christianfarioli.com/insights/category/future-of-work/",
+      "productionAnalyticsAbsent": true,
+      "batchCards": [
+        {
+          "id": "future-of-work/digital-employees-vs-human-employees",
+          "present": true
+        },
+        {
+          "id": "future-of-work/ai-middle-management",
+          "present": true
+        },
+        {
+          "id": "future-of-work/ai-leadership-offsite",
+          "present": true
+        },
+        {
+          "id": "future-of-work/which-jobs-will-ai-change-first",
+          "present": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "category",
+      "category": "human-centered-ai",
+      "path": "/insights/category/human-centered-ai/",
+      "status": 200,
+      "noindex": true,
+      "actualStatus": 200,
+      "bodyBytes": 25594,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "canonical": "https://christianfarioli.com/insights/category/human-centered-ai/",
+      "productionAnalyticsAbsent": true,
+      "batchCards": [
+        {
+          "id": "human-centered-ai/human-in-the-loop-ai-business",
+          "present": true
+        },
+        {
+          "id": "human-centered-ai/ai-augment-people-not-reduce-headcount",
+          "present": true
+        },
+        {
+          "id": "human-centered-ai/human-control-ai-deployment",
+          "present": true
+        },
+        {
+          "id": "human-centered-ai/introduce-ai-without-losing-employee-trust",
+          "present": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "kind": "hub",
+      "path": "/insights/",
+      "status": 200,
+      "noindex": true,
+      "actualStatus": 200,
+      "bodyBytes": 310088,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "robotsMeta": "noindex, nofollow",
+      "canonical": "https://christianfarioli.com/insights/",
+      "productionAnalyticsAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "admin-denial",
+      "path": "/insights/admin/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 0,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "admin-denial",
+      "path": "/admin/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 0,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "admin-denial",
+      "path": "/insights/ADMIN/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 0,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "admin-denial",
+      "path": "/insights/%61dmin/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 0,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "admin-denial",
+      "path": "/%69nsights/%61dmin/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 0,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "admin-denial",
+      "path": "/insights%2fadmin%2fpreview%2fai-marketing%2fai-marketing-stack-2025/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 0,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "admin-denial",
+      "path": "/insights%5cadmin%5cpreview%5cai-marketing%5cai-marketing-stack-2025/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 0,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "admin-denial",
+      "path": "/insights/ADMIN/preview/ai-marketing/ai-marketing-stack-2025/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 0,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "admin-denial",
+      "path": "/insights/admin/preview/ai-pulse/internal-editorial-preview/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 0,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "admin-denial",
+      "path": "/insights/admin./preview/ai-marketing/ai-marketing-stack-2025/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 5912,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "admin-denial",
+      "path": "/insights/admin%20/preview/ai-marketing/ai-marketing-stack-2025/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 5912,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "admin-denial",
+      "path": "/images/%2e%2e/insights/admin/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 0,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "unavailable-page",
+      "path": "/insights/ai-marketing/ai-marketing-stack-2025/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 5912,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "unavailable-page",
+      "path": "/insights/ai-pulse/internal-editorial-preview/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 5912,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "unavailable-page",
+      "path": "/insights/nonexistent-editorial-http-check/",
+      "status": 404,
+      "actualStatus": 404,
+      "bodyBytes": 5912,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "method-denial",
+      "path": "/insights/",
+      "method": "POST",
+      "status": 405,
+      "actualStatus": 405,
+      "bodyBytes": 0,
+      "robotsHeader": null,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "method-denial",
+      "path": "/insights/",
+      "method": "PUT",
+      "status": 405,
+      "actualStatus": 405,
+      "bodyBytes": 0,
+      "robotsHeader": null,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "method-denial",
+      "path": "/insights/",
+      "method": "PATCH",
+      "status": 405,
+      "actualStatus": 405,
+      "bodyBytes": 0,
+      "robotsHeader": null,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "method-denial",
+      "path": "/insights/",
+      "method": "DELETE",
+      "status": 405,
+      "actualStatus": 405,
+      "bodyBytes": 0,
+      "robotsHeader": null,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "method-denial",
+      "path": "/insights/",
+      "method": "OPTIONS",
+      "status": 405,
+      "actualStatus": 405,
+      "bodyBytes": 0,
+      "robotsHeader": null,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "host-denial",
+      "path": "/insights/",
+      "host": "example.test",
+      "status": 403,
+      "actualStatus": 403,
+      "bodyBytes": 0,
+      "robotsHeader": null,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "host-denial",
+      "path": "/insights/",
+      "host": "preview.example.test:8795",
+      "status": 403,
+      "actualStatus": 403,
+      "bodyBytes": 0,
+      "robotsHeader": null,
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "head",
+      "path": "/insights/",
+      "method": "HEAD",
+      "status": 200,
+      "actualStatus": 200,
+      "bodyBytes": 0,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "passed": true
+    },
+    {
+      "kind": "sitemap",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "actualStatus": 200,
+      "bodyBytes": 34321,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "draftUrlsAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "sitemap",
+      "path": "/insights/sitemap.xml",
+      "status": 200,
+      "actualStatus": 200,
+      "bodyBytes": 34321,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "draftUrlsAbsent": true,
+      "passed": true
+    },
+    {
+      "kind": "feed",
+      "path": "/insights/rss.xml",
+      "status": 200,
+      "actualStatus": 200,
+      "bodyBytes": 107719,
+      "robotsHeader": "noindex, nofollow",
+      "issues": [],
+      "draftUrlsAbsent": true,
+      "passed": true
+    }
+  ]
+}

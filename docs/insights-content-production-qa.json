@@ -1,0 +1,209 @@
+{
+  "mode": "production",
+  "checkedAt": "2026-10-07T15:59:57.932Z",
+  "articleCount": 12,
+  "summaries": [
+    {
+      "code": "A1",
+      "title": "AI Training for Marketing Teams in Dubai: What Should It Actually Cover?",
+      "id": "ai-marketing/ai-training-marketing-teams-dubai",
+      "words": 1436,
+      "readingTime": 7,
+      "tables": 1,
+      "externalLinks": [
+        "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+        "https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema"
+      ],
+      "internalLinks": [
+        "/insights/ai-leadership/the-ceo-guide-to-ai-governance/",
+        "/insights/ai-marketing/prepare-marketing-teams-for-ai/",
+        "/insights/executive-education/corporate-ai-training-cost-dubai/"
+      ],
+      "checks": "passed"
+    },
+    {
+      "code": "A2",
+      "title": "How to Build an AI Marketing Strategy Without Adding More Tools",
+      "id": "ai-marketing/ai-marketing-strategy-without-more-tools",
+      "words": 1405,
+      "readingTime": 7,
+      "tables": 1,
+      "externalLinks": [
+        "https://support.google.com/google-ads/answer/14102450?hl=en",
+        "https://support.google.com/google-ads/answer/12003020?hl=en"
+      ],
+      "internalLinks": [
+        "/insights/ai-strategy/why-ai-strategy-beats-ai-tools/",
+        "/insights/ai-marketing/ai-marketing-agency-vs-traditional-digital-agency/"
+      ],
+      "checks": "passed"
+    },
+    {
+      "code": "A3",
+      "title": "AI Marketing Agency vs Traditional Digital Agency: What Should Companies Look For?",
+      "id": "ai-marketing/ai-marketing-agency-vs-traditional-digital-agency",
+      "words": 1371,
+      "readingTime": 7,
+      "tables": 1,
+      "externalLinks": [
+        "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+        "https://support.google.com/google-ads/answer/7456532?hl=en"
+      ],
+      "internalLinks": [
+        "/insights/ai-marketing/ai-marketing-strategy-without-more-tools/"
+      ],
+      "checks": "passed"
+    },
+    {
+      "code": "A4",
+      "title": "How Should CMOs Prepare Their Marketing Teams for AI?",
+      "id": "ai-marketing/prepare-marketing-teams-for-ai",
+      "words": 1367,
+      "readingTime": 7,
+      "tables": 1,
+      "externalLinks": [
+        "https://www.oecd.org/en/publications/ai-and-skills_f843b352-en/full-report.html",
+        "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+      ],
+      "internalLinks": [
+        "/insights/ai-leadership/the-ceo-guide-to-ai-governance/",
+        "/insights/ai-marketing/ai-training-marketing-teams-dubai/"
+      ],
+      "checks": "passed"
+    },
+    {
+      "code": "B1",
+      "title": "Digital Employees vs Human Employees: What Should Companies Actually Automate?",
+      "id": "future-of-work/digital-employees-vs-human-employees",
+      "words": 1347,
+      "readingTime": 7,
+      "tables": 1,
+      "externalLinks": [
+        "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+        "https://airc.nist.gov/airmf-resources/airmf/appendices/app-c-ai-risk-management-and-human-ai-interaction/"
+      ],
+      "internalLinks": [
+        "/insights/human-centered-ai/human-control-ai-deployment/",
+        "/insights/future-of-work/which-jobs-will-ai-change-first/"
+      ],
+      "checks": "passed"
+    },
+    {
+      "code": "B2",
+      "title": "How Will AI Change Middle Management?",
+      "id": "future-of-work/ai-middle-management",
+      "words": 1542,
+      "readingTime": 8,
+      "tables": 0,
+      "externalLinks": [
+        "https://www.oecd.org/en/publications/algorithmic-management-in-the-workplace_287c13c4-en.html"
+      ],
+      "internalLinks": [
+        "/insights/human-centered-ai/ai-augment-people-not-reduce-headcount/",
+        "/insights/future-of-work/ai-leadership-offsite/"
+      ],
+      "checks": "passed"
+    },
+    {
+      "code": "B3",
+      "title": "AI Leadership Offsite: What Should Executives Discuss in 2027?",
+      "id": "future-of-work/ai-leadership-offsite",
+      "words": 1369,
+      "readingTime": 7,
+      "tables": 1,
+      "externalLinks": [
+        "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html#identifying-use-cases-for-ai"
+      ],
+      "internalLinks": [
+        "/insights/ai-strategy/how-to-choose-an-ai-keynote-speaker-in-dubai/",
+        "/insights/future-of-work/ai-middle-management/"
+      ],
+      "checks": "passed"
+    },
+    {
+      "code": "B4",
+      "title": "Which Jobs Will AI Change First - and What Should Companies Do About It?",
+      "id": "future-of-work/which-jobs-will-ai-change-first",
+      "words": 1290,
+      "readingTime": 6,
+      "tables": 1,
+      "externalLinks": [
+        "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+        "https://www.oecd.org/en/publications/2026/05/the-oecd-ai-exposure-measure_489cfd42.html",
+        "https://www.ilo.org/publications/workers%E2%80%99-exposure-ai-what-indicators-tell-us-%E2%80%93-and-what-they-don%E2%80%99t",
+        "https://www.oecd.org/en/publications/skills-in-the-ai-age_972bd15e-en/full-report/component-4.html"
+      ],
+      "internalLinks": [
+        "/insights/future-of-work/digital-employees-vs-human-employees/"
+      ],
+      "checks": "passed"
+    },
+    {
+      "code": "C1",
+      "title": "Human-in-the-Loop AI: What Does It Actually Mean for Business?",
+      "id": "human-centered-ai/human-in-the-loop-ai-business",
+      "words": 1419,
+      "readingTime": 7,
+      "tables": 0,
+      "externalLinks": [
+        "https://www.microsoft.com/en-us/research/wp-content/uploads/2019/01/Guidelines-for-Human-AI-Interaction-camera-ready.pdf",
+        "https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/"
+      ],
+      "internalLinks": [
+        "/insights/human-centered-ai/human-control-ai-deployment/"
+      ],
+      "checks": "passed"
+    },
+    {
+      "code": "C2",
+      "title": "AI Should Augment People, Not Just Reduce Headcount",
+      "id": "human-centered-ai/ai-augment-people-not-reduce-headcount",
+      "words": 1374,
+      "readingTime": 7,
+      "tables": 1,
+      "externalLinks": [
+        "https://pubsonline.informs.org/doi/10.1287/orsc.2025.20702",
+        "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/03/the-impact-of-ai-on-the-workplace-main-findings-from-the-oecd-ai-surveys-of-employers-and-workers_ad686e91/ea0a0fe1-en.pdf"
+      ],
+      "internalLinks": [
+        "/insights/future-of-work/ai-middle-management/",
+        "/insights/future-of-work/which-jobs-will-ai-change-first/"
+      ],
+      "checks": "passed"
+    },
+    {
+      "code": "C3",
+      "title": "Where Should Humans Stay in Control When Companies Deploy AI?",
+      "id": "human-centered-ai/human-control-ai-deployment",
+      "words": 1387,
+      "readingTime": 7,
+      "tables": 1,
+      "externalLinks": [
+        "https://www.nist.gov/itl/ai-risk-management-framework",
+        "https://airc.nist.gov/airmf-resources/playbook/govern/",
+        "https://airc.nist.gov/airmf-resources/playbook/manage/"
+      ],
+      "internalLinks": [
+        "/insights/human-centered-ai/human-in-the-loop-ai-business/",
+        "/insights/ai-leadership/the-ceo-guide-to-ai-governance/"
+      ],
+      "checks": "passed"
+    },
+    {
+      "code": "C4",
+      "title": "How to Introduce AI Without Losing Employee Trust",
+      "id": "human-centered-ai/introduce-ai-without-losing-employee-trust",
+      "words": 1451,
+      "readingTime": 7,
+      "tables": 0,
+      "externalLinks": [
+        "https://www.gov.uk/government/publications/a-human-centred-approach-to-scaling-and-de-risking-ai-tools/the-people-factor-a-human-centred-approach-to-scaling-ai-tools-html"
+      ],
+      "internalLinks": [
+        "/insights/human-centered-ai/ai-augment-people-not-reduce-headcount/",
+        "/insights/ai-marketing/prepare-marketing-teams-for-ai/"
+      ],
+      "checks": "passed"
+    }
+  ]
+}

@@ -1,0 +1,1276 @@
+{
+  "auditedAt": "2026-10-07T15:55:38.650Z",
+  "task": "Final read-only link and sampled source audit of 12 draft Insights articles",
+  "scope": "Source and repository route checks only; no build, deployment, publication, booking or message submission. HTTP requests use standard TLS validation. Draft routes are not expected live.",
+  "articles": [
+    {
+      "code": "A1",
+      "id": "ai-marketing/ai-training-marketing-teams-dubai",
+      "path": "src/content/insights/ai-marketing/ai-training-marketing-teams-dubai.mdx",
+      "sha256": "2a2d0c92a71873359b0c8f619a14e265a54e02bda147098410c629c116d4b54a",
+      "title": "AI Training for Marketing Teams in Dubai: What Should It Actually Cover?",
+      "canonical": "https://christianfarioli.com/insights/ai-marketing/ai-training-marketing-teams-dubai/",
+      "bodyLinks": [
+        {
+          "label": "Generative AI Profile",
+          "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+        },
+        {
+          "label": "Google Analytics documents active users and sessions as separate measures",
+          "url": "https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema"
+        },
+        {
+          "label": "The CEO's Guide to AI Governance",
+          "url": "/insights/ai-leadership/the-ceo-guide-to-ai-governance/"
+        },
+        {
+          "label": "30-day plan for preparing marketing teams for AI",
+          "url": "/insights/ai-marketing/prepare-marketing-teams-for-ai/"
+        },
+        {
+          "label": "corporate AI training cost guide",
+          "url": "/insights/executive-education/corporate-ai-training-cost-dubai/"
+        }
+      ],
+      "internalBodyChecks": [
+        {
+          "url": "/insights/ai-leadership/the-ceo-guide-to-ai-governance/",
+          "targetExists": true
+        },
+        {
+          "url": "/insights/ai-marketing/prepare-marketing-teams-for-ai/",
+          "targetExists": true
+        },
+        {
+          "url": "/insights/executive-education/corporate-ai-training-cost-dubai/",
+          "targetExists": true
+        }
+      ],
+      "relatedChecks": [
+        {
+          "id": "executive-education/corporate-ai-training-cost-dubai",
+          "targetExists": true
+        },
+        {
+          "id": "ai-leadership/the-ceo-guide-to-ai-governance",
+          "targetExists": true
+        },
+        {
+          "id": "ai-marketing/prepare-marketing-teams-for-ai",
+          "targetExists": true
+        }
+      ],
+      "cta": {
+        "bookingUrl": "https://calendly.com/chrisfarioli/30min",
+        "bookingLabel": "Book a Call with Christian",
+        "whatsappBase": "https://wa.me/971509596182",
+        "prompt": "Prefer to send a message?",
+        "decodedMessage": "Hi Christian, I’ve just read “AI Training for Marketing Teams in Dubai: What Should It Actually Cover?”. I’d like to discuss AI training for marketing teams for our organisation.\n\nhttps://christianfarioli.com/insights/ai-marketing/ai-training-marketing-teams-dubai/",
+        "exactExpectedMessage": true,
+        "productionCanonicalOnly": true,
+        "exactBookingLabel": true,
+        "exactPrompt": true
+      },
+      "research": {
+        "path": "docs/research-a1.md",
+        "present": true,
+        "sha256": "bbe78c4e4a7a40516ae752f989e5d59c11c3bd7a8244fc2982064a9ccd8a66dd",
+        "links": [
+          "https://christianfarioli.com/insights/ai-marketing/ai-training-marketing-teams-dubai/",
+          "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+          "https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema",
+          "https://www.nist.gov/itl/ai-risk-management-framework"
+        ],
+        "everyBodySourceDocumented": true
+      },
+      "unchangedSinceLinkInventory": true
+    },
+    {
+      "code": "A2",
+      "id": "ai-marketing/ai-marketing-strategy-without-more-tools",
+      "path": "src/content/insights/ai-marketing/ai-marketing-strategy-without-more-tools.mdx",
+      "sha256": "059a1d67fd130380615a9dc4d1c64171415b69119e9357674b9d9b784321b73b",
+      "title": "How to Build an AI Marketing Strategy Without Adding More Tools",
+      "canonical": "https://christianfarioli.com/insights/ai-marketing/ai-marketing-strategy-without-more-tools/",
+      "bodyLinks": [
+        {
+          "label": "Why AI Strategy Beats AI Tools",
+          "url": "/insights/ai-strategy/why-ai-strategy-beats-ai-tools/"
+        },
+        {
+          "label": "Google Ads' explanation of attributed and incremental conversions",
+          "url": "https://support.google.com/google-ads/answer/14102450?hl=en"
+        },
+        {
+          "label": "Conversion Lift is not available to all accounts",
+          "url": "https://support.google.com/google-ads/answer/12003020?hl=en"
+        },
+        {
+          "label": "AI Marketing Agency vs Traditional Digital Agency",
+          "url": "/insights/ai-marketing/ai-marketing-agency-vs-traditional-digital-agency/"
+        }
+      ],
+      "internalBodyChecks": [
+        {
+          "url": "/insights/ai-strategy/why-ai-strategy-beats-ai-tools/",
+          "targetExists": true
+        },
+        {
+          "url": "/insights/ai-marketing/ai-marketing-agency-vs-traditional-digital-agency/",
+          "targetExists": true
+        }
+      ],
+      "relatedChecks": [
+        {
+          "id": "ai-strategy/why-ai-strategy-beats-ai-tools",
+          "targetExists": true
+        },
+        {
+          "id": "ai-marketing/ai-marketing-agency-vs-traditional-digital-agency",
+          "targetExists": true
+        }
+      ],
+      "cta": {
+        "bookingUrl": "https://calendly.com/chrisfarioli/30min",
+        "bookingLabel": "Book a Call with Christian",
+        "whatsappBase": "https://wa.me/971509596182",
+        "prompt": "Prefer to send a message?",
+        "decodedMessage": "Hi Christian, I’ve just read “How to Build an AI Marketing Strategy Without Adding More Tools”. I’d like to discuss AI marketing strategy for our organisation.\n\nhttps://christianfarioli.com/insights/ai-marketing/ai-marketing-strategy-without-more-tools/",
+        "exactExpectedMessage": true,
+        "productionCanonicalOnly": true,
+        "exactBookingLabel": true,
+        "exactPrompt": true
+      },
+      "research": {
+        "path": "docs/research-a2.md",
+        "present": true,
+        "sha256": "30f6c59c5910a20f697a29185598670dbc90048fba789b76e1193a9988a00f69",
+        "links": [
+          "https://christianfarioli.com/insights/ai-marketing/ai-marketing-strategy-without-more-tools/",
+          "https://support.google.com/google-ads/answer/14102450?hl=en",
+          "https://support.google.com/google-ads/answer/12003020?hl=en"
+        ],
+        "everyBodySourceDocumented": true
+      },
+      "unchangedSinceLinkInventory": true
+    },
+    {
+      "code": "A3",
+      "id": "ai-marketing/ai-marketing-agency-vs-traditional-digital-agency",
+      "path": "src/content/insights/ai-marketing/ai-marketing-agency-vs-traditional-digital-agency.mdx",
+      "sha256": "a7c7f35bcbfff75a29a8c8a12a3ad968074c0a098c364c00a8e628d186e4d84c",
+      "title": "AI Marketing Agency vs Traditional Digital Agency: What Should Companies Look For?",
+      "canonical": "https://christianfarioli.com/insights/ai-marketing/ai-marketing-agency-vs-traditional-digital-agency/",
+      "bodyLinks": [
+        {
+          "label": "how to build an AI marketing strategy without adding more tools",
+          "url": "/insights/ai-marketing/ai-marketing-strategy-without-more-tools/"
+        },
+        {
+          "label": "Google's guidance on generative AI content",
+          "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content"
+        },
+        {
+          "label": "manager-account ownership provides administrative privileges but does not take the client account's data ownership away",
+          "url": "https://support.google.com/google-ads/answer/7456532?hl=en"
+        }
+      ],
+      "internalBodyChecks": [
+        {
+          "url": "/insights/ai-marketing/ai-marketing-strategy-without-more-tools/",
+          "targetExists": true
+        }
+      ],
+      "relatedChecks": [
+        {
+          "id": "ai-marketing/ai-marketing-strategy-without-more-tools",
+          "targetExists": true
+        }
+      ],
+      "cta": {
+        "bookingUrl": "https://calendly.com/chrisfarioli/30min",
+        "bookingLabel": "Book a Call with Christian",
+        "whatsappBase": "https://wa.me/971509596182",
+        "prompt": "Prefer to send a message?",
+        "decodedMessage": "Hi Christian, I’ve just read “AI Marketing Agency vs Traditional Digital Agency: What Should Companies Look For?”. I’d like to discuss marketing agency selection for our organisation.\n\nhttps://christianfarioli.com/insights/ai-marketing/ai-marketing-agency-vs-traditional-digital-agency/",
+        "exactExpectedMessage": true,
+        "productionCanonicalOnly": true,
+        "exactBookingLabel": true,
+        "exactPrompt": true
+      },
+      "research": {
+        "path": "docs/research-a3.md",
+        "present": true,
+        "sha256": "60bc7b3d081f7820c2b3eb7a54a3eb27b433000e6896b4f0e7c95a320f5cab86",
+        "links": [
+          "https://christianfarioli.com/insights/ai-marketing/ai-marketing-agency-vs-traditional-digital-agency/",
+          "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+          "https://support.google.com/google-ads/answer/7456532?hl=en",
+          "https://support.google.com/google-ads/answer/7456531?hl=en"
+        ],
+        "everyBodySourceDocumented": true
+      },
+      "unchangedSinceLinkInventory": true
+    },
+    {
+      "code": "A4",
+      "id": "ai-marketing/prepare-marketing-teams-for-ai",
+      "path": "src/content/insights/ai-marketing/prepare-marketing-teams-for-ai.mdx",
+      "sha256": "c3c45f0df0a520a718ea8695e3e517aa73cfbbc7fdd6427d5f375161c65fd119",
+      "title": "How Should CMOs Prepare Their Marketing Teams for AI?",
+      "canonical": "https://christianfarioli.com/insights/ai-marketing/prepare-marketing-teams-for-ai/",
+      "bodyLinks": [
+        {
+          "label": "The CEO's Guide to AI Governance",
+          "url": "/insights/ai-leadership/the-ceo-guide-to-ai-governance/"
+        },
+        {
+          "label": "AI and skills brief",
+          "url": "https://www.oecd.org/en/publications/ai-and-skills_f843b352-en/full-report.html"
+        },
+        {
+          "label": "AI training for marketing teams in Dubai",
+          "url": "/insights/ai-marketing/ai-training-marketing-teams-dubai/"
+        },
+        {
+          "label": "Generative AI Profile",
+          "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+        }
+      ],
+      "internalBodyChecks": [
+        {
+          "url": "/insights/ai-leadership/the-ceo-guide-to-ai-governance/",
+          "targetExists": true
+        },
+        {
+          "url": "/insights/ai-marketing/ai-training-marketing-teams-dubai/",
+          "targetExists": true
+        }
+      ],
+      "relatedChecks": [
+        {
+          "id": "ai-marketing/ai-training-marketing-teams-dubai",
+          "targetExists": true
+        },
+        {
+          "id": "ai-leadership/the-ceo-guide-to-ai-governance",
+          "targetExists": true
+        }
+      ],
+      "cta": {
+        "bookingUrl": "https://calendly.com/chrisfarioli/30min",
+        "bookingLabel": "Book a Call with Christian",
+        "whatsappBase": "https://wa.me/971509596182",
+        "prompt": "Prefer to send a message?",
+        "decodedMessage": "Hi Christian, I’ve just read “How Should CMOs Prepare Their Marketing Teams for AI?”. I’d like to discuss preparing marketing teams for AI for our organisation.\n\nhttps://christianfarioli.com/insights/ai-marketing/prepare-marketing-teams-for-ai/",
+        "exactExpectedMessage": true,
+        "productionCanonicalOnly": true,
+        "exactBookingLabel": true,
+        "exactPrompt": true
+      },
+      "research": {
+        "path": "docs/research-a4.md",
+        "present": true,
+        "sha256": "a059884c09bcd6de4b1ba13553c4737dda7e2fc2f9c62a6dd91ac3d220d1b96e",
+        "links": [
+          "https://www.oecd.org/en/publications/ai-and-skills_f843b352-en/full-report.html",
+          "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+        ],
+        "everyBodySourceDocumented": true
+      },
+      "unchangedSinceLinkInventory": true
+    },
+    {
+      "code": "B1",
+      "id": "future-of-work/digital-employees-vs-human-employees",
+      "path": "src/content/insights/future-of-work/digital-employees-vs-human-employees.mdx",
+      "sha256": "cab58de4823814705800b6cda793ae3951e55a9cdd4b15220a5bc636dee27bd0",
+      "title": "Digital Employees vs Human Employees: What Should Companies Actually Automate?",
+      "canonical": "https://christianfarioli.com/insights/future-of-work/digital-employees-vs-human-employees/",
+      "bodyLinks": [
+        {
+          "label": "ILO’s 2025 occupational exposure research",
+          "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
+        },
+        {
+          "label": "where humans should stay in control when companies deploy AI",
+          "url": "/insights/human-centered-ai/human-control-ai-deployment/"
+        },
+        {
+          "label": "NIST’s discussion of human-AI interaction",
+          "url": "https://airc.nist.gov/airmf-resources/airmf/appendices/app-c-ai-risk-management-and-human-ai-interaction/"
+        },
+        {
+          "label": "Which jobs AI will change first",
+          "url": "/insights/future-of-work/which-jobs-will-ai-change-first/"
+        }
+      ],
+      "internalBodyChecks": [
+        {
+          "url": "/insights/human-centered-ai/human-control-ai-deployment/",
+          "targetExists": true
+        },
+        {
+          "url": "/insights/future-of-work/which-jobs-will-ai-change-first/",
+          "targetExists": true
+        }
+      ],
+      "relatedChecks": [
+        {
+          "id": "future-of-work/which-jobs-will-ai-change-first",
+          "targetExists": true
+        },
+        {
+          "id": "human-centered-ai/human-control-ai-deployment",
+          "targetExists": true
+        }
+      ],
+      "cta": {
+        "bookingUrl": "https://calendly.com/chrisfarioli/30min",
+        "bookingLabel": "Book a Call with Christian",
+        "whatsappBase": "https://wa.me/971509596182",
+        "prompt": "Prefer to send a message?",
+        "decodedMessage": "Hi Christian, I’ve just read “Digital Employees vs Human Employees: What Should Companies Actually Automate?”. I’d like to discuss Digital Employees and bounded automation for our organisation.\n\nhttps://christianfarioli.com/insights/future-of-work/digital-employees-vs-human-employees/",
+        "exactExpectedMessage": true,
+        "productionCanonicalOnly": true,
+        "exactBookingLabel": true,
+        "exactPrompt": true
+      },
+      "research": {
+        "path": "docs/research-b1.md",
+        "present": true,
+        "sha256": "49898e563e796ea5328cc4430da602b8c18c0c1e3459273bf2b5b3c1d7447f02",
+        "links": [
+          "https://christianfarioli.com/insights/future-of-work/digital-employees-vs-human-employees/",
+          "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+          "https://airc.nist.gov/airmf-resources/airmf/appendices/app-c-ai-risk-management-and-human-ai-interaction/",
+          "https://www.nist.gov/itl/ai-risk-management-framework"
+        ],
+        "everyBodySourceDocumented": true
+      },
+      "unchangedSinceLinkInventory": true
+    },
+    {
+      "code": "B2",
+      "id": "future-of-work/ai-middle-management",
+      "path": "src/content/insights/future-of-work/ai-middle-management.mdx",
+      "sha256": "18b4ecfec0f68cfdfc301f9c8f6d0087c429703736fe4a6eb65c55b300332333",
+      "title": "How Will AI Change Middle Management?",
+      "canonical": "https://christianfarioli.com/insights/future-of-work/ai-middle-management/",
+      "bodyLinks": [
+        {
+          "label": "2025 OECD employer survey on algorithmic management",
+          "url": "https://www.oecd.org/en/publications/algorithmic-management-in-the-workplace_287c13c4-en.html"
+        },
+        {
+          "label": "AI Should Augment People, Not Just Reduce Headcount",
+          "url": "/insights/human-centered-ai/ai-augment-people-not-reduce-headcount/"
+        },
+        {
+          "label": "AI leadership offsite",
+          "url": "/insights/future-of-work/ai-leadership-offsite/"
+        }
+      ],
+      "internalBodyChecks": [
+        {
+          "url": "/insights/human-centered-ai/ai-augment-people-not-reduce-headcount/",
+          "targetExists": true
+        },
+        {
+          "url": "/insights/future-of-work/ai-leadership-offsite/",
+          "targetExists": true
+        }
+      ],
+      "relatedChecks": [
+        {
+          "id": "future-of-work/ai-leadership-offsite",
+          "targetExists": true
+        },
+        {
+          "id": "human-centered-ai/ai-augment-people-not-reduce-headcount",
+          "targetExists": true
+        }
+      ],
+      "cta": {
+        "bookingUrl": "https://calendly.com/chrisfarioli/30min",
+        "bookingLabel": "Book a Call with Christian",
+        "whatsappBase": "https://wa.me/971509596182",
+        "prompt": "Prefer to send a message?",
+        "decodedMessage": "Hi Christian, I’ve just read “How Will AI Change Middle Management?”. I’d like to discuss AI and the responsibilities of middle managers for our organisation.\n\nhttps://christianfarioli.com/insights/future-of-work/ai-middle-management/",
+        "exactExpectedMessage": true,
+        "productionCanonicalOnly": true,
+        "exactBookingLabel": true,
+        "exactPrompt": true
+      },
+      "research": {
+        "path": "docs/research-b2.md",
+        "present": true,
+        "sha256": "d2db38e7d4879f746df7911d80ef34fdfa6145570a7d87e529593ee1e4048ec5",
+        "links": [
+          "https://christianfarioli.com/insights/future-of-work/ai-middle-management/",
+          "https://www.oecd.org/en/publications/algorithmic-management-in-the-workplace_287c13c4-en.html",
+          "https://www.oecd.org/en/publications/how-widespread-is-algorithmic-management-in-workplaces_cda7a114-en/full-report.html"
+        ],
+        "everyBodySourceDocumented": true
+      },
+      "unchangedSinceLinkInventory": true
+    },
+    {
+      "code": "B3",
+      "id": "future-of-work/ai-leadership-offsite",
+      "path": "src/content/insights/future-of-work/ai-leadership-offsite.mdx",
+      "sha256": "e598fc807d4ffb68d25b42cffee52e3d37d4efff5d6a2b42d6ba46f81c98359b",
+      "title": "AI Leadership Offsite: What Should Executives Discuss in 2027?",
+      "canonical": "https://christianfarioli.com/insights/future-of-work/ai-leadership-offsite/",
+      "bodyLinks": [
+        {
+          "label": "UK Government's AI Playbook",
+          "url": "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html#identifying-use-cases-for-ai"
+        },
+        {
+          "label": "guide to choosing an AI keynote speaker in Dubai",
+          "url": "/insights/ai-strategy/how-to-choose-an-ai-keynote-speaker-in-dubai/"
+        },
+        {
+          "label": "AI and middle management",
+          "url": "/insights/future-of-work/ai-middle-management/"
+        }
+      ],
+      "internalBodyChecks": [
+        {
+          "url": "/insights/ai-strategy/how-to-choose-an-ai-keynote-speaker-in-dubai/",
+          "targetExists": true
+        },
+        {
+          "url": "/insights/future-of-work/ai-middle-management/",
+          "targetExists": true
+        }
+      ],
+      "relatedChecks": [
+        {
+          "id": "ai-strategy/how-to-choose-an-ai-keynote-speaker-in-dubai",
+          "targetExists": true
+        },
+        {
+          "id": "future-of-work/ai-middle-management",
+          "targetExists": true
+        }
+      ],
+      "cta": {
+        "bookingUrl": "https://calendly.com/chrisfarioli/30min",
+        "bookingLabel": "Book a Call with Christian",
+        "whatsappBase": "https://wa.me/971509596182",
+        "prompt": "Prefer to send a message?",
+        "decodedMessage": "Hi Christian, I’ve just read “AI Leadership Offsite: What Should Executives Discuss in 2027?”. I’d like to discuss an AI leadership offsite for our organisation.\n\nhttps://christianfarioli.com/insights/future-of-work/ai-leadership-offsite/",
+        "exactExpectedMessage": true,
+        "productionCanonicalOnly": true,
+        "exactBookingLabel": true,
+        "exactPrompt": true
+      },
+      "research": {
+        "path": "docs/research-b3.md",
+        "present": true,
+        "sha256": "9d45b44af17fe53ae22a354fa46644ad751c7ef3a8c3bab1ac3b49014e2c351d",
+        "links": [
+          "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html"
+        ],
+        "everyBodySourceDocumented": true
+      },
+      "unchangedSinceLinkInventory": true
+    },
+    {
+      "code": "B4",
+      "id": "future-of-work/which-jobs-will-ai-change-first",
+      "path": "src/content/insights/future-of-work/which-jobs-will-ai-change-first.mdx",
+      "sha256": "b68faf649ab229b429acdfa307b1d66052d1f702b22bcafba7bfaf6826927c35",
+      "title": "Which Jobs Will AI Change First - and What Should Companies Do About It?",
+      "canonical": "https://christianfarioli.com/insights/future-of-work/which-jobs-will-ai-change-first/",
+      "bodyLinks": [
+        {
+          "label": "ILO's 2025 global index of generative AI exposure",
+          "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure"
+        },
+        {
+          "label": "OECD's May 2026 exposure measure",
+          "url": "https://www.oecd.org/en/publications/2026/05/the-oecd-ai-exposure-measure_489cfd42.html"
+        },
+        {
+          "label": "ILO's April 2026 review of exposure indicators",
+          "url": "https://www.ilo.org/publications/workers%E2%80%99-exposure-ai-what-indicators-tell-us-%E2%80%93-and-what-they-don%E2%80%99t"
+        },
+        {
+          "label": "Digital Employees versus human employees",
+          "url": "/insights/future-of-work/digital-employees-vs-human-employees/"
+        },
+        {
+          "label": "Skills in the AI age",
+          "url": "https://www.oecd.org/en/publications/skills-in-the-ai-age_972bd15e-en/full-report/component-4.html"
+        }
+      ],
+      "internalBodyChecks": [
+        {
+          "url": "/insights/future-of-work/digital-employees-vs-human-employees/",
+          "targetExists": true
+        }
+      ],
+      "relatedChecks": [
+        {
+          "id": "future-of-work/digital-employees-vs-human-employees",
+          "targetExists": true
+        }
+      ],
+      "cta": {
+        "bookingUrl": "https://calendly.com/chrisfarioli/30min",
+        "bookingLabel": "Book a Call with Christian",
+        "whatsappBase": "https://wa.me/971509596182",
+        "prompt": "Prefer to send a message?",
+        "decodedMessage": "Hi Christian, I’ve just read “Which Jobs Will AI Change First - and What Should Companies Do About It?”. I’d like to discuss workforce planning and AI skills for our organisation.\n\nhttps://christianfarioli.com/insights/future-of-work/which-jobs-will-ai-change-first/",
+        "exactExpectedMessage": true,
+        "productionCanonicalOnly": true,
+        "exactBookingLabel": true,
+        "exactPrompt": true
+      },
+      "research": {
+        "path": "docs/research-b4.md",
+        "present": true,
+        "sha256": "bbc827e4dd0b3d2dad49f9ec5256ce9575e8d9b5135e909e83be3f4bd065766e",
+        "links": [
+          "https://christianfarioli.com/insights/future-of-work/which-jobs-will-ai-change-first/",
+          "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+          "https://www.oecd.org/en/publications/2026/05/the-oecd-ai-exposure-measure_489cfd42.html",
+          "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/05/the-oecd-ai-exposure-measure_489cfd42/f3da0f0a-en.pdf",
+          "https://www.ilo.org/publications/workers%E2%80%99-exposure-ai-what-indicators-tell-us-%E2%80%93-and-what-they-don%E2%80%99t",
+          "https://www.oecd.org/en/publications/skills-in-the-ai-age_972bd15e-en/full-report/component-4.html"
+        ],
+        "everyBodySourceDocumented": true
+      },
+      "unchangedSinceLinkInventory": true
+    },
+    {
+      "code": "C1",
+      "id": "human-centered-ai/human-in-the-loop-ai-business",
+      "path": "src/content/insights/human-centered-ai/human-in-the-loop-ai-business.mdx",
+      "sha256": "d84d1198f3f0cb4f910d4c2669c1626cdc763b4913472974e4ba6b785007c806",
+      "title": "Human-in-the-Loop AI: What Does It Actually Mean for Business?",
+      "canonical": "https://christianfarioli.com/insights/human-centered-ai/human-in-the-loop-ai-business/",
+      "bodyLinks": [
+        {
+          "label": "Guidelines for Human-AI Interaction",
+          "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2019/01/Guidelines-for-Human-AI-Interaction-camera-ready.pdf"
+        },
+        {
+          "label": "People + AI Guidebook",
+          "url": "https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/"
+        },
+        {
+          "label": "Where Should Humans Stay in Control When Companies Deploy AI?",
+          "url": "/insights/human-centered-ai/human-control-ai-deployment/"
+        }
+      ],
+      "internalBodyChecks": [
+        {
+          "url": "/insights/human-centered-ai/human-control-ai-deployment/",
+          "targetExists": true
+        }
+      ],
+      "relatedChecks": [
+        {
+          "id": "human-centered-ai/human-control-ai-deployment",
+          "targetExists": true
+        }
+      ],
+      "cta": {
+        "bookingUrl": "https://calendly.com/chrisfarioli/30min",
+        "bookingLabel": "Book a Call with Christian",
+        "whatsappBase": "https://wa.me/971509596182",
+        "prompt": "Prefer to send a message?",
+        "decodedMessage": "Hi Christian, I’ve just read “Human-in-the-Loop AI: What Does It Actually Mean for Business?”. I’d like to discuss meaningful human oversight of AI for our organisation.\n\nhttps://christianfarioli.com/insights/human-centered-ai/human-in-the-loop-ai-business/",
+        "exactExpectedMessage": true,
+        "productionCanonicalOnly": true,
+        "exactBookingLabel": true,
+        "exactPrompt": true
+      },
+      "research": {
+        "path": "docs/research-c1.md",
+        "present": true,
+        "sha256": "e84483a43d1ef1efb58ee871199d8c92cf51ebbc641e13140a77bf006cd9eeb3",
+        "links": [
+          "https://christianfarioli.com/insights/human-centered-ai/human-in-the-loop-ai-business/",
+          "https://www.microsoft.com/en-us/research/wp-content/uploads/2019/01/Guidelines-for-Human-AI-Interaction-camera-ready.pdf",
+          "https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/"
+        ],
+        "everyBodySourceDocumented": true
+      },
+      "unchangedSinceLinkInventory": true
+    },
+    {
+      "code": "C2",
+      "id": "human-centered-ai/ai-augment-people-not-reduce-headcount",
+      "path": "src/content/insights/human-centered-ai/ai-augment-people-not-reduce-headcount.mdx",
+      "sha256": "94261ebd4644942aca181eca45bab8177e181ab15ceeed83daaaac796279fec8",
+      "title": "AI Should Augment People, Not Just Reduce Headcount",
+      "canonical": "https://christianfarioli.com/insights/human-centered-ai/ai-augment-people-not-reduce-headcount/",
+      "bodyLinks": [
+        {
+          "label": "The Cybernetic Teammate, published in June 2026",
+          "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2025.20702"
+        },
+        {
+          "label": "OECD's 2023 report on its employer and worker surveys",
+          "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/03/the-impact-of-ai-on-the-workplace-main-findings-from-the-oecd-ai-surveys-of-employers-and-workers_ad686e91/ea0a0fe1-en.pdf"
+        },
+        {
+          "label": "How AI could change middle management",
+          "url": "/insights/future-of-work/ai-middle-management/"
+        },
+        {
+          "label": "role-analysis guide to which jobs AI may change first",
+          "url": "/insights/future-of-work/which-jobs-will-ai-change-first/"
+        }
+      ],
+      "internalBodyChecks": [
+        {
+          "url": "/insights/future-of-work/ai-middle-management/",
+          "targetExists": true
+        },
+        {
+          "url": "/insights/future-of-work/which-jobs-will-ai-change-first/",
+          "targetExists": true
+        }
+      ],
+      "relatedChecks": [
+        {
+          "id": "future-of-work/ai-middle-management",
+          "targetExists": true
+        },
+        {
+          "id": "future-of-work/which-jobs-will-ai-change-first",
+          "targetExists": true
+        }
+      ],
+      "cta": {
+        "bookingUrl": "https://calendly.com/chrisfarioli/30min",
+        "bookingLabel": "Book a Call with Christian",
+        "whatsappBase": "https://wa.me/971509596182",
+        "prompt": "Prefer to send a message?",
+        "decodedMessage": "Hi Christian, I’ve just read “AI Should Augment People, Not Just Reduce Headcount”. I’d like to discuss AI augmentation and the future of work for our organisation.\n\nhttps://christianfarioli.com/insights/human-centered-ai/ai-augment-people-not-reduce-headcount/",
+        "exactExpectedMessage": true,
+        "productionCanonicalOnly": true,
+        "exactBookingLabel": true,
+        "exactPrompt": true
+      },
+      "research": {
+        "path": "docs/research-c2.md",
+        "present": true,
+        "sha256": "056f60e99b2022743d3fc1c14d05f1cb60cf8e27bcf4da20bb9ef37dcf42bcdb",
+        "links": [
+          "https://christianfarioli.com/insights/human-centered-ai/ai-augment-people-not-reduce-headcount/",
+          "https://pubsonline.informs.org/doi/10.1287/orsc.2025.20702",
+          "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/03/the-impact-of-ai-on-the-workplace-main-findings-from-the-oecd-ai-surveys-of-employers-and-workers_ad686e91/ea0a0fe1-en.pdf",
+          "https://www.oecd.org/en/about/projects/aisurveysofemployersandworkers.html"
+        ],
+        "everyBodySourceDocumented": true
+      },
+      "unchangedSinceLinkInventory": true
+    },
+    {
+      "code": "C3",
+      "id": "human-centered-ai/human-control-ai-deployment",
+      "path": "src/content/insights/human-centered-ai/human-control-ai-deployment.mdx",
+      "sha256": "304ec4bd99a1510f222c8c2cd1c6f47f96d691aeec8b56c25d41da4b8c907069",
+      "title": "Where Should Humans Stay in Control When Companies Deploy AI?",
+      "canonical": "https://christianfarioli.com/insights/human-centered-ai/human-control-ai-deployment/",
+      "bodyLinks": [
+        {
+          "label": "NIST AI Risk Management Framework",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        },
+        {
+          "label": "NIST's Playbook, GOVERN 3.2",
+          "url": "https://airc.nist.gov/airmf-resources/playbook/govern/"
+        },
+        {
+          "label": "Human-in-the-Loop AI: What Does It Actually Mean for Business?",
+          "url": "/insights/human-centered-ai/human-in-the-loop-ai-business/"
+        },
+        {
+          "label": "The CEO's Guide to AI Governance",
+          "url": "/insights/ai-leadership/the-ceo-guide-to-ai-governance/"
+        },
+        {
+          "label": "NIST's Playbook, MANAGE 2.4",
+          "url": "https://airc.nist.gov/airmf-resources/playbook/manage/"
+        }
+      ],
+      "internalBodyChecks": [
+        {
+          "url": "/insights/human-centered-ai/human-in-the-loop-ai-business/",
+          "targetExists": true
+        },
+        {
+          "url": "/insights/ai-leadership/the-ceo-guide-to-ai-governance/",
+          "targetExists": true
+        }
+      ],
+      "relatedChecks": [
+        {
+          "id": "human-centered-ai/human-in-the-loop-ai-business",
+          "targetExists": true
+        },
+        {
+          "id": "ai-leadership/the-ceo-guide-to-ai-governance",
+          "targetExists": true
+        }
+      ],
+      "cta": {
+        "bookingUrl": "https://calendly.com/chrisfarioli/30min",
+        "bookingLabel": "Book a Call with Christian",
+        "whatsappBase": "https://wa.me/971509596182",
+        "prompt": "Prefer to send a message?",
+        "decodedMessage": "Hi Christian, I’ve just read “Where Should Humans Stay in Control When Companies Deploy AI?”. I’d like to discuss human control when deploying AI for our organisation.\n\nhttps://christianfarioli.com/insights/human-centered-ai/human-control-ai-deployment/",
+        "exactExpectedMessage": true,
+        "productionCanonicalOnly": true,
+        "exactBookingLabel": true,
+        "exactPrompt": true
+      },
+      "research": {
+        "path": "docs/research-c3.md",
+        "present": true,
+        "sha256": "7c3c5785de95cf0db74195ffee46648a5bdec2eb0b30b054ea1dddca1881b22a",
+        "links": [
+          "https://www.nist.gov/itl/ai-risk-management-framework",
+          "https://airc.nist.gov/airmf-resources/playbook/govern/",
+          "https://airc.nist.gov/airmf-resources/playbook/manage/"
+        ],
+        "everyBodySourceDocumented": true
+      },
+      "unchangedSinceLinkInventory": true
+    },
+    {
+      "code": "C4",
+      "id": "human-centered-ai/introduce-ai-without-losing-employee-trust",
+      "path": "src/content/insights/human-centered-ai/introduce-ai-without-losing-employee-trust.mdx",
+      "sha256": "3a3d30c29a2b1406015576f7f2743585639fbec382d20e0d6e4573606b3d17ed",
+      "title": "How to Introduce AI Without Losing Employee Trust",
+      "canonical": "https://christianfarioli.com/insights/human-centered-ai/introduce-ai-without-losing-employee-trust/",
+      "bodyLinks": [
+        {
+          "label": "AI Should Augment People, Not Just Reduce Headcount",
+          "url": "/insights/human-centered-ai/ai-augment-people-not-reduce-headcount/"
+        },
+        {
+          "label": "The People Factor",
+          "url": "https://www.gov.uk/government/publications/a-human-centred-approach-to-scaling-and-de-risking-ai-tools/the-people-factor-a-human-centred-approach-to-scaling-ai-tools-html"
+        },
+        {
+          "label": "CMO's preparation plan",
+          "url": "/insights/ai-marketing/prepare-marketing-teams-for-ai/"
+        }
+      ],
+      "internalBodyChecks": [
+        {
+          "url": "/insights/human-centered-ai/ai-augment-people-not-reduce-headcount/",
+          "targetExists": true
+        },
+        {
+          "url": "/insights/ai-marketing/prepare-marketing-teams-for-ai/",
+          "targetExists": true
+        }
+      ],
+      "relatedChecks": [
+        {
+          "id": "human-centered-ai/ai-augment-people-not-reduce-headcount",
+          "targetExists": true
+        },
+        {
+          "id": "ai-marketing/prepare-marketing-teams-for-ai",
+          "targetExists": true
+        }
+      ],
+      "cta": {
+        "bookingUrl": "https://calendly.com/chrisfarioli/30min",
+        "bookingLabel": "Book a Call with Christian",
+        "whatsappBase": "https://wa.me/971509596182",
+        "prompt": "Prefer to send a message?",
+        "decodedMessage": "Hi Christian, I’ve just read “How to Introduce AI Without Losing Employee Trust”. I’d like to discuss AI adoption and employee trust for our organisation.\n\nhttps://christianfarioli.com/insights/human-centered-ai/introduce-ai-without-losing-employee-trust/",
+        "exactExpectedMessage": true,
+        "productionCanonicalOnly": true,
+        "exactBookingLabel": true,
+        "exactPrompt": true
+      },
+      "research": {
+        "path": "docs/research-c4.md",
+        "present": true,
+        "sha256": "700de339fd4bf81985f3a847a87562dc800ce2abb3b5658e4ad8ae7a9373120e",
+        "links": [
+          "https://www.gov.uk/government/publications/a-human-centred-approach-to-scaling-and-de-risking-ai-tools/the-people-factor-a-human-centred-approach-to-scaling-ai-tools-html"
+        ],
+        "everyBodySourceDocumented": true
+      },
+      "unchangedSinceLinkInventory": true
+    }
+  ],
+  "existingGuides": [
+    {
+      "id": "executive-education/corporate-ai-training-cost-dubai",
+      "targetExists": true,
+      "bodyReferencedBy": [
+        "A1"
+      ]
+    },
+    {
+      "id": "ai-strategy/why-ai-strategy-beats-ai-tools",
+      "targetExists": true,
+      "bodyReferencedBy": [
+        "A2"
+      ]
+    },
+    {
+      "id": "ai-leadership/the-ceo-guide-to-ai-governance",
+      "targetExists": true,
+      "bodyReferencedBy": [
+        "A1",
+        "A4",
+        "C3"
+      ]
+    },
+    {
+      "id": "ai-strategy/how-to-choose-an-ai-keynote-speaker-in-dubai",
+      "targetExists": true,
+      "bodyReferencedBy": [
+        "B3"
+      ]
+    }
+  ],
+  "ctaSharedChecks": {
+    "navUsesSharedBooking": true,
+    "mainSiteBookingMatches": true,
+    "linksRequireUserActivation": true,
+    "whatsappRequestsMade": false,
+    "layoutPassesProductionArticleUrl": true,
+    "trackingReview": "ArticleContactCTA creates native anchors and handles clicks only for dataLayer events. article-contact-tracking.mjs contains no navigation callback or contact submission. No WhatsApp URL was opened and no Calendly booking was made."
+  },
+  "httpChecks": [
+    {
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "contentType": "application/pdf",
+      "durationMs": 632,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 735,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 693,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/ai-and-skills_f843b352-en/full-report.html",
+      "status": 403,
+      "ok": false,
+      "finalUrl": "https://www.oecd.org/en/publications/ai-and-skills_f843b352-en/full-report.html",
+      "contentType": "text/html; charset=UTF-8",
+      "durationMs": 445,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://support.google.com/google-ads/answer/12003020?hl=en",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://support.google.com/google-ads/answer/12003020?hl=en",
+      "contentType": "text/html; charset=UTF-8",
+      "durationMs": 1813,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://support.google.com/google-ads/answer/14102450?hl=en",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://support.google.com/google-ads/answer/14102450?hl=en",
+      "contentType": "text/html; charset=UTF-8",
+      "durationMs": 1920,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://support.google.com/google-ads/answer/7456532?hl=en",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://support.google.com/google-ads/answer/7456532?hl=en",
+      "contentType": "text/html; charset=UTF-8",
+      "durationMs": 1399,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 549,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/algorithmic-management-in-the-workplace_287c13c4-en.html",
+      "status": 403,
+      "ok": false,
+      "finalUrl": "https://www.oecd.org/en/publications/algorithmic-management-in-the-workplace_287c13c4-en.html",
+      "contentType": "text/html; charset=UTF-8",
+      "durationMs": 497,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://www.ilo.org/publications/workers%E2%80%99-exposure-ai-what-indicators-tell-us-%E2%80%93-and-what-they-don%E2%80%99t",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.ilo.org/publications/workers%E2%80%99-exposure-ai-what-indicators-tell-us-%E2%80%93-and-what-they-don%E2%80%99t",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 175,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://airc.nist.gov/airmf-resources/airmf/appendices/app-c-ai-risk-management-and-human-ai-interaction/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://airc.nist.gov/airmf-resources/airmf/appendices/app-c-ai-risk-management-and-human-ai-interaction/",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 791,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/2026/05/the-oecd-ai-exposure-measure_489cfd42.html",
+      "status": 403,
+      "ok": false,
+      "finalUrl": "https://www.oecd.org/en/publications/2026/05/the-oecd-ai-exposure-measure_489cfd42.html",
+      "contentType": "text/html; charset=UTF-8",
+      "durationMs": 437,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html#identifying-use-cases-for-ai",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government/artificial-intelligence-playbook-for-the-uk-government-html",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 727,
+      "fragment": "identifying-use-cases-for-ai",
+      "fragmentFound": true
+    },
+    {
+      "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2025.20702",
+      "status": 403,
+      "ok": false,
+      "finalUrl": "https://pubsonline.informs.org/doi/10.1287/orsc.2025.20702",
+      "contentType": "text/html; charset=UTF-8",
+      "durationMs": 53,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2019/01/Guidelines-for-Human-AI-Interaction-camera-ready.pdf",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.microsoft.com/en-us/research/wp-content/uploads/2019/01/Guidelines-for-Human-AI-Interaction-camera-ready.pdf",
+      "contentType": "application/pdf",
+      "durationMs": 329,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/skills-in-the-ai-age_972bd15e-en/full-report/component-4.html",
+      "status": 403,
+      "ok": false,
+      "finalUrl": "https://www.oecd.org/en/publications/skills-in-the-ai-age_972bd15e-en/full-report/component-4.html",
+      "contentType": "text/html; charset=UTF-8",
+      "durationMs": 479,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 527,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://airc.nist.gov/airmf-resources/playbook/govern/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://airc.nist.gov/airmf-resources/playbook/govern/",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 310,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/03/the-impact-of-ai-on-the-workplace-main-findings-from-the-oecd-ai-surveys-of-employers-and-workers_ad686e91/ea0a0fe1-en.pdf",
+      "status": 403,
+      "ok": false,
+      "finalUrl": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/03/the-impact-of-ai-on-the-workplace-main-findings-from-the-oecd-ai-surveys-of-employers-and-workers_ad686e91/ea0a0fe1-en.pdf",
+      "contentType": "text/html; charset=UTF-8",
+      "durationMs": 480,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "contentType": "text/html; charset=UTF-8",
+      "durationMs": 834,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://airc.nist.gov/airmf-resources/playbook/manage/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://airc.nist.gov/airmf-resources/playbook/manage/",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 745,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://christianfarioli.com/insights/executive-education/corporate-ai-training-cost-dubai/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://christianfarioli.com/insights/executive-education/corporate-ai-training-cost-dubai/",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 652,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/a-human-centred-approach-to-scaling-and-de-risking-ai-tools/the-people-factor-a-human-centred-approach-to-scaling-ai-tools-html",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://www.gov.uk/government/publications/a-human-centred-approach-to-scaling-and-de-risking-ai-tools/the-people-factor-a-human-centred-approach-to-scaling-ai-tools-html",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 796,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://christianfarioli.com/insights/ai-strategy/how-to-choose-an-ai-keynote-speaker-in-dubai/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://christianfarioli.com/insights/ai-strategy/how-to-choose-an-ai-keynote-speaker-in-dubai/",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 248,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://christianfarioli.com/insights/ai-strategy/why-ai-strategy-beats-ai-tools/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://christianfarioli.com/insights/ai-strategy/why-ai-strategy-beats-ai-tools/",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 591,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://christianfarioli.com/insights/ai-leadership/the-ceo-guide-to-ai-governance/",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://christianfarioli.com/insights/ai-leadership/the-ceo-guide-to-ai-governance/",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 598,
+      "fragment": null,
+      "fragmentFound": null
+    },
+    {
+      "url": "https://calendly.com/chrisfarioli/30min",
+      "status": 200,
+      "ok": true,
+      "finalUrl": "https://calendly.com/chrisfarioli/30min",
+      "contentType": "text/html; charset=utf-8",
+      "durationMs": 879,
+      "fragment": null,
+      "fragmentFound": null
+    }
+  ],
+  "webFallbackChecks": [
+    {
+      "url": "https://www.oecd.org/en/publications/ai-and-skills_f843b352-en/full-report.html",
+      "directHttpStatus": 403,
+      "method": "web tool open, standard service connection; no TLS bypass",
+      "result": "Source content opened successfully",
+      "title": "Full Report: AI and skills | OECD",
+      "checkedDate": "2026-10-07"
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/algorithmic-management-in-the-workplace_287c13c4-en.html",
+      "directHttpStatus": 403,
+      "method": "web tool open, standard service connection; no TLS bypass",
+      "result": "Source content opened successfully",
+      "title": "Algorithmic management in the workplace | OECD",
+      "checkedDate": "2026-10-07"
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/2026/05/the-oecd-ai-exposure-measure_489cfd42.html",
+      "directHttpStatus": 403,
+      "method": "web tool open, standard service connection; no TLS bypass",
+      "result": "Source content opened successfully",
+      "title": "The OECD AI exposure measure | OECD",
+      "checkedDate": "2026-10-07"
+    },
+    {
+      "url": "https://www.oecd.org/en/publications/skills-in-the-ai-age_972bd15e-en/full-report/component-4.html",
+      "directHttpStatus": 403,
+      "method": "web tool open, standard service connection; no TLS bypass",
+      "result": "Source content opened successfully",
+      "title": "Executive summary: Skills in the AI age | OECD",
+      "checkedDate": "2026-10-07"
+    },
+    {
+      "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2025.20702",
+      "directHttpStatus": 403,
+      "method": "web tool open, standard service connection; no TLS bypass",
+      "result": "Source content opened successfully",
+      "title": "The Cybernetic Teammate: A Field Experiment on Generative AI and Teamwork | Organization Science",
+      "checkedDate": "2026-10-07"
+    },
+    {
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/03/the-impact-of-ai-on-the-workplace-main-findings-from-the-oecd-ai-surveys-of-employers-and-workers_ad686e91/ea0a0fe1-en.pdf",
+      "directHttpStatus": 403,
+      "method": "web tool open, standard service connection; no TLS bypass",
+      "result": "Source content opened successfully",
+      "title": "The impact of AI on the workplace: Main findings from the OECD AI surveys of employers and workers (157-page PDF)",
+      "checkedDate": "2026-10-07"
+    }
+  ],
+  "sampledClaimReview": [
+    {
+      "article": "A2",
+      "urls": [
+        "https://support.google.com/google-ads/answer/14102450?hl=en",
+        "https://support.google.com/google-ads/answer/12003020?hl=en"
+      ],
+      "location": "Incremental conversions / Understanding Incremental conversions and Attributed conversions; About Conversion Lift opening",
+      "result": "Supported",
+      "note": "The linked official pages support the narrow attribution-versus-treatment/control comparison and account availability caveat. The draft does not transfer advertising effects to its offline AI pilot."
+    },
+    {
+      "article": "A4",
+      "urls": [
+        "https://www.oecd.org/en/publications/ai-and-skills_f843b352-en/full-report.html"
+      ],
+      "location": "Key messages; Workers will increasingly need to be able to use, analyse and interpret data",
+      "result": "Supported",
+      "note": "The skill mix attribution is directly supported. The marketing role recommendations are explicitly the proposed managerial response, not a causal result from the brief."
+    },
+    {
+      "article": "B2",
+      "urls": [
+        "https://www.oecd.org/en/publications/algorithmic-management-in-the-workplace_287c13c4-en.html"
+      ],
+      "location": "Abstract, 6 February 2025",
+      "result": "Supported",
+      "note": "Country scope and reported managerial perceptions match the source. The draft retains the perceptions distinction and does not extrapolate the survey to Dubai."
+    },
+    {
+      "article": "B4",
+      "urls": [
+        "https://www.oecd.org/en/publications/2026/05/the-oecd-ai-exposure-measure_489cfd42.html"
+      ],
+      "location": "Abstract, 26 May 2026",
+      "result": "Supported",
+      "note": "The capability domains and comparison of routine information work with contextual judgement match the abstract. The draft preserves the boundary between potential exposure and realised adoption/employment effects."
+    },
+    {
+      "article": "C1",
+      "urls": [
+        "https://www.microsoft.com/en-us/research/wp-content/uploads/2019/01/Guidelines-for-Human-AI-Interaction-camera-ready.pdf",
+        "https://pair.withgoogle.com/guidebook-v2/chapter/errors-failing/"
+      ],
+      "location": "Microsoft Table 1 G8/G9, PDF page 3; Google Return control to the user",
+      "result": "Supported",
+      "note": "The narrow dismissal/correction and manual-handover context statements match the original sources. The surrounding approval workflow is a proposal, not a claim that oversight guarantees safety."
+    },
+    {
+      "article": "C2",
+      "urls": [
+        "https://pubsonline.informs.org/doi/10.1287/orsc.2025.20702",
+        "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/03/the-impact-of-ai-on-the-workplace-main-findings-from-the-oecd-ai-surveys-of-employers-and-workers_ad686e91/ea0a0fe1-en.pdf"
+      ],
+      "location": "INFORMS experimental setting and generalisability limitations; OECD report pages 58-60",
+      "result": "Supported",
+      "note": "The study limitation is retained and no staffing forecast is inferred. The OECD pace/intensity paragraph accurately states the survey did not probe excessive workload."
+    },
+    {
+      "article": "C4",
+      "urls": [
+        "https://www.gov.uk/government/publications/a-human-centred-approach-to-scaling-and-de-risking-ai-tools/the-people-factor-a-human-centred-approach-to-scaling-ai-tools-html"
+      ],
+      "location": "Leadership recommendation 9 and Scope and limits of this guide",
+      "result": "Supported",
+      "note": "The attributed feedback recommendation and public-sector context match the official guide. The draft does not reuse the guide's adoption statistics or claim guaranteed trust."
+    }
+  ],
+  "limitations": [
+    "HTTP availability is a point-in-time result, not a guarantee of future availability.",
+    "Article source-claim review is sampled; author research ledgers cover each draft.",
+    "No exhaustive legal review, live draft publication or automatic contact was performed."
+  ],
+  "sourceExtractionCheck": "All 24 external body URL occurrences use Markdown link syntax; a raw URL scan found no additional JSX hrefs or uncollected bare external URLs.",
+  "ledgerReview": "All 12 per-article research records inspected. They distinguish source support from original proposed tools and hypothetical examples. Their per-agent pending integration sections describe historical handoffs, not final integrated test results.",
+  "nonBlockingNotes": [
+    {
+      "type": "Historical research handoff note",
+      "article": "A1",
+      "note": "research-a1.md records the earlier 1,391-word version and a pending A4 link. research-a4.md records the later A1 cross-link insertion and 1,416-word count. Current A1 body and related target both link A4 correctly; its seven-minute metadata remains valid."
+    }
+  ],
+  "materialDefects": [],
+  "summary": {
+    "articles": 12,
+    "researchRecords": 12,
+    "uniqueExternalBodyUrls": 22,
+    "externalBodyUrlOccurrences": 24,
+    "sourceHttp200": 16,
+    "sourceHttp403WithSuccessfulWebFallback": 6,
+    "unverifiedBodySourceUrls": 0,
+    "existingGuideHttp200": 4,
+    "calendlyHttp200": true,
+    "internalBodyLinks": 22,
+    "relatedReferences": 22,
+    "missingInternalOrRelatedTargets": 0,
+    "correctProductionWhatsAppMessages": 12,
+    "sampledArticles": 7,
+    "materialDefectsFound": 0
+  },
+  "completedAt": "2026-10-07T15:59:38.089Z"
+}

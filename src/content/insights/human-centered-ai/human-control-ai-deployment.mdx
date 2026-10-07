@@ -1,0 +1,158 @@
+---
+title: Where Should Humans Stay in Control When Companies Deploy AI?
+seoTitle: Human Oversight in AI Deployment | Decisions and Controls
+description: >-
+  Decide where AI may advise, act within limits or require approval, with a
+  practical human oversight matrix for marketing, procurement, finance and HR.
+excerpt: >-
+  A decision-level guide to human control in AI deployment: assess impact,
+  reversibility and authority, then assign approval rights, operational limits
+  and escalation routes your organisation can actually use.
+language: en-GB
+category: human-centered-ai
+tags:
+  - governance
+  - risk
+  - board
+author:
+  name: Prof. Christian Farioli
+  role: 'AI Keynote Speaker, Educator & Author'
+  avatar: /images/authors/christian-farioli.jpg
+  links:
+    website: 'https://christianfarioli.com/'
+featuredImage: /images/insights/covers/the-ceo-guide-to-ai-governance.jpg
+featuredImageAlt: >-
+  Editorial illustration of Prof. Christian Farioli beside a chessboard and
+  illuminated governance symbols
+status: draft
+draft: true
+readingTime: 7
+related:
+  - slug: human-centered-ai/human-in-the-loop-ai-business
+  - slug: ai-leadership/the-ceo-guide-to-ai-governance
+---
+
+import '../../../styles/insights-content-batch.css';
+
+Humans should retain control over the purpose of an AI deployment, the authority it receives and decisions whose consequences are difficult to reverse. That includes deciding when a system may make a suggestion, when it may change something and when it must stop for approval.
+
+The useful question is specific: should this system be allowed to take this action, using these records, for these people, under these conditions?
+
+An assistant that drafts a supplier comparison has different authority from one that signs an order. A marketing system that proposes copy is different from one that publishes it. Treating both as simply “using AI” hides the decision the leadership team needs to make.
+
+My recommendation is to approve **actions and limits**, not blanket autonomy for a department or product. The proposed matrix below gives executives a starting point for that conversation.
+
+## Judge the consequence before choosing the control
+
+Start with the person or business activity affected. Ask how serious an error could be, how quickly it would become visible and whether the organisation could meaningfully reverse it.
+
+Deleting an incorrect internal label may be straightforward. Retracting a public accusation does not erase its impact. Recovering an incorrect payment may depend on another party. A candidate who never receives an interview cannot inspect a decision they do not know occurred.
+
+Consider cumulative effects too. A small purchasing limit can become a large commitment if the same action repeats without an overall cap. An apparently minor recommendation may become influential when managers routinely accept it.
+
+The [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) provides voluntary guidance for managing AI risks. It is a useful reference for this assessment, rather than a certificate that a deployment is safe. Your decision still needs the context of the actual workflow.
+
+## Separate advice, internal changes and external action
+
+I would distinguish three levels of permission when reviewing a deployment proposal.
+
+**Advice only:** the system produces a draft, comparison or recommendation. A person decides whether to use it. This is a sensible starting point for unfamiliar tasks, although the reviewer still needs evidence to challenge a persuasive but incorrect answer.
+
+**Bounded internal action:** the system makes a defined change inside the organisation, such as assigning an incoming request to an approved queue. Permit this only where the change is observable, tested and recoverable. Internal does not automatically mean low impact: changing a payroll record or an employee rating deserves much closer scrutiny than adding a ticket label.
+
+**Action with external effects:** the system sends, publishes, purchases, pays or otherwise commits the organisation. Decide explicitly which actions require approval and which narrowly defined actions, if any, may proceed within agreed limits.
+
+A permission to draft must never silently become permission to send. A permission to prepare an order must never imply authority to select a new supplier or alter bank details.
+
+## A proposed human-control matrix
+
+Use this as a discussion tool, not a recognised standard or a universal approval policy. The named roles are examples: assign the actual people who hold authority in your organisation.
+
+<div className="insights-batch-table" role="region" aria-label="Proposed human controls for AI-supported business activities" tabIndex={0}>
+<table>
+  <caption>Proposed controls to adapt before authorising an AI workflow</caption>
+  <thead>
+    <tr>
+      <th scope="col">Activity</th>
+      <th scope="col">Possible AI role</th>
+      <th scope="col">Proposed human control</th>
+      <th scope="col">Accountable owner</th>
+      <th scope="col">Escalation trigger</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Marketing campaign release</th>
+      <td>Prepare copy and identify claims needing evidence.</td>
+      <td>Approve final claims, audience and release; separate drafting from publishing access.</td>
+      <td>Marketing lead with publishing authority.</td>
+      <td>Unverified claim, sensitive audience or material change after approval.</td>
+    </tr>
+    <tr>
+      <th scope="row">Procurement comparison and order</th>
+      <td>Compare quotes and prepare a proposed purchase.</td>
+      <td>Buyer checks comparability; authorised approver accepts supplier and commitment.</td>
+      <td>Procurement lead and existing budget approver.</td>
+      <td>New supplier, changed terms, missing specification or aggregate spend limit.</td>
+    </tr>
+    <tr>
+      <th scope="row">Finance invoice exception</th>
+      <td>Flag a mismatch and assemble supporting records.</td>
+      <td>Finance reviewer resolves the exception; payment remains in the established approval process.</td>
+      <td>Finance controller.</td>
+      <td>Changed bank details, suspected duplicate or conflicting evidence.</td>
+    </tr>
+    <tr>
+      <th scope="row">HR candidate assessment</th>
+      <td>Organise permitted, relevant application evidence for review.</td>
+      <td>Assessors check evidence against agreed criteria; no automatic rejection in this proposed design.</td>
+      <td>HR lead and accountable hiring manager.</td>
+      <td>Missing evidence, contested assessment or unexplained differences in treatment.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+These examples illustrate a distinction: AI may prepare useful work without receiving authority over the final consequence. Another activity may justify more automation, but it needs its own assessment.
+
+## Test the matrix against realistic exceptions
+
+Consider a hypothetical marketing team preparing a campaign. A manager approves a draft, then the system rewrites a performance claim while adapting it for another channel. Approval of the earlier text should not cover that new claim. The team needs a rule that material edits return to review, with the changed passage visible.
+
+In a procurement scenario, the cheapest quote omits installation. An accurate price extraction still produces an unreliable recommendation if the comparison ignores what each supplier includes. The buyer should inspect assumptions and exclusions before accepting the proposed order.
+
+For finance, imagine an invoice containing new payment instructions. The AI can highlight the difference, but an instruction inside that document should not be enough to update the supplier record. Keep verification separate from the material being checked and preserve the organisation's existing payment controls.
+
+For HR, suppose a summary leaves out relevant experience because an application uses an unfamiliar format. A reviewer should be able to inspect the original evidence, correct the summary and reconsider the assessment. A polished summary alone is an inadequate basis for the proposed hiring decision.
+
+## Name who may approve, intervene and restart
+
+“A human will review it” leaves important questions unanswered. Who has the relevant expertise? What exactly are they authorising? Can they refuse without being pressured to clear a queue? Who covers their absence?
+
+[NIST's Playbook, GOVERN 3.2](https://airc.nist.gov/airmf-resources/playbook/govern/), calls for differentiated responsibilities for people using, monitoring and overseeing AI. I would translate that into named decision rights for each workflow, including an escalation contact outside the immediate delivery team.
+
+The business owner approves the intended use and acceptable limits. The relevant functional approver decides on individual exceptions. The technical operator implements access restrictions and suspension. These may involve the same person in a small organisation, but the responsibilities still need to be explicit.
+
+For how to make an individual review meaningful, read [Human-in-the-Loop AI: What Does It Actually Mean for Business?](/insights/human-centered-ai/human-in-the-loop-ai-business/). The wider policy structure belongs in [The CEO's Guide to AI Governance](/insights/ai-leadership/the-ceo-guide-to-ai-governance/).
+
+## Make the boundary enforceable and inspectable
+
+Instructions alone are not enough for the permissions I would grant. Restrict the connected account to the records and actions the workflow actually needs. Where possible, separate preparation from approval and execution in the systems themselves.
+
+Set limits that reflect the exposure: transaction value, cumulative spending, recipients, allowed suppliers or the number of actions before a review. A model's own confidence statement should not substitute for those controls.
+
+Keep a proportionate record of the evidence used, proposed action, approval, action taken and any exception. Restrict access and retention rather than indiscriminately logging sensitive employee or customer material. The test is whether the owner can reconstruct a disputed decision without creating an unnecessary new data collection.
+
+## Know when automatic execution is inappropriate
+
+I would keep a workflow advisory where reviewers cannot verify its evidence, mistakes could cause serious harm before anyone can intervene, or no capable owner can handle exceptions. The same applies where the company cannot constrain permissions or provide a workable fallback. A successful demonstration does not resolve those gaps.
+
+Before authorising execution, rehearse a stop: who suspends further actions, what happens to queued work and how an alternative process takes over. Agree what evidence is required before restarting. [NIST's Playbook, MANAGE 2.4](https://airc.nist.gov/airmf-resources/playbook/manage/), specifically addresses assigned responsibility and mechanisms for overriding or deactivating systems whose outcomes depart from intended use.
+
+These are organisational recommendations. Applicable legal requirements need a separate assessment for the activity, sector and jurisdictions involved. A named approver, a log or this matrix cannot establish compliance with every relevant law.
+
+## Bring one decision to the leadership table
+
+Choose one proposed deployment and complete the matrix with its business owner and the people affected. Add the evidence a reviewer must see, the limit that stops execution and the person authorised to restart it.
+
+Then walk through a normal case and a difficult exception before expanding access. If the team cannot agree who owns the consequence, that is the decision to resolve first. An executive workshop or advisory discussion can help the group work through those boundaries; the useful outcome is a specific, testable operating decision.
