@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,existsSync} from 'node:fs';
+import {resolve,dirname,join} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import matter from 'gray-matter';
+import {assertAiPulse} from '../src/lib/ai-pulse.mjs';
+const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+const manifestFile=process.argv[2];
+assert.ok(manifestFile,'Pass the original canonical-pack-manifest.json for provenance checks');
+const manifest=JSON.parse(readFileSync(manifestFile,'utf8').replace(/^\uFEFF/,''));
+const groups=['early','middle','late'].flatMap(group=>JSON.parse(readFileSync(join(root,`docs/ai-pulse-research/group-${group}.json`),'utf8').replace(/^\uFEFF/,'')));
+const byDate=new Map(groups.map(record=>[record.editionDate,record]));
+assert.equal(groups.length,byDate.size,'Repeated edition mapping');
+assert.equal(groups.length,manifest.records.length,'Every source edition requires a resolved record or an explicit hold');
+const ids=new Set();
+const records=manifest.records.map(original=>{
+  const record=byDate.get(original.editionDate);
+  assert.ok(record,`Missing ${original.editionDate}`);
+  assert.equal(record.packSHA256.toLowerCase(),original.packSHA256.toLowerCase(),`Provenance mismatch ${record.editionDate}`);
+  assert.equal(record.packFileName ?? record.packfilename,original.packFileName);
+  if(record.status==='draft'){
+    assert.match(record.id,/^ai-pulse\/[a-z0-9-]+$/);
+    assert.ok(!ids.has(record.id),`Duplicate event URL: ${record.id}`);ids.add(record.id);
+    const file=join(root,'src/content/insights',record.id+'.md');
+    assert.ok(existsSync(file));
+    const {data,content}=matter(readFileSync(file,'utf8'));
+    assertAiPulse(data,content);
+    assert.equal(data.status,'draft');assert.ok(!data.internalTest && !data.publishedAt && !data.updatedAt && !data.reviewedAt,'Archive draft contains invented editorial approval or publication metadata');
+    assert.equal(data.title,record.title);
+    const words=content.trim().split(/\s+/).length;
+    assert.ok(words>=450 && words<=900,`${record.id}: ${words} words`);
+    assert.ok(!/[A-Za-z]\?[a-zA-Z]|\uFFFD/.test(content+' '+data.title+' '+data.description),`Possible broken punctuation: ${record.id}`);
+    record.wordCount=words;
+  } else assert.ok(['blocked','duplicate'].includes(record.status),`Unresolved ${record.editionDate}`);
+  return {...record,packFileName:original.packFileName,packfilename:undefined,canonicalSelectionReason:original.canonicalSelectionReason};
+}).sort((a,b)=>b.editionDate.localeCompare(a.editionDate));
+const index={createdAt:new Date().toISOString(),purpose:'Local editorial review; no publication dates or author approval implied',sourceFolder:'SM Chris DBOX',firstEdition:manifest.earliest,lastEdition:manifest.latest,missingEditions:manifest.missingDates,editionCount:records.length,draftCount:records.filter(r=>r.status==='draft').length,records};
+writeFileSync(join(root,'docs/ai-pulse-archive-index.json'),JSON.stringify(index,null,2)+'\n');
+console.log(JSON.stringify({editions:index.editionCount,drafts:index.draftCount,missing:index.missingEditions}));

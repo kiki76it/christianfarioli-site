@@ -17,6 +17,8 @@ dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+docs/*-runtime.json
+__pycache__/
 
 # os
 .DS_Store

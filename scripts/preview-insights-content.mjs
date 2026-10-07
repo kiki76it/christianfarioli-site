@@ -14,8 +14,15 @@ import {INSIGHTS_CONTENT_BATCH} from '../src/lib/insights-content-cta.mjs';
 const source=await realpath(resolve(dirname(fileURLToPath(import.meta.url)),'..'));
 const port=Number(process.env.INSIGHTS_REVIEW_PORT || 8795);
 assert.ok(Number.isInteger(port) && port>=1024 && port<=65535);
+const pulseIndexPath=join(source,'docs/ai-pulse-archive-index.json');
+const pulseIndex=await stat(pulseIndexPath).then(()=>readFile(pulseIndexPath,'utf8')).then(JSON.parse).catch(error=>{
+  if(error.code==='ENOENT')return {records:[]};
+  throw error;
+});
+const pulseRecords=pulseIndex.records.filter(record=>record.status==='draft' && record.id);
+assert.ok(pulseRecords.every(record=>/^ai-pulse\/[a-z0-9-]+$/.test(record.id) && /^\d{4}-\d{2}-\d{2}$/.test(record.editionDate)),'Invalid review allowlist');
 const review=await mkdtemp(join(tmpdir(),'insights-editorial-review-'));
-const marker={purpose:'Local editorial review only - never deploy',source,review,port,pid:process.pid,createdAt:new Date().toISOString(),ids:INSIGHTS_CONTENT_BATCH.map(a=>a.id)};
+const marker={purpose:'Local editorial review only - never deploy',source,review,port,pid:process.pid,createdAt:new Date().toISOString(),ids:[...INSIGHTS_CONTENT_BATCH.map(a=>a.id),...pulseRecords.map(a=>a.id)]};
 await writeFile(join(review,'.editorial-review-only.json'),JSON.stringify(marker,null,2));
 for(const dir of ['src','scripts']) await cp(join(source,dir),join(review,dir),{recursive:true});
 for(const file of ['astro.config.mjs','tsconfig.json','package.json','package-lock.json']) {
@@ -31,8 +38,18 @@ const patch=async(path,from,to)=>{
 };
 // Allow exactly this batch through archive/detail/related rendering in the
 // temporary copy. Draft flags, dates and source files remain untouched.
-await patch('src/lib/insights.ts','  const { status, scheduledFor, draft } = entry.data;',
-  `  if (${JSON.stringify(marker.ids)}.includes(entry.id)) return true;\n  const { status, scheduledFor, draft } = entry.data;`);
+await patch('src/lib/insights.ts','  if (draft || entry.data.internalTest || isRedirectedInsight(entry.id)) return false;',
+  `  if (entry.data.internalTest || isRedirectedInsight(entry.id)) return false;\n  if (${JSON.stringify(marker.ids)}.includes(entry.id)) return true;\n  if (draft) return false;`);
+// Review archive order follows pack editions, without inventing publication
+// timestamps in frontmatter, visible bylines, RSS or NewsArticle JSON-LD.
+if(pulseRecords.length) {
+  const dates=JSON.stringify(Object.fromEntries(pulseRecords.map(record=>[record.id,record.editionDate])));
+  await patch('src/lib/insights.ts','  return [...entries].sort((a, b) => {',
+    `  const reviewDates: Record<string, string> = ${dates};\n  return [...entries].sort((a, b) => {`);
+  for(const variable of ['a','b']) await patch('src/lib/insights.ts',
+    `const ${variable}Time = ${variable}.data.publishedAt?.getTime() ?? ${variable}.data.scheduledFor?.getTime() ?? 0;`,
+    `const ${variable}Time = reviewDates[${variable}.id] ? Date.parse(reviewDates[${variable}.id]) : (${variable}.data.publishedAt?.getTime() ?? ${variable}.data.scheduledFor?.getTime() ?? 0);`);
+}
 await patch('src/pages/insights/[...slug].astro','<ArticleLayout entry={entry} allEntries={all}>','<ArticleLayout entry={entry} allEntries={all} preview={true}>');
 await patch('src/layouts/BaseLayout.astro','(noindex || maxImagePreview)','(true)');
 await patch('src/layouts/BaseLayout.astro',"...(noindex ? ['noindex', 'nofollow'] : [])","...(['noindex', 'nofollow'])");
@@ -50,8 +67,9 @@ for(const block of [
 }
 await writeFile(baseLayout,layout);
 // Keep draft URLs out of discovery files even in the review copy.
-await patch('src/pages/sitemap.xml.ts','publicOnly(all)','publicOnly(all).filter((entry) => !entry.data.draft)');
-await patch('src/pages/rss.xml.js','publicOnly(all)','publicOnly(all).filter((entry) => !entry.data.draft)');
+await patch('src/pages/sitemap.xml.ts','publicOnly(all)',"publicOnly(all).filter((entry) => !entry.data.draft && entry.data.status !== 'draft')");
+await patch('src/pages/rss.xml.js','publicOnly(all)',"publicOnly(all).filter((entry) => !entry.data.draft && entry.data.status !== 'draft')");
+await patch('src/pages/ai-pulse/feed.xml.ts',"aiPulseEntries(await getCollection('insights'))", "aiPulseEntries(await getCollection('insights')).filter((entry) => !entry.data.draft && entry.data.status !== 'draft')");
 const packageJson=JSON.parse(await readFile(join(review,'package.json'),'utf8'));
 packageJson.scripts={build:packageJson.scripts.build};
 await writeFile(join(review,'package.json'),JSON.stringify(packageJson,null,2));

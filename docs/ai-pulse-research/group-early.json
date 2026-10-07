@@ -1,0 +1,275 @@
+[
+  {
+    "editionDate": "2026-08-12",
+    "packFileName": "Daily Content Pack - 2026-08-12 FRESH.docx",
+    "packSHA256": "14b8b88e174a4c0cfe7c3edb20d9d0a825bc8eb5677540db76149d49db43965a",
+    "id": "ai-pulse/autonomous-ai-agents-need-operating-boundaries",
+    "title": "Autonomous AI Agents Need Operating Boundaries",
+    "newsDate": "2026-08-12",
+    "primaryUrls": [
+      "https://dreamgroup.com/blog/inside-a-multi-agent-ai-framework-used-to-compromise-government-entities-in-asia"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 535
+  },
+  {
+    "editionDate": "2026-08-14",
+    "packFileName": "Daily Content Pack - 2026-08-14.docx",
+    "packSHA256": "0606b3084db9987e1c5fe4f46271a4bc89f8c673478699dfde1a79b82f29cdce",
+    "id": "ai-pulse/burry-ai-warning-and-business-case-discipline",
+    "title": "Burry's AI Warning Is a Test of Business Case Discipline",
+    "newsDate": "2026-08-14",
+    "primaryUrls": [
+      "https://www.aol.com/articles/big-short-michael-burry-says-100807000.html"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 526
+  },
+  {
+    "editionDate": "2026-08-15",
+    "packFileName": "Daily Content Pack - 2026-08-15.docx",
+    "packSHA256": "e51af4691b447950a544a0c20707aaac8387073367786feda35f3eeffcae29d3",
+    "id": "ai-pulse/us-ai-coalition-draft-and-vendor-dependency",
+    "title": "A US AI Coalition Draft Puts Vendor Dependency on the Agenda",
+    "newsDate": "2026-08-14",
+    "primaryUrls": [
+      "https://www.investing.com/news/world-news/exclusiveus-to-tell-partners-they-must-pick-sides-in-ai-race-with-china-4861859"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 529
+  },
+  {
+    "editionDate": "2026-08-16",
+    "packFileName": "Daily Content Pack - 2026-08-16.docx",
+    "packSHA256": "b5f69013230712299ec8116d31d6f0d071609bb848ff24484af5c33df18af119",
+    "id": "ai-pulse/andon-ai-boss-human-employment-decisions",
+    "title": "An AI Boss Recommended a Dismissal. Humans Still Owned the Decision.",
+    "newsDate": "2026-08-14",
+    "primaryUrls": [
+      "https://andonlabs.com/blog/ai-bosses-2"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 521
+  },
+  {
+    "editionDate": "2026-08-17",
+    "packFileName": "Daily Content Pack - 2026-08-17.docx",
+    "packSHA256": "41089b185ed531b9b9aececac79909eb7b27c23039f9290e0c0b5d7759af0728",
+    "id": "ai-pulse/stripe-openrouter-ai-routing-business-value",
+    "title": "Stripe and OpenRouter Put AI Routing in the Business Spotlight",
+    "newsDate": "2026-08-16",
+    "primaryUrls": [
+      "https://news.bloomberglaw.com/mergers-and-acquisitions/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion",
+      "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 529
+  },
+  {
+    "editionDate": "2026-08-18",
+    "packFileName": "Daily Content Pack - 2026-08-18.docx",
+    "packSHA256": "a49ed4f40da35847f0a0cd0420242c3ceb8903bad7369a1f1bae48733411df1d",
+    "id": "ai-pulse/amazon-rare-books-ai-data-provenance",
+    "title": "Amazon's Reported Book Scanning Raises a Data Provenance Question",
+    "newsDate": "2026-08-17",
+    "primaryUrls": [
+      "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 530
+  },
+  {
+    "editionDate": "2026-08-19",
+    "packFileName": "Daily Content Pack - 2026-08-19 V3.docx",
+    "packSHA256": "92585bb49049e31a32ed5fb53462cbba7e758e85a96c3a5c592b5729df54c083",
+    "id": "ai-pulse/china-ai-sovereignty-response-business-options",
+    "title": "China's AI Sovereignty Response Makes Business Options Worth Testing",
+    "newsDate": "2026-08-19",
+    "primaryUrls": [
+      "https://www.reutersconnect.com/item/china-urges-respect-for-digital-sovereignty-in-ai-race/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBNjQ0ODE5MDgyMDI2UlAx",
+      "https://www.investing.com/news/world-news/china-urges-respect-for-digital-sovereignty-in-ai-race-4866598"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 519
+  },
+  {
+    "editionDate": "2026-08-20",
+    "packFileName": "Daily Content Pack - 2026-08-20.docx",
+    "packSHA256": "dc0164fc15d2d242f84e97b3f2e0a2dd211177f38ce4df6aa8428fe4607b5def",
+    "id": "ai-pulse/amazon-drone-expansion-outcomes-before-technology",
+    "title": "Amazon's Drone Expansion Puts the Customer Outcome First",
+    "newsDate": "2026-08-19",
+    "primaryUrls": [
+      "https://www.aboutamazon.com/news/transportation/amazon-prime-air-drone-delivery-expansion",
+      "https://www.publicnow.com/view/84FC415B50FB31270BDF077832F7766A77A0E422"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 521
+  },
+  {
+    "editionDate": "2026-08-21",
+    "packFileName": "Daily Content Pack - 2026-08-21.docx",
+    "packSHA256": "d1ef5fbff9b2549e39cf0b536beda43be74c60b259b0bb0f6720652e219cbb6a",
+    "id": "ai-pulse/binance-agent-os-permission-to-act",
+    "title": "Binance Agent OS Shows Why Permission to Act Changes AI Risk",
+    "newsDate": "2026-08-20",
+    "primaryUrls": [
+      "https://www.prnewswire.com/news-releases/binance-introduces-agent-os-to-connect-ai-applications-to-financial-infrastructure-302856306.html"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 513
+  },
+  {
+    "editionDate": "2026-08-22",
+    "packFileName": "Daily Content Pack - 2026-08-22.docx",
+    "packSHA256": "92e77ab6baba20524b0c9cd4db2bac47b213299d23cc55c698d159f2115eeb25",
+    "id": "ai-pulse/ai-productivity-does-not-guarantee-lower-costs",
+    "title": "AI Productivity Does Not Guarantee Lower Costs",
+    "newsDate": "2026-08-21",
+    "primaryUrls": [
+      "https://www.investing.com/news/economy-news/artificial-intelligence-could-push-up-inflation--snbs-tschudin-says-4871908",
+      "https://www.snb.ch/de/publications/communication/interviews/int_20260824_gpe"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 531
+  },
+  {
+    "editionDate": "2026-08-23",
+    "packFileName": "Daily Content Pack - 2026-08-23.docx",
+    "packSHA256": "e982088e5cf9154c96afa0881abee61272b06c88b4b95396fa7fe8979e48e304",
+    "id": "ai-pulse/robot-games-speed-is-not-operational-readiness",
+    "title": "At the Robot Games, Speed Is Only One Measure",
+    "newsDate": "2026-08-22",
+    "primaryUrls": [
+      "https://apnews.com/article/86cb8e310843151a77057e4cb764b4e2"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 521
+  },
+  {
+    "editionDate": "2026-08-24",
+    "packFileName": "Daily Content Pack - 2026-08-24.docx",
+    "packSHA256": "f5ea763c4bb972f5b27a62b40e0e899ff96d93582af0934c85439790e074e3b0",
+    "id": "ai-pulse/alibaba-ai-share-placement-return-on-investment",
+    "title": "Alibaba's AI Funding Plan Brings the Return Question Into Focus",
+    "newsDate": "2026-08-24",
+    "primaryUrls": [
+      "https://www.alibabagroup.com/en-US/document-2028384807859257344",
+      "https://www.investing.com/news/stock-market-news/alibaba-stock-slumps-in-hong-kong-after-102-billion-share-placement-to-fund-ai-4872593"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 525
+  },
+  {
+    "editionDate": "2026-08-25",
+    "packFileName": "Daily Content Pack - 2026-08-25.docx",
+    "packSHA256": "afaa52fe89dbbbb66299bb185908866439647fd3b7b34b0b40dc26aab35c3271",
+    "id": "ai-pulse/holiday-ai-shopping-intent-retail-readiness",
+    "title": "AI Shopping Intent Is a Readiness Test for Retailers",
+    "newsDate": "2026-08-24",
+    "primaryUrls": [
+      "https://www.prnewswire.com/news-releases/sixty-five-percent-of-consumers-will-use-ai-to-shop-this-holiday-season-but-only-8-of-retailers-say-theyre-ready-302857040.html"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 532
+  },
+  {
+    "editionDate": "2026-08-26",
+    "packFileName": "Daily Content Pack - 2026-08-26.docx",
+    "packSHA256": "396cd9166350dde6a69fde9cac095caa8c62d3a781d8cabc917094e1f1199d16",
+    "id": "ai-pulse/mac-mini-local-ai-still-needs-an-owner",
+    "title": "A More Capable Mac mini Still Needs an AI Operating Plan",
+    "newsDate": "2026-08-25",
+    "primaryUrls": [
+      "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 532
+  },
+  {
+    "editionDate": "2026-08-27",
+    "packFileName": "Daily Content Pack - 2026-08-27.docx",
+    "packSHA256": "0d5d54c1f1f0ec9f875e326ba6a6c3f7a69dfd0c6e5ad0d38c6c7e61cd555760",
+    "id": "ai-pulse/meta-project-ot-measure-useful-work",
+    "title": "Meta's Project OT Report Puts Useful Work Ahead of AI Activity",
+    "newsDate": "2026-08-26",
+    "primaryUrls": [
+      "https://m.economictimes.com/ai/ai-insights/mark-zuckerberg-had-a-bold-plan-to-replace-meta-staff-with-ai-heres-how-it-imploded-/amp_articleshow/133538291.cms"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 518
+  },
+  {
+    "editionDate": "2026-08-28",
+    "packFileName": "Daily Content Pack - 2026-08-28.docx",
+    "packSHA256": "3259b9aef2bac3999baa901ff91ab87b6fc2e962485202a6d96909924bd1352a",
+    "id": "ai-pulse/chatgpt-study-quality-and-original-thinking",
+    "title": "Better AI-Assisted Answers Still Need Independent Thinking",
+    "newsDate": "2026-08-27",
+    "primaryUrls": [
+      "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 529
+  },
+  {
+    "editionDate": "2026-08-29",
+    "packFileName": "Daily Content Pack - 2026-08-29.docx",
+    "packSHA256": "e488d294953128c1a52b185fbc4cc9a9ca79878b24fec0c01956b2c95cde2f15",
+    "id": "ai-pulse/microduck-orders-accessible-robotics-learning",
+    "title": "Microduck's Early Orders Point to Accessible Robotics Learning",
+    "newsDate": "2026-08-28",
+    "primaryUrls": [
+      "https://pollen-robotics.com/microduck/blog/introducing-microduck/",
+      "https://tech.yahoo.com/ai/meta-ai/articles/hugging-face-says-roller-skating-164314293.html"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 527
+  },
+  {
+    "editionDate": "2026-08-30",
+    "packFileName": "Daily Content Pack - 2026-08-30.docx",
+    "packSHA256": "599a7e65d6e00bcbaf69f040b5584aba911b145999c5b8be6fa4ab6e81cbe3f0",
+    "id": "ai-pulse/valon-ai-access-new-hires-judgement",
+    "title": "Valon's AI Access Rule Puts Judgement Into Onboarding",
+    "newsDate": "2026-08-29",
+    "primaryUrls": [
+      "https://www.linkedin.com/posts/wangandrewd_two-weeks-ago-we-turned-off-ai-access-for-activity-7495524960489062400-rnyM",
+      "https://uk.finance.yahoo.com/news/hires-ai-startup-earn-ai-092201199.html"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 526
+  },
+  {
+    "editionDate": "2026-08-31",
+    "packFileName": "Daily Content Pack - 2026-08-31.docx",
+    "packSHA256": "ea681d5b3a7c87974bd79f028fc0e3b8b5641e1b7c914676df27b73abba3d5f0",
+    "id": "ai-pulse/small-business-first-ai-trial",
+    "title": "How a Small Business Can Design Its First AI Trial",
+    "newsDate": "2026-08-30",
+    "primaryUrls": [
+      "https://www.theguardian.com/technology/2026/aug/30/ai-small-business"
+    ],
+    "status": "draft",
+    "openIssues": [],
+    "wordCount": 531
+  }
+]
