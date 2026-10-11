@@ -28,6 +28,7 @@ export const GET: APIRoute = async () => {
   // --- Main site (static pages) ---
   urls.push({ loc: `${ORIGIN}/`, priority: '1.0', changefreq: 'weekly' });
   urls.push({ loc: `${ORIGIN}/ai-keynote-speaker-dubai/`, priority: '0.9', changefreq: 'monthly', lastmod: '2026-09-14' });
+  urls.push({ loc: `${ORIGIN}/book-launch/`, priority: '0.8', changefreq: 'weekly', lastmod: '2026-10-11' });
   urls.push({ loc: `${ORIGIN}/testimonials.html`, priority: '0.8', changefreq: 'monthly' });
   urls.push({ loc: `${ORIGIN}/past-events.html`, priority: '0.7', changefreq: 'monthly' });
   urls.push({ loc: `${ORIGIN}/clients.html`, priority: '0.7', changefreq: 'monthly' });
