@@ -31,11 +31,6 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   }
   const adminRequest = isAdminPath(rawPath);
 
-  // The book launch is managed entirely on Luma.
-  if (path === '/book-launch' || path === '/book-launch/' || path === '/book-launch/index.html') {
-    return Response.redirect('https://luma.com/5z1mu2l6', 302);
-  }
-
   // Consolidate duplicate imports with a permanent redirect. Pages _redirects
   // rules do not run for Function-served requests, so this belongs here.
   const redirectPath = insightRedirectPath(path) ?? aiPulseRedirectPath(path);
