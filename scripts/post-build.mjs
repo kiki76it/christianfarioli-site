@@ -3,7 +3,7 @@
 // Post-build: mirror the dist into dist/insights/ so the platform can be
 // served from a sub-path with all asset paths resolving correctly.
 
-import { cp, mkdir, readdir, rm } from 'node:fs/promises';
+import { cp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { join, resolve, sep } from 'node:path';
 
 const DIST = 'dist';
@@ -57,7 +57,11 @@ console.log(`[post-build] Done. /insights/ sub-path is now servable (article pag
 // ---------------------------------------------------------------------------
 const MAIN_SITE = 'main-site';
 console.log(`[post-build] Overlaying ${MAIN_SITE}/ → ${DIST}/ (main site at root)`);
+// Preserve the platform rewrites when the main-site overlay adds redirects.
+const platformRedirects = await readFile(join(DIST, '_redirects'), 'utf8');
 await copyDir(MAIN_SITE, DIST);
+const mainSiteRedirects = await readFile(join(MAIN_SITE, '_redirects'), 'utf8');
+await writeFile(join(DIST, '_redirects'), `${mainSiteRedirects.trimEnd()}\n\n${platformRedirects}`, 'utf8');
 console.log('[post-build] Main site overlaid at root. christianfarioli.com/ now serves the main site.');
 
 // The mirror is a deployment detail, not a second publishing surface. Keep
