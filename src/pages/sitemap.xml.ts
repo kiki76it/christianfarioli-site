@@ -33,6 +33,7 @@ export const GET: APIRoute = async () => {
   urls.push({ loc: `${ORIGIN}/past-events.html`, priority: '0.7', changefreq: 'monthly' });
   urls.push({ loc: `${ORIGIN}/clients.html`, priority: '0.7', changefreq: 'monthly' });
   urls.push({ loc: `${ORIGIN}/faq.html`, priority: '0.6', changefreq: 'monthly' });
+  urls.push({ loc: `${ORIGIN}/profcf-plugin`, priority: '0.3', changefreq: 'yearly', lastmod: '2026-11-02' });
   urls.push({ loc: `${ORIGIN}/privacy.html`, priority: '0.3', changefreq: 'yearly' });
   urls.push({ loc: absolute(paths.editorialPolicy(), ORIGIN), priority: '0.4', changefreq: 'yearly' });
 

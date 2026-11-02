@@ -5,7 +5,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFile, readdir, stat } from 'node:fs/promises';
-import { dirname, join, relative, resolve, sep } from 'node:path';
+import { dirname, extname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'parse5';
 import { XMLParser, XMLValidator } from 'fast-xml-parser';
@@ -48,7 +48,10 @@ async function fileFor(pathname) {
   const rel = relative(root, path);
   assert.ok(rel !== '..' && !rel.startsWith(`..${sep}`), `Path escapes build: ${pathname}`);
   const details = await stat(path).catch(() => null);
-  const file = details?.isDirectory() ? join(path, 'index.html') : path;
+  // Cloudflare Pages also serves /name from /name.html and redirects the
+  // .html URL to that extensionless canonical URL.
+  const file = details?.isDirectory() ? join(path, 'index.html')
+    : !details && !extname(path) && !url.pathname.endsWith('/') ? `${path}.html` : path;
   assert.ok((await stat(file).catch(() => null))?.isFile(), `Missing built URL: ${url.pathname}`);
   return file;
 }
