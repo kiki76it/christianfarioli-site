@@ -14,7 +14,7 @@ import matter from 'gray-matter';
 import { INSIGHT_REDIRECTS } from '../src/lib/insight-redirects.mjs';
 import { preferredSources, publiclyEnabled } from '../src/lib/preferred-sources-config.mjs';
 import { preferredSourceComponent, preferredSourceNoscript, preferredSourceTextLink } from '../src/lib/preferred-source-component.mjs';
-import { transformPreferredSources } from '../src/lib/preferred-sources-transform.mjs';
+import { transformPreferredSources, categoryRewriteCanonicalPath } from '../src/lib/preferred-sources-transform.mjs';
 
 const checkout = resolve(fileURLToPath(new URL('../', import.meta.url)));
 const baselineRoot = process.env.PREFSRC_BASELINE_DIR ? resolve(process.env.PREFSRC_BASELINE_DIR) : null;
@@ -201,6 +201,35 @@ test('private, noindex, legal, errors and registration routes never receive invi
   assert.equal(run(original, '/advanced-strategies/fixture/').html, original, 'Noncanonical post-build mirrors remain untouched');
 });
 
+test('existing category 200 rewrite receives identical origin/canonical markup with no general canonical bypass', async () => {
+  const redirects = await readFile(join(checkout, 'public/_redirects'), 'utf8');
+  const canonical = 'https://christianfarioli.com/insights/category/ai-strategy/';
+  assert.equal(categoryRewriteCanonicalPath('/category/ai-strategy/index.html', canonical, redirects), '/insights/category/ai-strategy');
+  for (const invalid of ['', '# /insights/category/* /category/:splat 200',
+    '/insights/category/* /category/:splat 301', '/category/* /insights/category/:splat 200',
+    '/insights/category/* /different/:splat 200']) {
+    assert.equal(categoryRewriteCanonicalPath('/category/ai-strategy/', canonical, invalid), null, invalid);
+  }
+  for (const [origin, href] of [
+    ['/category/other/', canonical], ['/category/ai-strategy/page/2/', canonical],
+    ['/other/ai-strategy/', canonical], ['/category/ai-strategy/', canonical.replace('christianfarioli.com', 'example.test')],
+    ['/category/ai-strategy/', `${canonical}?page=2`], ['/category/ai-strategy/', `${canonical}#archive`],
+  ]) assert.equal(categoryRewriteCanonicalPath(origin, href, redirects), null, `${origin} ${href}`);
+  const original = `<!doctype html><html><head><link rel="canonical" href="${canonical}"></head><body><section class="insights-hero"><h1>AI strategy</h1><p>Existing archive introduction</p></section><footer class="footer"><div class="footer-brand">Original brand</div></footer></body></html>`;
+  const origin = run(original, '/category/ai-strategy/');
+  const mirror = run(original, '/insights/category/ai-strategy/');
+  assert.deepEqual(origin.report.placements, ['category_archive', 'footer']);
+  assert.equal(origin.report.effectiveCanonicalPath, '/insights/category/ai-strategy');
+  assert.equal(origin.report.rewriteOrigin, '/category/ai-strategy');
+  assert.equal(origin.html, mirror.html, 'The existing public rewrite and mirror must serve byte-identical integration');
+  assert.equal(removeAdditions(origin.html), original);
+  assert.equal(run(original, '/category/other/').html, original);
+  assert.equal(run(original.replace('class="insights-hero"', 'class="other-hero"'), '/category/ai-strategy/').report.placements.length, 0);
+  assert.equal(run(original.replace('</head>', '<meta name="robots" content="noindex"></head>'), '/category/ai-strategy/').report.placements.length, 0);
+  const articleCopy = article(undefined, { route: '/insights/category/ai-strategy/' });
+  assert.equal(run(articleCopy, '/category/ai-strategy/').html, articleCopy, 'An article is not a category serving origin');
+});
+
 test('byline replaces intro; missing sidebar creates no invented layout; no article footer is created', () => {
   const byline = { ...active, articleInitialVariant: 'byline', placements: { ...active.placements, article_byline: true } };
   assert.deepEqual(placementIds(run(article(), undefined, byline).html), ['article_byline', 'article_end']);
@@ -321,6 +350,7 @@ test('current release baseline corpus (504 pages): inactive identity, canonical 
   const rows = [];
   const failures = [];
   const placementCounts = {};
+  const physicalPlacementCounts = {};
   let canonicalArticles = 0;
   for (const file of files) {
     const filePath = relative(baselineRoot, file).replaceAll('\\', '/');
@@ -350,7 +380,8 @@ test('current release baseline corpus (504 pages): inactive identity, canonical 
     const cleanRoute = routeNormal(route);
     // A category can contain only a featured article (or no cards at all):
     // its introduction still exists and remains a valid contextual placement.
-    if (isCanonical && /^\/insights\/category\/[^/]+$/.test(cleanRoute) && !ids.includes('category_archive')) problems.push('category-archive-context-missing');
+    const servedCanonical = transformed.report.effectiveCanonicalPath;
+    if ((isCanonical && /^\/insights\/category\/[^/]+$/.test(cleanRoute) || servedCanonical) && !ids.includes('category_archive')) problems.push('category-archive-context-missing');
     if (isCanonical && /^\/insights\/ai-pulse(?:\/page\/\d+)?$/.test(cleanRoute) && !ids.includes('ai_pulse_archive')) problems.push('ai-pulse-archive-context-missing');
     if (isCanonical && cleanRoute === '/' && !ids.includes('homepage_insights')) problems.push('homepage-context-missing');
     if (isCanonical && cleanRoute === '/insights' && !ids.includes('insights_grid')) problems.push('insights-context-missing');
@@ -376,16 +407,40 @@ test('current release baseline corpus (504 pages): inactive identity, canonical 
       if (end && commercial && end.sourceCodeLocation.endOffset > commercial.sourceCodeLocation.startOffset) problems.push('end-after-commercial');
       if (end && sources && end.sourceCodeLocation.startOffset < sources.sourceCodeLocation.endOffset) problems.push('end-before-sources');
     }
-    for (const id of ids) placementCounts[id] = (placementCounts[id] || 0) + 1;
+    for (const id of ids) {
+      physicalPlacementCounts[id] = (physicalPlacementCounts[id] || 0) + 1;
+      if (!transformed.report.rewriteOrigin) placementCounts[id] = (placementCounts[id] || 0) + 1;
+    }
     if (problems.length) failures.push({ file: filePath, problems });
-    rows.push({ file: filePath, route, canonicalPath: canonicalPath(beforeTree), pageType: transformed.report.pageType,
+    rows.push({ file: filePath, route, canonicalPath: canonicalPath(beforeTree), effectiveCanonicalPath: servedCanonical || canonicalPath(beforeTree),
+      rewriteOrigin: transformed.report.rewriteOrigin || null, pageType: transformed.report.pageType,
       placements: ids, omissions: transformed.report.omissions, baselineSha256: sha(original), outputSha256: sha(transformed.html),
       bytesAdded: Buffer.byteLength(transformed.html) - Buffer.byteLength(original), inactiveExactIdentity: disabledResult.html === original,
       originalBytesPreserved: preserved, articleWords: beforeBody ? wordCount(beforeBody) : null, gridCardsBefore: beforeCards, gridCardsAfter: afterCards, bootstrapCount, problems });
   }
   const audit = { checkedAt: new Date().toISOString(), scope: 'offline transformation of preserved baseline HTML; no network or live preference actions',
     baselineDirectory: baselineRoot, activation: 'synthetic approved configuration for local test only', htmlPages: files.length,
-    canonicalPublicArticles: canonicalArticles, placementCounts, failures, status: failures.length ? 'FAIL' : 'PASS', pages: rows };
+    canonicalPublicArticles: canonicalArticles, placementCounts, physicalPlacementCounts,
+    canonicalPagesAffected: rows.filter((row) => row.placements.length && !row.rewriteOrigin).length,
+    physicalPagesAffected: rows.filter((row) => row.placements.length).length,
+    rewriteOriginPairs: [], failures, status: failures.length ? 'FAIL' : 'PASS', pages: rows };
+  const categoryOrigins = rows.filter((row) => row.rewriteOrigin);
+  assert.equal(categoryOrigins.length, 8, 'All eight physical category serving origins must be integrated');
+  const redirects = await readFile(join(checkout, 'public/_redirects'), 'utf8');
+  for (const origin of categoryOrigins) {
+    assert.equal(categoryRewriteCanonicalPath(origin.route, origin.canonicalPath, redirects), origin.effectiveCanonicalPath);
+    const mirror = rows.find((row) => routeNormal(row.route) === origin.effectiveCanonicalPath);
+    assert.ok(mirror, `Missing canonical category mirror for ${origin.route}`);
+    assert.equal(origin.baselineSha256, mirror.baselineSha256, 'Origin and mirror start from identical existing HTML');
+    assert.equal(origin.outputSha256, mirror.outputSha256, 'Origin and mirror receive identical source-location insertions');
+    assert.deepEqual(origin.placements, ['category_archive', 'footer']);
+    assert.deepEqual(origin.placements, mirror.placements);
+    audit.rewriteOriginPairs.push({ originFile: origin.file, canonicalFile: mirror.file,
+      effectiveCanonicalPath: origin.effectiveCanonicalPath, exactOutputMatch: true });
+  }
+  assert.equal(audit.canonicalPagesAffected, 252, 'Routing copies must not increase canonical public surfaces');
+  assert.equal(audit.physicalPagesAffected, 260, 'The active build covers canonical outputs plus eight actual serving origins');
+  assert.equal(canonicalArticles, 232, 'Category routing must not alter public article coverage');
   audit.preExistingPublishedRedirects = [];
   for (const [id, target] of Object.entries(INSIGHT_REDIRECTS)) {
     const source = matter(await readFile(join(checkout, 'src/content/insights', `${id}.md`), 'utf8'));
