@@ -19,6 +19,20 @@ const text = (n) => n.nodeName === '#text' ? n.value : ['script','style','pre','
 const words = (n) => (text(n).match(/[\p{L}\p{N}]+(?:['’\-][\p{L}\p{N}]+)*/gu) || []).length;
 const existingInvite = (tree) => !!find(tree, (n) => attribute(n, 'google-add-preferred-source-btn') !== undefined || attribute(n, 'href')?.startsWith('https://www.google.com/preferences/source'));
 
+// These existing root files are the serving origin of canonical category URLs.
+// Require the exact checked-in 200 rewrite; never accept arbitrary canonical mismatches.
+export function categoryRewriteCanonicalPath(route, canonical, redirects) {
+  const path = normalise(route);
+  if (!/^\/category\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(path) || !canonical) return null;
+  const url = new URL(canonical, 'https://christianfarioli.com');
+  const target = normalise(url.pathname);
+  if (url.origin !== 'https://christianfarioli.com' || url.search || url.hash || target !== `/insights${path}`) return null;
+  const rules = redirects.split(/\r?\n/).map((line) => line.trim().split(/\s+/));
+  const verified = rules.some((fields) => fields.length === 3
+    && fields[0] === '/insights/category/*' && fields[1] === '/category/:splat' && fields[2] === '200');
+  return verified ? target : null;
+}
+
 /** Add only source-location inserts to parsed final HTML: never serialise/rewrite original markup. */
 export function transformPreferredSources(html, route, options = {}) {
   const config = options.config || preferredSources;
@@ -26,7 +40,7 @@ export function transformPreferredSources(html, route, options = {}) {
   const report = { route, pageType: 'other', placements: [], omissions: [] };
   const finish = () => ({ html, report });
   if (!preview && !publiclyEnabled(config, options.now)) { report.omissions.push('disabled-or-activation-gate'); return finish(); }
-  const path = normalise(route);
+  let path = normalise(route);
   if (/\/(?:admin|login|checkout|booking|book-launch|privacy|terms|editorial-policy|404|profcf-plugin)(?:\/|$)/i.test(path)) {
     report.omissions.push('excluded-route'); return finish();
   }
@@ -35,9 +49,20 @@ export function transformPreferredSources(html, route, options = {}) {
     report.omissions.push('private-or-noindex'); return finish();
   }
   const canonical = attribute(find(tree, (n) => n.tagName === 'link' && attribute(n, 'rel') === 'canonical'), 'href');
-  // Existing post-build mirrors are not extra editorial publishing surfaces.
+  // Category origin copies are served at their canonical URLs by the existing
+  // Cloudflare rewrite. Other noncanonical output remains excluded.
   if (canonical && normalise(new URL(canonical, 'https://christianfarioli.com').pathname) !== path) {
-    report.omissions.push('noncanonical-build-mirror'); return finish();
+    let canonicalOrigin = null;
+    if (byClass(tree, 'insights-hero') && !byClass(tree, 'article-body')) {
+      try {
+        canonicalOrigin = categoryRewriteCanonicalPath(path, canonical,
+          readFileSync(new URL('../../public/_redirects', import.meta.url), 'utf8'));
+      } catch { /* A missing or invalid routing source must keep the exclusion. */ }
+    }
+    if (!canonicalOrigin) { report.omissions.push('noncanonical-build-mirror'); return finish(); }
+    report.rewriteOrigin = path;
+    report.effectiveCanonicalPath = canonicalOrigin;
+    path = canonicalOrigin;
   }
   if (existingInvite(tree)) { report.omissions.push('existing-invite-deduplicated'); return finish(); }
   const inserts = [];
