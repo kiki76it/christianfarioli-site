@@ -70,3 +70,8 @@ for (const relativePath of ['admin', 'ai-pulse', 'insights/editorial-policy']) {
   }
   await rm(target, { recursive: true, force: true });
 }
+
+// Shared editorial invitation across the existing Astro and static templates.
+// Runs AFTER the original exposure guards; inactive builds remain byte-identical.
+const { integratePreferredSources } = await import('./integrate-preferred-sources.mjs');
+console.log('[preferred-sources]', await integratePreferredSources(DIST));
