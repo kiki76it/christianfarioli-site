@@ -1,15 +1,15 @@
 /** Release configuration. No query string, cookie or browser storage can enable it. */
 export const preferredSources = Object.freeze({
-  enabled: false,
+  enabled: true,
   eligibilityStatus: 'verified',
   eligibilityCheckedAt: '2026-11-08T08:54:03Z',
   eligibilityMaxAgeDays: 7,
-  activationApprovedAt: null, // Set only when this release and its service-consent rule are approved.
+  activationApprovedAt: '2026-11-08T11:35:11Z', // Owner approved publication and on-request loading.
   previewEnabled: true, // Only used by the separate loopback QA server; never by build.
   sourceDomain: 'christianfarioli.com',
   language: 'en-GB', // Explicitly listed as English (UK) in Google's supported-language CSV.
   theme: 'light',
-  consentPolicy: 'unresolved', // Public activation requires an explicitly reviewed policy.
+  consentPolicy: 'on-request', // Owner approved: request per document, no consent cookie/storage.
   measurementEnabled: false,
   articleInitialVariant: 'intro', // intro | byline | sidebar | none (alternatives, not additions)
   articleIntroMinWords: 600,
