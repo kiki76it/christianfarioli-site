@@ -2710,10 +2710,13 @@
       .home-faq-a{font-size:1rem;line-height:1.75;color:var(--color-text-secondary)}
       .home-faq-more{text-align:center;margin-top:var(--space-2xl)}
       .home-faq-more a{color:var(--color-accent);font-weight:600;text-decoration:none;border-bottom:1px solid var(--color-accent);padding-bottom:2px}
-      .google-badge{display:inline-flex;align-items:center;gap:10px;margin-top:var(--space-lg);padding:8px 16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:999px;text-decoration:none;backdrop-filter:blur(4px);transition:background .2s}
+      .google-badge{display:inline-flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 10px;max-width:100%;min-height:44px;margin-top:var(--space-lg);padding:8px 16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:999px;text-decoration:none;backdrop-filter:blur(4px);transition:background .2s}
       .google-badge:hover{background:rgba(255,255,255,.18)}
-      .google-badge-stars{color:#FBBC04;font-size:.95rem;letter-spacing:1px}
-      .google-badge-text{color:var(--color-text-light);font-size:.9rem}
+      .google-badge:focus-visible{outline:2px solid var(--color-white);outline-offset:4px}
+      .google-badge-logo{display:block;width:58px;height:auto;flex-shrink:0}
+      .google-badge-stars{position:relative;display:inline-block;flex-shrink:0;color:rgba(255,255,255,.35);font-size:.85rem;letter-spacing:1px;line-height:1;white-space:nowrap}
+      .google-badge-stars::after{content:'★★★★★';position:absolute;top:0;left:0;width:98%;overflow:hidden;color:#FBBC04;white-space:nowrap}
+      .google-badge-text{min-width:0;color:var(--color-text-light);font-size:.9rem;line-height:1.4}
       .google-badge-text strong{color:var(--color-white)}
       .forbes-cred{display:inline-flex;align-items:center;gap:12px;margin-top:20px;text-decoration:none}
       .forbes-cred-label{color:rgba(255,255,255,.55);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
@@ -2815,9 +2818,10 @@
                 <a href="https://calendly.com/chrisfarioli/30min" target="_blank" rel="noopener" class="btn btn-light">Book a Strategy Call</a>
                 <a href="/insights/" class="btn btn-outline-light">Explore Insights</a>
             </div>
-            <a href="https://christianfarioli.com/testimonials" target="_blank" rel="noopener" class="google-badge blur-in stagger-3" aria-label="4.9 stars on Google from 165 reviews — read testimonials">
+            <a href="/testimonials.html#google-reviews" class="google-badge blur-in stagger-3" aria-label="Read reviews: 4.9 out of 5 on Google from 165 reviews">
+                <img class="google-badge-logo" src="./imgs/clients/mq/client-13.png" width="277" height="91" alt="Google">
                 <span class="google-badge-stars" aria-hidden="true">★★★★★</span>
-                <span class="google-badge-text"><strong>4.9</strong> on Google · 165 reviews</span>
+                <span class="google-badge-text"><strong>4.9/5</strong> on Google · 165 reviews</span>
             </a>
             <a href="https://forbes.com.mx/author/prof-christian-farioli/" target="_blank" rel="noopener" class="forbes-cred" aria-label="Featured in Forbes">
                 <span class="forbes-cred-label">Featured in</span>
