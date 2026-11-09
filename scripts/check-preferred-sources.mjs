@@ -23,7 +23,7 @@ const corpusSkip = baselineRoot && evidenceRoot ? false
   : 'Release baseline corpus not configured: set both PREFSRC_BASELINE_DIR and PREFSRC_EVIDENCE_DIR explicitly';
 const now = Date.parse('2026-11-08T12:00:00Z');
 const active = {
-  ...preferredSources, enabled: true, eligibilityStatus: 'verified',
+  ...preferredSources, enabled: true, eligibilityStatus: 'verified', measurementEnabled: false,
   eligibilityCheckedAt: '2026-11-08T08:54:03Z', activationApprovedAt: '2026-11-08T12:00:00Z', consentPolicy: 'approved',
   placements: { ...preferredSources.placements },
 };

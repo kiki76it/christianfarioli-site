@@ -133,7 +133,7 @@ export function transformPreferredSources(html, route, options = {}) {
   const head = find(tree, (n) => n.tagName === 'head');
   const body = find(tree, (n) => n.tagName === 'body');
   inserts.push({offset: head.sourceCodeLocation.endTag.startOffset, value: `<link rel="stylesheet" href="${assetURL('styles.css')}" data-preferred-sources-asset>`});
-  inserts.push({offset: body.sourceCodeLocation.endTag.startOffset, value: `<script id="preferred-sources-runtime" type="module" src="${assetURL('runtime.js')}" data-preview="${preview}" data-eligibility="${config.eligibilityStatus}" data-measurement="${config.measurementEnabled}" data-consent-policy="${config.consentPolicy}" data-source-domain="${config.sourceDomain}"></script>`});
+  inserts.push({offset: body.sourceCodeLocation.endTag.startOffset, value: `<script id="preferred-sources-runtime" type="module" src="${assetURL('runtime.js')}" data-preview="${preview}" data-eligibility="${config.eligibilityStatus}" data-measurement="${config.measurementEnabled}" data-measurement-mode="${config.measurementMode || 'consented'}" data-ga4-measurement-id="${config.ga4MeasurementId || ''}" data-consent-policy="${config.consentPolicy}" data-source-domain="${config.sourceDomain}"></script>`});
   for (const insert of inserts.sort((a,b) => b.offset - a.offset)) html = html.slice(0,insert.offset) + insert.value + html.slice(insert.offset);
   return finish();
 }

@@ -1,10 +1,21 @@
 /* Google Preferred Sources: automatic publisher.js integration, no private SDK API.
- * Analytics adapter contract: window.dispatchEvent(new CustomEvent(
- *   'cf:analytics-consent', {detail: {granted: true|false}}));
- * Consent starts denied. Only an approved existing consent adapter may grant it.
+ * Analytics adapter contract (no private Google/CMP properties):
+ * - Runtime starts denied, then emits cf:analytics-consent-request with
+ *   {consumer: 'preferred-sources', requestId: N} on every start/BFcache restore.
+ * - An approved adapter reads authoritative consent and answers by dispatching
+ *   cf:analytics-consent with {granted: boolean, requestId: N}.
+ * - When the adapter becomes ready or consent changes, it dispatches
+ *   cf:analytics-consent-ready to request a fresh snapshot. A denial may also be
+ *   dispatched immediately; it invalidates any outstanding grant response.
+ * - Grants must match the current, single-use request. No response means denied.
  * Local preview records consented events in __cfPreferredSources.previewEvents;
- * it NEVER pushes to the production dataLayer. Google widget clicks are opaque:
- * only actual activations of our own explicit deeplinks are measured.
+ * it NEVER pushes to the production dataLayer. Only trusted native clicks on
+ * a visible official control or explicit deeplink are measured. A click does
+ * not establish that Google saved a preference. Google APIs/DOM are unchanged.
+ * Standard mode is explicit and separate from the consent adapter. It sends
+ * only trusted clicks to the verified GA4 destination and can use Analytics
+ * cookies. It never sets consent, changes advertising consent or defines
+ * window.gtag. Existing public Analytics denials and opt-out block transport.
  */
 (() => {
   'use strict';
@@ -12,12 +23,19 @@
   if (!boot || window.__cfPreferredSources) return;
   const preview = boot.dataset.preview === 'true';
   const verified = boot.dataset.eligibility === 'verified';
-  const measurement = boot.dataset.measurement === 'true';
+  const measurementMode = boot.dataset.measurementMode || 'consented';
+  const standard = measurementMode === 'standard';
+  const ga4Id = boot.dataset.ga4MeasurementId;
+  const measurement = boot.dataset.measurement === 'true' &&
+    (measurementMode === 'consented' || (standard && ga4Id === 'G-07K2C80BDJ'));
   const onRequest = boot.dataset.consentPolicy === 'on-request';
   const policyApproved = onRequest || boot.dataset.consentPolicy === 'approved';
   const state = window.__cfPreferredSources = {
-    version: 1, preview, status: 'initialising', previewEvents: [],
-    widgetClickCoverage: 'not-observable', consent: 'denied',
+    version: 2, preview, status: 'initialising', previewEvents: [],
+    widgetClickCoverage: 'native-composed-click-when-available',
+    consent: standard ? 'not-set-by-integration' : 'denied',
+    consentRequestId: 0, measurementMode,
+    analyticsTransport: measurement ? (standard ? 'awaiting-trusted-click' : 'consented-data-layer') : 'disabled',
     widgetConsent: onRequest ? 'awaiting-request' : 'policy-approved',
   };
   const nodes = [...document.querySelectorAll('[data-preferred-source-placement]')];
@@ -47,6 +65,9 @@
   }));
   let active = false;
   let granted = false;
+  let consentRequestId = 0;
+  let pendingConsentRequest = null;
+  const observedClickEvents = new WeakSet();
   let seen = new Set();
   let intersections;
   let readiness;
@@ -56,6 +77,12 @@
   let resize;
   let layoutFrame;
   let publisher;
+  const initialAnalyticsLayer = window.dataLayer;
+  let analyticsScript;
+  let analyticsConfigCommand;
+  let analyticsFailed = false;
+  let analyticsLoaded = false;
+  let pendingAnalyticsClicks = [];
   // This flag is scoped to this document only. No cookie or storage persists
   // permission, and analytics consent never grants permission for this service.
   let widgetRequested = !onRequest;
@@ -72,8 +99,36 @@
     clearTimeout(block.viewTimer);
     block.viewTimer = null;
   }
+  function denyAnalytics() {
+    granted = false;
+    state.consent = standard ? 'not-set-by-integration' : 'denied';
+    blocks.forEach(clearView);
+  }
+  function requestConsentSnapshot() {
+    if (!active || standard) return;
+    denyAnalytics();
+    pendingConsentRequest = ++consentRequestId;
+    state.consentRequestId = consentRequestId;
+    window.dispatchEvent(new CustomEvent('cf:analytics-consent-request', {
+      detail: { consumer: 'preferred-sources', requestId: consentRequestId },
+    }));
+  }
+  function applyConsentSnapshot(event) {
+    if (!active || standard) return;
+    if (event.detail?.granted === false) {
+      pendingConsentRequest = null;
+      denyAnalytics();
+      return;
+    }
+    if (event.detail?.granted !== true || pendingConsentRequest === null ||
+        event.detail.requestId !== pendingConsentRequest) return;
+    pendingConsentRequest = null;
+    granted = true;
+    state.consent = 'granted';
+    blocks.forEach(trackView);
+  }
   function emit(name, block) {
-    if (!active || !measurement || !granted) return;
+    if (!active || !measurement || (standard ? name !== 'preferred_source_click' : !granted)) return;
     const event = {
       event: name,
       placement: block.node.dataset.preferredSourcePlacement,
@@ -84,11 +139,155 @@
       page_path: window.location.pathname,
     };
     if (preview) state.previewEvents.push(event);
+    else if (standard) {
+      try { sendStandardClick(event); }
+      catch { analyticsFailed = true; state.analyticsTransport = 'transport-error'; }
+    }
     else if (Array.isArray(window.dataLayer)) window.dataLayer.push(event);
+  }
+  function blockAnalytics(reason) {
+    state.analyticsTransport = reason;
+    return null;
+  }
+  function standardLayer() {
+    if (window['ga-disable-' + ga4Id] === true) return blockAnalytics('opted-out');
+    if (analyticsFailed) return blockAnalytics('tag-load-failed');
+    const layer = window.dataLayer;
+    if (!Array.isArray(layer) || layer !== initialAnalyticsLayer || typeof layer.push !== 'function') {
+      return blockAnalytics('data-layer-state-changed');
+    }
+    // The public queue is the only observable consent source here. Any seen
+    // Analytics denial (including a regional default) fails closed for this
+    // document. Never replace a decision with an inferred or synthetic grant.
+    // A future CMP can instead use the separate consented adapter mode.
+    for (const command of layer) {
+      if (command?.[0] === 'consent' && command[2]?.analytics_storage !== undefined) {
+        if (command[2].analytics_storage === 'denied') return blockAnalytics('analytics-consent-denied');
+        if (command[2].analytics_storage !== 'granted') return blockAnalytics('analytics-consent-conflict');
+      }
+      if (command?.[0] === 'config' && command[1] === ga4Id && command !== analyticsConfigCommand) {
+        return blockAnalytics('existing-destination-configuration');
+      }
+    }
+    return layer;
+  }
+  function watchAnalyticsScript() {
+    if (!analyticsScript) return;
+    // Two one-shot listeners belong to this single script, not the page's
+    // interaction lifecycle. Completion while hidden records readiness only;
+    // pagehide has already discarded every pending click.
+    const remove = () => {
+      analyticsScript.removeEventListener('load', loaded);
+      analyticsScript.removeEventListener('error', failed);
+    };
+    const loaded = () => {
+      remove();
+      analyticsLoaded = true;
+      state.analyticsTransport = 'tag-loaded-receipt-unverified';
+      if (active) {
+        try { flushStandardClicks(); }
+        catch { analyticsFailed = true; pendingAnalyticsClicks = []; state.analyticsTransport = 'transport-error'; }
+      }
+    };
+    const failed = () => {
+      remove();
+      analyticsFailed = true;
+      pendingAnalyticsClicks = [];
+      state.analyticsTransport = 'tag-load-failed';
+    };
+    analyticsScript.addEventListener('load', loaded, { once: true });
+    analyticsScript.addEventListener('error', failed, { once: true });
+  }
+  function flushStandardClicks() {
+    if (!active || !analyticsLoaded || !pendingAnalyticsClicks.length) return;
+    const layer = standardLayer();
+    if (!layer) { pendingAnalyticsClicks = []; return; }
+    function enqueue() { layer.push(arguments); return arguments; }
+    if (!analyticsConfigCommand) {
+      const page = pendingAnalyticsClicks[0];
+      analyticsConfigCommand = enqueue('config', ga4Id, {
+        send_page_view: false,
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+        page_location: page.page_location, page_referrer: '', page_title: 'Preferred Sources',
+      });
+    }
+    for (const parameters of pendingAnalyticsClicks.splice(0)) {
+      enqueue('event', 'preferred_source_click', parameters);
+    }
+    state.analyticsTransport = 'event-queued-receipt-unverified';
+  }
+  function sendStandardClick(event) {
+    const layer = standardLayer();
+    if (!layer) return;
+    // No query/hash, document title, referrer, client ID or form/user values.
+    const location = new URL(window.location.href);
+    if (location.protocol !== 'https:' ||
+        !['christianfarioli.com', 'www.christianfarioli.com'].includes(location.hostname)) {
+      blockAnalytics('analytics-host-blocked'); return;
+    }
+    const page = {
+      page_location: location.origin + location.pathname,
+      page_referrer: '', page_title: 'Preferred Sources',
+    };
+    if (!analyticsScript) {
+      // An existing loader for this destination is not ours to reconfigure.
+      const existing = [...document.scripts].some((script) => {
+        try {
+          const url = new URL(script.src);
+          return url.hostname === 'www.googletagmanager.com' && url.pathname === '/gtag/js' &&
+            url.searchParams.get('id') === ga4Id;
+        } catch { return false; }
+      });
+      if (existing) { blockAnalytics('existing-destination-loader'); return; }
+      analyticsScript = document.createElement('script');
+      analyticsScript.id = 'preferred-sources-ga4';
+      analyticsScript.async = true;
+      analyticsScript.referrerPolicy = 'no-referrer';
+      analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${ga4Id}`;
+      watchAnalyticsScript();
+      document.head.append(analyticsScript);
+    }
+    const { event: name, ...parameters } = event;
+    // Bounded, per-document pending clicks only. No replays from storage or from
+    // before this explicit measurement mode. Configure after our loader resolves
+    // so an already running GTM cannot race to load the same destination twice.
+    if (pendingAnalyticsClicks.length >= 20) { blockAnalytics('pending-click-limit'); return; }
+    pendingAnalyticsClicks.push({ ...parameters, ...page, send_to: ga4Id });
+    state.analyticsTransport = 'tag-loading-click-pending';
+    flushStandardClicks();
+  }
+  function emitClick(event, block) {
+    if (!event.isTrusted || observedClickEvents.has(event)) return;
+    observedClickEvents.add(event);
+    emit('preferred_source_click', block);
+  }
+  function observeWidgetClick(event, block) {
+    if (!event.isTrusted || !active || !block.ready || block.node.hidden ||
+        block.wrapper?.hidden || block.node.dataset.preferredSourceState !== 'ready' ||
+        block.node.dataset.integrationType !== 'widget' || typeof event.composedPath !== 'function') return;
+    const path = event.composedPath();
+    const markerIndex = path.indexOf(block.marker);
+    if (markerIndex < 1) return;
+    // Use native HTML semantics, not Google's class names, private properties,
+    // method hooks or a guessed iframe interaction. Closed/unavailable controls
+    // intentionally produce no event instead of a fabricated click.
+    const inside = path.slice(0, markerIndex + 1);
+    const control = inside.find((node) => node?.tagName === 'BUTTON' &&
+      node.namespaceURI === 'http://www.w3.org/1999/xhtml');
+    if (!control) return;
+    const disabled = inside.some((node) => node?.nodeType === 1 && (
+      node.disabled === true || node.hidden || node.inert ||
+      node.hasAttribute('disabled') || node.hasAttribute('inert') ||
+      node.matches(':disabled') || node.getAttribute('aria-disabled')?.trim().toLowerCase() === 'true'
+    ));
+    if (!disabled) emitClick(event, block);
+    // Do not inspect defaultPrevented: Google itself prevents default on valid
+    // clicks. This passive listener never interferes with its popup or flow.
   }
   function trackView(block) {
     const placement = block.node.dataset.preferredSourcePlacement;
-    if (!active || !measurement || !granted || seen.has(placement) ||
+    if (!active || !measurement || standard || !granted || seen.has(placement) ||
         document.visibilityState !== 'visible' || block.node.hidden ||
         !block.ready || block.ratio < 0.5) {
       clearView(block);
@@ -311,6 +510,10 @@
   function start() {
     if (active) return;
     active = true;
+    // A cached document must not reuse a grant that may have been revoked while
+    // it was away. Only the fresh authoritative adapter response can grant it.
+    pendingConsentRequest = null;
+    denyAnalytics();
     if ('IntersectionObserver' in window) {
       intersections = new IntersectionObserver((entries) => {
         for (const entry of entries) {
@@ -320,13 +523,14 @@
       }, { threshold: [0, 0.5, 1] });
       blocks.forEach((block) => intersections.observe(block.node));
     }
-    listen(window, 'cf:analytics-consent', (event) => {
-      granted = event.detail?.granted === true;
-      state.consent = granted ? 'granted' : 'denied';
-      blocks.forEach(trackView);
-    });
+    if (!standard) {
+      listen(window, 'cf:analytics-consent', applyConsentSnapshot);
+      listen(window, 'cf:analytics-consent-ready', requestConsentSnapshot);
+    }
     listen(document, 'visibilitychange', () => blocks.forEach(trackView));
     for (const block of blocks) {
+      if (block.marker) listen(block.marker, 'click', (event) => observeWidgetClick(event, block),
+        { capture: true, passive: true });
       if (onRequest && block.marker && block.consentButton) {
         listen(block.consentButton, 'click', requestWidget);
         if (!widgetRequested) {
@@ -339,13 +543,14 @@
       }
       listen(block.node, 'click', (event) => {
         // Native click also covers keyboard activation. No extra key handler.
+        if (!event.isTrusted) return;
         const link = event.target?.closest?.('a[href]');
         if (!link || !block.node.contains(link) || block.node.hidden ||
             block.node.dataset.integrationType !== 'deeplink') return;
         let target;
         try { target = new URL(link.href); } catch { return; }
         if (target.origin === 'https://www.google.com' && target.pathname === '/preferences/source' &&
-            target.searchParams.get('q') === boot.dataset.sourceDomain) emit('preferred_source_click', block);
+            target.searchParams.get('q') === boot.dataset.sourceDomain) emitClick(event, block);
       });
     }
     arrangeGrid();
@@ -362,10 +567,16 @@
       if (widgetRequested) loadPublisher();
       else state.status = 'awaiting-request';
     } else state.status = 'deeplinks-ready';
+    // Listeners exist before the request, so adapters loaded before or after
+    // this module can safely return synchronous or asynchronous snapshots.
+    requestConsentSnapshot();
   }
   function stop() {
     if (!active) return;
     active = false;
+    pendingAnalyticsClicks = [];
+    pendingConsentRequest = null;
+    denyAnalytics();
     blocks.forEach(clearView);
     intersections?.disconnect();
     resize?.disconnect();
