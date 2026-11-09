@@ -24,7 +24,7 @@ const corpusSkip = baselineRoot && evidenceRoot ? false
 const now = Date.parse('2026-11-08T12:00:00Z');
 const active = {
   ...preferredSources, enabled: true, eligibilityStatus: 'verified',
-  eligibilityCheckedAt: '2026-11-08T08:54:03Z', activationApprovedAt: '2026-11-08T12:00:00Z', consentPolicy: 'on-request',
+  eligibilityCheckedAt: '2026-11-08T08:54:03Z', activationApprovedAt: '2026-11-08T12:00:00Z', consentPolicy: 'approved',
   placements: { ...preferredSources.placements },
 };
 const inactive = { ...preferredSources, enabled: false };
@@ -101,16 +101,20 @@ test('activation is fail-closed: kill switch, eligibility, recency at approval, 
   const cases = [
     { enabled: false }, { eligibilityStatus: 'unknown' }, { eligibilityStatus: 'unavailable' },
     { eligibilityCheckedAt: '2026-10-01T00:00:00Z' }, { eligibilityCheckedAt: 'invalid' },
-    { eligibilityCheckedAt: '2026-11-09T00:00:00Z' }, { consentPolicy: 'unresolved' },
+    { eligibilityCheckedAt: '2026-11-09T00:00:00Z' },
+    ...['unresolved', 'automatic', 'APPROVED', '', null, undefined, true, {}].map((consentPolicy) => ({ consentPolicy })),
     { activationApprovedAt: null }, { activationApprovedAt: '' }, { activationApprovedAt: 'invalid' },
     { activationApprovedAt: '2026-11-09T00:00:00Z' },
     { sourceDomain: 'christianfarioli.example' },
   ];
   const original = article();
-  for (const patch of cases) {
-    const config = { ...active, ...patch };
-    assert.equal(publiclyEnabled(config, now), false, JSON.stringify(patch));
-    assert.equal(run(original, undefined, config).html, original, JSON.stringify(patch));
+  for (const consentPolicy of ['approved', 'on-request']) {
+    assert.equal(publiclyEnabled({ ...active, consentPolicy }, now), true);
+    for (const patch of cases) {
+      const config = { ...active, consentPolicy, ...patch };
+      assert.equal(publiclyEnabled(config, now), false, JSON.stringify(patch));
+      assert.equal(run(original, undefined, config).html, original, JSON.stringify(patch));
+    }
   }
 });
 
@@ -299,6 +303,32 @@ test('no-JS Insights slots follow each real first-row boundary in DOM order, wit
     assert.equal(removeAdditions(output), original);
   }
   assert.equal(preferredSourceNoscript('insights_grid', { ...active, eligibilityStatus: 'unknown' }, { gridColumns: 1 }), '');
+});
+
+test('approved automatic loading omits the request step while preserving official markers, fallback and original content', () => {
+  const original = article();
+  const automatic = run(original, undefined, { ...active, consentPolicy: 'approved' }).html;
+  const requested = run(original, undefined, { ...active, consentPolicy: 'on-request' }).html;
+  const tree = parse(automatic);
+  assert.equal(publiclyEnabled({ ...active, consentPolicy: 'approved' }, now), true);
+  assert.deepEqual(placementIds(automatic), placementIds(requested));
+  assert.equal(removeAdditions(automatic), original, 'The policy switch must preserve all original page bytes');
+  assert.equal(byClass(tree, 'preferred-source-consent'), undefined);
+  assert.equal(byClass(tree, 'preferred-source-consent-button'), undefined);
+  assert.equal(automatic.includes('Show Google'), false);
+  const runtime = nodes(tree, (node) => attr(node, 'id') === 'preferred-sources-runtime');
+  assert.equal(runtime.length, 1);
+  assert.equal(attr(runtime[0], 'data-consent-policy'), 'approved');
+  assert.equal(attr(runtime[0], 'data-measurement'), 'false');
+  const official = nodes(tree, (node) => attr(node, 'google-add-preferred-source-btn') !== undefined);
+  assert.equal(official.length, 2);
+  for (const marker of official) {
+    assert.equal(attr(marker, 'data-theme'), active.theme);
+    assert.equal(attr(marker, 'data-lang'), active.language);
+    assert.equal(marker.childNodes.length, 0, 'Only Google may populate the official marker');
+  }
+  assert.ok(byClass(tree, 'preferred-source-fallback'));
+  assert.ok(automatic.includes('<noscript>'));
 });
 
 test('on-request consent is an explicit native loading control, separate from the untouched Google marker', () => {

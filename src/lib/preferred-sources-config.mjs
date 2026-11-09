@@ -4,12 +4,12 @@ export const preferredSources = Object.freeze({
   eligibilityStatus: 'verified',
   eligibilityCheckedAt: '2026-11-08T08:54:03Z',
   eligibilityMaxAgeDays: 7,
-  activationApprovedAt: '2026-11-08T11:35:11Z', // Owner approved publication and on-request loading.
+  activationApprovedAt: '2026-11-09T09:00:49Z', // Owner approved direct display with automatic Google loading.
   previewEnabled: true, // Only used by the separate loopback QA server; never by build.
   sourceDomain: 'christianfarioli.com',
   language: 'en-GB', // Explicitly listed as English (UK) in Google's supported-language CSV.
   theme: 'light',
-  consentPolicy: 'on-request', // Owner approved: request per document, no consent cookie/storage.
+  consentPolicy: 'approved', // Owner approved automatic loading; analytics measurement remains disabled.
   measurementEnabled: false,
   articleInitialVariant: 'intro', // intro | byline | sidebar | none (alternatives, not additions)
   articleIntroMinWords: 600,
@@ -27,7 +27,7 @@ export function publiclyEnabled(config = preferredSources, now = Date.now()) {
   const checked = Date.parse(config.eligibilityCheckedAt);
   const approved = Date.parse(config.activationApprovedAt);
   return config.enabled === true && config.eligibilityStatus === 'verified'
-    && config.consentPolicy === 'on-request'
+    && (config.consentPolicy === 'on-request' || config.consentPolicy === 'approved')
     && config.sourceDomain === 'christianfarioli.com'
     && Number.isFinite(checked) && Number.isFinite(approved)
     && checked <= approved && approved <= now
