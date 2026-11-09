@@ -9,8 +9,10 @@ export const preferredSources = Object.freeze({
   sourceDomain: 'christianfarioli.com',
   language: 'en-GB', // Explicitly listed as English (UK) in Google's supported-language CSV.
   theme: 'light',
-  consentPolicy: 'approved', // Owner approved automatic loading; analytics measurement remains disabled.
-  measurementEnabled: false,
+  consentPolicy: 'approved', // Widget policy is separate from Analytics storage consent.
+  measurementEnabled: true, // Isolated draft only; production activation is a separate release.
+  measurementMode: 'standard', // Owner requested Analytics without a banner; may use Analytics cookies.
+  ga4MeasurementId: 'G-07K2C80BDJ', // Property/stream verified through the owner's GA4 UI.
   articleInitialVariant: 'intro', // intro | byline | sidebar | none (alternatives, not additions)
   articleIntroMinWords: 600,
   placements: Object.freeze({
