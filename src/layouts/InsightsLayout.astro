@@ -36,7 +36,8 @@ const { title, description, category, entries: rawEntries, featuredOnly = false,
 const isAiPulse = category === 'ai-pulse';
 
 // Apply workflow visibility: only public entries are listed
-let entries = publicOnly(rawEntries);
+const publicEntries = publicOnly(rawEntries);
+let entries = publicEntries;
 if (category) entries = entries.filter((e) => e.data.category === category);
 if (featuredOnly) entries = entries.filter((e) => e.data.featured);
 entries = sortByDateDesc(entries);
@@ -80,7 +81,7 @@ const collectionSchema = isAiPulse ? {
   },
 } : undefined;
 
-const categories = INSIGHT_CATEGORIES;
+const categories = INSIGHT_CATEGORIES.filter((c) => publicEntries.some((entry) => entry.data.category === c));
 
 // Main site lives at the domain root (one level up from /insights).
 const main = paths.mainSite();
@@ -153,7 +154,7 @@ function dateLabel(d?: Date): string | null {
 
     <!-- Featured article -->
     {featured && (
-      <section class="featured-section" id="featuredSection">
+      <section class="featured-section" id="featuredSection" data-search={`${featured.data.title} ${CATEGORY_LABELS[featured.data.category]} ${featured.data.description ?? ''}`}>
         <div class="featured-inner">
           <span class="section-label">Featured</span>
           <article class="featured-article">
@@ -240,7 +241,7 @@ function dateLabel(d?: Date): string | null {
               </article>
             ))}
           </div>
-        ) : (
+        ) : entries.length === 0 && (
           <p class="empty-state">No insights in this category yet — check back soon.</p>
         )}
         <div class="no-results" id="noResults" hidden>
@@ -359,30 +360,33 @@ function dateLabel(d?: Date): string | null {
 
 <script is:inline>
   (function () {
-    // Live client-side search over the cards on this page
+    // Live client-side search over every article on this page, including featured.
     var input = document.getElementById('searchInput');
     var grid = document.getElementById('articlesGrid');
     var featuredSec = document.getElementById('featuredSection');
     var header = document.getElementById('searchHeader');
     var count = document.getElementById('searchCount');
     var noResults = document.getElementById('noResults');
-    if (input && grid) {
-      var cards = Array.prototype.slice.call(grid.querySelectorAll('.article-card'));
+    var emptyState = document.querySelector('.empty-state');
+    if (input) {
+      var articles = grid ? Array.prototype.slice.call(grid.querySelectorAll('.article-card')) : [];
+      if (featuredSec) articles.unshift(featuredSec);
       input.addEventListener('input', function () {
         var q = input.value.trim().toLowerCase();
         if (!q) {
-          cards.forEach(function (c) { c.style.display = ''; });
-          if (featuredSec) featuredSec.style.display = '';
+          articles.forEach(function (article) { article.style.display = ''; });
           if (header) header.hidden = true;
+          if (count) count.textContent = '';
           if (noResults) noResults.hidden = true;
+          if (emptyState) emptyState.hidden = false;
           return;
         }
-        if (featuredSec) featuredSec.style.display = 'none';
+        if (emptyState) emptyState.hidden = true;
         var n = 0;
-        cards.forEach(function (c) {
-          var hay = (c.getAttribute('data-search') || '').toLowerCase();
+        articles.forEach(function (article) {
+          var hay = (article.getAttribute('data-search') || '').toLowerCase();
           var show = hay.indexOf(q) !== -1;
-          c.style.display = show ? '' : 'none';
+          article.style.display = show ? '' : 'none';
           if (show) n++;
         });
         if (header) { header.hidden = false; }
