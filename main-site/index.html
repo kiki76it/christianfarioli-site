@@ -2718,7 +2718,10 @@
       .google-badge-stars::after{content:'★★★★★';position:absolute;top:0;left:0;width:98%;overflow:hidden;color:#FBBC04;white-space:nowrap}
       .google-badge-text{min-width:0;color:var(--color-text-light);font-size:.9rem;line-height:1.4}
       .google-badge-text strong{color:var(--color-white)}
-      .forbes-cred{display:inline-flex;align-items:center;gap:12px;margin-top:20px;text-decoration:none}
+      .hero-credibility{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:20px;margin-top:var(--space-lg)}
+      .hero-credibility .google-badge,.hero-credibility .forbes-cred{margin-top:0}
+      .forbes-cred{display:inline-flex;align-items:center;gap:20px;margin-top:20px;text-decoration:none}
+      .forbes-cred picture{display:flex}
       .forbes-cred-label{color:rgba(255,255,255,.55);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
       .forbes-cred img{height:26px;width:auto;filter:brightness(0) invert(1);opacity:.85;transition:filter .3s ease,opacity .3s ease}
       .forbes-cred:hover img{filter:none;opacity:1}
@@ -2818,6 +2821,7 @@
                 <a href="https://calendly.com/chrisfarioli/30min" target="_blank" rel="noopener" class="btn btn-light">Book a Strategy Call</a>
                 <a href="/insights/" class="btn btn-outline-light">Explore Insights</a>
             </div>
+            <div class="hero-credibility">
             <a href="/testimonials.html#google-reviews" class="google-badge blur-in stagger-3" aria-label="Read reviews: 4.9 out of 5 on Google from 165 reviews">
                 <img class="google-badge-logo" src="./imgs/clients/mq/client-13.png" width="277" height="91" alt="Google">
                 <span class="google-badge-stars" aria-hidden="true">★★★★★</span>
@@ -2827,6 +2831,7 @@
                 <span class="forbes-cred-label">COLUMNIST FOR</span>
                 <picture><source type="image/webp" srcset="./imgs/forbes-logo.webp"><img src="./imgs/forbes-logo.png" alt="Forbes" width="104" height="26"></picture>
             </a>
+            </div>
         </div>
 
         <div class="hero-scroll">
