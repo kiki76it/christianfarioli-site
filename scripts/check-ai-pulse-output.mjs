@@ -222,7 +222,9 @@ test('Existing evergreen article retains BlogPosting and its full established au
   assert.equal(one(articleSchemas(document), 'evergreen article schema')['@type'], 'BlogPosting');
   assert.equal(typed(document, 'NewsArticle').length, 0);
   assert.equal(canonical(document), `${origin}${pathname}`);
-  assert.equal(byClass(document, 'author-qualifications').length, 1);
+  const signature = one(byClass(document, 'author-qualifications'), 'author signature');
+  const credit = one(tags(signature, 'a').filter((node) => text(node) === 'Forbes Contributor'), 'Forbes contributor link');
+  assert.equal(attr(credit, 'href'), 'https://forbes.com.mx/author/prof-christian-farioli/');
   assert.ok(text(one(byClass(document, 'article-dates'), 'evergreen dates')).includes('Published August 20, 2025'));
   assert.equal(byClass(document, 'article-sources').length, 0);
 });
